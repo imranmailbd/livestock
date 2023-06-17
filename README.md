@@ -10,10 +10,10 @@
 
 ![Logo](https://skitsbd.com/assets/images/logo.png)
 
-🐮 U+1F42E Cow Face / Cattle / Beef
-🐄 U+1F404 Cow
-🐂 U+1F402 Ox / Bull → Icon request: Bull #1122
-🐃 U+1F403 Aurox / Water Buffalo
-🍖 U+1F356 Meat Unicode emoji Support public Unicode codepoints where possible #222
-🍗 U+1F357 Poultry
-🥩 U+1F969 Meat / Steak / Chop, probably in Unicode 10.0
+🐮 Cow Face / Cattle / Beef
+🐄 Cow
+🐂 Ox / Bull 
+🐃 Aurox / Water Buffalo
+🍖 Meat
+🍗 Poultry
+🥩 Meat / Steak / Chop
