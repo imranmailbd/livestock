@@ -1,0 +1,19 @@
+RewriteEngine On
+
+#RewriteCond %{http} off
+#RewriteRule (.*) http://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+
+#RewriteCond %{HTTP_HOST} ^www\.machousel.com.bd\.co [NC]
+#RewriteRule ^(.*)$ http://machousel.com.bd/$1 [L,R=301]
+
+#RewriteCond %{HTTP_HOST} ^machouse?([a-z0-9-]+)\.com\.bd$
+#RewriteRule ^$ /website_index.php [L]
+
+RewriteCond %{REQUEST_URI} !^(/public_html)
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteRule ^(.*)$ index.php/$1 [QSA,L]
+
+<IfModule mod_headers.c>
+   Header set Access-Control-Allow-Origin "*"
+ </IfModule>

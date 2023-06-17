@@ -1,0 +1,37 @@
+2023-06-14 06:46:58 Encountered error 2 in D:\wamp64\www\livestock\application\Account.php, line 721: Undefined variable $sitename, [AccID: 0, UserID: 0, Browser: Mozilla/5.0]
+2023-06-14 08:14:06 Encountered error 2 in D:\wamp64\www\livestock\public_html\index.php, line 220: Undefined array key "index", [AccID: 0, UserID: 0, Browser: Mozilla/5.0]
+2023-06-14 08:14:32 Encountered error 2 in D:\wamp64\www\livestock\public_html\index.php, line 220: Undefined array key "index", [AccID: 0, UserID: 0, Browser: Mozilla/5.0]
+2023-06-14 10:20:41 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'appendChild')
+    at createHeader (http://admin.livestockl.com/assets/js-v3/common.js:5823:41)
+    at http://admin.livestockl.com/assets/js-v3/common.js:5987:3 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://admin.livestockl.com/Home
+previous: http://admin.livestockl.com/POS/index/0/1
+2023-06-14 10:20:44 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'appendChild')
+    at createHeader (http://admin.livestockl.com/assets/js-v3/common.js:5823:41)
+    at http://admin.livestockl.com/assets/js-v3/common.js:5987:3 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://admin.livestockl.com/Home
+previous: http://admin.livestockl.com/POS/index/0/1
+2023-06-15 02:14:08 Script Error, Message: 2: TypeError: layoutFunctions[segment2] is not a function
+    at HTMLDocument.<anonymous> (http://admin.livestockl.com/assets/js-v3/Manage_Data.js:3385:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://admin.livestockl.com/Manage_Data/groups
+previous: http://admin.livestockl.com/Manage_Data/category
+2023-06-15 02:14:14 Script Error, Message: 2: TypeError: layoutFunctions[segment2] is not a function
+    at HTMLDocument.<anonymous> (http://admin.livestockl.com/assets/js-v3/Manage_Data.js:3385:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://admin.livestockl.com/Manage_Data/groups
+previous: http://admin.livestockl.com/Manage_Data/category
+2023-06-15 02:14:48 Script Error, Message: 2: ReferenceError: resetForm_groups is not defined
+    at Object.groups (http://admin.livestockl.com/assets/js-v3/Manage_Data.js:913:85)
+    at HTMLDocument.<anonymous> (http://admin.livestockl.com/assets/js-v3/Manage_Data.js:3385:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://admin.livestockl.com/Manage_Data/groups
+previous: http://admin.livestockl.com/Manage_Data/category
+2023-06-15 02:14:51 Script Error, Message: 2: ReferenceError: resetForm_groups is not defined
+    at Object.groups (http://admin.livestockl.com/assets/js-v3/Manage_Data.js:913:85)
+    at HTMLDocument.<anonymous> (http://admin.livestockl.com/assets/js-v3/Manage_Data.js:3385:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://admin.livestockl.com/Manage_Data/groups
+previous: http://admin.livestockl.com/Manage_Data/category
+2023-06-15 02:24:15 Script Error, Message: 2: TypeError: Cannot read properties of undefined (reading 'user_id')
+    at afterFetch (http://admin.livestockl.com/assets/js-v3/common.js:622:61)
+    at fetchData (http://admin.livestockl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://admin.livestockl.com/Manage_Data/lsgroups
+previous: http://admin.livestockl.com/Manage_Data/category
+2023-06-15 02:24:19 Script Error, Message: 2: TypeError: Cannot read properties of undefined (reading 'user_id')
+    at afterFetch (http://admin.livestockl.com/assets/js-v3/common.js:622:61)
+    at fetchData (http://admin.livestockl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://admin.livestockl.com/Manage_Data/lsgroups
+previous: http://admin.livestockl.com/Manage_Data/category
+2023-06-15 07:00:07 Script Error, Message: 2: TypeError: Cannot read properties of undefined (reading 'user_id')
+    at afterFetch (http://admin.livestockl.com/assets/js-v3/common.js:622:61)
+    at fetchData (http://admin.livestockl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://admin.livestockl.com/Manage_Data/lsbcscore
+previous: http://admin.livestockl.com/Manage_Data/lsclassification

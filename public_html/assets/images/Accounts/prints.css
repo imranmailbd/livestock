@@ -1,0 +1,33 @@
+body{ font-family:Arial, sans-serif, Helvetica; width:100%; margin:0; padding:15px 0px;background:#fff;color:#000;line-height:18px; font-size: 12px;}
+h1{font-size:25px; height:30px; margin:0px !important; padding:0px !important;color:blue;}
+
+h2{font-size:20px; margin:0px !important;}
+.fs13{font-size:13px;}
+.fs15{font-size:15px;}
+.fs22{font-size:22px;}
+.fs30{font-size:30px;}
+.margin0{margin:0;}
+.mtopbot10{margin-top:10px !important;margin-bottom:10px !important;}
+.p15{padding:15px !important;}
+.ptop15{padding-top:15px !important;}
+.pbot15{padding-bottom:15px !important;}
+.h4, h4 {font-size: 18px;margin-bottom: 10px;margin-top: 10px; font-weight:500;}
+table{border-collapse:collapse;}
+.bordertop{border-top:1px solid #000}
+.borderbot{border-bottom:1px solid #000}
+.border th{background-color:rgba(0, 0, 0, 0.05); text-align:center;}
+.border td, .border th{ border:1px solid #000; padding:8px 10px; vertical-align: center;}
+.lightborder td{ border:1px solid #ccc; padding:8px 10px; vertical-align: center;}
+td.vatop, th.vatop{vertical-align:top !important;}
+td.vabottom, th.vabottom{vertical-align:bottom !important;}
+th.ptopbot0, td.ptopbot0{padding:0px 10px !important;}
+th.ptopbot10x5, td.ptopbot10x5{padding:10px 5px !important;}
+.h200{height:200px;}
+.h100{height:100px;}
+.h50{height:150px;}
+.h35{height:35px;}
+.txtc{text-align:center !important;}
+.printpagebreak {min-height:800px;background:url(../images/printOpacity1.png) repeat-y center top; width:96%; margin:15px auto; display:block;}
+@media print {
+	.printpagebreak {page-break-before: always;}
+}

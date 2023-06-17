@@ -1,0 +1,1449 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: AvenirLTStd-Black;
+    src: url(../fonts/AvenirLTStd-Black.ttf)
+}
+
+@font-face {
+    font-family: AvenirLTStd-Book;
+    src: url(../fonts/AvenirLTStd-Book.ttf)
+}
+
+@font-face {
+    font-family: AvenirLTStd-Roman;
+    src: url(../fonts/AvenirLTStd-Roman.ttf)
+}
+
+@font-face {
+    font-family: 'FontAwesome';
+    src:url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'),
+        url('../fonts/fa-solid-900.woff2?v=4.7.0') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+  
+html, body {
+    height: 100%;
+    overflow: inherit;
+}
+  
+body {
+    min-width: 100%;
+    width: fit-content;
+    background: #f4f4f4;
+    font-size: 1rem;
+    color: #313131;
+    text-align: center;
+    line-height: 1.42857143;
+    font-family: Arial, sans-serif, Helvetica, Montserrat;
+}
+
+/* Navigation menu start here */
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.667rem 5%;
+}
+
+/* set width of logo as the minimum of 200px & 50vw */
+.logoImg {
+	width: min(40vw, 200px);
+}
+
+.nav-link {
+    padding: 0.5rem 1rem;
+    font-size: 0.933rem;
+    color: #4e4e4e;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'AvenirLTStd-Book';
+    margin: 0.533rem 0.4rem;
+    letter-spacing: 1px;
+}
+
+.nav-link:hover, .nav-link.active{
+	background: #0196db;
+    border-radius: 1.333rem;
+	color: #fff;
+	transition: transform 0.5s;
+    width: 100%;
+    text-align: center;
+}
+
+.navbar-links ul {
+    display: flex;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.toggle-button {
+    position: absolute;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2rem;
+    height: 1.4rem;
+    top: 1.333rem;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #000;
+    border-radius: 0.667rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    transition: color .15s;
+    cursor: pointer;
+}
+
+.freeTrailBtn {
+    color: #4e4e4e;
+    border: 1px solid #0196db;
+    border-radius: 3.333rem;
+    width: 12.667rem;
+    padding: 0.667rem 0;
+    font-family: 'AvenirLTStd-Book';
+    font-size: 0.933rem;
+    font-weight: 600;
+}
+
+.freeTrailBtn:hover {
+    color: #f4f4f4;
+    background-color: #0196db;
+    border-color: #0196db;
+}
+
+.flexSpaBetRow {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexSpaBetRow {
+    justify-content: space-between;
+}
+
+.columnLG2, .columnLG3, .columnLG4, .columnLG6, .columnLG7, .columnLG8,
+.columnMD3, .columnMD4, .columnMD5, .columnMD6, .columnMD7, .columnMD9, .columnMD12 {
+    padding: 0 0.333rem;
+    box-sizing: border-box;
+    margin: 0.333rem 0;
+    width: 100%;
+}
+
+/* Banner Section Section */
+.blueBG {
+    background: url(../img/blueBG.png) repeat-x top center; 
+    display: block;
+}
+
+.mainCaption {
+    display: block;
+    padding-top:2rem;
+    /* margin-top: 1.667rem; */
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainCaption h1{
+    font-family: 'AvenirLTStd-Black';
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+h2{
+    font-family: 'AvenirLTStd-Book';
+    font-size: 2rem;
+    margin-bottom: 0.533rem;
+}
+
+.mainCaption p {
+    font-family: 'AvenirLTStd-Roman';
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #c9c9c9;
+}
+
+.mainCaption h6 {
+    font-family: 'AvenirLTStd-Roman';
+    font-size: 1.133rem;
+    color: #d5dde5;
+}
+
+.tryFreeBtn {
+    color: #e9f5fb;
+    background-color: #0196db;
+    border: 1px solid #0196db;
+    border-radius: 3.333rem;
+    width: 17rem;
+    padding: 1.4rem 0;
+    font-family: 'AvenirLTStd-Book';
+    font-size: 0.933rem;
+    margin-bottom: 0.667rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.tryFreeBtn:hover {
+    background-color: #fff;
+    color: #0196db;
+}
+
+/* Buy Sell Repair Section */
+.buySellRepairContainer, .allDevices {
+    padding: 2.667rem 8rem;
+    background-color: #fff;
+}
+
+.buySellRepairContainer img {
+    width: 100%;
+    padding: 0 3.333rem;
+    margin-bottom: 1rem;
+}
+
+.buySellRepairContainer h3, .allDevices h3, .aboutUs h3, .phoneShopSection h3, .existingPosSection h3, .ownersSection h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1.333rem;
+    font-family: 'AvenirLTStd-Black';
+}
+
+.buySellRepairContainer span, .oneSoftwareContainer span, .allDevices span, .deserveSection span, .phoneShopSection span, .repairShopSection span, .posHardwareSection span {
+    color: #0196db;
+}
+
+.buySellRepairContainer p, .existingPosSection p, .ownersSection p {
+    padding: 0 5.8rem;
+    font-size: 1.6rem;
+    margin-bottom: 1.333rem;
+    font-family: 'AvenirLTStd-Roman';
+}
+
+.buySellRepairContainer ul, .existingPosSection ul {
+    margin-bottom: 2rem;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.buySellRepairContainer ul li, .existingPosSection ul li {
+    list-style: none;
+    padding-bottom: 6px;
+    color: #9e9e9e;
+    font-size: 1.4rem;
+}
+
+/* Existing Pos Section */
+.existingPosSection, .ownersSection {
+    padding: 2.667rem 8rem;
+    background-color: #f1f1f1;
+}
+
+.existingPosSection ul {
+    padding: 0 6rem;
+}
+
+/* ONE software Section */
+.oneSoftwareSection {
+    background-color: #f6f9fc;
+    padding: 2.667rem 5rem;
+}
+
+.oneSoftwareContainer, .existingPosContainer {
+    padding: 1.667rem 3rem;
+}
+
+.oneSoftwareContainer p {
+    font-size: 1.6rem;
+    margin-bottom: 0.667rem;
+    font-family: 'AvenirLTStd-Roman';
+    color: #6c757d;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.cardBody {
+    padding: 1rem .667rem;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    box-shadow: 0 0 0.267rem 0.067rem rgba(201,240,245,1);
+    height: 100%;
+}
+
+.cardBody h4 {
+    font-family: 'AvenirLTStd-Book';
+    font-size: 1.4rem;
+    margin-bottom: 0.25rem;
+}
+
+.cardBody h5 {
+    font-family: 'AvenirLTStd-Book';
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+.cardBody ul {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.cardBody ul li {
+    list-style: none;
+    margin-bottom: 0.333rem;
+    color: #9e9e9e;
+    font-family: 'AvenirLTStd-Roman';
+    margin-left: 10px;
+}
+
+/* owners section */
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    text-align: center;
+    padding: 10px;
+    width: 33%;
+}
+
+th b {
+    font-size: 1.6rem;
+    color: #0196db;
+}
+
+/* Testimonial Slider Section CSS */
+.dark-bg {
+    padding: 1.5rem 4rem;
+    background: linear-gradient(90deg, rgba(3,9,14,1) 0%, rgba(14,31,47,1) 34%, rgba(36,75,113,1) 100%);
+}
+
+.testimonial-img{
+    position: absolute;
+    left: 16%;
+}
+
+.reviewContainer p {
+    font-family: 'AvenirLTStd-Roman';
+    font-size: 1.467rem;
+    margin-top: 0;
+    margin-bottom: 0.667rem;
+}
+
+.reviewContainer h5 {
+    font-family: 'AvenirLTStd-Black';
+    font-size: 1.333rem;
+}
+
+.reviewContainer h6 {
+    font-family: 'AvenirLTStd-Book';
+    font-size: 1.133rem;
+    margin-bottom: 6px;
+}
+
+.testinomalSection {
+    color: #fff;
+}
+
+.testinomalContainer {
+    position: relative;
+    max-width: 1020px;
+    padding: 2.667rem 1.333rem;
+    margin: auto;
+}
+
+.testinomalSection .arrow{
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    font-size: 3em;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .3s ease-in-out;
+    padding: 0.333rem;
+}
+
+.testinomalSection i {
+    color: #cbc6c6;
+    font-size: 2rem;
+}
+
+.arrow.previousArrow {
+    left: 0;
+    cursor: pointer;
+}
+
+.arrow.nextArrow {
+    right: 0.667rem;
+    cursor: pointer;
+}
+
+.testinomalSection i:hover{
+    color: #0196db;
+}
+
+.testinomalSection .dots {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 4rem;
+    left: 0;
+    display: block;
+    z-index: 3333;
+    height: 0.8rem;
+}
+
+.testinomalSection .dots .dot {
+    list-style-type: none;
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    margin: 0 0.667rem;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    position: relative;
+}
+
+.testinomalSection .dots .dot.active,
+.testinomalSection .dots .dot:hover{
+    background: #0196db;
+    border-color: #03adfc;
+}
+
+.testinomalSection .dots .dot.active{
+    animation: testinomalSection-scale .5s ease-in-out forwards;
+}
+
+.testinomalSection .reviewContainer{
+    position: relative;
+    overflow: hidden;
+    min-height: 330px;
+}
+
+.testinomalSection .reviewContainer > div{
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 0 4.667rem 0;
+    opacity: 0;
+}
+
+.testinomalSection .reviewContainer > div.active{
+    position: relative;
+    opacity: 1;
+}
+
+.testinomalSection .reviewContainer div.active p {
+    animation: testinomalSection-content-in .5s ease-in-out forwards;
+}
+
+.testinomalSection .reviewContainer div.inactive p {
+    animation: testinomalSection-content-out .5s ease-in-out forwards;
+}
+
+@keyframes testinomalSection-scale {
+    0% {
+        box-shadow: 0px 0px 0px 0px #eee;
+    }
+    35% {
+        box-shadow: 0px 0px 10px 5px #eee;
+    }
+    70% {
+        box-shadow: 0px 0px 10px 5px #0196db;
+    }
+    100% {
+        box-shadow: 0px 0px 0px 0px #03a9f7;
+    }
+}
+
+@keyframes testinomalSection-content-in {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes testinomalSection-content-out {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes testinomalSection-show {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes testinomalSection-hide {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+/* Works with All Standard Devices Section */
+.allDevices p {
+    padding: 0 5.8rem;
+    font-size: 1.133rem;
+    margin-bottom: 1.333rem;
+    font-family: 'AvenirLTStd-Roman';
+}
+
+/* Deserve more Section Start here */
+.deserveSection {
+    background-color: #f6f9fc; 
+    padding: 2rem 8rem;
+}
+
+.deserveSection p {
+    padding: 0 11rem;
+    font-size: 1.133rem;
+    margin-bottom: 0.667rem;
+    font-family: 'AvenirLTStd-Roman';
+    color: #6c757d;
+}
+
+/* Ready to Grow start here */
+.readyToGrowSection {
+    position: relative;
+    background-color: #f9f9f9;
+}
+
+.readyToGrowSection img {
+    width: 100%;
+    padding: 3.333rem 0;
+    overflow: hidden;
+}
+
+.readyToGrowSection h3 {
+    font-size: 2.2rem;
+    margin-bottom: 2.667rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    font-family: 'AvenirLTStd-Black';
+}
+
+.freeTrail {
+    color: #0196db;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+    border-radius: 3.333rem;
+    width: 15.467rem;
+    padding: 0.933rem 0;
+    font-family: 'AvenirLTStd-Book';
+    font-size: 0.933rem;
+    font-weight: 600;
+    margin-bottom: 0.667rem;
+    letter-spacing: 0.5px;
+}
+
+.freeTrail:hover {
+    color: #fff;
+    background-color: #0196db;
+    border-color: #0196db;
+}
+
+/* Footer Section start here */
+footer {
+    background-color: #f6f9fc;
+    padding: 0 3.8rem;
+    margin-bottom: 2rem;
+}
+
+footer ul li {
+    list-style: none;
+    margin: 0.333rem 0;
+    padding: 2px 0;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #a2a2a2;
+    font-size: 1.067rem;
+    font-family: 'AvenirLTStd-Roman';
+}
+
+footer ul li a:hover {
+    transition: all 0.4s ease-in-out;
+    color: #0196db;
+    font-weight: 800;
+    font-size: 1.133rem;
+}
+
+footer h4 {
+    margin-bottom: 2rem;
+    font-size: 1.667rem;
+    font-weight: 700;
+    font-family: 'AvenirLTStd-Book';
+}
+footer p, footer p a{
+    color: #a2a2a2;
+    font-family: 'AvenirLTStd-Roman';
+}
+footer p {
+    margin-bottom: 0.667rem;
+}
+
+.contactUsFlex {
+    display: flex;
+    margin-bottom: 0.5rem;
+    gap: 6px;
+}
+
+/* Font Awesome */
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    color: #0196db;
+    margin-right: 0.8rem;
+}
+
+.fa-refresh:before {
+    content: "\f021";
+}
+.fa-check:before {
+    content: "\f00c";
+}
+
+.fa-chevron-left:before {
+    content: "\f053";
+}
+  
+.fa-chevron-right:before {
+    content: "\f054";
+}
+
+.fa-map-marker:before {
+    content:"\f041";
+}
+
+.fa-phone:before {
+    content:"\f095";
+}
+
+.fa-envelope:before {
+    content:"\f0e0";
+}
+
+.fa-plus:before {
+    content: "\f067";
+}
+
+.fa-star:before {
+    content: "\f005";
+}
+
+/* Key Features Section start here */
+.dark-bg p {
+    margin-bottom: 1.333rem;
+    color: #c9c9c9;
+    font-family: 'AvenirLTStd-Roman';
+}
+
+.allFeatures, .aboutUs, .contactUs, .pricingSection, .phoneShopSection, .repairShopSection, .posHardwareSection, .termsSection {
+    padding: 2.667rem 8rem;
+}
+
+.allFeatures img {
+    width: 100%;
+    border-radius: 0.667rem;
+    filter: brightness(1.1);
+}
+
+.allFeatures p {
+    text-align: left; 
+    color: #a2a2a2;
+}
+
+h2 span {
+    color: #0196db;
+}
+
+.allFeatures ul {
+    text-align: left; 
+    padding-top: 1.333rem;
+}
+
+.allFeatures ul li {
+    color: #a2a2a2;
+    list-style: none;
+    padding-bottom: 6px;
+}
+
+.allFeatures ul li i {
+    color: #64d37d;
+}
+
+.aboutUs h1 {
+    font-family: 'AvenirLTStd-Book';
+    font-size: 2.533rem;
+    margin-bottom: 2.333rem;
+    text-align: left;
+}
+
+.aboutUs p {
+    text-align: left; 
+    color: #6c757d;
+    letter-spacing: 1px;
+    line-height: 1.7;
+}
+
+.titleDiv {
+    padding: 1.667rem 5.333rem;
+}
+
+.titleDiv p {
+    color: #6c757d;
+    letter-spacing: 1px;
+    line-height: 1.7;
+    padding: 0 11rem;
+    font-size: 1.133rem;
+    margin-bottom: 0.667rem;
+    font-family: 'AvenirLTStd-Roman';
+    text-align: center;
+}
+
+.aboutUsFlex {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+/* Contact Us Section start here */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+}
+
+.contactUs h3 {
+    font-size: 1.667rem;
+    font-weight: 700;
+    font-family: 'AvenirLTStd-Book';
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.contact-fa {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #eeeded;
+    border-radius: 50%;
+    border: 1px solid #0196db;
+    line-height: 2.667rem;
+    box-shadow: 0 0 1px 1px #0000002e;
+    font-size: 1.6rem;
+}
+
+.contactUs a {
+    color: #343a40;
+    font-size: 1.067rem;
+}
+
+.contactUs a:hover {
+    color: #0196db;
+    text-decoration: underline;
+}
+
+/* Pricing Section start here */
+.border {
+    border: 1px solid #0196db;
+    box-shadow: 0px 0px 4px 1px rgb(182, 231, 238);
+}
+
+.pricingSection h1 {
+    font-family: 'AvenirLTStd-Black';
+    font-size: 7em;
+    margin-bottom: 1.667rem;
+}
+
+.pricingSection sup {
+    top: -1.5em;
+    font-size: 2.6rem;
+}
+
+.pricingSection h4 {
+    font-family: 'AvenirLTStd-Book';
+    font-size: 1.333rem;
+    margin-bottom: 1.667rem;
+    font-weight: 600;
+    color: #929292;
+}
+
+.detailPrice {
+    padding: 3rem 0 0 0;
+}
+
+.detailPrice ul li {
+    font-size: 1.333rem;
+    color: #000;
+    margin-bottom: 0.667rem;
+    font-family: 'AvenirLTStd-Roman';
+}
+
+.detailPrice h6 {
+    font-family: 'AvenirLTStd-Roman';
+    font-size: 1.2rem;
+    color: #a2a2a2;
+    margin-left: 1.5rem;
+}
+
+.detailPrice h3 {
+    font-family: 'AvenirLTStd-Roman';
+    font-size: 1.667rem;
+    margin-bottom: 0.867rem;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+button.accordion {
+    background-color: whitesmoke;
+    border: none;
+    outline: none;
+    text-align: left;
+    padding: 1rem 1.333rem;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+    font-family: 'AvenirLTStd-Book';
+    font-size: 1.667rem;
+}
+  
+button.accordion:after {
+    content: '\f055';
+    font-family: "fontawesome";
+    font-size: 1.467rem;
+    float: right;
+    color: #0196db;
+}
+  
+button.accordion.is-open:after {
+    content: '\f056';
+}
+  
+button.accordion:hover, button.accordion.is-open {
+    background-color: #ddd;
+}
+  
+.accordion-content {
+    background-color: white;
+    border-left: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
+    padding: 0 1.333rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+}
+
+.accordion-content p {
+    text-align: left;
+    letter-spacing: .5px;
+    font-family: 'AvenirLTStd-Roman';
+    font-size: 1.133rem;
+}
+
+/* Cell phone Store point of Sale start here */
+.phoneShopSection .columnMD12 {
+    text-align: center;
+    padding: 5px 5.333rem;
+}
+
+.phoneShopSection h2, .repairShopSection h2, .termsSection h2 {
+    font-size: 1.667rem;
+    margin-bottom: 0.667rem;
+    margin-top: 2rem;
+    font-family: 'AvenirLTStd-Black';
+}
+
+.phoneShopSection p, .termsSection p {
+    color: #a2a2a2;
+    font-family: 'AvenirLTStd-Roman';
+    margin-bottom: 0.667rem;
+    line-height: 1.5;
+}
+
+.phoneShopSection ul,ol, .repairShopSection ul, .termsSection ul {
+    color: #a2a2a2;
+    padding-left: 2rem;
+    margin-bottom: 0.667rem
+}
+
+.tracking-features li {
+    list-style: none;
+}
+
+.fluid-width-video-wrapper {
+    width: 100%;
+    position: relative;
+    padding: 0;
+    padding-top: 56.25%;
+    margin-top: 1.333rem;
+}
+
+.fluid-width-video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Cell phone Repair start here */
+.repairShopSection h3, .posHardwareSection h3 {
+    font-size: 33px;
+    margin-bottom: 1.333rem;
+    font-family: 'AvenirLTStd-Black';
+}
+
+.repairShopSection p {
+    font-size: 1.133rem;
+    margin-bottom: 1.333rem;
+    font-family: 'AvenirLTStd-Roman';
+    color: #a2a2a2;
+}
+
+blockquote {
+    padding: 0.667rem 1.333rem;
+    margin: 1.333rem 0 1.333rem;
+    font-size: 17.5px;
+    border-left: 5px solid #eee;
+}
+
+.card-header {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.card-header h6 {
+    font-family: 'AvenirLTStd-Book';
+    font-size: 1rem;
+    text-align: left;
+}
+
+.cardBody h6 {
+    font-size: 16px;
+    font-family: 'AvenirLTStd-Book';
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    background-color: #f8f9fa;
+}
+
+.padding1 {
+    padding: 0.5rem;
+    color: #9e9e9e;
+    text-align: left;
+}
+
+.padding1 p {
+    margin-bottom: 0.5rem;
+}
+
+/* articles */
+.mainBlog {
+    padding: 0.667rem 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+article {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    margin: 0;
+    margin-bottom: 1.333rem;
+    border-radius: 5px;
+    box-shadow: 0 0 3px rgb(51 51 51 / 50%);
+    padding: 1.333rem 1.667rem 1.667rem 1.667rem;
+}
+
+.entry-header {
+    margin-bottom: 1em;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+.entry-title a {
+    color: #0095db;
+    font-size: 21px;
+}
+
+.comments-link {
+    color: #d3d3d3;
+    font-size: 13px;
+}
+
+.entry-content p {
+    margin-bottom: 1.6em;
+    font-family: 'Open Sans',Helvetica Neue,sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    color: #313131;
+}
+
+article ol {
+    color: #313131;
+}
+
+figure {
+    margin: 0 0 1em;
+}
+
+p.has-background {
+    padding: 1.25em 2.375em;
+    background-color: #0693e3;
+}
+
+aside h2 {
+    font-size: 1.375rem;
+}
+
+.card-item a {
+    margin-bottom: 0.667rem;
+    border-bottom: 1px solid #e6e6e6;
+    color: #0095db;
+    font-size: 1.133rem;
+}
+
+.tagCloud {
+    margin-top: 0.667rem;
+    display: inline-block;
+}
+
+.tagCloud a {
+    border: 1px solid #e2e2e2;
+    padding: 0.5em 0.9em;
+    display: inline-block;
+    margin-bottom: 8px;
+    font-size: 13px!important;
+    color: #0095db;
+    border-radius: 5px;
+    margin-right: 4px;
+    line-height: 1.5;
+    transition: all .2s linear;
+}
+
+.tagCloud a:hover {
+    color: #fff;
+    border-color: #0095db!important;
+    background-color: #0095db!important;
+}
+
+.ast-pagination {
+    display: inline-block;
+    width: 100%;
+    padding-left: 1em;
+    text-align: left;
+}
+
+.nav-links .current {
+    background-color: #0096db!important;
+    color: #fff!important;
+}
+
+.ast-pagination .page-numbers {
+    display: inline-block;
+    width: 2.33333em;
+    border: 1px solid #c5c5c5;
+    margin-right: -5px;
+    height: 2.33333em;
+    font-size: 16px;
+    font-size: 1.06666rem;
+    line-height: calc(2.33333em - 3px);
+    text-align: center;
+}
+
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px,1px,1px,1px);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal!important;
+}
+
+.ast-pagination .nav-links {
+    display: inline-block;
+    width: 100%;
+}
+
+.ast-pagination .next.page-numbers, .ast-pagination .next.page-numbers:focus, .ast-pagination .next.page-numbers:visited, .ast-pagination .prev.page-numbers, .ast-pagination .prev.page-numbers:focus, .ast-pagination .prev.page-numbers:visited {
+    display: inline-block;
+    width: auto;
+}
+
+.ast-pagination .next.page-numbers, .ast-pagination .prev.page-numbers, .post-navigation a {
+    padding: 0 1.5em;
+    height: 2.33333em;
+    line-height: calc(2.33333em - 3px);
+}
+
+/* responsive nav */
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        z-index: 2;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+        margin: 0.667rem 0;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+/* Small Devices, Tablets */
+@media (max-width : 991px){
+    .bannerSection {
+        position: relative;
+    }
+
+    .mainCaption {
+        top: -6%;
+    }
+
+    .mainCaption h1 {
+        font-family: 'AvenirLTStd-Black';
+        font-size: 1.66rem;
+        margin: 0.667rem 0;
+    }
+
+    h2 {
+        font-family: 'AvenirLTStd-Book';
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 0.4rem;
+    }
+
+    .mainCaption p {
+        display: none;
+    }
+
+    .mainCaption h6 {
+        display: none;
+    }
+
+    .tryFreeBtn {
+        width: 75%;
+        margin-top: 0.667rem;
+        padding: 0.8rem 0;
+        margin-bottom: 0.667rem;
+        font-size: 0.867rem;
+    }
+
+    .buySellRepairContainer, .allFeatures, .aboutUs, .contactUs, .pricingSection, .phoneShopSection, .repairShopSection, .posHardwareSection, .termsSection, .existingPosSection, .ownersSection {
+        padding: 0.667rem 2rem;
+    }
+
+    .buySellRepairContainer img {
+        padding: 0;
+    }
+
+    .buySellRepairContainer h3, .allDevices h3, .existingPosSection h3, .ownersSection h3 {
+        font-size: 1.667rem;
+        margin-bottom: 0.667rem;
+    }
+
+    .buySellRepairContainer p, .existingPosSection p, .ownersSection p {
+        padding: 0;
+        font-size: 1rem;
+        margin-bottom: 0.667rem;
+    }
+
+    .existingPosSection ul {
+        padding: 0 0 0 1rem;
+    }
+
+    .buySellRepairContainer ul li, .existingPosSection ul li {
+        font-size: 15px;
+    }
+
+    .oneSoftwareSection, .existingPosSection {
+        padding: 0;
+    }
+
+    .existingPosContainer {
+        padding: 1rem 2.5rem;
+    }
+
+    .oneSoftwareContainer {
+        padding: 0 1rem;
+    }
+
+    .columnMD6 {
+        width: 50%;
+    }
+
+    .testinomalContainer p {
+        font-size: 0.933rem;
+    }
+    
+    .allDevices { 
+        padding: 1.667rem 0;
+    }
+
+    .allDevices p {
+        padding: 0 0.667rem;
+        font-size: 1rem;
+        margin-bottom: 0.667rem;
+    }
+
+    .deserveSection {
+        padding: 1rem 0;
+    }
+
+    .deserveSection p {
+        padding: 0 1.467rem;
+        font-size: 1rem;
+    }
+
+    .readyToGrowSection h3 {
+        font-size:1rem;
+        margin-bottom: 1rem;
+    }
+
+    .freeTrail {
+        width: 65%;
+        padding: 0.8rem 0;
+        margin-bottom: 0.333rem;
+    }
+
+    footer {
+        padding: 1rem 0;
+        margin-bottom: 0.333rem;
+    }
+
+    footer h4 {
+        margin-bottom: 1.667rem;
+        font-size: 1.333rem;
+    }
+
+    .titleDiv {
+        padding: 1rem 2rem;
+    }
+
+    .titleDiv p {
+        padding: 0;
+    }
+
+    button.accordion {
+        font-size: 1.2rem;
+    }
+
+    .phoneShopSection .columnMD12 {
+        padding: 0.667rem 2rem;
+    }
+
+    .mainBlog {
+        flex-direction: column;
+    }
+
+    .pricingSection h1 {
+        font-size: 4.5em;
+        margin-bottom: 1rem;
+    }
+
+    .detailPrice ul li {
+        font-size: 1rem;
+    }
+
+    .aboutUs h1 {
+        font-size: 1.8rem;
+    }
+
+    .aboutUs h3, .phoneShopSection h3, .repairShopSection h3 {
+        font-size: 1.6rem;
+    }
+
+    .phoneShopSection h2, .repairShopSection h2, .termsSection h2 {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (min-width:300px) {
+    .columnXS12 {
+      width: 100%;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media (min-width : 992px) {
+    .columnMD12 {
+        width: 100%;
+    }
+    
+    .columnMD9 {
+        width: 75%;
+    }
+
+    .columnMD7 {
+        width: 58.33333333%;
+    }
+
+    .columnMD6 {
+        width: 50%;
+    }
+
+    .columnMD5 {
+        width: 41.66666667%;
+    }
+
+    .columnMD4 {
+        width: 33.33333333%;
+    }
+
+    .columnMD3 {
+        width: 25%;
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media (min-width : 1200px) {
+    .columnLG8 {
+        width: 66.66666667%;
+    }
+    
+    .columnLG7 {
+        width: 58.33333333%;
+    }
+
+    .columnLG6 {
+        width: 50%;
+    }
+    
+    .columnLG4 {
+        width: 33.33333333%;
+    }
+
+    .columnLG3 {
+        width: 25%;
+    }
+    
+    .columnLG2 {
+        width: 16.66666667%;
+    }
+}

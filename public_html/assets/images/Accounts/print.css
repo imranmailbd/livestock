@@ -1,0 +1,46 @@
+@charset "utf-8";
+body{ font-family:Arial; width:98%; margin:0; padding:1%;background:#fff;color:#000;line-height:20px; font-size: 12px;}
+@page {size: auto;margin-top: 0;margin-bottom: 0;}
+h2{font-size:22px; height:20px; margin-bottom:0; padding-bottom:0; font-weight:500;}
+.h4, h4 {font-size: 18px;margin-bottom: 10px;margin-top: 10px; font-weight:500;}
+address {font-style: normal;line-height: 1.42857;margin-bottom: 20px;}
+a{text-decoration:none;}
+a, a:hover, a:active, a:focus {outline:none !important;}
+.pright15{padding-right:15px;}
+.pbottom10{padding-bottom:10px;}
+.ptopbottom20{padding-top:20px !important;padding-bottom:20px !important;}
+
+.mtop10{ margin-top:10px !important;}
+.mbottom0{ margin-bottom:0px;}
+.mleft10{ margin-left:10px;}
+
+table{border-collapse:collapse; width:100%;}
+.table-bordered th{background:#F5F5F6;}
+.table-bordered td, .table-bordered th, .bordered{ border:1px solid #000; padding:8px 10px;}
+.table-bordered td.bgnone, .table-bordered th.bgnone {background-color:#FFF !important;border:0px solid #fff;}
+
+.width15{ width:15%; float:left;}
+.width25{ width:25%; float:left;}
+.width30{ width:30%; float:left;}
+.width35{ width:35%; float:left;}
+.width40{ width:40%; float:left;}
+.width45{ width:45%; float:left;}
+.width50{ width:50%; float:left;}
+.width85{ width:85%; float:left;}
+.width98{ width:98%; float:left;}
+.width100{ width:100%; float:left;}
+
+.txtnormal{font-weight:normal !important;}
+.txt14bold{font-size:14px !important; font-weight:bold !important; line-height:22px;}
+.txt16normal{font-size:16px !important; font-weight:normal !important; line-height:22px;}
+.txt18bold{font-size:18px !important; font-weight:bold !important; text-transform:capitalize;}
+.txt20bold{font-size:20px !important; font-weight:bold !important; text-transform:capitalize;}
+.txtleft{ text-align:left !important;}
+.txtcenter{ text-align:center !important;}
+.txtright{ text-align:right !important;}
+
+.hilightbutton2{background:#a71d4c; border:1px solid #a71d4c; color:#fff; border-radius:4px; padding:4px 10px;}
+.floatleft{ float:left;}
+.floatright{ float:right;}
+.bordertop{ border-top:1px solid #dddddd;}
+
