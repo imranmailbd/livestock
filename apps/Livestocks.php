@@ -58,18 +58,7 @@ class Livestocks{
 		if($sdata_type=='Archived'){
 			$sqlPublish = " AND p.product_publish = 0";
 		}
-		$strextra ="SELECT p.product_id AS product_id, p.category_id, p.manufacturer_id, i.current_inventory AS current_inventory, manufacturer.name AS manufacture$addiselect FROM inventory i, product p LEFT JOIN manufacturer ON (p.manufacturer_id = manufacturer.manufacturer_id) 
-					WHERE i.accounts_id = $accounts_id AND p.product_type != 'Live Stocks' $sqlPublish $filterSql";
-		if($sdata_type=='Available'){
-			$strextra .= " AND ((p.manage_inventory_count = 0 OR p.manage_inventory_count is null) OR (p.manage_inventory_count=1 AND i.current_inventory>0) OR p.allow_backorder = 1)";
-		}
-		elseif($sdata_type=='Low Stock'){
-			$strextra .= " AND (p.manage_inventory_count>0 AND i.current_inventory < i.low_inventory_alert)";
-		}
-		
-		$strextra .= " AND i.product_id = p.product_id GROUP BY p.product_id 
-						 UNION 
-						 SELECT p.product_id AS product_id, p.category_id, p.manufacturer_id, count(item.item_id) as current_inventory, manufacturer.name AS manufacture$addiselect";
+		$strextra ="SELECT p.product_id AS product_id, p.category_id, p.manufacturer_id, i.current_inventory as current_inventory, manufacturer.name AS manufacture$addiselect";
 		if($sdata_type =='All'){
 			$strextra .= " FROM inventory i, product p LEFT JOIN manufacturer ON (p.manufacturer_id = manufacturer.manufacturer_id) LEFT JOIN item ON (item.accounts_id = $accounts_id AND item.product_id = p.product_id AND item.in_inventory = 1)";
 		}
@@ -1099,7 +1088,7 @@ class Livestocks{
 						}
 					}	
 				}
-				
+
 				$queryItemObj = $this->db->querypagination("SELECT item_id FROM item WHERE accounts_id = $accounts_id AND product_id = $product_id", array());
 				if($queryItemObj){
 					$item_id = $queryItemObj[0]['item_id'];					

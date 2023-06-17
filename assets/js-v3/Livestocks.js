@@ -2139,7 +2139,6 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 				document.getElementById("manufacturer_id").value = data.manufacturer_id;
 				document.getElementById("colour_name").value = data.colour_name;
 				document.getElementById("physical_condition_name").value = data.physical_condition_name;
-				document.getElementById("ave_cost_is_percent").value = data.ave_cost_is_percent;
 				
 				if(data.customFieldsData.length>0 && document.getElementsByClassName("DateField").length>0){					
 					date_picker('.DateField');
@@ -2178,35 +2177,12 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 	return true;
 }
 
-function adjustAveCostFieldAttributs(){
-	let is_percent = parseInt(document.getElementById('ave_cost_is_percent').value);
-    let ave_cost = document.getElementById('ave_cost');
-
-	if(is_percent===1){
-        ave_cost.setAttribute('data-max','99.99');        
-
-	}
-    else{
-        ave_cost.setAttribute('data-max','9999999.99');
-    }
-}
-
 async function AJsave_Livestocks(hidePopup,addCartCBF){
 	let oField, oElement, labelStr;
 	oField = document.getElementById('product_type');
-	oElement = document.getElementById('errmsg_product_type');
 	let errmsg_sku = document.getElementById('errmsg_sku');
-	let errmsg_minimum_price = document.getElementById('errmsg_minimum_price');
+	oElement = document.getElementById('errmsg_minimum_price');
 	oElement.innerHTML = "";
-	errmsg_sku.innerHTML = "";
-	errmsg_minimum_price.innerHTML = "";
-
-	if(oField.value === ""){
-		oElement.innerHTML = Translate('Missing product type');
-		document.querySelector("#tabs").activateTab(0);
-		oField.focus();
-		return(false);
-	}
 			
 	oField = document.querySelector('#frmproduct #product_name');
 	oElement = document.getElementById('errmsg_product_name');
@@ -2222,9 +2198,6 @@ async function AJsave_Livestocks(hidePopup,addCartCBF){
         oField.classList.remove('errorFieldBorder');
     }
 
-	let ave_cost = document.getElementById('ave_cost');
-    if(!ave_cost.valid()) return;
-	
 	let regular_price = document.getElementById('regular_price');
     if(!regular_price.valid()) return;
 
@@ -2262,8 +2235,8 @@ async function AJsave_Livestocks(hidePopup,addCartCBF){
 		else{
             if(data.savemsg==='Name_Already_Exist') document.getElementById("errmsg_product_name").innerHTML = Translate('This product name with the manufacturer already exists! Please try again with a different product name.');
             else if(data.savemsg==='Name_ExistInArchive') document.getElementById("errmsg_product_name").innerHTML = Translate('This product name with the manufacturer already exists <b>IN ARCHIVED</b>! Please try again with a different product name.');
-            else if(data.savemsg==='SKU_Already_Exist') document.getElementById("errmsg_sku").innerHTML = Translate('This SKU already exists! Please try again with a different SKU.');
-            else if(data.savemsg==='SKU_ExistInArchive') document.getElementById("errmsg_sku").innerHTML = Translate('This SKU already exists <b>IN ARCHIVED</b>! Please try again with a different SKU.');
+            else if(data.savemsg==='SKU_Already_Exist') errmsg_sku.innerHTML = Translate('This SKU already exists! Please try again with a different SKU.');
+            else if(data.savemsg==='SKU_ExistInArchive') errmsg_sku.innerHTML = Translate('This SKU already exists <b>IN ARCHIVED</b>! Please try again with a different SKU.');
             else if(data.savemsg==='error-adding-product') showTopMessage('error_msg', Translate('Error occured while adding new product! Please try again.'));
 			document.querySelector("#tabs").activateTab(0);
 
@@ -2304,12 +2277,6 @@ function checkManageInventory(){
 				oneFieldObj.style.display = '';
 			}
 		});
-        
-		if(document.getElementById("ave_costrow").style.display !== 'none'){
-			document.getElementById("ave_costrow").style.display = 'none';
-		}
-        
-        document.getElementById("ave_cost").value = document.getElementById("prev_ave_cost").value;
     }
 	else{
 		document.querySelectorAll(".manage_inventory").forEach(oneFieldObj=>{
@@ -2318,9 +2285,6 @@ function checkManageInventory(){
 			}
 		});
 		document.getElementById("low_inventory_alert").value = 0;
-		if(document.getElementById("ave_costrow").style.display === 'none'){
-			document.getElementById("ave_costrow").style.display = '';
-		}
 	}
 }
 

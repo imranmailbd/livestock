@@ -390,12 +390,7 @@ class Template{
 				</td>
 			</tr>
 			</table>
-		</div>";
-
-		$htmlStr .= "
-				<script src=\"/assets/js-".swVersion."/carts1.js\"></script>";
-
-		$htmlStr .= "
+		</div>
 		</body>
 		</html>";
 		return $htmlStr;

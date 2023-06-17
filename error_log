@@ -28,3 +28,45 @@ previous: http://livestock.skitsbdl.com/Livestocks/lists
 2023-06-17 06:53:14 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
     at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2142:58 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
 previous: http://livestock.skitsbdl.com/Livestocks/lists
+2023-06-17 07:21:00 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2142:58 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists
+2023-06-17 07:21:11 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at AJsave_Livestocks (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2200:21)
+    at Object.click (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2123:80)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists
+2023-06-17 07:21:12 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at AJsave_Livestocks (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2200:21)
+    at Object.click (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2123:80)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists
+2023-06-17 07:22:07 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'style')
+    at checkManageInventory (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2294:44)
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2147:5 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists
+2023-06-17 07:22:17 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at AJsave_Livestocks (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2186:21)
+    at Object.click (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2123:80)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists
+2023-06-17 07:22:34 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'style')
+    at HTMLInputElement.checkManageInventory (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2294:44) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists
+2023-06-17 07:22:35 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'style')
+    at HTMLInputElement.checkManageInventory (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2294:44) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists
+2023-06-17 07:23:19 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'value')
+    at checkManageInventory (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2294:93)
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2147:5 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists
+2023-06-17 07:25:20 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at AJsave_Livestocks (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2186:21)
+    at Object.click (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2123:80)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists
+2023-06-17 07:30:28 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'valid')
+    at AJsave_Livestocks (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2202:18)
+    at Object.click (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2123:80)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists
