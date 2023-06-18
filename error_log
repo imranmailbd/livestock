@@ -70,3 +70,248 @@ previous: http://livestock.skitsbdl.com/Livestocks/lists
     at Object.click (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2123:80)
     at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
 previous: http://livestock.skitsbdl.com/Livestocks/lists
+2023-06-18 05:17:26 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:17:28 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:17:30 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:17:32 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:17:34 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:17:40 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:17:51 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:17:53 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:17:55 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:17:57 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:17:59 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:30:20 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:30:22 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:30:24 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:30:26 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:30:28 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:41:36 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:41:38 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:41:40 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:41:42 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:41:44 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:42:29 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:42:31 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:42:33 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:42:35 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:42:37 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:43:31 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:43:33 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:43:35 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:43:38 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:43:40 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:45:10 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:45:12 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:45:14 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:45:16 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:45:18 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:49:36 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:49:38 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:49:40 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:49:42 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:49:45 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:51:40 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:51:42 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:51:44 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:51:46 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:51:48 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:52:51 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1129: Undefined variable $itemdata, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-18 05:52:51 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:52:53 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1129: Undefined variable $itemdata, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-18 05:52:53 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:52:55 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1129: Undefined variable $itemdata, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-18 05:52:55 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:52:57 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1129: Undefined variable $itemdata, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-18 05:52:57 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:52:59 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1129: Undefined variable $itemdata, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-18 05:52:59 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:55:26 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:55:28 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:55:30 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:55:32 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:55:34 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:55:45 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:55:47 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:55:49 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:55:51 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:55:54 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:56:30 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:56:32 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:56:34 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:56:37 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:56:40 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:56:55 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:56:57 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:57:00 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:57:03 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 05:57:06 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-18 06:10:08 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:10:10 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:10:12 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:10:14 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:10:16 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:14:22 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:14:24 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:14:26 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:14:28 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:14:30 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:19:04 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:19:06 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:19:08 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:19:10 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:19:13 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:26:48 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:26:50 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:26:52 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:26:54 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:26:56 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:38:10 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:38:12 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:38:15 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:38:17 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:38:19 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:45:21 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:45:23 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:45:25 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:45:27 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:45:29 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:46:46 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:46:48 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:46:50 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:46:52 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:46:54 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:48:36 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:48:38 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:48:40 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:48:42 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:48:44 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:53:46 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:53:48 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:53:50 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:53:52 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:53:54 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:57:59 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:58:01 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:58:03 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:58:05 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 06:58:08 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 07:06:56 Script Error, Message: 2: ReferenceError: Cannot access 'colorNameInGroup' before initialization
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:1871:49)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 07:06:58 Script Error, Message: 2: ReferenceError: Cannot access 'colorNameInGroup' before initialization
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:1871:49)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 07:06:58 Script Error, Message: 2: ReferenceError: Cannot access 'colorNameInGroup' before initialization
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:1871:49)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 07:06:59 Script Error, Message: 2: ReferenceError: Cannot access 'colorNameInGroup' before initialization
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:1871:49)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-18 07:19:33 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 605: Undefined property: stdClass::$tag_color, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]

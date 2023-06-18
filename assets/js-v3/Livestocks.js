@@ -150,6 +150,7 @@ async function  loadTableRows_Livestocks_lists(){
 }
 
 function  lists(){
+   
     let page = parseInt(segment3);
     if(page==='' || isNaN(page)){page = 1;}
 
@@ -328,6 +329,7 @@ async function  loadTableRows_Livestocks_view(){
 }
 
 async function  AJ_view_MoreInfo(){
+    
 	const product_id = document.getElementById("table_idValue").value;
 	const jsonData = {};
 	jsonData['product_id'] = product_id;
@@ -689,7 +691,8 @@ async function  AJ_view_MoreInfo(){
 
         let buttonRow =  document.getElementById("buttonRow");
         buttonRow.innerHTML = '';
-        if(data.product_publish===1){							
+        if(data.product_publish===1){	
+            						
             let buttonRowDiv = cTag('div', {class: "columnSM12", 'align': "left"});
                 let changeButton = cTag('button', {class: "btn editButton", 'style': "margin-right: 15px; margin-bottom: 10px;", id: "picbutton"});
                 changeButton.innerHTML = Translate('Change Picture');
@@ -896,6 +899,7 @@ async function  AJ_view_MoreInfo(){
 }
 
 function view(){
+    
     let product_id = parseInt(segment3);
     if(product_id==='' || isNaN(product_id)){product_id = 0;}    
     
@@ -1777,7 +1781,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                 noPermissionWarning('Livestock');
                 return false;
             }            
-
+            console.log(data);
 			let divCol12, aTag, inputField, requiredField, requireSpan;
 			const formDialog = cTag('div');
             // formDialog.appendChild(cTag('div',{ 'class': 'errormsg','id': 'error_product' }));
@@ -1806,8 +1810,10 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 							ulTabs.appendChild(liTabs3);
 						}
                         divTabs.appendChild(ulTabs);
+                        
                              //======divTabs1 Start======//
                              let divTabs1 = cTag('div',{ 'class': 'columnXS12 flexSpaBetRow','id': 'tabs-1' });
+
                                 let divCol7 = cTag('div',{ 'class': 'columnXS12 columnMD7' });
                                 divCol7.appendChild(cTag('input',{ 'type': 'hidden','readonly': '','name': 'product_type','id': 'product_type','value': 'Live Stocks','class': 'form-control' }));
 
@@ -1845,6 +1851,32 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                         tagField.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_tag' }));
                                     tagRow.appendChild(tagField);
                                 divCol7.appendChild(tagRow);
+
+
+
+                                const tagColorDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
+                                    const tagColorRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                        const tagColorTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                            const tagColorLabel = cTag('label',{ 'for': 'tag_color' });
+											tagColorLabel.innerHTML = Translate('Tag Color');
+                                            tagColorTitle.appendChild(tagColorLabel);
+                                        tagColorRow.appendChild(tagColorTitle);
+                                    tagColorDiv.appendChild(tagColorRow);
+                                        const tagcolorDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+                                            const tagColorInGroup = cTag('div',{ 'class': 'input-group' });
+												let selectTagColor = cTag('select',{ 'class': 'form-control','name': 'tag_color','id': 'tag_color' });
+												selectTagColor.appendChild(cTag('option',{ 'value': '' }));
+												setOptions(selectTagColor, data.tagColOpt, 0, 1);                             
+                                                tagColorInGroup.appendChild(selectTagColor);
+                                                tagColorInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '50','name': 'tag_color2','id': 'tag_color2','class': 'form-control', 'style': 'display:none'}));
+												let tagColorSpan = cTag('span',{ 'data-toggle': 'tooltip','title': Translate('Add New Tag Color Name'),'class': 'input-group-addon cursor showNewInputOrSelect' });
+												tagColorSpan.append(cTag('i',{ 'class': 'fa fa-plus' }), ' ', Translate('New'));
+                                                tagColorInGroup.appendChild(tagColorSpan);
+                                            tagcolorDropDown.appendChild(tagColorInGroup);
+                                        tagColorRow.appendChild(tagcolorDropDown);
+                                    tagColorDiv.appendChild(tagColorRow);
+                                    tagColorDiv.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_tag_color' }));
+							divCol7.appendChild(tagColorDiv);
                                 
                                 //Category Name
 									const categoryRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
@@ -1913,6 +1945,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                 productNameRow.appendChild(productNameField);
 							divCol7.appendChild(productNameRow);
 
+                             //Color
 								const colorDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
                                     const colorRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
                                         const colorTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
@@ -2138,6 +2171,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 				document.getElementById("category_id").value = data.category_id;
 				document.getElementById("manufacturer_id").value = data.manufacturer_id;
 				document.getElementById("colour_name").value = data.colour_name;
+				document.getElementById("tag_color").value = data.tag_color;
 				document.getElementById("physical_condition_name").value = data.physical_condition_name;
 				
 				if(data.customFieldsData.length>0 && document.getElementsByClassName("DateField").length>0){					

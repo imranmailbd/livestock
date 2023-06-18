@@ -270,6 +270,7 @@ class Db{
 		'item.item_number'=>20,
 		'item.carrier_name'=>22,
 		'item.tag'=>50,
+		'item.tag_color'=>50,
 		'manufacturer.name'=>30,
 		'notes.note_for'=>20,
 		'our_invoices.paid_by'=>50,

@@ -564,7 +564,7 @@ class Livestocks{
 
 		$Common = new Common($this->db);
 		
-		$product_type = $colour_name = $storage = $physical_condition_name = $alert_message = '';
+		$product_type = $colour_name = $tag_color = $storage = $physical_condition_name = $alert_message = '';
 		$category_id = $manufacturer_id = $low_inventory_alert = $require_serial_no = $manage_inventory_count = $allow_backorder = $ave_cost_is_percent = 0;
 		$taxable = 1;
 		
@@ -594,6 +594,7 @@ class Livestocks{
 		$custom_data = '';
 		if($product_id>0 && $prod_cat_man>0){
 			$queryObj = $this->db->query("SELECT * FROM product WHERE product_id = :product_id AND accounts_id=$prod_cat_man AND product_publish=1", array('product_id'=>$product_id),1);
+			$itemObj = $this->db->query("SELECT * FROM item WHERE product_id = $product_id AND accounts_id = $prod_cat_man", array());
 			if($queryObj){
 				$productRow = $queryObj->fetch(PDO::FETCH_OBJ);
 				$product_id = $productRow->product_id;
@@ -601,6 +602,7 @@ class Livestocks{
 				$category_id = $productRow->category_id;
 				$manufacturer_id = $productRow->manufacturer_id;
 				$colour_name = stripslashes(trim((string) $productRow->colour_name));
+				
 				$storage = $productRow->storage;
 				$physical_condition_name = stripslashes(trim((string) $productRow->physical_condition_name));
 				$taxable = $productRow->taxable;
@@ -618,6 +620,7 @@ class Livestocks{
 				if($itemObj2){
 					$itemRow = $itemObj2->fetch(PDO::FETCH_OBJ);
 					$productData['tag'] = $itemRow->tag;
+					$productData['tag_color'] = $itemRow->tag_color;
 				}
 				
 				$queryInvObj = $this->db->query("SELECT * FROM inventory WHERE product_id = $product_id AND accounts_id=$accounts_id", array());
@@ -638,6 +641,7 @@ class Livestocks{
 					$productData['current_inventoryReadonly'] = ' readonly';
 				}					
 			}
+			
 		}
 		
 		$productData['product_type'] = $product_type;
@@ -716,6 +720,26 @@ class Livestocks{
 			}
 		}
 		$productData['phyConNamOpt'] = $phyConNamOpt;
+
+
+		$tagColorData = $this->tagColorData();		
+		$sqlTagCol= "SELECT tag_color FROM item WHERE product_id = $product_id AND accounts_id = $accounts_id";
+		$tagColObj = $this->db->query($sqlTagCol, array());
+		if($tagColObj){
+			while($tagColRow = $tagColObj->fetch(PDO::FETCH_OBJ)){
+				if(!empty($tagColRow->tag_color) && !in_array($tagColRow->tag_color, $tagColorData)){
+					$tagColorData[] = stripslashes(trim((string) $tagColRow->tag_color));
+				}
+			}
+		}
+		$colNamOpt = array();
+		if (!empty($tagColorData)){
+			sort($tagColorData);
+			foreach ($tagColorData as $oneOption) {
+				$tagColOpt[] = $oneOption;
+			}
+		}
+		$productData['tagColOpt'] = $tagColOpt;
 		
 		$productData['taxable'] = intval($taxable);				
 		$productData['require_serial_no'] = intval($require_serial_no);		
@@ -745,6 +769,10 @@ class Livestocks{
 		$product_type = $this->db->checkCharLen('product.product_type', $product_type);
 		$category_name = trim((string) $POST['category_name']??'');
 		$category_name = $this->db->checkCharLen('category.category_name', $category_name);
+		$tag_color = trim((string) $POST['tag_color']??'');
+		$tag_color = $this->db->checkCharLen('item.tag_color', $tag_color);
+		$tag_color2 = addslashes(trim((string) $POST['tag_color2']??''));
+		$tag_color2 = $this->db->checkCharLen('item.colour_name', $tag_color2);
 		$manufacturer_id = intval($POST['manufacturer_id']??0);
 		$manufacture = addslashes(trim((string) $POST['manufacture']??''));
 		$manufacture = $this->db->checkCharLen('manufacturer.name', $manufacture);
@@ -827,7 +855,9 @@ class Livestocks{
 				$manufacturer_id = $this->db->insert('manufacturer', $manufacturerData);
 			}
 		}
+
 		if($colour_name == '' && $colour_name2 !=''){$colour_name = $colour_name2;}
+		if($tag_color == '' && $tag_color2 !=''){$tag_color = $tag_color2;}
 		$sku = str_replace(' ', '-', strtoupper($sku));
 		if($sku =='' && $product_id>0){$sku = $product_id;}
 		if($storage==0){$storage = '';}
@@ -840,7 +870,8 @@ class Livestocks{
 		$productdata['manufacturer_id'] = intval($manufacturer_id);
 		$productdata['manufacture'] = '';
 		$productdata['product_name'] = $product_name;
-		$productdata['colour_name'] = $colour_name;
+		$productdata['colour_name'] = $colour_name;		
+		$productdata['tag_color'] = $tag_color;		
 		$productdata['sku'] = $sku;
 		$productdata['require_serial_no'] = $require_serial_no;
 		$productdata['manage_inventory_count'] = intval($manage_inventory_count);
@@ -854,16 +885,19 @@ class Livestocks{
 		$productdata['taxable'] = $taxable;
 		$productdata['custom_data'] = '';
 		
+		
 		$itemdata = array();
-		$itemdata['last_updated'] = date('Y-m-d H:i:s');
+		$itemdata['last_updated'] = $last_updated; //date('Y-m-d H:i:s');
 		$itemdata['accounts_id'] = $accounts_id;
 		$itemdata['user_id'] = $user_id;
 		$itemdata['item_number'] = $tag;
 		$itemdata['tag'] = $tag;
+		$itemdata['tag_color'] = $tag_color;
 		$itemdata['carrier_name'] = '';
 		$itemdata['in_inventory'] = 1;
 		$itemdata['is_pos'] = 0;
 		$itemdata['custom_data'] = '';
+		
 		
 		$inventorydata = array();
 		$inventorydata['accounts_id'] = $accounts_id;
@@ -960,8 +994,12 @@ class Livestocks{
 							}
 						}
 					}
+
+					//#############ITEM Data Save######################
+					
 					$itemdata['created_on'] = date('Y-m-d H:i:s');
 					$itemdata['product_id'] = $product_id;
+					
 					$item_id = $this->db->insert('item', $itemdata);
 					
 
@@ -1091,8 +1129,9 @@ class Livestocks{
 
 				$queryItemObj = $this->db->querypagination("SELECT item_id FROM item WHERE accounts_id = $accounts_id AND product_id = $product_id", array());
 				if($queryItemObj){
+
 					$item_id = $queryItemObj[0]['item_id'];					
-					$update = $this->db->update('inventory', $itemdata, $item_id);
+					$update = $this->db->update('item', $itemdata, $item_id);
 				}
 				else{					
 					$itemdata['created_on'] = date('Y-m-d H:i:s');
@@ -1485,6 +1524,19 @@ class Livestocks{
 			'message'=>$message);
 		return json_encode($array);
     }
+
+	public function tagColorData(){
+		$returnarray =array('Black',
+							'Brown',
+							'Gold',
+							'Gray',
+							'Red',
+							'White',
+							'Other'
+							);
+				
+		return $returnarray;
+	}
 	
 	public function AJget_LivestocksDescPopup(){
 		$POST = json_decode(file_get_contents('php://input'), true);
