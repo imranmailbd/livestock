@@ -1817,7 +1817,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                 let divCol7 = cTag('div',{ 'class': 'columnXS12 columnMD7' });
                                 divCol7.appendChild(cTag('input',{ 'type': 'hidden','readonly': '','name': 'product_type','id': 'product_type','value': 'Live Stocks','class': 'form-control' }));
 
-                                    //sku barcode
+                                    //SKU barcode
                                     const skuRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
                                         const skuTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
                                             const skuLabel = cTag('label',{ 'for': 'sku' });
@@ -1837,6 +1837,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                     skuRow.appendChild(skuField);
                                 divCol7.appendChild(skuRow);
 
+                                    //Tag    
                                     const tagRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
                                         const tagTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
                                             const tagLabel = cTag('label',{ 'for': 'tag','id': 'lbtag' });
@@ -1853,7 +1854,24 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                 divCol7.appendChild(tagRow);
 
 
+                                //Alternate Tag    
+                                const altTagRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                    const altTagTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                        const altTagLabel = cTag('label',{ 'for': 'alt_tag','id': 'alt_tag' });
+                                        altTagLabel.innerHTML = Translate('Alter Tag');
+                                            requireSpan = cTag('span',{ 'class': 'required' });
+                                            requireSpan.innerHTML = '*';
+                                            altTagLabel.appendChild(requireSpan);
+                                        altTagTitle.appendChild(altTagLabel);
+                                    altTagRow.appendChild(altTagTitle);
+                                    const altTagField = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+                                    altTagField.appendChild(cTag('input',{ 'type': 'text','class': 'form-control','name': 'alt_tag','id': 'alt_tag','value': data.alt_tag,'maxlength': '150' }));
+                                    altTagField.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_alt_tag' }));
+                                    altTagRow.appendChild(altTagField);
+                            divCol7.appendChild(altTagRow);
 
+
+                                //Tag Color        
                                 const tagColorDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
                                     const tagColorRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
                                         const tagColorTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
@@ -1876,9 +1894,138 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                         tagColorRow.appendChild(tagcolorDropDown);
                                     tagColorDiv.appendChild(tagColorRow);
                                     tagColorDiv.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_tag_color' }));
-							divCol7.appendChild(tagColorDiv);
+							    divCol7.appendChild(tagColorDiv);
+
+
+                                //Breed
+								const breedRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                    const breedTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                        const breedLabel = cTag('label',{ 'for': 'category_id' });
+                                        breedLabel.innerHTML = Translate('Breed Name');
+                                        breedTitle.appendChild(breedLabel);
+                                    breedRow.appendChild(breedTitle);
+                                    const breedDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+                                        const breedInGroup = cTag('div',{ 'class': 'input-group' });
+                                            let selectBreed = cTag('select',{ 'class': 'form-control','name': 'category_id','id': 'category_id' });
+                                                const breedOpt = cTag('option',{ 'value': '0' });
+                                                breedOpt.innerHTML = '';
+                                                selectBreed.appendChild(breedOpt);
+                                            setOptions(selectBreed, data.breedOpt, 1, 1);                      
+                                            breedInGroup.appendChild(selectBreed);
+                                            breedInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '35','name': 'category_name','id': 'category_name','class': 'form-control',style:'display:none'}));
+                                            let breedSpan = cTag('span', {'data-toggle':'tooltip', 'class':'input-group-addon cursor showNewInputOrSelect', 'title': Translate('Add New Category')});
+                                            breedSpan.append(cTag('i', {'class':'fa fa-plus'}), ' ', Translate('New'));
+                                            breedInGroup.appendChild(breedSpan);
+                                        breedDropDown.appendChild(breedInGroup);
+                                        breedDropDown.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_category_id' }));
+                                    breedRow.appendChild(breedDropDown);
+                                divCol7.appendChild(breedRow);
+
+
+                                    //Location
+									const locationRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                    const locationTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                        const locationLabel = cTag('label',{ 'for': 'location_id' });
+                                        locationLabel.innerHTML = Translate('Location Name');
+                                        locationTitle.appendChild(locationLabel);
+                                    locationRow.appendChild(locationTitle);
+                                    const locationDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+                                        const locationInGroup = cTag('div',{ 'class': 'input-group' });
+                                            let selectLocation = cTag('select',{ 'class': 'form-control','name': 'location_id','id': 'location_id' });
+                                                const locationOpt = cTag('option',{ 'value': '0' });
+                                                locationOpt.innerHTML = '';
+                                                selectLocation.appendChild(locationOpt);
+                                            setOptions(selectLocation, data.locationOpt, 1, 1);                      
+                                            locationInGroup.appendChild(selectLocation);
+                                            locationInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '10','name': 'location_id','id': 'location_id','class': 'form-control',style:'display:none'}));
+                                            let locationSpan = cTag('span', {'data-toggle':'tooltip', 'class':'input-group-addon cursor showNewInputOrSelect', 'title': Translate('Add New Location')});
+                                            locationSpan.append(cTag('i', {'class':'fa fa-plus'}), ' ', Translate('New'));
+                                            locationInGroup.appendChild(locationSpan);
+                                        locationDropDown.appendChild(locationInGroup);
+                                        locationDropDown.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_location_id' }));
+                                    locationRow.appendChild(locationDropDown);
+                                divCol7.appendChild(locationRow);
+
+
+                            //     //Group
+							// 		const groupRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                            //         const groupTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                            //             const groupLabel = cTag('label',{ 'for': 'group_id' });
+                            //             groupLabel.innerHTML = Translate('Group Name');
+                            //             groupTitle.appendChild(groupLabel);
+                            //         groupRow.appendChild(groupTitle);
+                            //         const groupDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+                            //             const groupInGroup = cTag('div',{ 'class': 'input-group' });
+                            //                 let selectGroup = cTag('select',{ 'class': 'form-control','name': 'group_id','id': 'group_id' });
+                            //                     const groupOpt = cTag('option',{ 'value': '0' });
+                            //                     groupOpt.innerHTML = '';
+                            //                     selectGroup.appendChild(groupOpt);
+                            //                 setOptions(selectGroup, data.groupOpt, 1, 1);                      
+                            //                 groupInGroup.appendChild(selectGroup);
+                            //                 groupInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '35','name': 'group_name','id': 'group_name','class': 'form-control',style:'display:none'}));
+                            //                 let groupSpan = cTag('span', {'data-toggle':'tooltip', 'class':'input-group-addon cursor showNewInputOrSelect', 'title': Translate('Add New Category')});
+                            //                 groupSpan.append(cTag('i', {'class':'fa fa-plus'}), ' ', Translate('New'));
+                            //                 groupInGroup.appendChild(groupSpan);
+                            //             groupDropDown.appendChild(groupInGroup);
+                            //             groupDropDown.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_group_id' }));
+                            //         groupRow.appendChild(groupDropDown);
+                            // divCol7.appendChild(groupRow);
+
+                            
+                                //Classification        
+                                const classificationDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
+                                    const classificationRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                        const classificationTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                            const classificationLabel = cTag('label',{ 'for': 'tag_color' });
+                                            classificationLabel.innerHTML = Translate('Tag Color');
+                                            classificationTitle.appendChild(classificationLabel);
+                                            classificationRow.appendChild(classificationTitle);
+                                        classificationDiv.appendChild(classificationRow);
+                                        const classificationDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+                                            const classificationInGroup = cTag('div',{ 'class': 'input-group' });
+                                                let selectClassification = cTag('select',{ 'class': 'form-control','name': 'tag_color','id': 'tag_color' });
+                                                selectClassification.appendChild(cTag('option',{ 'value': '' }));
+                                                setOptions(selectClassification, data.tagColOpt, 0, 1);                             
+                                                classificationInGroup.appendChild(selectClassification);
+                                                classificationInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '50','name': 'tag_color2','id': 'tag_color2','class': 'form-control', 'style': 'display:none'}));
+                                                let classificationSpan = cTag('span',{ 'data-toggle': 'tooltip','title': Translate('Add New Tag Color Name'),'class': 'input-group-addon cursor showNewInputOrSelect' });
+                                                classificationSpan.append(cTag('i',{ 'class': 'fa fa-plus' }), ' ', Translate('New'));
+                                                classificationInGroup.appendChild(classificationSpan);
+                                                classificationDropDown.appendChild(classificationInGroup);
+                                            classificationRow.appendChild(classificationDropDown);
+                                        classificationDiv.appendChild(classificationRow);
+                                        classificationDiv.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_tag_color' }));
+                                divCol7.appendChild(classificationDiv); 
                                 
-                                //Category Name
+                                
+                                //Purpose        
+                                const purposeDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
+                                    const purposeRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                        const purposeTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                            const purposeLabel = cTag('label',{ 'for': 'tag_color' });
+											purposeLabel.innerHTML = Translate('Tag Color');
+                                            purposeTitle.appendChild(purposeLabel);
+                                            purposeRow.appendChild(purposeTitle);
+                                        purposeDiv.appendChild(purposeRow);
+                                        const purposeDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+                                            const purposeInGroup = cTag('div',{ 'class': 'input-group' });
+												let selectPurpose = cTag('select',{ 'class': 'form-control','name': 'tag_color','id': 'tag_color' });
+												selectPurpose.appendChild(cTag('option',{ 'value': '' }));
+												setOptions(selectPurpose, data.tagColOpt, 0, 1);                             
+                                                purposeInGroup.appendChild(selectPurpose);
+                                                purposeInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '50','name': 'tag_color2','id': 'tag_color2','class': 'form-control', 'style': 'display:none'}));
+												let purposeSpan = cTag('span',{ 'data-toggle': 'tooltip','title': Translate('Add New Tag Color Name'),'class': 'input-group-addon cursor showNewInputOrSelect' });
+												purposeSpan.append(cTag('i',{ 'class': 'fa fa-plus' }), ' ', Translate('New'));
+                                                purposeInGroup.appendChild(purposeSpan);
+                                                purposeDropDown.appendChild(purposeInGroup);
+                                            purposeRow.appendChild(purposeDropDown);
+                                        purposeDiv.appendChild(purposeRow);
+                                        purposeDiv.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_tag_color' }));
+							    divCol7.appendChild(purposeDiv);
+
+
+                                
+                                    //Category Name
 									const categoryRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
                                         const categoryTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
                                             const categoryLabel = cTag('label',{ 'for': 'category_id' });
@@ -2151,7 +2298,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 				productForm.appendChild(cTag('input',{ 'type': 'hidden','name': 'frompage','id': 'frompage','value': frompage }));
                 productForm.appendChild(cTag('input',{ 'type': 'hidden','name': 'product_id','id': 'product_id','value': data.product_id }));
                 productForm.appendChild(cTag('input',{ 'type': 'submit',style:'display:none' }));
-            formDialog.appendChild(productForm);
+                formDialog.appendChild(productForm);
 
 			popup_dialog1000(Translate('Livestock Information'),formDialog,(hidePopup)=>AJsave_Livestocks(hidePopup,addCartCBF));
 
@@ -2360,7 +2507,7 @@ function checkLivestockType(){
 			});
 
 			productName = document.getElementById("lbproduct_name");
-			productName.innerHTML = Translate('Model Name');
+			productName.innerHTML = Translate('Livestock Name');
                 requiredField = cTag('span',{ 'class': 'required' });
 				requiredField.innerHTML = '*';
 			productName.appendChild(requiredField);

@@ -563,9 +563,10 @@ class Livestocks{
 		$product_id = intval($POST['product_id']??0);
 
 		$Common = new Common($this->db);
+
 		
 		$product_type = $colour_name = $tag_color = $storage = $physical_condition_name = $alert_message = '';
-		$category_id = $manufacturer_id = $low_inventory_alert = $require_serial_no = $manage_inventory_count = $allow_backorder = $ave_cost_is_percent = 0;
+		$category_id = $breed_id = $location_id = $manufacturer_id = $low_inventory_alert = $require_serial_no = $manage_inventory_count = $allow_backorder = $ave_cost_is_percent = 0;
 		$taxable = 1;
 		
 		$productData = array();
@@ -579,6 +580,7 @@ class Livestocks{
 		
 		$productData['sku'] = '';
 		$productData['tag'] = '';
+		$productData['alt_tag'] = '';
 		$productData['cnc'] = $cnc;
 		$productData['cne'] = $cne;
 		$productData['login'] = '';	
@@ -594,7 +596,6 @@ class Livestocks{
 		$custom_data = '';
 		if($product_id>0 && $prod_cat_man>0){
 			$queryObj = $this->db->query("SELECT * FROM product WHERE product_id = :product_id AND accounts_id=$prod_cat_man AND product_publish=1", array('product_id'=>$product_id),1);
-			$itemObj = $this->db->query("SELECT * FROM item WHERE product_id = $product_id AND accounts_id = $prod_cat_man", array());
 			if($queryObj){
 				$productRow = $queryObj->fetch(PDO::FETCH_OBJ);
 				$product_id = $productRow->product_id;
@@ -619,8 +620,13 @@ class Livestocks{
 				$itemObj2 = $this->db->query("SELECT * FROM item WHERE product_id = $product_id AND accounts_id = $accounts_id", array());
 				if($itemObj2){
 					$itemRow = $itemObj2->fetch(PDO::FETCH_OBJ);
+					$breed_id = $itemRow->breed_id;
+					$location_id = $itemRow->location_id;
 					$productData['tag'] = $itemRow->tag;
+					$productData['alt_tag'] = $itemRow->alt_tag;
 					$productData['tag_color'] = $itemRow->tag_color;
+					$productData['breed_id'] = $itemRow->breed_id;
+					$productData['location_id'] = $itemRow->location_id;
 				}
 				
 				$queryInvObj = $this->db->query("SELECT * FROM inventory WHERE product_id = $product_id AND accounts_id=$accounts_id", array());
@@ -646,7 +652,9 @@ class Livestocks{
 		
 		$productData['product_type'] = $product_type;
 		$productData['alert_message'] = $alert_message;
-				
+
+
+		//Category dropdonm		
 		$productData['category_id'] = intval($category_id);
 		$catOpt = array();
 		if($prod_cat_man>0){
@@ -661,7 +669,40 @@ class Livestocks{
 			}
 		}
 		$productData['catOpt'] = $catOpt;
-		
+
+		//Breed Dropdown 
+		$productData['breed_id'] = intval($breed_id);
+		$breedOpt = array();
+		if($prod_cat_man>0){
+			$sqlbreed = "SELECT lsbreed_id, lsbreed_name FROM lsbreed WHERE accounts_id = $prod_cat_man AND (lsbreed_publish = 1 OR (lsbreed_id = $breed_id AND lsbreed_publish = 0)) ORDER BY lsbreed_name ASC";
+			$breedquery = $this->db->query($sqlbreed, array());
+			if($breedquery){
+				while($onebreedrow = $breedquery->fetch(PDO::FETCH_OBJ)){
+					$breed_id = $onebreedrow->lsbreed_id;
+					$breed_name = stripslashes(trim((string) $onebreedrow->lsbreed_name));
+					$breedOpt[$breed_id] = $breed_name;
+				}
+			}
+		}
+		$productData['breedOpt'] = $breedOpt;
+
+		//Location Dropdown 
+		$productData['location_id'] = intval($location_id);
+		$locationOpt = array();
+		if($prod_cat_man>0){
+			$sqllocation = "SELECT lslocation_id, lslocation_name FROM lslocation WHERE accounts_id = $prod_cat_man AND (lslocation_publish = 1 OR (lslocation_id = $location_id AND lslocation_publish = 0)) ORDER BY lslocation_name ASC";
+			$locationquery = $this->db->query($sqllocation, array());
+			if($locationquery){
+				while($onelocationdrow = $locationquery->fetch(PDO::FETCH_OBJ)){
+					$location_id = $onelocationdrow->lslocation_id;
+					$location_name = stripslashes(trim((string) $onelocationdrow->lslocation_name));
+					$locationOpt[$location_id] = $location_name;
+				}
+			}
+		}
+		$productData['locationOpt'] = $locationOpt;
+
+	
 		$productData['manufacturer_id'] = intval($manufacturer_id);
 		$manOpt = array();
 		if($prod_cat_man>0){
@@ -678,7 +719,9 @@ class Livestocks{
 			}
 		}
 		$productData['manOpt'] = $manOpt;
+
 		
+		//Color
 		$productData['colour_name'] = $colour_name;
 		$colourNameData = $this->colourNameData();
 		
@@ -701,6 +744,7 @@ class Livestocks{
 		$productData['colour_name'] = $colour_name;
 		$productData['colNamOpt'] = $colNamOpt;
 		
+		//Storage
 		$productData['storage'] = $storage;
 		$productData['physical_condition_name'] = $physical_condition_name;
 		$conditionsData = array();
@@ -721,7 +765,7 @@ class Livestocks{
 		}
 		$productData['phyConNamOpt'] = $phyConNamOpt;
 
-
+		//Tag Color
 		$tagColorData = $this->tagColorData();		
 		$sqlTagCol= "SELECT tag_color FROM item WHERE product_id = $product_id AND accounts_id = $accounts_id";
 		$tagColObj = $this->db->query($sqlTagCol, array());
@@ -739,7 +783,7 @@ class Livestocks{
 				$tagColOpt[] = $oneOption;
 			}
 		}
-		$productData['tagColOpt'] = $tagColOpt;
+		$productData['tagColOpt'] = $tagColOpt; 
 		
 		$productData['taxable'] = intval($taxable);				
 		$productData['require_serial_no'] = intval($require_serial_no);		
@@ -1537,6 +1581,34 @@ class Livestocks{
 				
 		return $returnarray;
 	}
+
+	public function breedData(){
+		$returnarray =array('Brahman',
+							'Highland',
+							'TexasLonghorn',
+							'Shorthorn',
+							'MunshiganjCattle',
+							'NorthBengalGrey',
+							'RedChittagong'
+							);
+				
+		return $returnarray;
+	}
+
+
+	public function locationData(){
+		$returnarray =array('Brahman',
+							'Highland',
+							'TexasLonghorn',
+							'Shorthorn',
+							'MunshiganjCattle',
+							'NorthBengalGrey',
+							'RedChittagong'
+							);
+				
+		return $returnarray;
+	}
+
 	
 	public function AJget_LivestocksDescPopup(){
 		$POST = json_decode(file_get_contents('php://input'), true);

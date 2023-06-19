@@ -315,3 +315,177 @@ previous: http://livestock.skitsbdl.com/Livestocks/view/1/1
     at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
 previous: http://livestock.skitsbdl.com/Livestocks/view/1/1
 2023-06-18 07:19:33 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 605: Undefined property: stdClass::$tag_color, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-19 03:47:18 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-19 03:47:20 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-19 03:47:22 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-19 03:47:24 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-19 03:47:26 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-19 03:47:27 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-19 03:47:29 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-19 03:47:31 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-19 03:47:37 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-19 03:47:39 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-19 03:47:41 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-19 03:47:48 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 627: Undefined property: stdClass::$breed, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-19 03:47:48 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-19 03:47:50 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 627: Undefined property: stdClass::$breed, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-19 03:47:50 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-19 03:47:52 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 627: Undefined property: stdClass::$breed, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-19 03:47:52 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-19 03:47:54 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 627: Undefined property: stdClass::$breed, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-19 03:47:54 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-19 03:47:56 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 627: Undefined property: stdClass::$breed, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-19 03:47:56 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-19 03:47:58 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 627: Undefined property: stdClass::$breed, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-19 03:47:58 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-19 03:48:00 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 627: Undefined property: stdClass::$breed, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-19 03:48:00 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-19 03:48:02 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 627: Undefined property: stdClass::$breed, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-19 03:48:02 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-19 03:48:04 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 627: Undefined property: stdClass::$breed, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-19 03:48:04 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-19 03:48:06 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 627: Undefined property: stdClass::$breed, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-19 03:48:06 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-19 03:49:11 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 627: Undefined property: stdClass::$breed, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-19 03:49:11 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-19 03:49:13 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 627: Undefined property: stdClass::$breed, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-19 03:49:13 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-19 03:49:15 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 627: Undefined property: stdClass::$breed, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-19 03:49:15 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-19 03:49:17 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 627: Undefined property: stdClass::$breed, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-19 03:49:17 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-19 03:49:19 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 627: Undefined property: stdClass::$breed, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-19 03:49:19 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-19 03:49:22 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 627: Undefined property: stdClass::$breed, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-19 03:49:22 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-19 03:49:24 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 627: Undefined property: stdClass::$breed, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-19 03:49:24 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-19 03:49:26 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 627: Undefined property: stdClass::$breed, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-19 03:49:26 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-19 03:49:28 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 627: Undefined property: stdClass::$breed, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-19 03:49:28 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-19 03:49:30 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 627: Undefined property: stdClass::$breed, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-19 03:49:30 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-19 04:23:27 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 627: Undefined property: stdClass::$breed, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-19 06:11:37 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-19 06:11:39 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-19 06:11:41 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-19 06:11:43 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-19 06:11:45 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-19 06:11:46 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-19 06:11:48 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-19 06:11:50 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-19 06:11:52 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-19 06:11:55 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-19 06:44:56 Script Error, Message: 2: TypeError: Cannot convert undefined or null to object
+    at Function.entries (<anonymous>)
+    at setOptions (http://livestock.skitsbdl.com/assets/js-v3/common.js:1044:36)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:1963:45)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-19 06:44:57 Script Error, Message: 2: TypeError: Cannot convert undefined or null to object
+    at Function.entries (<anonymous>)
+    at setOptions (http://livestock.skitsbdl.com/assets/js-v3/common.js:1044:36)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:1963:45)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-19 06:44:57 Script Error, Message: 2: TypeError: Cannot convert undefined or null to object
+    at Function.entries (<anonymous>)
+    at setOptions (http://livestock.skitsbdl.com/assets/js-v3/common.js:1044:36)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:1963:45)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-19 06:44:58 Script Error, Message: 2: TypeError: Cannot convert undefined or null to object
+    at Function.entries (<anonymous>)
+    at setOptions (http://livestock.skitsbdl.com/assets/js-v3/common.js:1044:36)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:1963:45)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-19 06:44:59 Script Error, Message: 2: TypeError: Cannot convert undefined or null to object
+    at Function.entries (<anonymous>)
+    at setOptions (http://livestock.skitsbdl.com/assets/js-v3/common.js:1044:36)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:1963:45)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
