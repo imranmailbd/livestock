@@ -566,7 +566,7 @@ class Livestocks{
 
 		
 		$product_type = $colour_name = $tag_color = $storage = $physical_condition_name = $alert_message = '';
-		$category_id = $breed_id = $location_id = $manufacturer_id = $low_inventory_alert = $require_serial_no = $manage_inventory_count = $allow_backorder = $ave_cost_is_percent = 0;
+		$category_id = $breed_id = $classification_id = $location_id = $group_id = $manufacturer_id = $low_inventory_alert = $require_serial_no = $manage_inventory_count = $allow_backorder = $ave_cost_is_percent = 0;
 		$taxable = 1;
 		
 		$productData = array();
@@ -622,11 +622,14 @@ class Livestocks{
 					$itemRow = $itemObj2->fetch(PDO::FETCH_OBJ);
 					$breed_id = $itemRow->breed_id;
 					$location_id = $itemRow->location_id;
+					$classification_id = $itemRow->classification_id;
 					$productData['tag'] = $itemRow->tag;
 					$productData['alt_tag'] = $itemRow->alt_tag;
 					$productData['tag_color'] = $itemRow->tag_color;
 					$productData['breed_id'] = $itemRow->breed_id;
 					$productData['location_id'] = $itemRow->location_id;
+					$productData['group_id'] = $itemRow->group_id;
+					$productData['classification_id'] = $itemRow->classification_id;
 				}
 				
 				$queryInvObj = $this->db->query("SELECT * FROM inventory WHERE product_id = $product_id AND accounts_id=$accounts_id", array());
@@ -701,6 +704,40 @@ class Livestocks{
 			}
 		}
 		$productData['locationOpt'] = $locationOpt;
+
+
+		//Group Dropdown 
+		$productData['group_id'] = intval($group_id);
+		$groupOpt = array();
+		if($prod_cat_man>0){
+			$sqlgroup = "SELECT lsgroups_id, lsgroups_name FROM lsgroups WHERE accounts_id = $prod_cat_man AND (lsgroups_publish = 1 OR (lsgroups_id = $group_id AND lsgroups_publish = 0)) ORDER BY lsgroups_name ASC";
+			$groupquery = $this->db->query($sqlgroup, array());
+			if($groupquery){
+				while($onegrouprow = $groupquery->fetch(PDO::FETCH_OBJ)){
+					$group_id = $onegrouprow->lsgroups_id;
+					$group_name = stripslashes(trim((string) $onegrouprow->lsgroups_name));
+					$groupOpt[$group_id] = $group_name;
+				}
+			}
+		}
+		$productData['groupOpt'] = $groupOpt;
+
+
+		//Classification Dropdown 
+		$productData['classification_id'] = intval($classification_id);
+		$classificationOpt = array();
+		if($prod_cat_man>0){
+			$sqlclassification = "SELECT lsclassification_id, lsclassification_name FROM lsclassification WHERE accounts_id = $prod_cat_man AND (lsclassification_publish = 1 OR (lsclassification_id = $classification_id AND lsclassification_publish = 0)) ORDER BY lsclassification_name ASC";
+			$classificationquery = $this->db->query($sqlclassification, array());
+			if($classificationquery){
+				while($oneclassificationrow = $classificationquery->fetch(PDO::FETCH_OBJ)){
+					$classification_id = $oneclassificationrow->lsclassification_id;
+					$classification_name = stripslashes(trim((string) $oneclassificationrow->lsclassification_name));
+					$classificationOpt[$classification_id] = $classification_name;
+				}
+			}
+		}
+		$productData['clasfOpt'] = $classificationOpt;
 
 	
 		$productData['manufacturer_id'] = intval($manufacturer_id);
@@ -1572,40 +1609,12 @@ class Livestocks{
 	public function tagColorData(){
 		$returnarray =array('Black',
 							'Brown',
-							'Gold',
-							'Gray',
 							'Red',
+							'Gold',
+							'Gray',							
 							'White',
 							'Other'
-							);
-				
-		return $returnarray;
-	}
-
-	public function breedData(){
-		$returnarray =array('Brahman',
-							'Highland',
-							'TexasLonghorn',
-							'Shorthorn',
-							'MunshiganjCattle',
-							'NorthBengalGrey',
-							'RedChittagong'
-							);
-				
-		return $returnarray;
-	}
-
-
-	public function locationData(){
-		$returnarray =array('Brahman',
-							'Highland',
-							'TexasLonghorn',
-							'Shorthorn',
-							'MunshiganjCattle',
-							'NorthBengalGrey',
-							'RedChittagong'
-							);
-				
+							);				
 		return $returnarray;
 	}
 

@@ -489,3 +489,311 @@ previous: http://livestock.skitsbdl.com/Home
     at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:1963:45)
     at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
 previous: http://livestock.skitsbdl.com/Home
+2023-06-19 23:12:43 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Products/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Products
+2023-06-19 23:12:45 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Products/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Products
+2023-06-19 23:12:47 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Products/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Products
+2023-06-19 23:12:49 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Products/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Products
+2023-06-19 23:12:51 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Products/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Products
+2023-06-19 23:12:53 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Products/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Products
+2023-06-19 23:12:55 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Products/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Products
+2023-06-19 23:12:57 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Products/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Products
+2023-06-19 23:12:59 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Products/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Products
+2023-06-19 23:13:01 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Products/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Products
+2023-06-19 23:13:14 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Products/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Products
+2023-06-19 23:13:16 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Products/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Products
+2023-06-19 23:13:18 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Products/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Products
+2023-06-19 23:13:20 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Products/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Products
+2023-06-19 23:13:22 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Products/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Products
+2023-06-19 23:18:08 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_groups/filter, Page Url: http://livestock.skitsbdl.com/Accounts/groups
+2023-06-19 23:18:10 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_groups/filter, Page Url: http://livestock.skitsbdl.com/Accounts/groups
+2023-06-19 23:18:12 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_groups/filter, Page Url: http://livestock.skitsbdl.com/Accounts/groups
+2023-06-19 23:18:14 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_groups/filter, Page Url: http://livestock.skitsbdl.com/Accounts/groups
+2023-06-19 23:18:16 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_groups/filter, Page Url: http://livestock.skitsbdl.com/Accounts/groups
+2023-06-19 23:18:23 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_ledger, Page Url: http://livestock.skitsbdl.com/Accounts/ledger
+2023-06-19 23:18:25 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_ledger, Page Url: http://livestock.skitsbdl.com/Accounts/ledger
+2023-06-19 23:18:27 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_ledger, Page Url: http://livestock.skitsbdl.com/Accounts/ledger
+2023-06-19 23:18:29 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_ledger, Page Url: http://livestock.skitsbdl.com/Accounts/ledger
+2023-06-19 23:18:31 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_ledger, Page Url: http://livestock.skitsbdl.com/Accounts/ledger
+2023-06-19 23:18:43 Script Error, Message: 2: TypeError: oneVListDatas.forEach is not a function
+    at loadVoucherTableRows (http://livestock.skitsbdl.com/assets/js-v3/Accounts.js:1920:17)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Accounts.js:3468:3)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Accounts/dayBook
+previous: http://livestock.skitsbdl.com/Accounts/salesVoucher
+2023-06-19 23:19:01 Script Error, Message: 2: TypeError: oneVListDatas.forEach is not a function
+    at loadVoucherTableRows (http://livestock.skitsbdl.com/assets/js-v3/Accounts.js:1920:17)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Accounts.js:3468:3)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Accounts/dayBook
+previous: http://livestock.skitsbdl.com/Accounts
+2023-06-19 23:19:06 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_ledger, Page Url: http://livestock.skitsbdl.com/Accounts/ledger
+2023-06-19 23:19:08 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_ledger, Page Url: http://livestock.skitsbdl.com/Accounts/ledger
+2023-06-19 23:19:10 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_ledger, Page Url: http://livestock.skitsbdl.com/Accounts/ledger
+2023-06-19 23:19:13 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_groups/filter, Page Url: http://livestock.skitsbdl.com/Accounts/groups
+2023-06-19 23:19:15 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_ledger, Page Url: http://livestock.skitsbdl.com/Accounts/ledger
+2023-06-19 23:19:34 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_ledger, Page Url: http://livestock.skitsbdl.com/Accounts/ledger
+2023-06-19 23:19:36 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_ledger, Page Url: http://livestock.skitsbdl.com/Accounts/ledger
+2023-06-19 23:19:38 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_ledger, Page Url: http://livestock.skitsbdl.com/Accounts/ledger
+2023-06-19 23:19:40 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_ledger, Page Url: http://livestock.skitsbdl.com/Accounts/ledger
+2023-06-19 23:19:42 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_ledger, Page Url: http://livestock.skitsbdl.com/Accounts/ledger
+2023-06-20 00:35:06 Script Error, Message: 1: ReferenceError: tagName is not defined
+    at checkLivestockType (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2528:17)
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2337:5 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 00:35:48 Script Error, Message: 1: ReferenceError: tagName is not defined
+    at checkLivestockType (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2530:17)
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2337:5 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 00:36:08 Script Error, Message: 1: ReferenceError: tagName is not defined
+    at checkLivestockType (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2530:17)
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2337:5 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 00:38:16 Script Error, Message: 2: TypeError: Cannot read properties of undefined (reading 'user_id')
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/common.js:622:61)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Manage_Data/lsbreed
+previous: http://livestock.skitsbdl.com/Manage_Data
+2023-06-20 00:38:16 Script Error, Message: 2: TypeError: Cannot read properties of undefined (reading 'user_id')
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/common.js:622:61)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Manage_Data/lsbreed
+previous: http://livestock.skitsbdl.com/Manage_Data
+2023-06-20 00:38:34 Script Error, Message: 2: TypeError: Cannot read properties of undefined (reading 'user_id')
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/common.js:622:61)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Manage_Data/lsbreed
+previous: http://livestock.skitsbdl.com/Manage_Data
+2023-06-20 00:38:51 Script Error, Message: 2: TypeError: Cannot read properties of undefined (reading 'user_id')
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/common.js:622:61)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Manage_Data/lsbreed
+previous: http://livestock.skitsbdl.com/Manage_Data
+2023-06-20 00:40:16 Script Error, Message: 1: ReferenceError: tagName is not defined
+    at checkLivestockType (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2530:17)
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2337:5 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 00:40:21 Script Error, Message: 1: ReferenceError: tagName is not defined
+    at checkLivestockType (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2530:17)
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2337:5 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 00:46:27 Script Error, Message: 1: ReferenceError: tagName is not defined
+    at checkLivestockType (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2530:17)
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2337:5 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 00:47:07 Script Error, Message: 1: ReferenceError: tagName is not defined
+    at checkLivestockType (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2530:17)
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2337:5 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-20 00:48:49 Script Error, Message: 1: ReferenceError: tagName is not defined
+    at checkLivestockType (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2531:17)
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2338:5 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-20 00:49:09 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-20 00:49:11 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-20 00:49:13 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-20 00:49:22 Script Error, Message: 1: ReferenceError: tagName is not defined
+    at checkLivestockType (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2531:17)
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2338:5 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 00:50:59 Script Error, Message: 1: ReferenceError: tagName is not defined
+    at checkLivestockType (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2531:17)
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2338:5 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 01:18:52 Script Error, Message: 2: TypeError: anmlDescriptionField.appendChild is not a function
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:1986:50)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 01:18:53 Script Error, Message: 2: TypeError: anmlDescriptionField.appendChild is not a function
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:1986:50)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 01:18:54 Script Error, Message: 2: TypeError: anmlDescriptionField.appendChild is not a function
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:1986:50)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 01:45:35 Script Error, Message: 2: TypeError: Assignment to constant variable.
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:1999:54)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 02:32:42 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_groups/filter, Page Url: http://livestock.skitsbdl.com/Accounts/groups
+2023-06-20 02:32:44 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_groups/filter, Page Url: http://livestock.skitsbdl.com/Accounts/groups
+2023-06-20 02:32:46 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_ledger, Page Url: http://livestock.skitsbdl.com/Accounts/ledger
+2023-06-20 02:32:48 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_ledger, Page Url: http://livestock.skitsbdl.com/Accounts/ledger
+2023-06-20 02:32:51 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_ledger, Page Url: http://livestock.skitsbdl.com/Accounts/ledger
+2023-06-20 02:33:16 Script Error, Message: 2: TypeError: oneVListDatas.forEach is not a function
+    at loadVoucherTableRows (http://livestock.skitsbdl.com/assets/js-v3/Accounts.js:1920:17)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Accounts.js:3468:3)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Accounts/dayBook
+previous: http://livestock.skitsbdl.com/Accounts/salesVoucher
+2023-06-20 02:33:45 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Products/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Products
+2023-06-20 02:33:47 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Products/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Products
+2023-06-20 02:33:49 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Products/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Products
+2023-06-20 02:33:51 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Products/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Products
+2023-06-20 02:33:53 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Products/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Products
+2023-06-20 04:51:21 Script Error, Message: 2: TypeError: Assignment to constant variable.
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2071:46)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 04:51:22 Script Error, Message: 2: TypeError: Assignment to constant variable.
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2071:46)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 04:51:23 Script Error, Message: 2: TypeError: Assignment to constant variable.
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2071:46)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 04:51:23 Script Error, Message: 2: TypeError: Assignment to constant variable.
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2071:46)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 04:51:55 Script Error, Message: 2: TypeError: Assignment to constant variable.
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2071:46)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 04:51:56 Script Error, Message: 2: TypeError: Assignment to constant variable.
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2071:46)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 05:25:57 Script Error, Message: 2: TypeError: Cannot convert undefined or null to object
+    at Function.entries (<anonymous>)
+    at setOptions (http://livestock.skitsbdl.com/assets/js-v3/common.js:1044:36)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2067:33)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 05:25:58 Script Error, Message: 2: TypeError: Cannot convert undefined or null to object
+    at Function.entries (<anonymous>)
+    at setOptions (http://livestock.skitsbdl.com/assets/js-v3/common.js:1044:36)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2067:33)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 05:27:32 Script Error, Message: 2: TypeError: Cannot convert undefined or null to object
+    at Function.entries (<anonymous>)
+    at setOptions (http://livestock.skitsbdl.com/assets/js-v3/common.js:1044:36)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2067:33)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 05:39:34 Script Error, Message: 2: ReferenceError: Cannot access 'taxLabel' before initialization
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2060:37)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 05:39:35 Script Error, Message: 2: ReferenceError: Cannot access 'taxLabel' before initialization
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2060:37)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 05:52:12 Script Error, Message: 2: ReferenceError: OptcTag is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2057:55)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 05:52:13 Script Error, Message: 2: ReferenceError: OptcTag is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2057:55)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 05:52:37 Script Error, Message: 2: TypeError: Cannot create property 'innerHTML' on string ''
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2058:57)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 06:32:12 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-20 06:32:14 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-20 06:32:16 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-20 06:32:18 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-20 06:32:20 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
