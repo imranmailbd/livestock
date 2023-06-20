@@ -565,7 +565,7 @@ class Livestocks{
 		$Common = new Common($this->db);
 
 		
-		$product_type = $colour_name = $tag_color = $storage = $physical_condition_name = $alert_message = '';
+		$product_type = $purpose = $colour_name = $tag_color = $storage = $age_in_year = $no_of_teeth = $physical_condition_name = $alert_message = '';
 		$category_id = $breed_id = $classification_id = $location_id = $group_id = $manufacturer_id = $low_inventory_alert = $require_serial_no = $manage_inventory_count = $allow_backorder = $ave_cost_is_percent = 0;
 		$taxable = 1;
 		
@@ -623,6 +623,9 @@ class Livestocks{
 					$breed_id = $itemRow->breed_id;
 					$location_id = $itemRow->location_id;
 					$classification_id = $itemRow->classification_id;
+					$age_in_year = $itemRow->age_in_year;
+					$no_of_teeth = $itemRow->no_of_teeth;
+
 					$productData['tag'] = $itemRow->tag;
 					$productData['alt_tag'] = $itemRow->alt_tag;
 					$productData['tag_color'] = $itemRow->tag_color;
@@ -781,8 +784,15 @@ class Livestocks{
 		$productData['colour_name'] = $colour_name;
 		$productData['colNamOpt'] = $colNamOpt;
 		
+
 		//Storage
 		$productData['storage'] = $storage;
+
+		$productData['age_in_year'] = $age_in_year;
+		
+		$productData['no_of_teeth'] = $no_of_teeth;
+
+
 		$productData['physical_condition_name'] = $physical_condition_name;
 		$conditionsData = array();
 		$conditionsData = array('A', 'B', 'C', 'D', 'New');
@@ -802,7 +812,9 @@ class Livestocks{
 		}
 		$productData['phyConNamOpt'] = $phyConNamOpt;
 
+
 		//Tag Color
+		$productData['tag_color'] = $tag_color;
 		$tagColorData = $this->tagColorData();		
 		$sqlTagCol= "SELECT tag_color FROM item WHERE product_id = $product_id AND accounts_id = $accounts_id";
 		$tagColObj = $this->db->query($sqlTagCol, array());
@@ -821,6 +833,29 @@ class Livestocks{
 			}
 		}
 		$productData['tagColOpt'] = $tagColOpt; 
+
+
+		//Purpose
+		$productData['purpose'] = $purpose;
+		$purposeData = $this->purposeData();		
+		$sqlPurpose= "SELECT purpose FROM item WHERE product_id = $product_id AND accounts_id = $accounts_id";
+		$purposeObj = $this->db->query($sqlPurpose, array());
+		if($purposeObj){
+			while($purposeRow = $purposeObj->fetch(PDO::FETCH_OBJ)){
+				if(!empty($purposeRow->purpose) && !in_array($purposeRow->purpose, $purposeData)){
+					$purposeData[] = stripslashes(trim((string) $purposeRow->purpose));
+				}
+			}
+		}
+		$colNamOpt = array();
+		if (!empty($purposeData)){
+			sort($purposeData);
+			foreach ($purposeData as $oneOption) {
+				$purposeOpt[] = $oneOption;
+			}
+		}
+		$productData['purposeOpt'] = $purposeOpt; 
+
 		
 		$productData['taxable'] = intval($taxable);				
 		$productData['require_serial_no'] = intval($require_serial_no);		
@@ -1614,6 +1649,15 @@ class Livestocks{
 							'Gray',							
 							'White',
 							'Other'
+							);				
+		return $returnarray;
+	}
+
+	public function purposeData(){
+		$returnarray =array('Fattening',
+							'Breeding',
+							'Dairy',
+							'GenerationDevelop'
 							);				
 		return $returnarray;
 	}

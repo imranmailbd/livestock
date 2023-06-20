@@ -1818,8 +1818,8 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                 divCol7.appendChild(cTag('input',{ 'type': 'hidden','readonly': '','name': 'product_type','id': 'product_type','value': 'Live Stocks','class': 'form-control' }));
 
 
-                                    //#### Serial No or SKU barcode
-                                    const skuRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                //#### Serial No or SKU barcode ######
+                                const skuRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
                                         const skuTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
                                             const skuLabel = cTag('label',{ 'for': 'sku' });
                                             skuLabel.innerHTML = Translate('SL No.');
@@ -1838,8 +1838,8 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                     skuRow.appendChild(skuField);
                                 divCol7.appendChild(skuRow);
 
-                                    //####### Tag    
-                                    const tagRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                //####### Tag ###########
+                                const tagRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
                                         const tagTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
                                             const tagLabel = cTag('label',{ 'for': 'tag','id': 'lbtag' });
                                             tagLabel.innerHTML = Translate('Tag');
@@ -1852,14 +1852,13 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                     tagRow.appendChild(tagTitle);
 
                                         const tagField = cTag('div',{ 'class': 'columnXS12 columnSM8' });
-                                        // tagField.appendChild(cTag('input',{ 'type': 'text','class': 'form-control','name': 'tag','id': 'tag','value': data.tag,'maxlength': '100' }));
                                         tagField.appendChild(cTag('input',{ 'type': 'text','class': 'form-control','name': 'tag','id': 'tag','value': '','maxlength': '100' }));
                                         tagField.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_tag' }));
                                     tagRow.appendChild(tagField);
                                 divCol7.appendChild(tagRow);                                                         
 
 
-                                //########## Tag Color        
+                                //########## Tag Color ##########        
                                 const tagColorDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
                                     const tagColorRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
                                         const tagColorTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
@@ -1885,14 +1884,11 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 							    divCol7.appendChild(tagColorDiv);
 
 
-                                //Alternate Tag    
+                                //######## Alternate Tag ################    
                                 const altTagRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
                                     const altTagTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
                                         const altTagLabel = cTag('label',{ 'for': 'alt_tag','id': 'alt_tag' });
                                         altTagLabel.innerHTML = Translate('Alternate/RFID Tag');
-                                            // requireSpan = cTag('span',{ 'class': 'required' });
-                                            // requireSpan.innerHTML = '*';
-                                            // altTagLabel.appendChild(requireSpan);
                                         altTagTitle.appendChild(altTagLabel);
                                     altTagRow.appendChild(altTagTitle);
                                     const altTagField = cTag('div',{ 'class': 'columnXS12 columnSM8' });
@@ -1902,7 +1898,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                 divCol7.appendChild(altTagRow);
 
 
-                                //Breed
+                                //############## Breed #################
 								const breedRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
                                     const breedTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
                                         const breedLabel = cTag('label',{ 'for': 'category_id' });
@@ -1927,7 +1923,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                 divCol7.appendChild(breedRow);
 
 
-                                //Livestock Name
+                                //############# Livestock Name ################
 								const productNameRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
                                     const productNameTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
                                         const productNameLabel = cTag('label',{ 'for': 'product_name','id': 'lbproduct_name' });
@@ -1935,16 +1931,16 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                             requireSpan = cTag('span',{ 'class': 'required' });
                                             requireSpan.innerHTML = '*';
                                         productNameLabel.appendChild(requireSpan);
-                                    productNameTitle.appendChild(productNameLabel);
-                                productNameRow.appendChild(productNameTitle);
-                                    const productNameField = cTag('div',{ 'class': 'columnXS12 columnSM8' });
-                                    productNameField.appendChild(cTag('input',{ 'type': 'text','class': 'form-control','name': 'product_name','id': 'product_name','value': '','maxlength': '100' }));
-                                    productNameField.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_product_name' }));
-                                productNameRow.appendChild(productNameField);
-                            divCol7.appendChild(productNameRow);
+                                        productNameTitle.appendChild(productNameLabel);
+                                    productNameRow.appendChild(productNameTitle);
+                                        const productNameField = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+                                        productNameField.appendChild(cTag('input',{ 'type': 'text','class': 'form-control','name': 'product_name','id': 'product_name','value': '','maxlength': '100' }));
+                                        productNameField.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_product_name' }));
+                                    productNameRow.appendChild(productNameField);
+                                divCol7.appendChild(productNameRow);
 
 
-                                //Color
+                                //############## Color ###################
                                 const colorDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
                                     const colorRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
                                         const colorTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
@@ -1953,7 +1949,6 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                         colorTitle.appendChild(colorLabel);
                                     colorRow.appendChild(colorTitle);
                                 colorDiv.appendChild(colorRow);
-
                                 const colorNameDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
                                     const colorNameInGroup = cTag('div',{ 'class': 'input-group' });
                                         let selectColor = cTag('select',{ 'class': 'form-control','name': 'colour_name','id': 'colour_name' });
@@ -1966,138 +1961,137 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                         colorNameInGroup.appendChild(newColorSpan);
                                     colorNameDropDown.appendChild(colorNameInGroup);
                                 colorRow.appendChild(colorNameDropDown);
-                            colorDiv.appendChild(colorRow);
-                            colorDiv.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_colour_name' }));
-                            divCol7.appendChild(colorDiv);
+                                colorDiv.appendChild(colorRow);
+                                colorDiv.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_colour_name' }));
+                                divCol7.appendChild(colorDiv);
 
 
-                            //Animal Description
-                            const anmlDescriptionRow = cTag('div',{  'class': 'flex', 'style': "text-align: left;" });
-                                const anmlDescriptionTitle = cTag('div',{ 'class': 'columnXS12 columnSM4'});
-                                    const anmlDescriptionLabel = cTag('label',{ 'for': 'anml_description','id': 'anml_description' });
-                                    anmlDescriptionLabel.innerHTML = Translate('Description');
-                                    anmlDescriptionTitle.appendChild(anmlDescriptionLabel);
-                                    anmlDescriptionRow.appendChild(anmlDescriptionTitle);
+                                //############ Animal Description ###################
+                                const anmlDescriptionRow = cTag('div',{  'class': 'flex', 'style': "text-align: left;" });
+                                    const anmlDescriptionTitle = cTag('div',{ 'class': 'columnXS12 columnSM4'});
+                                        const anmlDescriptionLabel = cTag('label',{ 'for': 'anml_description','id': 'anml_description' });
+                                        anmlDescriptionLabel.innerHTML = Translate('Description');
+                                        anmlDescriptionTitle.appendChild(anmlDescriptionLabel);
+                                        anmlDescriptionRow.appendChild(anmlDescriptionTitle);
 
-                                    const anmlDescArea = cTag('div',{ 'class': 'columnXS12 columnSM8' });
-                                    anmlDescArea.appendChild(cTag('textarea',{ 'rows': '4','cols': '20', 'class': 'form-control','name': 'anml_description','id': 'anml_description' }));
-                                    anmlDescArea.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_anml_description' }));
-                                    // anmlDescArea.innerHTML = '';   //data.anml_description;
-                                    anmlDescriptionRow.appendChild(anmlDescArea);
-                            divCol7.appendChild(anmlDescriptionRow);
-
-
-                            //Location
-                            const locationRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
-                                const locationTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                                    const locationLabel = cTag('label',{ 'for': 'location_id' });
-                                    locationLabel.innerHTML = Translate('Location Name');
-                                    locationTitle.appendChild(locationLabel);
-                                locationRow.appendChild(locationTitle);
-                                const locationDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
-                                    const locationInGroup = cTag('div',{ 'class': 'input-group' });
-                                        let selectLocation = cTag('select',{ 'class': 'form-control','name': 'location_id','id': 'location_id' });
-                                            const locationOpt = cTag('option',{ 'value': '0' });
-                                            locationOpt.innerHTML = '';
-                                            selectLocation.appendChild(locationOpt);
-                                        setOptions(selectLocation, data.locationOpt, 1, 1);                      
-                                        locationInGroup.appendChild(selectLocation);
-                                        locationInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '10','name': 'location_id','id': 'location_id','class': 'form-control',style:'display:none'}));
-                                        let locationSpan = cTag('span', {'data-toggle':'tooltip', 'class':'input-group-addon cursor showNewInputOrSelect', 'title': Translate('Add New Location')});
-                                        locationSpan.append(cTag('i', {'class':'fa fa-plus'}), ' ', Translate('New'));
-                                        locationInGroup.appendChild(locationSpan);
-                                    locationDropDown.appendChild(locationInGroup);
-                                    locationDropDown.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_location_id' }));
-                                locationRow.appendChild(locationDropDown);
-                            divCol7.appendChild(locationRow);
+                                        const anmlDescArea = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+                                        anmlDescArea.appendChild(cTag('textarea',{ 'rows': '4','cols': '20', 'class': 'form-control','name': 'anml_description','id': 'anml_description' }));
+                                        anmlDescArea.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_anml_description' }));
+                                        // anmlDescArea.innerHTML = '';   //data.anml_description;
+                                        anmlDescriptionRow.appendChild(anmlDescArea);
+                                divCol7.appendChild(anmlDescriptionRow);
 
 
-                            //Group
-                            const groupRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
-                                const groupTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                                    const groupLabel = cTag('label',{ 'for': 'group_id' });
-                                    groupLabel.innerHTML = Translate('Group Name');
-                                    groupTitle.appendChild(groupLabel);
-                                    groupRow.appendChild(groupTitle);
-
-                                    const groupDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
-                                        const groupInGroup = cTag('div',{ 'class': 'input-group' });
-                                        
-                                            let selectGroup = cTag('select',{ 'class': 'form-control','name': 'group_id','id': 'group_id' });
-                                                const groupOpt = cTag('option',{ 'value': '0' });
-                                                groupOpt.innerHTML = '';
-                                                selectGroup.appendChild(groupOpt);
-                                            setOptions(selectGroup, data.groupOpt, 1, 1);                      
-                                            groupInGroup.appendChild(selectGroup);
-                                            groupInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '35','name': 'group_id','id': 'group_id','class': 'form-control',style:'display:none'}));
-                                            let groupSpan = cTag('span', {'data-toggle':'tooltip', 'class':'input-group-addon cursor showNewInputOrSelect', 'title': Translate('Add New Group')});
-                                            groupSpan.append(cTag('i', {'class':'fa fa-plus'}), ' ', Translate('New'));
-                                            groupInGroup.appendChild(groupSpan);
-
-                                        groupDropDown.appendChild(groupInGroup);
-                                        groupDropDown.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_group_id' }));
-                                    groupRow.appendChild(groupDropDown);
-                            divCol7.appendChild(groupRow);                     
+                                //########### Location ###################
+                                const locationRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                    const locationTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                        const locationLabel = cTag('label',{ 'for': 'location_id' });
+                                        locationLabel.innerHTML = Translate('Location Name');
+                                        locationTitle.appendChild(locationLabel);
+                                    locationRow.appendChild(locationTitle);
+                                    const locationDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+                                        const locationInGroup = cTag('div',{ 'class': 'input-group' });
+                                            let selectLocation = cTag('select',{ 'class': 'form-control','name': 'location_id','id': 'location_id' });
+                                                const locationOpt = cTag('option',{ 'value': '0' });
+                                                locationOpt.innerHTML = '';
+                                                selectLocation.appendChild(locationOpt);
+                                            setOptions(selectLocation, data.locationOpt, 1, 1);                      
+                                            locationInGroup.appendChild(selectLocation);
+                                            locationInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '10','name': 'location_id','id': 'location_id','class': 'form-control',style:'display:none'}));
+                                            let locationSpan = cTag('span', {'data-toggle':'tooltip', 'class':'input-group-addon cursor showNewInputOrSelect', 'title': Translate('Add New Location')});
+                                            locationSpan.append(cTag('i', {'class':'fa fa-plus'}), ' ', Translate('New'));
+                                            locationInGroup.appendChild(locationSpan);
+                                        locationDropDown.appendChild(locationInGroup);
+                                        locationDropDown.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_location_id' }));
+                                    locationRow.appendChild(locationDropDown);
+                                divCol7.appendChild(locationRow);
 
 
-                            //Gender
-                            const genderRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
-                                const genderTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                                const genderLabel = cTag('label',{ 'for': 'gender_id' });
-                                genderLabel.innerHTML = Translate('Gender Name');
-                                genderTitle.appendChild(genderLabel);
-                                genderRow.appendChild(genderTitle);
+                                //############# Group ####################
+                                const groupRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                    const groupTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                        const groupLabel = cTag('label',{ 'for': 'group_id' });
+                                        groupLabel.innerHTML = Translate('Group Name');
+                                        groupTitle.appendChild(groupLabel);
+                                        groupRow.appendChild(groupTitle);
+
+                                        const groupDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+                                            const groupInGroup = cTag('div',{ 'class': 'input-group' });
                                             
-                                const genderRadio = cTag('div',{ 'class': 'columnXS12 columnSM8' });
-                                    const genderInGroup = cTag('div',{ 'class': 'input-group' });
-                                        
-                                    genderInGroup.appendChild(cTag('input',{ 'type': 'radio', 'name': 'gender_id','id': 'gender_id','value': 1 }));
-                                    genderInGroup.append(' '+Translate('Male'));
-                                    // genderInGroup.append(' ');
-                                    const genderOpt = cTag('span',{ 'value': '&nbsp;' });
-                                    genderOpt.innerHTML = '&nbsp;&nbsp;';
-                                    genderInGroup.appendChild(genderOpt);
-                                    genderInGroup.appendChild(cTag('input',{ 'type': 'radio', 'name': 'gender_id','id': 'gender_id','value': 2 }));
-                                    genderInGroup.append(' '+Translate('Female'));
+                                                let selectGroup = cTag('select',{ 'class': 'form-control','name': 'group_id','id': 'group_id' });
+                                                    const groupOpt = cTag('option',{ 'value': '0' });
+                                                    groupOpt.innerHTML = '';
+                                                    selectGroup.appendChild(groupOpt);
+                                                setOptions(selectGroup, data.groupOpt, 1, 1);                      
+                                                groupInGroup.appendChild(selectGroup);
+                                                groupInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '35','name': 'group_id','id': 'group_id','class': 'form-control',style:'display:none'}));
+                                                let groupSpan = cTag('span', {'data-toggle':'tooltip', 'class':'input-group-addon cursor showNewInputOrSelect', 'title': Translate('Add New Group')});
+                                                groupSpan.append(cTag('i', {'class':'fa fa-plus'}), ' ', Translate('New'));
+                                                groupInGroup.appendChild(groupSpan);
 
-                                genderRadio.appendChild(genderInGroup); 
-                                genderRadio.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_gender_id' }));
-                                genderRow.appendChild(genderRadio);
-                            divCol7.appendChild(genderRow);                            
+                                            groupDropDown.appendChild(groupInGroup);
+                                            groupDropDown.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_group_id' }));
+                                        groupRow.appendChild(groupDropDown);
+                                divCol7.appendChild(groupRow);                     
 
 
-                            //Classification
-							const classificationRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
-                                const classificationTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                                    const classificationLabel = cTag('label',{ 'for': 'classification_id' });
-                                    classificationLabel.innerHTML = Translate('Classification');
-                                        classificationTitle.appendChild(classificationLabel);
-                                    classificationRow.appendChild(classificationTitle);
-                                    const classificationDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
-                                        const classificationInGroup = cTag('div',{ 'class': 'input-group' });
-                                            let selectClassification = cTag('select',{ 'class': 'form-control','name': 'classification_id','id': 'classification_id' });
-                                                const clasfOpt = cTag('option',{ 'value': '0' });
-                                                clasfOpt.innerHTML = '';
-                                                selectClassification.appendChild(clasfOpt);
-                                            setOptions(selectClassification, data.clasfOpt, 1, 1);                      
-                                            classificationInGroup.appendChild(selectClassification);
-                                            classificationInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '35','name': 'classification_id','id': 'classification_id','class': 'form-control',style:'display:none'}));
-                                            let clasfSpan = cTag('span', {'data-toggle':'tooltip', 'class':'input-group-addon cursor showNewInputOrSelect', 'title': Translate('Add New Classification')});
-                                            clasfSpan.append(cTag('i', {'class':'fa fa-plus'}), ' ', Translate('New'));
-                                            classificationInGroup.appendChild(clasfSpan);
-                                        classificationDropDown.appendChild(classificationInGroup);
-                                        classificationDropDown.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_classification_id' }));
-                                    classificationRow.appendChild(classificationDropDown);
-                            divCol7.appendChild(classificationRow);
-                            
-                             
+                                //########### Gender ###############
+                                const genderRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                    const genderTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                    const genderLabel = cTag('label',{ 'for': 'gender_id' });
+                                    genderLabel.innerHTML = Translate('Gender Name');
+                                    genderTitle.appendChild(genderLabel);
+                                    genderRow.appendChild(genderTitle);
+                                                
+                                    const genderRadio = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+                                        const genderInGroup = cTag('div',{ 'class': 'input-group' });
+                                            
+                                        genderInGroup.appendChild(cTag('input',{ 'type': 'radio', 'name': 'gender_id','id': 'gender_id','value': 1 }));
+                                        genderInGroup.append(' '+Translate('Male'));
+                                        // genderInGroup.append(' ');
+                                        const genderOpt = cTag('span',{ 'value': '&nbsp;' });
+                                        genderOpt.innerHTML = '&nbsp;&nbsp;';
+                                        genderInGroup.appendChild(genderOpt);
+                                        genderInGroup.appendChild(cTag('input',{ 'type': 'radio', 'name': 'gender_id','id': 'gender_id','value': 2 }));
+                                        genderInGroup.append(' '+Translate('Female'));
+
+                                    genderRadio.appendChild(genderInGroup); 
+                                    genderRadio.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_gender_id' }));
+                                    genderRow.appendChild(genderRadio);
+                                divCol7.appendChild(genderRow);                            
+
+
+                                //############## Classification #################
+                                const classificationRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                    const classificationTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                        const classificationLabel = cTag('label',{ 'for': 'classification_id' });
+                                        classificationLabel.innerHTML = Translate('Classification');
+                                            classificationTitle.appendChild(classificationLabel);
+                                        classificationRow.appendChild(classificationTitle);
+                                        const classificationDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+                                            const classificationInGroup = cTag('div',{ 'class': 'input-group' });
+                                                let selectClassification = cTag('select',{ 'class': 'form-control','name': 'classification_id','id': 'classification_id' });
+                                                    const clasfOpt = cTag('option',{ 'value': '0' });
+                                                    clasfOpt.innerHTML = '';
+                                                    selectClassification.appendChild(clasfOpt);
+                                                setOptions(selectClassification, data.clasfOpt, 1, 1);                      
+                                                classificationInGroup.appendChild(selectClassification);
+                                                classificationInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '35','name': 'classification_id','id': 'classification_id','class': 'form-control',style:'display:none'}));
+                                                let clasfSpan = cTag('span', {'data-toggle':'tooltip', 'class':'input-group-addon cursor showNewInputOrSelect', 'title': Translate('Add New Classification')});
+                                                clasfSpan.append(cTag('i', {'class':'fa fa-plus'}), ' ', Translate('New'));
+                                                classificationInGroup.appendChild(clasfSpan);
+                                            classificationDropDown.appendChild(classificationInGroup);
+                                            classificationDropDown.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_classification_id' }));
+                                        classificationRow.appendChild(classificationDropDown);
+                                divCol7.appendChild(classificationRow);
+                                                             
                                 
-                                //Purpose        
+                                //############# Purpose #################        
                                 const purposeDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
                                     const purposeRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
                                         const purposeTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
                                             const purposeLabel = cTag('label',{ 'for': 'tag_color' });
-											purposeLabel.innerHTML = Translate('Tag Color');
+											purposeLabel.innerHTML = Translate('Purpose');
                                             purposeTitle.appendChild(purposeLabel);
                                             purposeRow.appendChild(purposeTitle);
                                         purposeDiv.appendChild(purposeRow);
@@ -2105,10 +2099,10 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                             const purposeInGroup = cTag('div',{ 'class': 'input-group' });
 												let selectPurpose = cTag('select',{ 'class': 'form-control','name': 'tag_color','id': 'tag_color' });
 												selectPurpose.appendChild(cTag('option',{ 'value': '' }));
-												setOptions(selectPurpose, data.tagColOpt, 0, 1);                             
+												setOptions(selectPurpose, data.purposeOpt, 0, 1);                             
                                                 purposeInGroup.appendChild(selectPurpose);
                                                 purposeInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '50','name': 'tag_color2','id': 'tag_color2','class': 'form-control', 'style': 'display:none'}));
-												let purposeSpan = cTag('span',{ 'data-toggle': 'tooltip','title': Translate('Add New Tag Color Name'),'class': 'input-group-addon cursor showNewInputOrSelect' });
+												let purposeSpan = cTag('span',{ 'data-toggle': 'tooltip','title': Translate('Add Purpose'),'class': 'input-group-addon cursor showNewInputOrSelect' });
 												purposeSpan.append(cTag('i',{ 'class': 'fa fa-plus' }), ' ', Translate('New'));
                                                 purposeInGroup.appendChild(purposeSpan);
                                                 purposeDropDown.appendChild(purposeInGroup);
@@ -2118,129 +2112,164 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 							    divCol7.appendChild(purposeDiv);
 
 
+                                // Age In Year
+								const ageInYearDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
+                                    const ageInYearRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                        const ageInYearTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                            const ageInYearLabel = cTag('label',{ 'for': 'age_in_year','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select the internal memory capacity of the device you are entering.') });
+                                            ageInYearLabel.innerHTML = Translate('Age in Year');
+                                            ageInYearTitle.appendChild(ageInYearLabel);
+                                        ageInYearRow.appendChild(ageInYearTitle);
+                                        ageInYearDiv.appendChild(ageInYearRow);
+                                            const ageInYearField = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
+                                            ageInYearField.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'age_in_year','id': 'age_in_year','class': 'form-control','value': data.age_in_year }));
+                                            ageInYearRow.appendChild(ageInYearField);
+                                        ageInYearDiv.appendChild(ageInYearRow);
+                                        ageInYearDiv.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_age_in_year' }));
+                                divCol7.appendChild(ageInYearDiv);
+
+
+                                // No of Teeth
+								const noOfTeethDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
+                                const noOfTeethRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                    const noOfTeethTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                        const noOfTeethLabel = cTag('label',{ 'for': 'no_of_teeth','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select the internal memory capacity of the device you are entering.') });
+                                        noOfTeethLabel.innerHTML = Translate('No of Teeth');
+                                        noOfTeethTitle.appendChild(noOfTeethLabel);
+                                        noOfTeethRow.appendChild(noOfTeethTitle);
+                                    noOfTeethDiv.appendChild(noOfTeethRow);
+                                        const noOfTeethField = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
+                                        noOfTeethField.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'no_of_teeth','id': 'no_of_teeth','class': 'form-control','value': data.no_of_teeth }));
+                                        noOfTeethRow.appendChild(noOfTeethField);
+                                        noOfTeethDiv.appendChild(noOfTeethRow);
+                                        noOfTeethDiv.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_no_of_teeth' }));
+                            divCol7.appendChild(noOfTeethDiv);
+
+
                                 
-                                    //Category Name
-									const categoryRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
-                                        const categoryTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                                            const categoryLabel = cTag('label',{ 'for': 'category_id' });
-                                            categoryLabel.innerHTML = Translate('Category Name');
-                                        categoryTitle.appendChild(categoryLabel);
-                                    categoryRow.appendChild(categoryTitle);
-                                        const categoryDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
-                                            const categoryInGroup = cTag('div',{ 'class': 'input-group' });
-                                                let selectCategory = cTag('select',{ 'class': 'form-control','name': 'category_id','id': 'category_id' });
-                                                    const categoryOpt = cTag('option',{ 'value': '0' });
-                                                    categoryOpt.innerHTML = '';
-                                                selectCategory.appendChild(categoryOpt);
-                                                setOptions(selectCategory, data.catOpt, 1, 1);                      
-                                            categoryInGroup.appendChild(selectCategory);
-                                            categoryInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '35','name': 'category_name','id': 'category_name','class': 'form-control',style:'display:none'}));
-                                                let newSpan = cTag('span', {'data-toggle':'tooltip', 'class':'input-group-addon cursor showNewInputOrSelect', 'title': Translate('Add New Category')});
-                                                newSpan.append(cTag('i', {'class':'fa fa-plus'}), ' ', Translate('New'));
-                                            categoryInGroup.appendChild(newSpan);
-                                        categoryDropDown.appendChild(categoryInGroup);
-                                        categoryDropDown.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_category_id' }));
-                                    categoryRow.appendChild(categoryDropDown);
-                                divCol7.appendChild(categoryRow);
+                                //     //Category Name
+								// 	const categoryRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                //         const categoryTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                //             const categoryLabel = cTag('label',{ 'for': 'category_id' });
+                                //             categoryLabel.innerHTML = Translate('Category Name');
+                                //         categoryTitle.appendChild(categoryLabel);
+                                //     categoryRow.appendChild(categoryTitle);
+                                //         const categoryDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+                                //             const categoryInGroup = cTag('div',{ 'class': 'input-group' });
+                                //                 let selectCategory = cTag('select',{ 'class': 'form-control','name': 'category_id','id': 'category_id' });
+                                //                     const categoryOpt = cTag('option',{ 'value': '0' });
+                                //                     categoryOpt.innerHTML = '';
+                                //                 selectCategory.appendChild(categoryOpt);
+                                //                 setOptions(selectCategory, data.catOpt, 1, 1);                      
+                                //             categoryInGroup.appendChild(selectCategory);
+                                //             categoryInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '35','name': 'category_name','id': 'category_name','class': 'form-control',style:'display:none'}));
+                                //                 let newSpan = cTag('span', {'data-toggle':'tooltip', 'class':'input-group-addon cursor showNewInputOrSelect', 'title': Translate('Add New Category')});
+                                //                 newSpan.append(cTag('i', {'class':'fa fa-plus'}), ' ', Translate('New'));
+                                //             categoryInGroup.appendChild(newSpan);
+                                //         categoryDropDown.appendChild(categoryInGroup);
+                                //         categoryDropDown.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_category_id' }));
+                                //     categoryRow.appendChild(categoryDropDown);
+                                // divCol7.appendChild(categoryRow);
 
-                                    //Manufacturer Name
-                                    const manufacturerDiv = cTag('div',{ 'class': ' LiveStocks' });
-                                        const manufacturerRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
-                                            const manufacturerTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                                                const manufacturerLabel = cTag('label',{ 'for': 'manufacturer_id' });
-												manufacturerLabel.innerHTML = Translate('Manufacturer Name');
-                                            manufacturerTitle.appendChild(manufacturerLabel);
-                                        manufacturerRow.appendChild(manufacturerTitle);
-                                    manufacturerDiv.appendChild(manufacturerRow);
-                                            const manufacturerDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
-                                                const manufacturerInGroup = cTag('div',{ 'class': 'input-group' });
-													let selectManufacturer = cTag('select',{ 'class': 'form-control','name': 'manufacturer_id','id': 'manufacturer_id' });
-                                                        const manufacturerOpt = cTag('option',{ 'value': '0' });
-                                                        manufacturerOpt.innerHTML = '';
-                                                    selectManufacturer.appendChild(manufacturerOpt);
-                                                    setOptions(selectManufacturer, data.manOpt, 1, 1);                       
-                                                manufacturerInGroup.appendChild(selectManufacturer);
-												manufacturerInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '30','name': 'manufacture','id': 'manufacture','class': 'form-control', style:'display:none'}));
-													let newManfacturerSpan = cTag('span',{ 'data-toggle': 'tooltip','title': Translate('Add New Manufacturer'),'class': 'input-group-addon cursor showNewInputOrSelect' });
-													newManfacturerSpan.append(cTag('i',{ 'class': 'fa fa-plus' }), ' ', Translate('New'));
-                                                manufacturerInGroup.appendChild(newManfacturerSpan);
-                                            manufacturerDropDown.appendChild(manufacturerInGroup);
-											manufacturerDropDown.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_manufacturer_id' }));
-                                        manufacturerRow.appendChild(manufacturerDropDown);
-                                    manufacturerDiv.appendChild(manufacturerRow);
-                                divCol7.appendChild(manufacturerDiv);
-								
+                                //     //Manufacturer Name
+                                //     const manufacturerDiv = cTag('div',{ 'class': ' LiveStocks' });
+                                //         const manufacturerRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                //             const manufacturerTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                //                 const manufacturerLabel = cTag('label',{ 'for': 'manufacturer_id' });
+								// 				manufacturerLabel.innerHTML = Translate('Manufacturer Name');
+                                //             manufacturerTitle.appendChild(manufacturerLabel);
+                                //         manufacturerRow.appendChild(manufacturerTitle);
+                                //     manufacturerDiv.appendChild(manufacturerRow);
+                                //             const manufacturerDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+                                //                 const manufacturerInGroup = cTag('div',{ 'class': 'input-group' });
+								// 					let selectManufacturer = cTag('select',{ 'class': 'form-control','name': 'manufacturer_id','id': 'manufacturer_id' });
+                                //                         const manufacturerOpt = cTag('option',{ 'value': '0' });
+                                //                         manufacturerOpt.innerHTML = '';
+                                //                     selectManufacturer.appendChild(manufacturerOpt);
+                                //                     setOptions(selectManufacturer, data.manOpt, 1, 1);                       
+                                //                 manufacturerInGroup.appendChild(selectManufacturer);
+								// 				manufacturerInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '30','name': 'manufacture','id': 'manufacture','class': 'form-control', style:'display:none'}));
+								// 					let newManfacturerSpan = cTag('span',{ 'data-toggle': 'tooltip','title': Translate('Add New Manufacturer'),'class': 'input-group-addon cursor showNewInputOrSelect' });
+								// 					newManfacturerSpan.append(cTag('i',{ 'class': 'fa fa-plus' }), ' ', Translate('New'));
+                                //                 manufacturerInGroup.appendChild(newManfacturerSpan);
+                                //             manufacturerDropDown.appendChild(manufacturerInGroup);
+								// 			manufacturerDropDown.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_manufacturer_id' }));
+                                //         manufacturerRow.appendChild(manufacturerDropDown);
+                                //     manufacturerDiv.appendChild(manufacturerRow);
+                                // divCol7.appendChild(manufacturerDiv);
+								                       
 
-                             
+                        //     //Storage
+						// 		const storageDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
+                        //         const storageRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                        //             const storageTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                        //                 const storageLabel = cTag('label',{ 'for': 'storage','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select the internal memory capacity of the device you are entering.') });
+                        //                 storageLabel.innerHTML = Translate('Storage');
+                        //             storageTitle.appendChild(storageLabel);
+                        //         storageRow.appendChild(storageTitle);
+                        //     storageDiv.appendChild(storageRow);
+                        //             const storageField = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
+                        //             storageField.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'storage','id': 'storage','class': 'form-control','value': data.storage }));
+                        //         storageRow.appendChild(storageField);
+                        //     storageDiv.appendChild(storageRow);
+                        //     storageDiv.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_storage' }));
+                        // divCol7.appendChild(storageDiv);
 
-								//Storage
-								const storageDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
-                                    const storageRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
-                                        const storageTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                                            const storageLabel = cTag('label',{ 'for': 'storage','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select the internal memory capacity of the device you are entering.') });
-											storageLabel.innerHTML = Translate('Storage');
-                                        storageTitle.appendChild(storageLabel);
-                                    storageRow.appendChild(storageTitle);
-                                storageDiv.appendChild(storageRow);
-                                        const storageField = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
-										storageField.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'storage','id': 'storage','class': 'form-control','value': data.storage }));
-                                    storageRow.appendChild(storageField);
-                                storageDiv.appendChild(storageRow);
-								storageDiv.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_storage' }));
-							divCol7.appendChild(storageDiv);
 
-								//physical condition
-								const physicalDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
-                                    const physicalRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
-                                        const physicalTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                                            const physicalLabel = cTag('label',{ 'for': 'physical_condition_name','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('What would you grade the device in terms of cosmetic appearance?') });
-											physicalLabel.innerHTML = Translate('Physical Condition');
-                                        physicalTitle.appendChild(physicalLabel);
-                                    physicalRow.appendChild(physicalTitle);
-                                physicalDiv.appendChild(physicalRow);
-                                        const physicalConditionDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left' });
-											let selectCondition = cTag('select',{ 'class': 'form-control','id': 'physical_condition_name','name': 'physical_condition_name' });
-											selectCondition.appendChild(cTag('option',{ 'value': '' }));
-											setOptions(selectCondition, data.phyConNamOpt, 0, 1);  
-                                        physicalConditionDropDown.appendChild(selectCondition);
-										physicalConditionDropDown.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_physical_condition_name' }));
-                                    physicalRow.appendChild(physicalConditionDropDown);
-                                physicalDiv.appendChild(physicalRow);
-							divCol7.appendChild(physicalDiv);
+							// 	//physical condition
+							// 	const physicalDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
+                            //         const physicalRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                            //             const physicalTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                            //                 const physicalLabel = cTag('label',{ 'for': 'physical_condition_name','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('What would you grade the device in terms of cosmetic appearance?') });
+							// 				physicalLabel.innerHTML = Translate('Physical Condition');
+                            //             physicalTitle.appendChild(physicalLabel);
+                            //         physicalRow.appendChild(physicalTitle);
+                            //     physicalDiv.appendChild(physicalRow);
+                            //             const physicalConditionDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left' });
+							// 				let selectCondition = cTag('select',{ 'class': 'form-control','id': 'physical_condition_name','name': 'physical_condition_name' });
+							// 				selectCondition.appendChild(cTag('option',{ 'value': '' }));
+							// 				setOptions(selectCondition, data.phyConNamOpt, 0, 1);  
+                            //             physicalConditionDropDown.appendChild(selectCondition);
+							// 			physicalConditionDropDown.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_physical_condition_name' }));
+                            //         physicalRow.appendChild(physicalConditionDropDown);
+                            //     physicalDiv.appendChild(physicalRow);
+							// divCol7.appendChild(physicalDiv);
 
-								//regular price
-								const regularRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
-                                    const regularTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                                        const regularLabel = cTag('label',{ 'for': 'regular_price','data-placement': 'bottom' });
-										regularLabel.innerHTML = Translate('Selling Price');
-                                    regularTitle.appendChild(regularLabel);
-                                regularRow.appendChild(regularTitle);
-                                    const regularDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
-										let sellPrice = cTag('input',{ 'type': 'text','data-min':'-9999999.99','data-max':'9999999.99','data-format':'d.dd','class': 'form-control','name': 'regular_price','id': 'regular_price','value': round(data.regular_price,2) });
-										controllNumericField(sellPrice,'#errmsg_regular_price');
-                                        sellPrice.addEventListener('blur',function(){
-											if(this.value<0) document.getElementById('error_product').innerHTML = "Selling Price can't be < than 0"
-										})
-                                    regularDropDown.appendChild(sellPrice);
-									regularDropDown.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_regular_price' }));
-                                regularRow.appendChild(regularDropDown);
-							divCol7.appendChild(regularRow);
-						divTabs1.appendChild(divCol7);
+						// 		//regular price
+						// 		const regularRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                        //             const regularTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                        //                 const regularLabel = cTag('label',{ 'for': 'regular_price','data-placement': 'bottom' });
+						// 				regularLabel.innerHTML = Translate('Selling Price');
+                        //             regularTitle.appendChild(regularLabel);
+                        //         regularRow.appendChild(regularTitle);
+                        //             const regularDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+						// 				let sellPrice = cTag('input',{ 'type': 'text','data-min':'-9999999.99','data-max':'9999999.99','data-format':'d.dd','class': 'form-control','name': 'regular_price','id': 'regular_price','value': round(data.regular_price,2) });
+						// 				controllNumericField(sellPrice,'#errmsg_regular_price');
+                        //                 sellPrice.addEventListener('blur',function(){
+						// 					if(this.value<0) document.getElementById('error_product').innerHTML = "Selling Price can't be < than 0"
+						// 				})
+                        //             regularDropDown.appendChild(sellPrice);
+						// 			regularDropDown.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_regular_price' }));
+                        //         regularRow.appendChild(regularDropDown);
+						// 	divCol7.appendChild(regularRow);
+						// divTabs1.appendChild(divCol7);
 
 								//Minimum Selling price
-								const minimumSellingRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
-                                    const minimumSellingTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                                        const minimumSellingLabel = cTag('label',{ 'for': 'minimum_price'});
-										minimumSellingLabel.innerHTML = Translate('Minimum Selling Price');
-                                    minimumSellingTitle.appendChild(minimumSellingLabel);
-                                minimumSellingRow.appendChild(minimumSellingTitle);
-                                    const minimumSellingField = cTag('div',{ 'class': 'columnXS12 columnSM8' });
-										let sellPriceInput = cTag('input',{ 'type': 'text','data-min':'-9999999.99','data-max':'9999999.99','data-format':'d.dd','class': 'form-control','name': 'minimum_price','id': 'minimum_price','value': round(data.minimum_price,2)});
-										controllNumericField(sellPriceInput,'#errmsg_minimum_price');
-                                    minimumSellingField.appendChild(sellPriceInput);
-									minimumSellingField.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_minimum_price' }));
-                                minimumSellingRow.appendChild(minimumSellingField);
-							divCol7.appendChild(minimumSellingRow);
+							// 	const minimumSellingRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                            //         const minimumSellingTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                            //             const minimumSellingLabel = cTag('label',{ 'for': 'minimum_price'});
+							// 			minimumSellingLabel.innerHTML = Translate('Minimum Selling Price');
+                            //         minimumSellingTitle.appendChild(minimumSellingLabel);
+                            //     minimumSellingRow.appendChild(minimumSellingTitle);
+                            //         const minimumSellingField = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+							// 			let sellPriceInput = cTag('input',{ 'type': 'text','data-min':'-9999999.99','data-max':'9999999.99','data-format':'d.dd','class': 'form-control','name': 'minimum_price','id': 'minimum_price','value': round(data.minimum_price,2)});
+							// 			controllNumericField(sellPriceInput,'#errmsg_minimum_price');
+                            //         minimumSellingField.appendChild(sellPriceInput);
+							// 		minimumSellingField.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_minimum_price' }));
+                            //     minimumSellingRow.appendChild(minimumSellingField);
+							// divCol7.appendChild(minimumSellingRow);
+
+
 						divTabs1.appendChild(divCol7);
 
 							//taxable
@@ -2321,15 +2350,17 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 								addDescriptionRow.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_add_description' }));
 							divCol5.appendChild(addDescriptionRow);
 
-								const imeiLivestockDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
-                                    const imeiLivestockRow = cTag('div',{ 'class': 'flex' });
-                                        const imeiLivestockColumn = cTag('div',{ 'class': 'columnXS12 roundborder bgcoolblue', 'style': "padding-left: 20px; padding-right: 20px; padding-top: 15px; padding-bottom: 15px;" });
-											let pTag = cTag('p');
-											pTag.innerHTML = Translate('IMEI numbers are added from the Livestock Information page after you save this new mobile device.');
-                                        imeiLivestockColumn.appendChild(pTag);
-                                    imeiLivestockRow.appendChild(imeiLivestockColumn);
-                                imeiLivestockDiv.appendChild(imeiLivestockRow);
-							divCol5.appendChild(imeiLivestockDiv);
+							// 	const imeiLivestockDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
+                            //         const imeiLivestockRow = cTag('div',{ 'class': 'flex' });
+                            //             const imeiLivestockColumn = cTag('div',{ 'class': 'columnXS12 roundborder bgcoolblue', 'style': "padding-left: 20px; padding-right: 20px; padding-top: 15px; padding-bottom: 15px;" });
+							// 				let pTag = cTag('p');
+							// 				pTag.innerHTML = Translate('IMEI numbers are added from the Livestock Information page after you save this new mobile device.');
+                            //             imeiLivestockColumn.appendChild(pTag);
+                            //         imeiLivestockRow.appendChild(imeiLivestockColumn);
+                            //     imeiLivestockDiv.appendChild(imeiLivestockRow);
+							// divCol5.appendChild(imeiLivestockDiv);
+
+
 						divTabs1.appendChild(divCol5);
 					divTabs.appendChild(divTabs1);
 
@@ -2374,10 +2405,10 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 
 				document.getElementById("tag").value = data.tag;
 				document.getElementById("category_id").value = data.category_id;
-				document.getElementById("manufacturer_id").value = data.manufacturer_id;
+				// document.getElementById("manufacturer_id").value = data.manufacturer_id;
 				document.getElementById("colour_name").value = data.colour_name;
 				document.getElementById("tag_color").value = data.tag_color;
-				document.getElementById("physical_condition_name").value = data.physical_condition_name;
+				// document.getElementById("physical_condition_name").value = data.physical_condition_name;
 				
 				if(data.customFieldsData.length>0 && document.getElementsByClassName("DateField").length>0){					
 					date_picker('.DateField');
@@ -2420,14 +2451,14 @@ async function AJsave_Livestocks(hidePopup,addCartCBF){
 	let oField, oElement, labelStr;
 	oField = document.getElementById('product_type');
 	let errmsg_sku = document.getElementById('errmsg_sku');
-	oElement = document.getElementById('errmsg_minimum_price');
-	oElement.innerHTML = "";
+	// oElement = document.getElementById('errmsg_minimum_price');
+	// oElement.innerHTML = "";
 
     oField = document.querySelector('#frmproduct #tag');
-	oElement = document.getElementById('errmsg_tag');
-	oElement.innerHTML = "";
+	// oElement = document.getElementById('errmsg_tag');
+	// oElement.innerHTML = "";
 	if(oField.value === ""){
-		oElement.innerHTML = Translate('Missing tag');
+		// oElement.innerHTML = Translate('Missing tag');
 		document.querySelector("#tabs").activateTab(0);
 		oField.focus();
         oField.classList.add('errorFieldBorder');
@@ -2456,10 +2487,10 @@ async function AJsave_Livestocks(hidePopup,addCartCBF){
     
 
 	let regular_price = document.getElementById('regular_price');
-    if(!regular_price.valid()) return;
+    // if(!regular_price.valid()) return;
 
 	let minimum_price = document.getElementById('minimum_price');
-    if(!minimum_price.valid()) return;	
+    // if(!minimum_price.valid()) return;	
 
     let validCustomFields = validifyCustomField(2);
 	if(!validCustomFields) return;

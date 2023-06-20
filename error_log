@@ -797,3 +797,192 @@ previous: http://livestock.skitsbdl.com/Home
 2023-06-20 06:32:20 JSON Issue, Message: Unexpected token '<', "<br />
 <fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
 <fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-20 07:25:30 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'focus')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2373:45 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 07:26:31 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2385:42 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 07:26:56 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2386:50 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 07:27:24 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2388:50 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 07:27:46 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'value')
+    at checkManageInventory (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2537:60)
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2396:5 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 07:28:18 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'value')
+    at checkLivestockType (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2561:63)
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2397:5 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 07:30:26 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'focus')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2373:45 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 07:31:21 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2370:54 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 07:31:31 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2370:54 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 07:32:53 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'focus')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2373:45 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 07:33:40 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2390:62 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 07:33:51 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2390:62 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 07:34:06 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2390:62 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 07:34:39 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2389:54 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 07:34:44 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at AJsave_Livestocks (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2436:21)
+    at Object.click (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2371:80)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 07:34:45 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at AJsave_Livestocks (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2436:21)
+    at Object.click (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2371:80)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 07:35:04 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at AJsave_Livestocks (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2436:21)
+    at Object.click (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2371:80)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 07:36:17 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at AJsave_Livestocks (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2436:21)
+    at Object.click (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2371:80)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 07:38:23 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'valid')
+    at AJsave_Livestocks (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2471:23)
+    at Object.click (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2371:80)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 07:38:31 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'valid')
+    at AJsave_Livestocks (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2471:23)
+    at Object.click (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2371:80)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 07:38:31 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'valid')
+    at AJsave_Livestocks (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2471:23)
+    at Object.click (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2371:80)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 07:38:32 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'valid')
+    at AJsave_Livestocks (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2471:23)
+    at Object.click (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2371:80)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 07:38:32 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'valid')
+    at AJsave_Livestocks (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2471:23)
+    at Object.click (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2371:80)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 07:38:32 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'valid')
+    at AJsave_Livestocks (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2471:23)
+    at Object.click (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2371:80)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 07:38:35 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'valid')
+    at AJsave_Livestocks (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2471:23)
+    at Object.click (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2371:80)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 07:38:36 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'valid')
+    at AJsave_Livestocks (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2471:23)
+    at Object.click (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2371:80)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 07:38:36 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'valid')
+    at AJsave_Livestocks (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2471:23)
+    at Object.click (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2371:80)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 07:38:36 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'valid')
+    at AJsave_Livestocks (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2471:23)
+    at Object.click (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2371:80)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 07:38:36 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'valid')
+    at AJsave_Livestocks (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2471:23)
+    at Object.click (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2371:80)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 07:38:37 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'valid')
+    at AJsave_Livestocks (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2471:23)
+    at Object.click (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2371:80)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 07:38:37 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'valid')
+    at AJsave_Livestocks (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2471:23)
+    at Object.click (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2371:80)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 07:38:37 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'valid')
+    at AJsave_Livestocks (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2471:23)
+    at Object.click (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2371:80)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 07:39:18 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'valid')
+    at AJsave_Livestocks (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2474:23)
+    at Object.click (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2371:80)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-20 07:39:49 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 890: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 07:39:49 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 905: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 07:39:49 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-20 07:39:51 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 890: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 07:39:51 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 905: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 07:39:51 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-20 07:39:53 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 890: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 07:39:53 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 905: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 07:39:53 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-20 07:39:55 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 890: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 07:39:55 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 905: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 07:39:55 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-20 07:39:57 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 890: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 07:39:57 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 905: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 07:39:57 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-20 07:56:31 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 893: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 07:56:31 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 908: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 07:56:31 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-20 07:56:33 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 893: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 07:56:33 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 908: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 07:56:33 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-20 07:56:35 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 893: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 07:56:35 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 908: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 07:56:35 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-20 07:56:37 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 893: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 07:56:37 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 908: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 07:56:37 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-20 07:56:39 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 893: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 07:56:39 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 908: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 07:56:39 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
