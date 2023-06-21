@@ -1781,7 +1781,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                 noPermissionWarning('Livestock');
                 return false;
             }            
-            //console.log(data);
+            console.log(data);
 			let divCol12, aTag, inputField, requiredField, requireSpan;
 			const formDialog = cTag('div');
             // formDialog.appendChild(cTag('div',{ 'class': 'errormsg','id': 'error_product' }));
@@ -1855,8 +1855,8 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                         tagField.appendChild(cTag('input',{ 'type': 'text','class': 'form-control','name': 'tag','id': 'tag','value': '','maxlength': '100' }));
                                         tagField.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_tag' }));
                                     tagRow.appendChild(tagField);
-                                divCol7.appendChild(tagRow); 
-                                
+                                divCol7.appendChild(tagRow);                                                         
+
 
                                 //########## Tag Color ##########        
                                 const tagColorDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
@@ -1974,11 +1974,10 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                         anmlDescriptionTitle.appendChild(anmlDescriptionLabel);
                                         anmlDescriptionRow.appendChild(anmlDescriptionTitle);
 
-                                        const anmlDescArea = cTag('div',{ 'class': 'columnXS12 columnSM8' , 'id':'anml_description_div'});
-                                        anmlDescArea.appendChild(cTag('textarea',{ 'rows': '4','cols': '20', 'class': 'form-control','name': 'anml_description','id': 'anml_description_ta' }));
+                                        const anmlDescArea = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+                                        anmlDescArea.appendChild(cTag('textarea',{ 'rows': '4','cols': '20', 'class': 'form-control','name': 'anml_description','id': 'anml_description' }));
                                         anmlDescArea.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_anml_description' }));
-                                        // anmlDescArea.innerHTML = data.anml_description;
-                                        // anmlDescArea.val = data.anml_description;
+                                        // anmlDescArea.innerHTML = '';   //data.anml_description;
                                         anmlDescriptionRow.appendChild(anmlDescArea);
                                 divCol7.appendChild(anmlDescriptionRow);
 
@@ -1998,7 +1997,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                                 selectLocation.appendChild(locationOpt);
                                             setOptions(selectLocation, data.locationOpt, 1, 1);                      
                                             locationInGroup.appendChild(selectLocation);
-                                            // locationInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '10','name': 'location_id','id': 'location_id','class': 'form-control',style:'display:none'}));
+                                            locationInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '10','name': 'location_id','id': 'location_id','class': 'form-control',style:'display:none'}));
                                             let locationSpan = cTag('span', {'data-toggle':'tooltip', 'class':'input-group-addon cursor showNewInputOrSelect', 'title': Translate('Add New Location')});
                                             locationSpan.append(cTag('i', {'class':'fa fa-plus'}), ' ', Translate('New'));
                                             locationInGroup.appendChild(locationSpan);
@@ -2025,9 +2024,9 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                                     selectGroup.appendChild(groupOpt);
                                                 setOptions(selectGroup, data.groupOpt, 1, 1);                      
                                                 groupInGroup.appendChild(selectGroup);
-                                                // groupInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '35','name': 'group_id','id': 'group_id','class': 'form-control',style:'display:none'}));
+                                                groupInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '35','name': 'group_id','id': 'group_id','class': 'form-control',style:'display:none'}));
                                                 let groupSpan = cTag('span', {'data-toggle':'tooltip', 'class':'input-group-addon cursor showNewInputOrSelect', 'title': Translate('Add New Group')});
-                                                groupSpan.append(cTag('i', {'class':'fa fa-plus'}), ' ', Translate('New Group'));
+                                                groupSpan.append(cTag('i', {'class':'fa fa-plus'}), ' ', Translate('New'));
                                                 groupInGroup.appendChild(groupSpan);
 
                                             groupDropDown.appendChild(groupInGroup);
@@ -2047,18 +2046,13 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                     const genderRadio = cTag('div',{ 'class': 'columnXS12 columnSM8' });
                                         const genderInGroup = cTag('div',{ 'class': 'input-group' });
                                             
-                                        genderInGroup.appendChild(cTag('input',{ 'type': 'radio', 'name': 'gender_id','id': 'gender_id_m','value': 1 }));
+                                        genderInGroup.appendChild(cTag('input',{ 'type': 'radio', 'name': 'gender_id','id': 'gender_id','value': 1 }));
                                         genderInGroup.append(' '+Translate('Male'));
                                         // genderInGroup.append(' ');
-                                        // if(data.gender_id==1){
-                                        //     alert(data.gender_id);
-										// 	genderInGroup.setAttribute('checked',true);
-                                        //     document.getElementById("_1234").checked = true;
-										// }
                                         const genderOpt = cTag('span',{ 'value': '&nbsp;' });
                                         genderOpt.innerHTML = '&nbsp;&nbsp;';
                                         genderInGroup.appendChild(genderOpt);
-                                        genderInGroup.appendChild(cTag('input',{ 'type': 'radio', 'name': 'gender_id','id': 'gender_id_f','value': 2 }));
+                                        genderInGroup.appendChild(cTag('input',{ 'type': 'radio', 'name': 'gender_id','id': 'gender_id','value': 2 }));
                                         genderInGroup.append(' '+Translate('Female'));
 
                                     genderRadio.appendChild(genderInGroup); 
@@ -2082,7 +2076,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                                     selectClassification.appendChild(clasfOpt);
                                                 setOptions(selectClassification, data.clasfOpt, 1, 1);                      
                                                 classificationInGroup.appendChild(selectClassification);
-                                                // classificationInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '35','name': 'classification_id','id': 'classification_id','class': 'form-control',style:'display:none'}));
+                                                classificationInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '35','name': 'classification_id','id': 'classification_id','class': 'form-control',style:'display:none'}));
                                                 let clasfSpan = cTag('span', {'data-toggle':'tooltip', 'class':'input-group-addon cursor showNewInputOrSelect', 'title': Translate('Add New Classification')});
                                                 clasfSpan.append(cTag('i', {'class':'fa fa-plus'}), ' ', Translate('New'));
                                                 classificationInGroup.appendChild(clasfSpan);
@@ -2096,25 +2090,25 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                 const purposeDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
                                     const purposeRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
                                         const purposeTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                                            const purposeLabel = cTag('label',{ 'for': 'purpose' });
+                                            const purposeLabel = cTag('label',{ 'for': 'tag_color' });
 											purposeLabel.innerHTML = Translate('Purpose');
                                             purposeTitle.appendChild(purposeLabel);
                                             purposeRow.appendChild(purposeTitle);
                                         purposeDiv.appendChild(purposeRow);
                                         const purposeDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
                                             const purposeInGroup = cTag('div',{ 'class': 'input-group' });
-												let selectPurpose = cTag('select',{ 'class': 'form-control','name': 'purpose','id': 'purpose' });
+												let selectPurpose = cTag('select',{ 'class': 'form-control','name': 'tag_color','id': 'tag_color' });
 												selectPurpose.appendChild(cTag('option',{ 'value': '' }));
 												setOptions(selectPurpose, data.purposeOpt, 0, 1);                             
                                                 purposeInGroup.appendChild(selectPurpose);
-                                                // purposeInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '50','name': 'purpose2','id': 'purpose2','class': 'form-control', 'style': 'display:none'}));
+                                                purposeInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '50','name': 'tag_color2','id': 'tag_color2','class': 'form-control', 'style': 'display:none'}));
 												let purposeSpan = cTag('span',{ 'data-toggle': 'tooltip','title': Translate('Add Purpose'),'class': 'input-group-addon cursor showNewInputOrSelect' });
 												purposeSpan.append(cTag('i',{ 'class': 'fa fa-plus' }), ' ', Translate('New'));
                                                 purposeInGroup.appendChild(purposeSpan);
                                                 purposeDropDown.appendChild(purposeInGroup);
                                             purposeRow.appendChild(purposeDropDown);
                                         purposeDiv.appendChild(purposeRow);
-                                        purposeDiv.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_purpose' }));
+                                        purposeDiv.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_tag_color' }));
 							    divCol7.appendChild(purposeDiv);
 
 
@@ -2411,26 +2405,10 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 
 				document.getElementById("tag").value = data.tag;
 				document.getElementById("category_id").value = data.category_id;
-				document.getElementById("location_id").value = data.location_id;
-				document.getElementById("group_id").value = data.group_id;
-				document.getElementById("classification_id").value = data.classification_id;
-				document.getElementById("purpose").value = data.purpose;
+				// document.getElementById("manufacturer_id").value = data.manufacturer_id;
 				document.getElementById("colour_name").value = data.colour_name;
 				document.getElementById("tag_color").value = data.tag_color;
-				document.getElementById("alt_tag").value = data.alt_tag;
-				// document.getElementById("breed_id").value = data.breed_id;
-				// document.getElementById("anml_description").value  = data.anml_description;
-				document.getElementById("anml_description_ta").innerHTML  = data.anml_description;
-                // console.log(data.anml_description);
-				// document.getElementById("manufacturer_id").value = data.manufacturer_id;
 				// document.getElementById("physical_condition_name").value = data.physical_condition_name;
-
-                if(data.gender_id==1){
-                    // genderInGroup.setAttribute('checked',true);
-                    document.getElementById("gender_id_m").checked = true;
-                }else if(data.gender_id==2){
-                    document.getElementById("gender_id_f").checked = true;
-                }
 				
 				if(data.customFieldsData.length>0 && document.getElementsByClassName("DateField").length>0){					
 					date_picker('.DateField');

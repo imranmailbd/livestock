@@ -566,7 +566,7 @@ class Livestocks{
 
 		
 		$product_type = $purpose = $colour_name = $tag_color = $storage = $age_in_year = $no_of_teeth = $physical_condition_name = $alert_message = '';
-		$category_id = $breed_id = $classification_id = $location_id = $group_id = $manufacturer_id = $low_inventory_alert = $require_serial_no = $manage_inventory_count = $allow_backorder = $ave_cost_is_percent = 0;
+		$category_id = $breed_id = $classification_id = $location_id = $group_id = $gender_id = $manufacturer_id = $low_inventory_alert = $require_serial_no = $manage_inventory_count = $allow_backorder = $ave_cost_is_percent = 0;
 		$taxable = 1;
 		
 		$productData = array();
@@ -622,7 +622,10 @@ class Livestocks{
 					$itemRow = $itemObj2->fetch(PDO::FETCH_OBJ);
 					$breed_id = $itemRow->breed_id;
 					$location_id = $itemRow->location_id;
+					$group_id = $itemRow->group_id;
+					$gender_id = $itemRow->gender_id;
 					$classification_id = $itemRow->classification_id;
+					$purpose = $itemRow->purpose;
 					$age_in_year = $itemRow->age_in_year;
 					$no_of_teeth = $itemRow->no_of_teeth;
 
@@ -632,7 +635,12 @@ class Livestocks{
 					$productData['breed_id'] = $itemRow->breed_id;
 					$productData['location_id'] = $itemRow->location_id;
 					$productData['group_id'] = $itemRow->group_id;
+					$productData['gender_id'] = $itemRow->gender_id;
 					$productData['classification_id'] = $itemRow->classification_id;
+					$productData['age_in_year'] = $itemRow->age_in_year;
+					$productData['no_of_teeth'] = $itemRow->no_of_teeth;
+					$productData['purpose'] = $itemRow->purpose;
+					$productData['anml_description'] = $itemRow->anml_description;
 				}
 				
 				$queryInvObj = $this->db->query("SELECT * FROM inventory WHERE product_id = $product_id AND accounts_id=$accounts_id", array());
@@ -693,7 +701,7 @@ class Livestocks{
 		$productData['breedOpt'] = $breedOpt;
 
 		//Location Dropdown 
-		$productData['location_id'] = intval($location_id);
+		// $productData['location_id'] = intval($location_id);
 		$locationOpt = array();
 		if($prod_cat_man>0){
 			$sqllocation = "SELECT lslocation_id, lslocation_name FROM lslocation WHERE accounts_id = $prod_cat_man AND (lslocation_publish = 1 OR (lslocation_id = $location_id AND lslocation_publish = 0)) ORDER BY lslocation_name ASC";
@@ -710,7 +718,7 @@ class Livestocks{
 
 
 		//Group Dropdown 
-		$productData['group_id'] = intval($group_id);
+		// $productData['group_id'] = intval($group_id);
 		$groupOpt = array();
 		if($prod_cat_man>0){
 			$sqlgroup = "SELECT lsgroups_id, lsgroups_name FROM lsgroups WHERE accounts_id = $prod_cat_man AND (lsgroups_publish = 1 OR (lsgroups_id = $group_id AND lsgroups_publish = 0)) ORDER BY lsgroups_name ASC";
@@ -727,7 +735,7 @@ class Livestocks{
 
 
 		//Classification Dropdown 
-		$productData['classification_id'] = intval($classification_id);
+		// $productData['classification_id'] = intval($classification_id);
 		$classificationOpt = array();
 		if($prod_cat_man>0){
 			$sqlclassification = "SELECT lsclassification_id, lsclassification_name FROM lsclassification WHERE accounts_id = $prod_cat_man AND (lsclassification_publish = 1 OR (lsclassification_id = $classification_id AND lsclassification_publish = 0)) ORDER BY lsclassification_name ASC";
@@ -788,9 +796,9 @@ class Livestocks{
 		//Storage
 		$productData['storage'] = $storage;
 
-		$productData['age_in_year'] = $age_in_year;
+		// $productData['age_in_year'] = $age_in_year;
 		
-		$productData['no_of_teeth'] = $no_of_teeth;
+		// $productData['no_of_teeth'] = $no_of_teeth;
 
 
 		$productData['physical_condition_name'] = $physical_condition_name;
@@ -814,7 +822,7 @@ class Livestocks{
 
 
 		//Tag Color
-		$productData['tag_color'] = $tag_color;
+		// $productData['tag_color'] = $tag_color;
 		$tagColorData = $this->tagColorData();		
 		$sqlTagCol= "SELECT tag_color FROM item WHERE product_id = $product_id AND accounts_id = $accounts_id";
 		$tagColObj = $this->db->query($sqlTagCol, array());
@@ -836,7 +844,7 @@ class Livestocks{
 
 
 		//Purpose
-		$productData['purpose'] = $purpose;
+		// $productData['purpose'] = $purpose;
 		$purposeData = $this->purposeData();		
 		$sqlPurpose= "SELECT purpose FROM item WHERE product_id = $product_id AND accounts_id = $accounts_id";
 		$purposeObj = $this->db->query($sqlPurpose, array());
@@ -866,6 +874,8 @@ class Livestocks{
 		$productData['low_inventory_alert'] = intval($low_inventory_alert);
 		$productData['product_id'] = intval($product_id);
 		$productData['customFieldsData'] = $Common->customFormFields('product', $custom_data);
+
+		// var_dump($productData);exit;
 		
 		return json_encode($productData);
 	}	
@@ -881,19 +891,28 @@ class Livestocks{
 		
 		$product_id = intval($POST['product_id']??0);
 		$category_id = intval($POST['category_id']??0);
+		$gender_id = intval($POST['gender_id']??0);
+		$age_in_year = intval($POST['age_in_year']??0);
+		$no_of_teeth = intval($POST['no_of_teeth']??0);
 		$product_type = $POST['product_type']??'';
 		$product_type = $this->db->checkCharLen('product.product_type', $product_type);
 		$category_name = trim((string) $POST['category_name']??'');
 		$category_name = $this->db->checkCharLen('category.category_name', $category_name);
-		$tag_color = trim((string) $POST['tag_color']??'');
-		$tag_color = $this->db->checkCharLen('item.tag_color', $tag_color);
-		$tag_color2 = addslashes(trim((string) $POST['tag_color2']??''));
-		$tag_color2 = $this->db->checkCharLen('item.colour_name', $tag_color2);
 		$manufacturer_id = intval($POST['manufacturer_id']??0);
+		$breed_id = intval($POST['breed_id']??0);
+		$location_id = intval($POST['location_id']??0);
+		$group_id = intval($POST['group_id']??0);
+		$classification_id = intval($POST['classification_id']??0);
 		$manufacture = addslashes(trim((string) $POST['manufacture']??''));
 		$manufacture = $this->db->checkCharLen('manufacturer.name', $manufacture);
+		$purpose = addslashes(trim((string) $POST['purpose']??''));
+		$purpose = $this->db->checkCharLen('item.purpose', $purpose);
 		$product_name = addslashes(trim((string) $POST['product_name']??''));
 		$product_name = $this->db->checkCharLen('product.product_name', $product_name);
+		$anml_description = addslashes(trim((string) $POST['anml_description']??''));
+		$anml_description = $this->db->checkCharLen('item.anml_description', $anml_description);
+		$alt_tag = addslashes(trim((string) $POST['alt_tag']??''));
+		$alt_tag = $this->db->checkCharLen('item.alt_tag', $alt_tag);
 		$colour_name = addslashes(trim((string) $POST['colour_name']??''));
 		$colour_name = $this->db->checkCharLen('product.colour_name', $colour_name);
 		$colour_name2 = addslashes(trim((string) $POST['colour_name2']??''));
@@ -902,6 +921,10 @@ class Livestocks{
 		$sku = $this->db->checkCharLen('product.sku', $sku);
 		$tag = addslashes(trim((string) $POST['tag']??''));
 		$tag = $this->db->checkCharLen('product.tag', $tag);
+		$tag_color = trim((string) $POST['tag_color']??'');
+		$tag_color = $this->db->checkCharLen('item.tag_color', $tag_color);
+		$tag_color2 = addslashes(trim((string) $POST['tag_color2']??''));
+		$tag_color2 = $this->db->checkCharLen('item.colour_name', $tag_color2);
 		$require_serial_no = intval($POST['require_serial_no']??0);
 		$manage_inventory_count = intval($POST['manage_inventory_count']??0);
 		$add_description = addslashes(trim((string) $POST['add_description']??''));
@@ -987,7 +1010,6 @@ class Livestocks{
 		$productdata['manufacture'] = '';
 		$productdata['product_name'] = $product_name;
 		$productdata['colour_name'] = $colour_name;		
-		$productdata['tag_color'] = $tag_color;		
 		$productdata['sku'] = $sku;
 		$productdata['require_serial_no'] = $require_serial_no;
 		$productdata['manage_inventory_count'] = intval($manage_inventory_count);
@@ -1006,15 +1028,25 @@ class Livestocks{
 		$itemdata['last_updated'] = $last_updated; //date('Y-m-d H:i:s');
 		$itemdata['accounts_id'] = $accounts_id;
 		$itemdata['user_id'] = $user_id;
+		$itemdata['breed_id'] = $breed_id;
+		$itemdata['location_id'] = $location_id;
+		$itemdata['group_id'] = $group_id;
+		$itemdata['classification_id'] = $classification_id;
+		$itemdata['purpose'] = $purpose;
+		$itemdata['gender_id'] = $gender_id;
+		$itemdata['age_in_year'] = $age_in_year;
+		$itemdata['no_of_teeth'] = $no_of_teeth;
 		$itemdata['item_number'] = $tag;
 		$itemdata['tag'] = $tag;
 		$itemdata['tag_color'] = $tag_color;
+		$itemdata['anml_description'] = $anml_description;
+		$itemdata['alt_tag'] = $alt_tag;
 		$itemdata['carrier_name'] = '';
 		$itemdata['in_inventory'] = 1;
 		$itemdata['is_pos'] = 0;
 		$itemdata['custom_data'] = '';
 		
-		
+
 		$inventorydata = array();
 		$inventorydata['accounts_id'] = $accounts_id;
 		
@@ -1075,6 +1107,7 @@ class Livestocks{
 					}
 				}
 			}
+
 
 			if($totalrows1>0){
 				if($product_publish1>0){
@@ -1245,7 +1278,7 @@ class Livestocks{
 
 				$queryItemObj = $this->db->querypagination("SELECT item_id FROM item WHERE accounts_id = $accounts_id AND product_id = $product_id", array());
 				if($queryItemObj){
-
+					// var_dump($itemdata);exit;
 					$item_id = $queryItemObj[0]['item_id'];					
 					$update = $this->db->update('item', $itemdata, $item_id);
 				}

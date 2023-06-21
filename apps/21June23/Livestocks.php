@@ -1,5 +1,5 @@
 <?php
-class Products{
+class Livestocks{
 	protected $db;
 	private int $page, $totalRows, $product_id;
 	private string $data_type, $category_id, $manufacturer_id, $keyword_search, $history_type;
@@ -23,7 +23,7 @@ class Products{
 		$scategory_id = $this->category_id;
 		$keyword_search = $this->keyword_search;
 		
-		$_SESSION["current_module"] = "Products";
+		$_SESSION["current_module"] = "Livestocks";
 		$_SESSION["list_filters"] = array('sdata_type'=>$sdata_type, 'smanufacturer_id'=>$smanufacturer_id, 'scategory_id'=>$scategory_id, 'keyword_search'=>$keyword_search);
 		
 		$filterSql = "";
@@ -49,7 +49,6 @@ class Products{
 				$num++;
 			}
 		}
-		
 		$addiselect = $havingsql = '';
 		if($sdata_type=='Low Stock'){
 			$addiselect = ', i.low_inventory_alert AS low_inventory_alert';
@@ -59,17 +58,25 @@ class Products{
 		if($sdata_type=='Archived'){
 			$sqlPublish = " AND p.product_publish = 0";
 		}
-		$strextra ="SELECT p.product_id AS product_id, p.category_id, p.manufacturer_id, i.current_inventory AS current_inventory, manufacturer.name AS manufacture$addiselect FROM inventory i, product p LEFT JOIN manufacturer ON (p.manufacturer_id = manufacturer.manufacturer_id) 
-					WHERE i.accounts_id = $accounts_id AND p.product_type != 'Live Stocks' $sqlPublish $filterSql";
+		$strextra ="SELECT p.product_id AS product_id, p.category_id, p.manufacturer_id, i.current_inventory as current_inventory, manufacturer.name AS manufacture$addiselect";
+		if($sdata_type =='All'){
+			$strextra .= " FROM inventory i, product p LEFT JOIN manufacturer ON (p.manufacturer_id = manufacturer.manufacturer_id) LEFT JOIN item ON (item.accounts_id = $accounts_id AND item.product_id = p.product_id AND item.in_inventory = 1)";
+		}
+		else{
+			$strextra .= " FROM inventory i, item, product p LEFT JOIN manufacturer ON (p.manufacturer_id = manufacturer.manufacturer_id)";
+		}
+
+		$strextra .= " WHERE i.accounts_id = $accounts_id AND p.product_type = 'Live Stocks' $sqlPublish $filterSql";
 		if($sdata_type=='Available'){
-			$strextra .= " AND ((p.manage_inventory_count = 0 OR p.manage_inventory_count is null) OR (p.manage_inventory_count=1 AND i.current_inventory>0) OR p.allow_backorder = 1)";
+			$strextra .=" AND item.accounts_id = $accounts_id AND item.in_inventory = 1";
 		}
 		elseif($sdata_type=='Low Stock'){
-			$strextra .= " AND (p.manage_inventory_count>0 AND i.current_inventory < i.low_inventory_alert)";
+			$strextra .=" AND item.accounts_id = $accounts_id AND item.in_inventory = 1";
 		}
-		
 		$strextra .= " AND i.product_id = p.product_id";
-		
+		if($sdata_type !='All'){
+			$strextra .= " AND item.product_id = p.product_id";
+		}
 		$strextra .= " GROUP BY product_id$havingsql";
 
 		$totalRows = 0;
@@ -162,8 +169,27 @@ class Products{
 		elseif($sdata_type=='Low Stock'){
 			$strextra .= " AND (p.manage_inventory_count>0 AND i.current_inventory < i.low_inventory_alert)";
 		}
-		$strextra .= " AND i.product_id = p.product_id GROUP BY p.product_id";
-		$strextra .= " ORDER BY manufacture ASC, product_name ASC, colour_name ASC, storage ASC, physical_condition_name ASC";
+		$strextra .= " AND i.product_id = p.product_id GROUP BY p.product_id 
+						 UNION 
+						 SELECT p.product_id AS product_id, p.product_type, p.sku, p.category_id, count(item.item_id) as current_inventory,  manufacturer.name AS manufacture, p.product_name as product_name, p.colour_name AS colour_name, p.storage AS storage, p.physical_condition_name AS physical_condition_name, i.regular_price, p.manage_inventory_count, count(item.item_id) as current_inventory, p.allow_backorder, i.low_inventory_alert AS low_inventory_alert";
+		if($sdata_type =='All'){
+			$strextra .= " FROM inventory i, product p LEFT JOIN manufacturer ON (p.manufacturer_id = manufacturer.manufacturer_id) LEFT JOIN item ON (item.accounts_id = $accounts_id AND item.product_id = p.product_id AND item.in_inventory = 1 AND item.item_publish = 1)";
+		}
+		else{
+			$strextra .= " FROM inventory i, item, product p LEFT JOIN manufacturer ON (p.manufacturer_id = manufacturer.manufacturer_id)";
+		}
+		$strextra .= " WHERE i.accounts_id = $accounts_id AND p.product_type = 'Live Stocks' $sqlPublish $filterSql";
+
+		if($sdata_type=='Available' || $sdata_type=='Low Stock'){
+			$strextra .=" AND item.accounts_id = $accounts_id AND item.in_inventory = 1 AND item.item_publish = 1";
+		}
+
+		$strextra .= " AND i.product_id = p.product_id";
+		if($sdata_type !='All'){
+			$strextra .= " AND item.product_id = p.product_id";
+		}
+		$strextra .= " GROUP BY p.product_id$havingsql 
+					 ORDER BY manufacture ASC, product_name ASC, colour_name ASC, storage ASC, physical_condition_name ASC";
 		
 		$sqlquery = "$strextra LIMIT $starting_val, $limit";
 		$query = $this->db->querypagination($sqlquery, $bindData);
@@ -230,7 +256,7 @@ class Products{
 				$NeedHaveOnPOInfo['onPO'] = 0;
 				
 				$NeedHaveOnPO = $current_inventory;
-				if(in_array($product_type, array('Standard')) && $manage_inventory_count>0){
+				if(in_array($product_type, array('Standard', 'Live Stocks')) && $manage_inventory_count>0){
 					$NHPInfo = $Carts->NeedHaveOnPO($product_id, $product_type, 1);
 					$NeedHaveOnPOInfo['need'] = $NHPInfo[0];
 					$NeedHaveOnPOInfo['have'] = $NHPInfo[1];
@@ -252,7 +278,7 @@ class Products{
 		$bindData = array();
 		$bindData['sproduct_id'] = $sproduct_id;
 		if($shistory_type !=''){
-			if(strcmp($shistory_type, 'Product Created')==0){
+			if(strcmp($shistory_type, 'Livestock Created')==0){
 				$filterSql = "SELECT COUNT(product_id) AS totalrows FROM product 
 							WHERE product_id = :sproduct_id AND accounts_id = $prod_cat_man";
 			}
@@ -290,14 +316,14 @@ class Products{
 			}
 			else{
 				$filterSql = "SELECT COUNT(activity_feed_id) AS totalrows FROM activity_feed 
-						WHERE accounts_id = $accounts_id AND uri_table_name = 'product' AND activity_feed_link = CONCAT('/Products/view/', :sproduct_id)";
+						WHERE accounts_id = $accounts_id AND uri_table_name = 'product' AND activity_feed_link = CONCAT('/Livestocks/view/', :sproduct_id)";
 				$filterSql .= " AND activity_feed_title = :shistory_type";
 				$bindData['shistory_type'] = $shistory_type;
 			}
 		}
 		else{
 			$filterSql = "SELECT COUNT(activity_feed_id) AS totalrows FROM activity_feed 
-						WHERE accounts_id = $accounts_id AND uri_table_name = 'product' AND activity_feed_link = CONCAT('/Products/view/', :sproduct_id) 
+						WHERE accounts_id = $accounts_id AND uri_table_name = 'product' AND activity_feed_link = CONCAT('/Livestocks/view/', :sproduct_id) 
 						UNION ALL 
 							SELECT COUNT(product_id) AS totalrows FROM product 
 							WHERE product_id = :sproduct_id AND accounts_id = $prod_cat_man 
@@ -348,8 +374,8 @@ class Products{
 		$bindData['sproduct_id'] = $sproduct_id;            
 		
 		if($shistory_type !=''){
-			if(strcmp($shistory_type, 'Product Created')==0){
-				$filterSql = "SELECT 'product' as tablename, created_on as tabledate, product_id as table_id, 'Product Created' as activity_feed_title FROM product 
+			if(strcmp($shistory_type, 'Livestock Created')==0){
+				$filterSql = "SELECT 'product' as tablename, created_on as tabledate, product_id as table_id, 'Livestock Created' as activity_feed_title FROM product 
 							WHERE product_id = :sproduct_id AND accounts_id = $prod_cat_man";
 			}
 			elseif(strcmp($shistory_type, 'Sales Invoice Created')==0){
@@ -390,16 +416,16 @@ class Products{
 			}
 			else{
 				$filterSql = "SELECT 'activity_feed' as tablename, created_on as tabledate, activity_feed_id as table_id, activity_feed_title FROM activity_feed 
-					WHERE accounts_id = $accounts_id AND uri_table_name = 'product' AND activity_feed_link = CONCAT('/Products/view/', :sproduct_id)";
+					WHERE accounts_id = $accounts_id AND uri_table_name = 'product' AND activity_feed_link = CONCAT('/Livestocks/view/', :sproduct_id)";
 				$filterSql .= " AND activity_feed_title = :shistory_type";
 				$bindData['shistory_type'] = $shistory_type;
 			}
 		}
 		else{
 			$filterSql = "SELECT 'activity_feed' as tablename, created_on as tabledate, activity_feed_id as table_id, activity_feed_title FROM activity_feed 
-					WHERE accounts_id = $accounts_id AND uri_table_name = 'product' AND activity_feed_link = CONCAT('/Products/view/', :sproduct_id) 
+					WHERE accounts_id = $accounts_id AND uri_table_name = 'product' AND activity_feed_link = CONCAT('/Livestocks/view/', :sproduct_id) 
 					UNION ALL 
-						SELECT 'product' as tablename, created_on as tabledate, product_id as table_id, 'Product Created' as activity_feed_title FROM product 
+						SELECT 'product' as tablename, created_on as tabledate, product_id as table_id, 'Livestock Created' as activity_feed_title FROM product 
 							WHERE product_id = :sproduct_id AND accounts_id = $prod_cat_man 
 					UNION ALL 
 						SELECT 'pos' as tablename, pos.created_on as tabledate, pos.pos_id as table_id, 
@@ -473,6 +499,32 @@ class Products{
 
 								$activity_feed_name .= $product_name;
 								$product_type = $product_row->product_type;
+								
+								if($product_type=='Live Stocks'){
+									$newimei_info = '';
+									$sqlitem = "SELECT item.item_number, item.carrier_name, poci.return_po_items_id FROM item, po_cart_item poci WHERE (poci.po_items_id = $po_items_id OR poci.return_po_items_id = $po_items_id) AND item.item_id = poci.item_id";
+									$itemquery = $this->db->query($sqlitem, array());
+									if($itemquery){
+										while($newitem_row = $itemquery->fetch(PDO::FETCH_OBJ)){
+											$imei_info = $newitem_row->item_number;
+											$carrier_name = $newitem_row->carrier_name;
+											if($carrier_name !=''){
+												$imei_info .= ' '.$carrier_name;
+											}
+											
+											$return_po_items_id = $newitem_row->return_po_items_id;
+											if($return_po_items_id>0){
+												$imei_info .= ' (Return)';
+											}
+											
+											if($imei_info !=''){
+												if(!empty($newimei_info)){$newimei_info .= "<br>";}
+												$newimei_info .= $imei_info;
+											}
+										}
+									}
+									if(!empty($newimei_info)){$activity_feed_name .= "<br>$newimei_info";}
+								}
 							}
 
 							$activity_feed_link = '/Purchase_orders/edit/'.$oneRow->po_number;
@@ -504,16 +556,17 @@ class Products{
 		return $tabledata;
     }
 	
-	public function AJget_ProductsPopup(){	
+	public function AJget_LivestocksPopup(){	
 		$POST = json_decode(file_get_contents('php://input'), true);
 		$prod_cat_man = $_SESSION["prod_cat_man"]??0;
 		$accounts_id = $_SESSION["accounts_id"]??0;
 		$product_id = intval($POST['product_id']??0);
 
 		$Common = new Common($this->db);
+
 		
-		$product_type = $colour_name = $storage = $physical_condition_name = $alert_message = '';
-		$category_id = $manufacturer_id = $low_inventory_alert = $require_serial_no = $manage_inventory_count = $allow_backorder = $ave_cost_is_percent = 0;
+		$product_type = $purpose = $colour_name = $tag_color = $storage = $age_in_year = $no_of_teeth = $physical_condition_name = $alert_message = '';
+		$category_id = $breed_id = $classification_id = $location_id = $group_id = $manufacturer_id = $low_inventory_alert = $require_serial_no = $manage_inventory_count = $allow_backorder = $ave_cost_is_percent = 0;
 		$taxable = 1;
 		
 		$productData = array();
@@ -525,6 +578,9 @@ class Products{
 			$cne = 1;
 		}
 		
+		$productData['sku'] = '';
+		$productData['tag'] = '';
+		$productData['alt_tag'] = '';
 		$productData['cnc'] = $cnc;
 		$productData['cne'] = $cne;
 		$productData['login'] = '';	
@@ -535,7 +591,6 @@ class Products{
 		$productData['current_inventory'] = 0;
 		$productData['current_inventoryReadonly'] = '';			
 		$productData['product_name'] = '';
-		$productData['sku'] = '';
 		$productData['description'] = '';
 		$productData['add_description'] = '';
 		$custom_data = '';
@@ -548,6 +603,7 @@ class Products{
 				$category_id = $productRow->category_id;
 				$manufacturer_id = $productRow->manufacturer_id;
 				$colour_name = stripslashes(trim((string) $productRow->colour_name));
+				
 				$storage = $productRow->storage;
 				$physical_condition_name = stripslashes(trim((string) $productRow->physical_condition_name));
 				$taxable = $productRow->taxable;
@@ -560,6 +616,24 @@ class Products{
 				$productData['sku'] = $productRow->sku;
 				$productData['add_description'] = stripslashes(trim((string) $productRow->add_description));
 				$alert_message = stripslashes(trim((string) $productRow->alert_message));
+
+				$itemObj2 = $this->db->query("SELECT * FROM item WHERE product_id = $product_id AND accounts_id = $accounts_id", array());
+				if($itemObj2){
+					$itemRow = $itemObj2->fetch(PDO::FETCH_OBJ);
+					$breed_id = $itemRow->breed_id;
+					$location_id = $itemRow->location_id;
+					$classification_id = $itemRow->classification_id;
+					$age_in_year = $itemRow->age_in_year;
+					$no_of_teeth = $itemRow->no_of_teeth;
+
+					$productData['tag'] = $itemRow->tag;
+					$productData['alt_tag'] = $itemRow->alt_tag;
+					$productData['tag_color'] = $itemRow->tag_color;
+					$productData['breed_id'] = $itemRow->breed_id;
+					$productData['location_id'] = $itemRow->location_id;
+					$productData['group_id'] = $itemRow->group_id;
+					$productData['classification_id'] = $itemRow->classification_id;
+				}
 				
 				$queryInvObj = $this->db->query("SELECT * FROM inventory WHERE product_id = $product_id AND accounts_id=$accounts_id", array());
 				if($queryInvObj){
@@ -575,14 +649,18 @@ class Products{
 					$productData['ave_cost'] = round($inventoryRow->ave_cost,2);
 					
 					$productData['current_inventory'] = floatval($inventoryRow->current_inventory);
+					
 					$productData['current_inventoryReadonly'] = ' readonly';
 				}					
 			}
+			
 		}
 		
 		$productData['product_type'] = $product_type;
 		$productData['alert_message'] = $alert_message;
-				
+
+
+		//Category dropdonm		
 		$productData['category_id'] = intval($category_id);
 		$catOpt = array();
 		if($prod_cat_man>0){
@@ -597,7 +675,74 @@ class Products{
 			}
 		}
 		$productData['catOpt'] = $catOpt;
-		
+
+		//Breed Dropdown 
+		$productData['breed_id'] = intval($breed_id);
+		$breedOpt = array();
+		if($prod_cat_man>0){
+			$sqlbreed = "SELECT lsbreed_id, lsbreed_name FROM lsbreed WHERE accounts_id = $prod_cat_man AND (lsbreed_publish = 1 OR (lsbreed_id = $breed_id AND lsbreed_publish = 0)) ORDER BY lsbreed_name ASC";
+			$breedquery = $this->db->query($sqlbreed, array());
+			if($breedquery){
+				while($onebreedrow = $breedquery->fetch(PDO::FETCH_OBJ)){
+					$breed_id = $onebreedrow->lsbreed_id;
+					$breed_name = stripslashes(trim((string) $onebreedrow->lsbreed_name));
+					$breedOpt[$breed_id] = $breed_name;
+				}
+			}
+		}
+		$productData['breedOpt'] = $breedOpt;
+
+		//Location Dropdown 
+		$productData['location_id'] = intval($location_id);
+		$locationOpt = array();
+		if($prod_cat_man>0){
+			$sqllocation = "SELECT lslocation_id, lslocation_name FROM lslocation WHERE accounts_id = $prod_cat_man AND (lslocation_publish = 1 OR (lslocation_id = $location_id AND lslocation_publish = 0)) ORDER BY lslocation_name ASC";
+			$locationquery = $this->db->query($sqllocation, array());
+			if($locationquery){
+				while($onelocationdrow = $locationquery->fetch(PDO::FETCH_OBJ)){
+					$location_id = $onelocationdrow->lslocation_id;
+					$location_name = stripslashes(trim((string) $onelocationdrow->lslocation_name));
+					$locationOpt[$location_id] = $location_name;
+				}
+			}
+		}
+		$productData['locationOpt'] = $locationOpt;
+
+
+		//Group Dropdown 
+		$productData['group_id'] = intval($group_id);
+		$groupOpt = array();
+		if($prod_cat_man>0){
+			$sqlgroup = "SELECT lsgroups_id, lsgroups_name FROM lsgroups WHERE accounts_id = $prod_cat_man AND (lsgroups_publish = 1 OR (lsgroups_id = $group_id AND lsgroups_publish = 0)) ORDER BY lsgroups_name ASC";
+			$groupquery = $this->db->query($sqlgroup, array());
+			if($groupquery){
+				while($onegrouprow = $groupquery->fetch(PDO::FETCH_OBJ)){
+					$group_id = $onegrouprow->lsgroups_id;
+					$group_name = stripslashes(trim((string) $onegrouprow->lsgroups_name));
+					$groupOpt[$group_id] = $group_name;
+				}
+			}
+		}
+		$productData['groupOpt'] = $groupOpt;
+
+
+		//Classification Dropdown 
+		$productData['classification_id'] = intval($classification_id);
+		$classificationOpt = array();
+		if($prod_cat_man>0){
+			$sqlclassification = "SELECT lsclassification_id, lsclassification_name FROM lsclassification WHERE accounts_id = $prod_cat_man AND (lsclassification_publish = 1 OR (lsclassification_id = $classification_id AND lsclassification_publish = 0)) ORDER BY lsclassification_name ASC";
+			$classificationquery = $this->db->query($sqlclassification, array());
+			if($classificationquery){
+				while($oneclassificationrow = $classificationquery->fetch(PDO::FETCH_OBJ)){
+					$classification_id = $oneclassificationrow->lsclassification_id;
+					$classification_name = stripslashes(trim((string) $oneclassificationrow->lsclassification_name));
+					$classificationOpt[$classification_id] = $classification_name;
+				}
+			}
+		}
+		$productData['clasfOpt'] = $classificationOpt;
+
+	
 		$productData['manufacturer_id'] = intval($manufacturer_id);
 		$manOpt = array();
 		if($prod_cat_man>0){
@@ -614,7 +759,9 @@ class Products{
 			}
 		}
 		$productData['manOpt'] = $manOpt;
+
 		
+		//Color
 		$productData['colour_name'] = $colour_name;
 		$colourNameData = $this->colourNameData();
 		
@@ -637,7 +784,15 @@ class Products{
 		$productData['colour_name'] = $colour_name;
 		$productData['colNamOpt'] = $colNamOpt;
 		
+
+		//Storage
 		$productData['storage'] = $storage;
+
+		$productData['age_in_year'] = $age_in_year;
+		
+		$productData['no_of_teeth'] = $no_of_teeth;
+
+
 		$productData['physical_condition_name'] = $physical_condition_name;
 		$conditionsData = array();
 		$conditionsData = array('A', 'B', 'C', 'D', 'New');
@@ -656,6 +811,51 @@ class Products{
 			}
 		}
 		$productData['phyConNamOpt'] = $phyConNamOpt;
+
+
+		//Tag Color
+		$productData['tag_color'] = $tag_color;
+		$tagColorData = $this->tagColorData();		
+		$sqlTagCol= "SELECT tag_color FROM item WHERE product_id = $product_id AND accounts_id = $accounts_id";
+		$tagColObj = $this->db->query($sqlTagCol, array());
+		if($tagColObj){
+			while($tagColRow = $tagColObj->fetch(PDO::FETCH_OBJ)){
+				if(!empty($tagColRow->tag_color) && !in_array($tagColRow->tag_color, $tagColorData)){
+					$tagColorData[] = stripslashes(trim((string) $tagColRow->tag_color));
+				}
+			}
+		}
+		$colNamOpt = array();
+		if (!empty($tagColorData)){
+			sort($tagColorData);
+			foreach ($tagColorData as $oneOption) {
+				$tagColOpt[] = $oneOption;
+			}
+		}
+		$productData['tagColOpt'] = $tagColOpt; 
+
+
+		//Purpose
+		$productData['purpose'] = $purpose;
+		$purposeData = $this->purposeData();		
+		$sqlPurpose= "SELECT purpose FROM item WHERE product_id = $product_id AND accounts_id = $accounts_id";
+		$purposeObj = $this->db->query($sqlPurpose, array());
+		if($purposeObj){
+			while($purposeRow = $purposeObj->fetch(PDO::FETCH_OBJ)){
+				if(!empty($purposeRow->purpose) && !in_array($purposeRow->purpose, $purposeData)){
+					$purposeData[] = stripslashes(trim((string) $purposeRow->purpose));
+				}
+			}
+		}
+		$colNamOpt = array();
+		if (!empty($purposeData)){
+			sort($purposeData);
+			foreach ($purposeData as $oneOption) {
+				$purposeOpt[] = $oneOption;
+			}
+		}
+		$productData['purposeOpt'] = $purposeOpt; 
+
 		
 		$productData['taxable'] = intval($taxable);				
 		$productData['require_serial_no'] = intval($require_serial_no);		
@@ -670,7 +870,7 @@ class Products{
 		return json_encode($productData);
 	}	
 	
-	public function AJsave_Products(){
+	public function AJsave_Livestocks(){
 		$POST = $_POST;
 		$id = 0;
 		$sku = $savemsg = $returnStr = '';
@@ -685,6 +885,10 @@ class Products{
 		$product_type = $this->db->checkCharLen('product.product_type', $product_type);
 		$category_name = trim((string) $POST['category_name']??'');
 		$category_name = $this->db->checkCharLen('category.category_name', $category_name);
+		$tag_color = trim((string) $POST['tag_color']??'');
+		$tag_color = $this->db->checkCharLen('item.tag_color', $tag_color);
+		$tag_color2 = addslashes(trim((string) $POST['tag_color2']??''));
+		$tag_color2 = $this->db->checkCharLen('item.colour_name', $tag_color2);
 		$manufacturer_id = intval($POST['manufacturer_id']??0);
 		$manufacture = addslashes(trim((string) $POST['manufacture']??''));
 		$manufacture = $this->db->checkCharLen('manufacturer.name', $manufacture);
@@ -696,6 +900,8 @@ class Products{
 		$colour_name2 = $this->db->checkCharLen('product.colour_name', $colour_name2);
 		$sku = addslashes(trim((string) $POST['sku']??''));
 		$sku = $this->db->checkCharLen('product.sku', $sku);
+		$tag = addslashes(trim((string) $POST['tag']??''));
+		$tag = $this->db->checkCharLen('product.tag', $tag);
 		$require_serial_no = intval($POST['require_serial_no']??0);
 		$manage_inventory_count = intval($POST['manage_inventory_count']??0);
 		$add_description = addslashes(trim((string) $POST['add_description']??''));
@@ -703,7 +909,10 @@ class Products{
 		$storage = $this->db->checkCharLen('product.storage', $storage);
 		$physical_condition_name = addslashes(trim((string) array_key_exists('physical_condition_name', $POST)?$POST['physical_condition_name']:''));
 		$physical_condition_name = $this->db->checkCharLen('product.physical_condition_name', $physical_condition_name);
-		
+		if($product_type =='Live Stocks'){
+			$manage_inventory_count = 1;
+			$require_serial_no = 0;
+		}
 		$ave_cost = floatval($POST['ave_cost']??0);
 		if(empty($ave_cost)){
 			$ave_cost = 0.00;
@@ -762,7 +971,9 @@ class Products{
 				$manufacturer_id = $this->db->insert('manufacturer', $manufacturerData);
 			}
 		}
+
 		if($colour_name == '' && $colour_name2 !=''){$colour_name = $colour_name2;}
+		if($tag_color == '' && $tag_color2 !=''){$tag_color = $tag_color2;}
 		$sku = str_replace(' ', '-', strtoupper($sku));
 		if($sku =='' && $product_id>0){$sku = $product_id;}
 		if($storage==0){$storage = '';}
@@ -775,7 +986,8 @@ class Products{
 		$productdata['manufacturer_id'] = intval($manufacturer_id);
 		$productdata['manufacture'] = '';
 		$productdata['product_name'] = $product_name;
-		$productdata['colour_name'] = $colour_name;
+		$productdata['colour_name'] = $colour_name;		
+		$productdata['tag_color'] = $tag_color;		
 		$productdata['sku'] = $sku;
 		$productdata['require_serial_no'] = $require_serial_no;
 		$productdata['manage_inventory_count'] = intval($manage_inventory_count);
@@ -788,6 +1000,20 @@ class Products{
 		$productdata['storage'] = $storage;
 		$productdata['taxable'] = $taxable;
 		$productdata['custom_data'] = '';
+		
+		
+		$itemdata = array();
+		$itemdata['last_updated'] = $last_updated; //date('Y-m-d H:i:s');
+		$itemdata['accounts_id'] = $accounts_id;
+		$itemdata['user_id'] = $user_id;
+		$itemdata['item_number'] = $tag;
+		$itemdata['tag'] = $tag;
+		$itemdata['tag_color'] = $tag_color;
+		$itemdata['carrier_name'] = '';
+		$itemdata['in_inventory'] = 1;
+		$itemdata['is_pos'] = 0;
+		$itemdata['custom_data'] = '';
+		
 		
 		$inventorydata = array();
 		$inventorydata['accounts_id'] = $accounts_id;
@@ -884,6 +1110,14 @@ class Products{
 							}
 						}
 					}
+
+					//#############ITEM Data Save######################
+					
+					$itemdata['created_on'] = date('Y-m-d H:i:s');
+					$itemdata['product_id'] = $product_id;
+					
+					$item_id = $this->db->insert('item', $itemdata);
+					
 
 					if($sku ==''){
 						$sku = $product_id;
@@ -1008,7 +1242,19 @@ class Products{
 						}
 					}	
 				}
-				
+
+				$queryItemObj = $this->db->querypagination("SELECT item_id FROM item WHERE accounts_id = $accounts_id AND product_id = $product_id", array());
+				if($queryItemObj){
+
+					$item_id = $queryItemObj[0]['item_id'];					
+					$update = $this->db->update('item', $itemdata, $item_id);
+				}
+				else{					
+					$itemdata['created_on'] = date('Y-m-d H:i:s');
+					$itemdata['product_id'] = $product_id;
+					$item_id = $this->db->insert('item', $itemdata);
+				}
+
 				if(!empty($changed)){
 					$moreInfo = array();
 					$teData = array();
@@ -1123,15 +1369,15 @@ class Products{
 				$jsonResponse['commonInfo'] = $commonInfo;
 				
 				$CompanyName = $_SESSION["company_name"];
-				$ProductName = $Price = $Barcode = $custom_data = '';
+				$LivestockName = $Price = $Barcode = $custom_data = '';
 				if($product_id>0){
 					$productObj = $this->db->query("SELECT p.*, manufacturer.name AS manufacture FROM product p LEFT JOIN manufacturer ON (p.manufacturer_id = manufacturer.manufacturer_id) WHERE p.accounts_id = $prod_cat_man AND p.product_id = :product_id", array('product_id'=>$product_id),1);
 					if($productObj){
 						$product_onerow = $productObj->fetch(PDO::FETCH_OBJ);
 						
-						$ProductName .= stripslashes(trim((string) $product_onerow->product_name));
+						$LivestockName .= stripslashes(trim((string) $product_onerow->product_name));
 						$manufacturer_name = stripslashes(trim((string) $product_onerow->manufacture));
-						if($manufacturer_name !=''){$ProductName = stripslashes(trim($manufacturer_name.' '.$ProductName));}
+						if($manufacturer_name !=''){$LivestockName = stripslashes(trim($manufacturer_name.' '.$LivestockName));}
 						
 						$inventoryObj = $this->db->query("SELECT regular_price FROM inventory WHERE accounts_id = $accounts_id AND product_id = $product_onerow->product_id", array());
 						if($inventoryObj){
@@ -1147,7 +1393,7 @@ class Products{
 				}
 				
 				$jsonResponse['CompanyName'] = $CompanyName;
-				$jsonResponse['ProductName'] = $ProductName;
+				$jsonResponse['LivestockName'] = $LivestockName;
 				$jsonResponse['Price'] = $Price;
 				$jsonResponse['Barcode'] = $Barcode;
 				$Common = new Common($this->db);
@@ -1188,7 +1434,103 @@ class Products{
 			$ave_cost = $inventoryrow->ave_cost;
 			$currentproducttotalcost = round($current_inventory*$ave_cost,2);
 
-			$poInsert = true;
+			$poInsert = false;
+			if($product_type=='Live Stocks'){
+				$itemIds = array();
+
+				$current_inventory = 0;
+				$itemObj = $this->db->query("SELECT COUNT(item_id) AS current_inventory FROM item WHERE product_id = $product_id AND accounts_id = $accounts_id AND item_publish = 1 AND in_inventory = 1", array());
+				if($itemObj){
+					$current_inventory = $itemObj->fetch(PDO::FETCH_OBJ)->current_inventory;
+				}
+				$currentproducttotalcost = round($current_inventory*$ave_cost,2);
+
+				$item_numberData = preg_split("/\\r\\n|\\r|\\n/", $bulkimei);
+
+				if(count($item_numberData)>0){
+					$imeisaved = 0;
+					$imeismallerthan = 0;
+					$imeilongerthan = 0;
+					$duplicateimei = 0;
+					$totalIMEI = count($item_numberData);
+					foreach($item_numberData as $item_number){
+						$item_number = $this->db->checkCharLen('item.item_number', addslashes(trim((string) $item_number)));
+						if($item_number==''){
+							$totalIMEI--;
+						}
+						elseif(strlen($item_number)<2){
+							$imeismallerthan++;
+						}
+						elseif(strlen($item_number)>20){
+							$imeilongerthan++;
+						}
+						else{
+
+							$countitemquery = 0;
+							$itemObj = $this->db->query("SELECT COUNT(item_id) AS counttotalrows, SUM(in_inventory) AS inInvCount FROM item WHERE accounts_id = $accounts_id AND item_number = '$item_number'", array());
+							if($itemObj){
+								$itemRow = $itemObj->fetch(PDO::FETCH_OBJ);
+								$countitemquery = $itemRow->counttotalrows;
+								$inInvCount = $itemRow->inInvCount;
+								if($countitemquery != $inInvCount){
+
+									$sqlitem = "SELECT i.item_id FROM item i, po_cart_item pci WHERE i.accounts_id = $accounts_id AND i.item_number = '$item_number' AND i.in_inventory = 0 AND i.item_id = pci.item_id LIMIT 0,1";
+									$itemObj = $this->db->querypagination($sqlitem, array());
+									if($itemObj){
+										foreach($itemObj as $oneItemRow){
+											$checkItemId = $oneItemRow['item_id'];
+											if(empty($itemIds) || (is_array($itemIds) && !in_array($checkItemId, $itemIds))){
+												if($poInsert===false){$poInsert = true;}
+												$itemIds[] = $checkItemId;
+											}
+										}
+									}
+								}
+							}
+
+							if($countitemquery==0){
+								$itemData = array('created_on' => date('Y-m-d H:i:s'),
+												'last_updated' => date('Y-m-d H:i:s'),
+												'accounts_id' => $accounts_id,		
+												'user_id' => $user_id,
+												'product_id' => $product_id,
+												'item_number' => $item_number,
+												'carrier_name' => "",
+												'in_inventory' => 1,
+												'is_pos'=>0,
+												'custom_data'=>''
+												);
+								$item_id = $this->db->insert('item', $itemData);
+								if($item_id){
+									if($poInsert===false){$poInsert = true;}
+									$itemIds[] = $item_id;
+								}
+							}
+							else{
+								$duplicateimei++;
+							}
+						}
+					}
+
+					if($imeismallerthan>0){
+						$savemsg = 'smallerIMEI';
+						$message .= $imeismallerthan;
+					}
+
+					if($imeilongerthan>0){
+						$savemsg = 'longerIMEI';
+						$message .= $imeilongerthan;
+					}
+
+					if($duplicateimei>0){
+						$savemsg = 'duplicateIMEI';
+						$message .= $duplicateimei;
+					}
+				}
+			}
+			else{
+				$poInsert = true;
+			}
 
 			if($poInsert){
 				//=============collect user last new Ticket no================//
@@ -1224,6 +1566,10 @@ class Products{
 				$po_id = $this->db->insert('po', $poData);
 				if($po_id){
 					$item_type = 'product';
+					if($product_type=='Live Stocks'){
+						$item_type = 'livestocks';
+						$ordered_qty = 0;
+					}
 					$item_type = $this->db->checkCharLen('po_items.item_type', $item_type);
 					$poiData =array('created_on'=>date('Y-m-d H:i:s'),
 									'user_id'=>$_SESSION["user_id"],
@@ -1236,18 +1582,46 @@ class Products{
 					$po_items_id = $this->db->insert('po_items', $poiData);
 					if($po_items_id){
 
-						$new_current_inventory = $current_inventory+$ordered_qty;
-						$new_ave_cost = $ave_cost;
-						if($current_inventory <=0){
-							$new_ave_cost = $cost;
+						if($product_type=='Live Stocks'){
+							if(!empty($itemIds)){
+
+								foreach($itemIds as $item_id){
+
+									$poCartItemData = array('po_items_id' => $po_items_id,
+															'item_id' => $item_id,
+															'return_po_items_id' => 0);
+									$this->db->insert('po_cart_item', $poCartItemData);
+
+									$this->db->update('item', array('in_inventory'=>1), $item_id);
+
+									$ordered_qty++;
+									$imeisaved++;
+								}
+
+								if($imeisaved>0){
+									$savemsg = 'saved';
+									$updatepo_items = $this->db->update('po_items', array('ordered_qty'=>$ordered_qty, 'received_qty'=>$ordered_qty), $po_items_id);
+								}
+								else{
+									$savemsg = 'noIMEI';
+								}
+							}
 						}
-						elseif($new_current_inventory !=0){
-							$newInvTotalCost = round($cost*$ordered_qty,2);
-							$new_ave_cost = round(($currentproducttotalcost+$newInvTotalCost)/$new_current_inventory,2);
-							
+						else{
+
+							$new_current_inventory = $current_inventory+$ordered_qty;
+							$new_ave_cost = $ave_cost;
+							if($current_inventory <=0){
+								$new_ave_cost = $cost;
+							}
+							elseif($new_current_inventory !=0){
+								$newInvTotalCost = round($cost*$ordered_qty,2);
+								$new_ave_cost = round(($currentproducttotalcost+$newInvTotalCost)/$new_current_inventory,2);
+								
+							}
+							$this->db->update('inventory', array('current_inventory'=>($new_current_inventory-$orderRepairShipQty), 'ave_cost' => $new_ave_cost), $inventoryrow->inventory_id);
+							$savemsg = 'saved';
 						}
-						$this->db->update('inventory', array('current_inventory'=>($new_current_inventory-$orderRepairShipQty), 'ave_cost' => $new_ave_cost), $inventoryrow->inventory_id);
-						$savemsg = 'saved';
 					}
 
 					$id = $po_id;
@@ -1266,8 +1640,30 @@ class Products{
 			'message'=>$message);
 		return json_encode($array);
     }
+
+	public function tagColorData(){
+		$returnarray =array('Black',
+							'Brown',
+							'Red',
+							'Gold',
+							'Gray',							
+							'White',
+							'Other'
+							);				
+		return $returnarray;
+	}
+
+	public function purposeData(){
+		$returnarray =array('Fattening',
+							'Breeding',
+							'Dairy',
+							'GenerationDevelop'
+							);				
+		return $returnarray;
+	}
+
 	
-	public function AJget_ProductsDescPopup(){
+	public function AJget_LivestocksDescPopup(){
 		$POST = json_decode(file_get_contents('php://input'), true);
 		$descData = array();
 		$descData['login'] = '';
@@ -1283,7 +1679,7 @@ class Products{
 		return json_encode($descData);
 	}
 
-	public function AJsave_ProductsDesc(){
+	public function AJsave_LivestocksDesc(){
 		if(!isset($_SESSION["prod_cat_man"])){
 			echo json_encode(array('login'=>'session_ended'));
 		}
@@ -1303,9 +1699,9 @@ class Products{
 				if($queryObj){
 					$productRow = $queryObj->fetch(PDO::FETCH_OBJ);
 					
-					$activity_feed_title = $this->db->translate('Product was edited');
+					$activity_feed_title = $this->db->translate('Livestock was edited');
 					$activity_feed_title = $this->db->checkCharLen('activity_feed.activity_feed_title', $activity_feed_title);
-					$activity_feed_link = "/Products/view/$product_id";
+					$activity_feed_link = "/Livestocks/view/$product_id";
 					$activity_feed_link = $this->db->checkCharLen('activity_feed.activity_feed_link', $activity_feed_link);
 					
 					$afData = array('created_on' => date('Y-m-d H:i:s'),
@@ -1329,7 +1725,7 @@ class Products{
 		}
 	}
 
-	public function AJget_ProductsPricePopup(){
+	public function AJget_LivestocksPricePopup(){
 		$POST = json_decode(file_get_contents('php://input'), true);
 		$priceData = array();
 		$priceData['login'] = '';
@@ -1393,7 +1789,7 @@ class Products{
 		return json_encode($priceData);
 	}
 	
-	public function AJsave_ProductsPrice(){
+	public function AJsave_LivestocksPrice(){
 		$POST = json_decode(file_get_contents('php://input'), true);
 		$savemsg = '';
 		$accounts_id = $_SESSION["accounts_id"]??0;
@@ -1457,9 +1853,9 @@ class Products{
 					if($is_percent>0){$is_percentstr = $price.'%';}
 					$activity_feed_name = stripslashes(trim((string) "$price_type, $type_match, $is_percentstr"));
 					
-					$activity_feed_title = $this->db->translate('Product price has been added');
+					$activity_feed_title = $this->db->translate('Livestock price has been added');
 					$activity_feed_title = $this->db->checkCharLen('activity_feed.activity_feed_title', $activity_feed_title);
-					$activity_feed_link = "/Products/view/$product_id";
+					$activity_feed_link = "/Livestocks/view/$product_id";
 					$activity_feed_link = $this->db->checkCharLen('activity_feed.activity_feed_link', $activity_feed_link);
 					
 					$afData = array('created_on' => date('Y-m-d H:i:s'),
@@ -1694,7 +2090,17 @@ class Products{
 			if($inventoryObj){
 				$ave_cost = round($inventoryrow->ave_cost,2);
 			}
-			
+			if(strcmp($product_type, 'Live Stocks')==0){
+				$imeicurrent_inventory = 0;
+				$itemObj = $this->db->query("SELECT count(item_id) as counttotalrows FROM item WHERE product_id = $product_id AND accounts_id = $accounts_id AND item_publish = 1 AND in_inventory = 1", array());
+				if($itemObj){
+					$imeicurrent_inventory = $itemObj->fetch(PDO::FETCH_OBJ)->counttotalrows;
+				}
+				if($current_inventory != $imeicurrent_inventory && $inventory_id>0){
+					$this->db->update('inventory', array('current_inventory'=>$imeicurrent_inventory), $inventory_id);
+					$current_inventory = $imeicurrent_inventory;
+				}
+			}
 			$jsonResponse['current_inventory'] = floatval($current_inventory);
 
 			$prodImg = '';
@@ -1746,7 +2152,7 @@ class Products{
 			$NeedHaveOnPOInfo['need'] = 0;
 			$NeedHaveOnPOInfo['have'] = 0;
 			$NeedHaveOnPOInfo['onPO'] = 0;
-			if(in_array($product_type, array('Standard')) && $manage_inventory_count>0){
+			if(in_array($product_type, array('Standard', 'Live Stocks')) && $manage_inventory_count>0){
 				$NHPInfo = $Carts->NeedHaveOnPO($product_id, $product_type, 1);
 				$NeedHaveOnPOInfo['need'] = $NHPInfo[0];
 				$NeedHaveOnPOInfo['have'] = $NHPInfo[1];
@@ -1781,7 +2187,13 @@ class Products{
 						$company_subdomain = stripslashes($oneRow->company_subdomain);					
 						$current_inventory = 0;
 						
-						if($manage_inventory_count>0){
+						if(strcmp($product_type, 'Live Stocks')==0){
+							$itemObj2 = $this->db->query("SELECT COUNT(item_id) AS current_inventory FROM item WHERE product_id = $product_id AND accounts_id = $user_id AND item_publish = 1 AND in_inventory = 1", array());
+							if($itemObj2){
+								$current_inventory = $itemObj2->fetch(PDO::FETCH_OBJ)->current_inventory;
+							}
+						}
+						elseif($manage_inventory_count>0){
 							$inventoryObj2 = $this->db->query("SELECT current_inventory FROM inventory WHERE product_id = $product_id AND accounts_id = $user_id", array());
 							if($inventoryObj2){
 								$current_inventory = $inventoryObj2->fetch(PDO::FETCH_OBJ)->current_inventory;
@@ -1852,9 +2264,9 @@ class Products{
 
 			$actFeeTitOpt = array();
 			$Sql = "SELECT activity_feed_title AS afTitle FROM activity_feed 
-			WHERE accounts_id = $accounts_id AND uri_table_name = 'product' AND activity_feed_link = CONCAT('/Products/view/', :sproduct_id) 
+			WHERE accounts_id = $accounts_id AND uri_table_name = 'product' AND activity_feed_link = CONCAT('/Livestocks/view/', :sproduct_id) 
 			UNION ALL 
-				SELECT 'Product Created' AS afTitle FROM product 
+				SELECT 'Livestock Created' AS afTitle FROM product 
 				WHERE product_id = :sproduct_id AND accounts_id = $prod_cat_man 
 			UNION ALL 
 				SELECT (Case When pos.pos_type = 'Order' AND pos.order_status = 1 Then 'Order Created' 
@@ -1887,7 +2299,7 @@ class Products{
 			$jsonResponse['actFeeTitOpt'] = $actFeeTitOpt;
 		}
 		else{
-			$jsonResponse['login'] = 'Products/lists/';
+			$jsonResponse['login'] = 'Livestocks/lists/';
 		}
 		return json_encode($jsonResponse);
 	}
@@ -1919,7 +2331,7 @@ class Products{
 		return json_encode($jsonResponse);
 	}
 	
-    public function AJ_showProductRow(){
+    public function AJ_showLivestockRow(){
 		$POST = json_decode(file_get_contents('php://input'), true);
 		$sku = $POST['sku']??'';
 		$accounts_id = $_SESSION["accounts_id"]??0;
@@ -2107,9 +2519,9 @@ class Products{
 						}
 					}
 					
-					$activity_feed_title = 'Product archived';
+					$activity_feed_title = 'Livestock archived';
 					$activity_feed_title = $this->db->checkCharLen('activity_feed.activity_feed_title', $activity_feed_title);
-					$activity_feed_link = "/Products/view/$product_id";
+					$activity_feed_link = "/Livestocks/view/$product_id";
 					$activity_feed_link = $this->db->checkCharLen('activity_feed.activity_feed_link', $activity_feed_link);
 					
 					$afData = array('created_on' => date('Y-m-d H:i:s'),

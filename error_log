@@ -986,3 +986,229 @@ previous: http://livestock.skitsbdl.com/Home
 2023-06-20 07:56:39 JSON Issue, Message: Unexpected token '<', "<br />
 <fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
 <fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-20 23:24:44 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 893: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:24:44 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 908: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:24:44 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-20 23:24:46 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 893: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:24:46 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 908: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:24:46 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-20 23:24:48 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 893: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:24:48 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 908: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:24:48 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-20 23:24:50 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 893: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:24:50 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 908: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:24:50 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-20 23:24:52 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 893: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:24:52 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 908: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:24:52 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-20 23:29:19 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 893: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:29:19 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 908: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:29:19 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-20 23:29:21 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 893: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:29:21 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 908: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:29:21 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-20 23:29:23 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 893: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:29:23 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 908: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:29:23 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-20 23:29:25 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 893: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:29:25 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 908: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:29:25 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-20 23:29:27 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 893: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:29:27 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 908: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:29:27 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-20 23:33:48 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 893: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:33:48 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 908: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:44:16 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 889: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:44:16 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 908: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:48:27 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 889: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:48:27 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 908: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:49:57 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 889: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:49:57 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 908: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:49:57 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-20 23:49:59 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 889: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:49:59 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 908: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:50:00 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-20 23:50:02 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 889: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:50:02 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 908: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:50:02 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-20 23:50:04 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 889: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:50:04 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 908: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:50:05 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-20 23:50:07 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 889: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:50:08 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 908: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:50:08 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-20 23:59:27 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 889: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:59:27 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 908: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:59:27 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-20 23:59:29 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 889: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:59:29 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 908: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:59:30 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-20 23:59:32 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 889: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:59:32 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 908: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:59:32 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-20 23:59:34 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 889: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:59:34 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 908: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:59:34 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-20 23:59:36 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 889: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:59:36 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 908: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-20 23:59:36 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJsave_Livestocks, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-21 00:00:10 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 889: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 00:00:10 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 908: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 00:49:28 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Products/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Products
+2023-06-21 00:49:30 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Products/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Products
+2023-06-21 00:49:32 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Products/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Products
+2023-06-21 00:49:34 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Products/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Products
+2023-06-21 00:49:36 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Products/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Products
+2023-06-21 00:49:44 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Products/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Products
+2023-06-21 00:49:46 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Products/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Products
+2023-06-21 00:49:48 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Products/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Products
+2023-06-21 00:49:50 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Products/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Products
+2023-06-21 00:49:52 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Products/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Products
+2023-06-21 02:42:51 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 889: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 02:42:51 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 910: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 02:52:51 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2411:47 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-21 02:53:14 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2411:47 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-21 02:53:19 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 890: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 02:53:19 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 911: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 02:53:22 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2411:47 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-21 02:53:28 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 890: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 02:53:28 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 911: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 02:53:30 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2411:47 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-21 03:50:36 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2411:47 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-21 04:17:18 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2411:47 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-21 04:17:34 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 891: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 04:17:34 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 914: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 04:17:38 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2411:47 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-21 04:18:22 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2411:47 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-21 04:18:40 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2411:47 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-21 04:22:23 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 871: Undefined variable $anml_description, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 04:22:23 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-21 04:22:25 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 871: Undefined variable $anml_description, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 04:22:25 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-21 04:22:27 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 871: Undefined variable $anml_description, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 04:22:27 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-21 04:22:29 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 871: Undefined variable $anml_description, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 04:22:29 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-21 04:22:31 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 871: Undefined variable $anml_description, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 04:22:31 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-21 04:25:58 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-21 04:26:00 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-21 04:26:03 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-21 04:26:06 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-21 04:26:08 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-21 04:32:29 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-21 04:32:31 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-21 04:32:33 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-21 04:32:36 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-21 04:32:38 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-21 04:33:46 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2411:47 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-21 04:34:39 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2411:47 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-21 04:38:24 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2411:47 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-21 04:40:28 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2411:47 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-21 04:41:00 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2411:47 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-21 04:42:25 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2411:47 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-21 04:43:46 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2411:47 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-21 04:44:53 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2411:47 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-21 05:15:43 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 894: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 05:15:43 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 917: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 05:18:53 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 894: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 05:18:53 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 917: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 05:24:14 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 896: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 05:24:14 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 919: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 05:24:40 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 896: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 05:24:40 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 919: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 05:35:30 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 626: Undefined property: stdClass::$gender_id, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 05:35:30 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 637: Undefined property: stdClass::$gender_id, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 05:35:52 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 626: Undefined property: stdClass::$gender_id, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 05:35:52 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 637: Undefined property: stdClass::$gender_id, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 05:36:09 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 626: Undefined property: stdClass::$gender_id, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 05:36:09 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 637: Undefined property: stdClass::$gender_id, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 05:36:15 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 898: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 05:36:15 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 921: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 05:36:17 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 626: Undefined property: stdClass::$gender_id, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 05:36:17 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 637: Undefined property: stdClass::$gender_id, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 05:47:01 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-21 05:47:03 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-21 05:47:05 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-21 05:47:07 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-21 05:47:09 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-21 05:47:56 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 899: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 05:47:56 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 922: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 05:54:28 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 899: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 05:54:28 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 922: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 05:54:37 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 899: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 05:54:37 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 922: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 06:03:14 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 900: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 06:03:14 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 923: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 06:06:09 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 900: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 06:06:09 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 923: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 06:07:32 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 900: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 06:07:32 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 923: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 06:15:02 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 902: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 06:15:02 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 927: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 06:21:14 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 906: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 06:21:14 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 931: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]

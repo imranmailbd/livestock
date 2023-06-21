@@ -49,7 +49,6 @@ class Products{
 				$num++;
 			}
 		}
-		
 		$addiselect = $havingsql = '';
 		if($sdata_type=='Low Stock'){
 			$addiselect = ', i.low_inventory_alert AS low_inventory_alert';
@@ -68,7 +67,7 @@ class Products{
 			$strextra .= " AND (p.manage_inventory_count>0 AND i.current_inventory < i.low_inventory_alert)";
 		}
 		
-		$strextra .= " AND i.product_id = p.product_id";
+		$strextra .= " AND i.product_id = p.product_id GROUP BY p.product_id";
 		
 		$strextra .= " GROUP BY product_id$havingsql";
 
