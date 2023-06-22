@@ -565,7 +565,7 @@ class Livestocks{
 		$Common = new Common($this->db);
 
 		
-		$product_type = $purpose = $colour_name = $tag_color = $storage = $age_in_year = $no_of_teeth = $physical_condition_name = $alert_message = '';
+		$product_type = $purpose = $arrival_note = $purchase_price = $arrival_type = $colour_name = $tag_color = $storage = $age_in_year = $no_of_teeth = $arrival_weight = $physical_condition_name = $alert_message = '';
 		$category_id = $breed_id = $classification_id = $location_id = $group_id = $gender_id = $manufacturer_id = $low_inventory_alert = $require_serial_no = $manage_inventory_count = $allow_backorder = $ave_cost_is_percent = 0;
 		$taxable = 1;
 		
@@ -581,6 +581,11 @@ class Livestocks{
 		$productData['sku'] = '';
 		$productData['tag'] = '';
 		$productData['alt_tag'] = '';
+		$productData['arrival_date'] = '';
+		$productData['arrival_note'] = '';
+		$productData['arrival_weight'] = '';
+		$productData['purchase_price'] = '';
+		$productData['arrival_type'] = '';
 		$productData['cnc'] = $cnc;
 		$productData['cne'] = $cne;
 		$productData['login'] = '';	
@@ -626,8 +631,11 @@ class Livestocks{
 					$gender_id = $itemRow->gender_id;
 					$classification_id = $itemRow->classification_id;
 					$purpose = $itemRow->purpose;
+					$arrival_type = $itemRow->arrival_type;
 					$age_in_year = $itemRow->age_in_year;
 					$no_of_teeth = $itemRow->no_of_teeth;
+					$arrival_weight = $itemRow->arrival_weight;
+					$arrival_note = $itemRow->arrival_note;
 
 					$productData['tag'] = $itemRow->tag;
 					$productData['alt_tag'] = $itemRow->alt_tag;
@@ -639,8 +647,14 @@ class Livestocks{
 					$productData['classification_id'] = $itemRow->classification_id;
 					$productData['age_in_year'] = $itemRow->age_in_year;
 					$productData['no_of_teeth'] = $itemRow->no_of_teeth;
+					$productData['arrival_weight'] = $itemRow->arrival_weight;
 					$productData['purpose'] = $itemRow->purpose;
+					$productData['arrival_type'] = $itemRow->arrival_type;
 					$productData['anml_description'] = $itemRow->anml_description;
+					$productData['purchase_price'] = $itemRow->purchase_price;
+					$productData['arrival_note'] = $itemRow->arrival_note;
+
+					$productData['arrival_date'] = $itemRow->arrival_date;
 				}
 				
 				$queryInvObj = $this->db->query("SELECT * FROM inventory WHERE product_id = $product_id AND accounts_id=$accounts_id", array());
@@ -864,6 +878,27 @@ class Livestocks{
 		}
 		$productData['purposeOpt'] = $purposeOpt; 
 
+
+		//Arrival Type
+		$arrivalTypeData = $this->arrivalTypeData();		
+		$sqlArrivalType= "SELECT arrival_type FROM item WHERE product_id = $product_id AND accounts_id = $accounts_id";
+		$arrivalTypeObj = $this->db->query($sqlArrivalType, array());
+		if($arrivalTypeObj){
+			while($arrivalTypeRow = $arrivalTypeObj->fetch(PDO::FETCH_OBJ)){
+				if(!empty($arrivalTypeRow->arrival_type) && !in_array($arrivalTypeRow->arrival_type, $arrivalTypeData)){
+					$arrivalTypeData[] = stripslashes(trim((string) $arrivalTypeRow->arrival_type));
+				}
+			}
+		}
+		$colNamOpt = array();
+		if (!empty($arrivalTypeData)){
+			sort($arrivalTypeData);
+			foreach ($arrivalTypeData as $oneOption) {
+				$arrvtypeOpt[] = $oneOption;
+			}
+		}
+		$productData['arrvtypeOpt'] = $arrvtypeOpt; 		
+
 		
 		$productData['taxable'] = intval($taxable);				
 		$productData['require_serial_no'] = intval($require_serial_no);		
@@ -888,25 +923,35 @@ class Livestocks{
 		$prod_cat_man = $_SESSION["prod_cat_man"]??0;
 		$user_id = $_SESSION["user_id"]??0;
 		$Common = new Common($this->db);
-		
+				
 		$product_id = intval($POST['product_id']??0);
 		$category_id = intval($POST['category_id']??0);
 		$gender_id = intval($POST['gender_id']??0);
 		$age_in_year = intval($POST['age_in_year']??0);
 		$no_of_teeth = intval($POST['no_of_teeth']??0);
+		$purchase_price = intval($POST['purchase_price']??0);
 		$product_type = $POST['product_type']??'';
 		$product_type = $this->db->checkCharLen('product.product_type', $product_type);
 		$category_name = trim((string) $POST['category_name']??'');
 		$category_name = $this->db->checkCharLen('category.category_name', $category_name);
+		$arrival_weight = trim((string) $POST['arrival_weight']??'');
+		$arrival_weight = $this->db->checkCharLen('item.arrival_weight', $arrival_weight);
 		$manufacturer_id = intval($POST['manufacturer_id']??0);
 		$breed_id = intval($POST['breed_id']??0);
 		$location_id = intval($POST['location_id']??0);
 		$group_id = intval($POST['group_id']??0);
+		$arrival_date = $POST['arrival_date']??'';
+		if($arrival_date !=''){$arrival_date = date('Y-m-d', strtotime(trim((string) $arrival_date)));}
+		else{$arrival_date = '1000-01-01';}
 		$classification_id = intval($POST['classification_id']??0);
 		$manufacture = addslashes(trim((string) $POST['manufacture']??''));
 		$manufacture = $this->db->checkCharLen('manufacturer.name', $manufacture);
 		$purpose = addslashes(trim((string) $POST['purpose']??''));
 		$purpose = $this->db->checkCharLen('item.purpose', $purpose);
+		$arrival_note = addslashes(trim((string) $POST['arrival_note']??''));
+		$arrival_note = $this->db->checkCharLen('item.arrival_note', $arrival_note);
+		$arrival_type = addslashes(trim((string) $POST['arrival_type']??''));
+		$arrival_type = $this->db->checkCharLen('item.arrival_type', $arrival_type);
 		$product_name = addslashes(trim((string) $POST['product_name']??''));
 		$product_name = $this->db->checkCharLen('product.product_name', $product_name);
 		$anml_description = addslashes(trim((string) $POST['anml_description']??''));
@@ -1033,18 +1078,23 @@ class Livestocks{
 		$itemdata['group_id'] = $group_id;
 		$itemdata['classification_id'] = $classification_id;
 		$itemdata['purpose'] = $purpose;
+		$itemdata['arrival_type'] = $arrival_type;
 		$itemdata['gender_id'] = $gender_id;
 		$itemdata['age_in_year'] = $age_in_year;
 		$itemdata['no_of_teeth'] = $no_of_teeth;
+		$itemdata['arrival_weight'] = $arrival_weight;
+		$itemdata['purchase_price'] = $purchase_price;
 		$itemdata['item_number'] = $tag;
 		$itemdata['tag'] = $tag;
 		$itemdata['tag_color'] = $tag_color;
 		$itemdata['anml_description'] = $anml_description;
+		$itemdata['arrival_note'] = $arrival_note;
 		$itemdata['alt_tag'] = $alt_tag;
 		$itemdata['carrier_name'] = '';
 		$itemdata['in_inventory'] = 1;
 		$itemdata['is_pos'] = 0;
 		$itemdata['custom_data'] = '';
+		$itemdata['arrival_date'] = $arrival_date;
 		
 
 		$inventorydata = array();
@@ -1337,6 +1387,72 @@ class Livestocks{
 		$array = array( 'login'=>'','id'=>intval($id),'sku'=>$sku,'savemsg'=>$savemsg, 'returnStr'=>$returnStr);
 		return json_encode($array);
 	}
+
+
+
+	public function AJautoComplete_supplier_name(){
+		$POST = json_decode(file_get_contents('php://input'), true);
+		$prod_cat_man = $_SESSION["prod_cat_man"]??0;
+		$accounts_id = $_SESSION["accounts_id"]??0;
+		$keyword_search = $POST['keyword_search']??'';
+		$frompage = $POST['frompage']??'';
+		$fromcustomers_id = intval($POST['fromcustomers_id']??0);
+		$extrastr = "";
+		if($frompage=='Customers' && $fromcustomers_id>0){$extrastr .= " AND customers_id != $fromcustomers_id";}
+		if($frompage=='Accounts_Receivables'){$extrastr .= " AND credit_limit = 0";}
+		$bindData = array();
+		if($keyword_search !=''){
+			$keyword_search = addslashes(trim((string) $keyword_search));
+			if ( $keyword_search == "" ) { $keyword_search = " "; }
+			$keyword_searchs = explode (" ", $keyword_search);
+			if ( strpos($keyword_search, " ") === false ) {$keyword_searchs[0] = $keyword_search;}
+			$num = 0;
+			while ( $num < sizeof($keyword_searchs) ) {
+				$extrastr .= " AND TRIM(CONCAT_WS(' ', first_name, last_name, company, email, contact_no)) LIKE CONCAT('%', :keyword_search$num, '%')";
+				$bindData['keyword_search'.$num] = trim((string) $keyword_searchs[$num]);
+				$num++;
+			}
+		}
+		
+		$customers_results = array();
+		$customerssql = "SELECT company, first_name, last_name, email, contact_no, credit_limit, customers_id, alert_message FROM customers WHERE accounts_id = $prod_cat_man AND customers_publish = 1 $extrastr";
+		$customersquery = $this->db->query($customerssql, $bindData);
+		if($customersquery){
+			while($onerow = $customersquery->fetch(PDO::FETCH_OBJ)){
+				$customers_id = $onerow->customers_id;
+				
+				$name = trim((string) stripslashes($onerow->company));
+				$email = trim((string) stripslashes($onerow->email));
+				$contact_no = trim((string) stripslashes($onerow->contact_no));
+				$first_name = trim((string) stripslashes($onerow->first_name));
+				if($name !=''){$name .= ', ';}
+				$name .= $first_name;
+				$last_name = trim((string) stripslashes($onerow->last_name));
+				if($name !=''){$name .= ' ';}
+				$name .= $last_name;
+				
+				if($email !=''){
+					$name .= " ($email)";
+				}
+				elseif($contact_no !=''){
+					$name .= " ($contact_no)";
+				}
+				$credit_limit = $onerow->credit_limit;
+				$alert_message = trim((string) stripslashes($onerow->alert_message));
+				//======================Here calculate all invoiced credit ===============//
+				$customers_results[] =array('id' => $customers_id,
+											'email' => $email,
+											'contact_no' => $contact_no,
+											'crlimit' => $credit_limit,
+											'am' => $alert_message,
+											'label' => $name
+											);
+			}
+		}
+		
+		return json_encode(array('login'=>'', 'returnStr'=>$customers_results));
+	}
+
 	
     public function colourNameData(){
 		$returnarray =array('Black',
@@ -1691,6 +1807,15 @@ class Livestocks{
 							'Breeding',
 							'Dairy',
 							'GenerationDevelop'
+							);				
+		return $returnarray;
+	}
+
+	public function arrivalTypeData(){
+		$returnarray =array('Purchased',
+							'Gift',
+							'BirthInhouse',
+							'Other'
 							);				
 		return $returnarray;
 	}

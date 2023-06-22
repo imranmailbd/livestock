@@ -1212,3 +1212,196 @@ previous: http://livestock.skitsbdl.com/Livestocks/lists/1
 2023-06-21 06:15:02 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 927: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
 2023-06-21 06:21:14 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 906: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
 2023-06-21 06:21:14 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 931: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 23:05:55 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 906: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 23:05:55 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 931: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-21 23:44:30 Script Error, Message: 2: TypeError: Cannot read properties of undefined (reading 'user_id')
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/common.js:622:61)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Manage_Data/lsbreed
+previous: http://livestock.skitsbdl.com/Manage_Data
+2023-06-21 23:44:31 Script Error, Message: 2: TypeError: Cannot read properties of undefined (reading 'user_id')
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/common.js:622:61)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Manage_Data/lsbreed
+previous: http://livestock.skitsbdl.com/Manage_Data
+2023-06-21 23:44:46 Script Error, Message: 2: TypeError: Cannot read properties of undefined (reading 'user_id')
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/common.js:622:61)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Manage_Data/lsbreed
+previous: http://livestock.skitsbdl.com/Manage_Data/lssection
+2023-06-22 00:12:44 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 906: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-22 00:12:44 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 931: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-22 00:27:41 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'style')
+    at setStyles (http://livestock.skitsbdl.com/assets/js-v3/common.js:3291:9)
+    at http://livestock.skitsbdl.com/assets/js-v3/common.js:3246:4
+    at NodeList.forEach (<anonymous>)
+    at createTabs (http://livestock.skitsbdl.com/assets/js-v3/common.js:3238:51)
+    at popup_dialog (http://livestock.skitsbdl.com/assets/js-v3/common.js:1854:9)
+    at popup_dialog1000 (http://livestock.skitsbdl.com/assets/js-v3/common.js:1994:5)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2412:4)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-22 00:27:42 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'style')
+    at setStyles (http://livestock.skitsbdl.com/assets/js-v3/common.js:3291:9)
+    at http://livestock.skitsbdl.com/assets/js-v3/common.js:3246:4
+    at NodeList.forEach (<anonymous>)
+    at createTabs (http://livestock.skitsbdl.com/assets/js-v3/common.js:3238:51)
+    at popup_dialog (http://livestock.skitsbdl.com/assets/js-v3/common.js:1854:9)
+    at popup_dialog1000 (http://livestock.skitsbdl.com/assets/js-v3/common.js:1994:5)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2412:4)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-22 00:27:43 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'style')
+    at setStyles (http://livestock.skitsbdl.com/assets/js-v3/common.js:3291:9)
+    at http://livestock.skitsbdl.com/assets/js-v3/common.js:3246:4
+    at NodeList.forEach (<anonymous>)
+    at createTabs (http://livestock.skitsbdl.com/assets/js-v3/common.js:3238:51)
+    at popup_dialog (http://livestock.skitsbdl.com/assets/js-v3/common.js:1854:9)
+    at popup_dialog1000 (http://livestock.skitsbdl.com/assets/js-v3/common.js:1994:5)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2412:4)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-22 00:31:27 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'style')
+    at setStyles (http://livestock.skitsbdl.com/assets/js-v3/common.js:3291:9)
+    at http://livestock.skitsbdl.com/assets/js-v3/common.js:3246:4
+    at NodeList.forEach (<anonymous>)
+    at createTabs (http://livestock.skitsbdl.com/assets/js-v3/common.js:3238:51)
+    at popup_dialog (http://livestock.skitsbdl.com/assets/js-v3/common.js:1854:9)
+    at popup_dialog1000 (http://livestock.skitsbdl.com/assets/js-v3/common.js:1994:5)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2412:4)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-22 01:32:01 Script Error, Message: 2: ReferenceError: requireField is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2412:46)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-22 01:32:02 Script Error, Message: 2: ReferenceError: requireField is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2412:46)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-22 01:32:02 Script Error, Message: 2: ReferenceError: requireField is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2412:46)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-22 01:32:02 Script Error, Message: 2: ReferenceError: requireField is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2412:46)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-22 02:55:44 Script Error, Message: 2: ReferenceError: requireField is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2459:54)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-22 02:58:49 Script Error, Message: 2: TypeError: Cannot read properties of undefined (reading 'length')
+    at DBDateToViewDate (http://livestock.skitsbdl.com/assets/js-v3/common.js:381:14)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2471:196)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-22 03:00:13 Script Error, Message: 2: TypeError: Cannot read properties of undefined (reading 'length')
+    at DBDateToViewDate (http://livestock.skitsbdl.com/assets/js-v3/common.js:381:14)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2471:196)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-22 03:50:53 Script Error, Message: 2: TypeError: Cannot read properties of undefined (reading 'length')
+    at DBDateToViewDate (http://livestock.skitsbdl.com/assets/js-v3/common.js:381:14)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2467:199)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-22 03:51:18 Script Error, Message: 2: TypeError: Cannot read properties of undefined (reading 'length')
+    at DBDateToViewDate (http://livestock.skitsbdl.com/assets/js-v3/common.js:381:14)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2467:199)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-22 04:12:27 Script Error, Message: 2: TypeError: Cannot read properties of undefined (reading 'length')
+    at DBDateToViewDate (http://livestock.skitsbdl.com/assets/js-v3/common.js:381:14)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2467:202)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-22 04:13:44 Script Error, Message: 2: TypeError: Cannot read properties of undefined (reading 'length')
+    at DBDateToViewDate (http://livestock.skitsbdl.com/assets/js-v3/common.js:381:14)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2447:202)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-22 04:18:50 Script Error, Message: 2: TypeError: Cannot read properties of undefined (reading 'length')
+    at DBDateToViewDate (http://livestock.skitsbdl.com/assets/js-v3/common.js:381:14)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2453:202)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-22 04:23:10 Script Error, Message: 2: TypeError: Cannot read properties of undefined (reading 'length')
+    at DBDateToViewDate (http://livestock.skitsbdl.com/assets/js-v3/common.js:381:14)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2458:202)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-22 04:41:12 Script Error, Message: 2: TypeError: Cannot read properties of undefined (reading 'length')
+    at DBDateToViewDate (http://livestock.skitsbdl.com/assets/js-v3/common.js:381:14)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:384:46)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-22 04:42:21 Script Error, Message: 2: TypeError: Cannot read properties of undefined (reading 'length')
+    at DBDateToViewDate (http://livestock.skitsbdl.com/assets/js-v3/common.js:381:14)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:384:46)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-22 04:42:28 Script Error, Message: 2: TypeError: Cannot read properties of undefined (reading 'length')
+    at DBDateToViewDate (http://livestock.skitsbdl.com/assets/js-v3/common.js:381:14)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:384:46)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-22 04:42:44 Script Error, Message: 2: TypeError: Cannot read properties of undefined (reading 'length')
+    at DBDateToViewDate (http://livestock.skitsbdl.com/assets/js-v3/common.js:381:14)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:384:46)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/2
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-22 04:43:04 Script Error, Message: 2: TypeError: Cannot read properties of undefined (reading 'length')
+    at DBDateToViewDate (http://livestock.skitsbdl.com/assets/js-v3/common.js:381:14)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:384:46)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-22 04:43:06 Script Error, Message: 2: TypeError: Cannot read properties of undefined (reading 'length')
+    at DBDateToViewDate (http://livestock.skitsbdl.com/assets/js-v3/common.js:381:14)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:384:46)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-22 04:43:24 Script Error, Message: 2: TypeError: Cannot read properties of undefined (reading 'length')
+    at DBDateToViewDate (http://livestock.skitsbdl.com/assets/js-v3/common.js:381:14)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:384:46)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-22 05:02:01 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 917: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-22 05:02:01 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 942: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-22 05:02:01 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 973: Undefined array key "alert_message", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-22 05:37:41 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 941: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-22 05:37:41 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 968: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-22 05:37:41 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 999: Undefined array key "alert_message", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-22 06:00:56 Script Error, Message: 2: ReferenceError: errorSpan is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2504:55)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-22 06:00:57 Script Error, Message: 2: ReferenceError: errorSpan is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2504:55)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-22 06:02:17 Script Error, Message: 2: ReferenceError: errorSpan is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2504:55)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-22 06:32:28 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'value')
+    at HTMLInputElement.updateSupplierId (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2759:17) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-22 06:32:35 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'value')
+    at HTMLInputElement.updateSupplierId (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2759:17) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-22 07:38:58 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'value')
+    at HTMLInputElement.updateSupplierId (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2759:17) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-22 07:39:03 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'value')
+    at HTMLInputElement.updateSupplierId (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2759:17) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-22 07:39:31 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'value')
+    at HTMLInputElement.updateSupplierId (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2759:17) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-22 07:46:39 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 944: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-22 07:46:39 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 971: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-22 07:46:39 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1002: Undefined array key "alert_message", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-22 07:54:05 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 944: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-22 07:54:05 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 971: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-22 07:54:05 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1002: Undefined array key "alert_message", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-22 07:56:40 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 947: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-22 07:56:40 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 976: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-22 07:56:40 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1007: Undefined array key "alert_message", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]

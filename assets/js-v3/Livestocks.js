@@ -375,6 +375,17 @@ async function  AJ_view_MoreInfo(){
             productHeader.innerHTML = data.product_name;
         viewBasicInfo.appendChild(productHeader);
 
+        const viewLeft = cTag('div', {class: "customInfoGrid columnSM6", align:'left', 'style': "border-right: 1px solid #CCC;"});
+               
+
+            // const arrivalDateLabel = cTag('label');
+            // arrivalDateLabel.innerHTML = Translate('Arrival Date')+' : ';
+            //     const arrivalDateValue = cTag('span');
+            //     arrivalDateValue.innerHTML = DBDateToViewDate(data.arrival_date);
+            //     viewLeft.append(arrivalDateLabel, arrivalDateValue);
+
+                viewBasicInfo.appendChild(viewLeft);    
+
             let productInfoDiv = cTag('div', {class: "flex", 'style': "padding: 5px 0px;"});
                 let categoryLabel = cTag('label');
                 categoryLabel.innerHTML = Translate('Category')+' : ';
@@ -1771,8 +1782,11 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
     
     function afterFetch(data){
         let message = '';
-		if(data.login !==''){window.location = '/'+data.login;}
+		if(data.login !==''){
+            window.location = '/'+data.login;
+        }
 		else{
+
             if(product_id===0 && data.cnc===1){
                 noPermissionWarning('Livestock');
                 return false;
@@ -1782,40 +1796,61 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                 return false;
             }            
             //console.log(data);
+
 			let divCol12, aTag, inputField, requiredField, requireSpan;
 			const formDialog = cTag('div');
             // formDialog.appendChild(cTag('div',{ 'class': 'errormsg','id': 'error_product' }));
+
             formDialog.appendChild(cTag('div',{ 'class': 'errormsg','id': '' }));
-				let productForm = cTag('form',{ 'action': '#','name': 'frmproduct','id': 'frmproduct','enctype': 'multipart/form-data','method': 'post','accept-charset': 'utf-8' });
+
+				    let productForm = cTag('form',{ 'action': '#','name': 'frmproduct','id': 'frmproduct','enctype': 'multipart/form-data','method': 'post','accept-charset': 'utf-8' });
                     
-					let formFields2 = cTag('div',{ 'class': 'flexSpaBetRow', 'style':'border:1px solid lightgrey' });
-						let divTabs = cTag('div',{ 'id':'tabs', 'style': "max-height: 600px; width: 100%;" });
-						let ulTabs = cTag('ul');
-							let liTabs1 = cTag('li');
-								aTag = cTag('a',{ 'href': '#tabs-1' });
-								aTag.innerHTML = Translate('Basic Info');
-                            liTabs1.appendChild(aTag);
-                        ulTabs.appendChild(liTabs1);
-							let liTabs2 = cTag('li');
-								aTag = cTag('a',{ 'href': '#tabs-2' });
-								aTag.innerHTML =Translate('Alert message');
-                            liTabs2.appendChild(aTag);
-                        ulTabs.appendChild(liTabs2);
+					    let formFields2 = cTag('div',{ 'class': 'flexSpaBetRow', 'style':'border:1px solid lightgrey' });
+                    
+					        let divTabs = cTag('div',{ 'id':'tabs', 'style': "max-height: 600px; width: 100%;" });
 
-						if(data.customFieldsData.length>0){
-							let liTabs3 = cTag('li');
-								aTag = cTag('a',{ 'href': '#tabs-3' });
-								aTag.innerHTML = Translate('Custom Fields');
-                            liTabs3.appendChild(aTag);
-							ulTabs.appendChild(liTabs3);
-						}
-                        divTabs.appendChild(ulTabs);
-                        
-                             //======divTabs1 Start======//
-                             let divTabs1 = cTag('div',{ 'class': 'columnXS12 flexSpaBetRow','id': 'tabs-1' });
+					            let ulTabs = cTag('ul');
 
-                                let divCol7 = cTag('div',{ 'class': 'columnXS12 columnMD7' });
-                                divCol7.appendChild(cTag('input',{ 'type': 'hidden','readonly': '','name': 'product_type','id': 'product_type','value': 'Live Stocks','class': 'form-control' }));
+                                        let liTabs1 = cTag('li');
+                                            aTag = cTag('a',{ 'href': '#tabs-1' });
+                                            aTag.innerHTML = Translate('Basic Info');
+                                            liTabs1.appendChild(aTag);
+                                        ulTabs.appendChild(liTabs1);
+
+                                        let liTabs2 = cTag('li');
+                                            aTag = cTag('a',{ 'href': '#tabs-2' });
+                                            aTag.innerHTML =Translate('Arrival');
+                                            liTabs2.appendChild(aTag);
+                                        ulTabs.appendChild(liTabs2);
+
+                                        let liTabs3 = cTag('li');
+                                            aTag = cTag('a',{ 'href': '#tabs-3' });
+                                            aTag.innerHTML = Translate('Birth');
+                                            liTabs3.appendChild(aTag);
+                                        ulTabs.appendChild(liTabs3);
+
+                                        let liTabs4 = cTag('li');
+                                            aTag = cTag('a',{ 'href': '#tabs-4' });
+                                            aTag.innerHTML = Translate('Weaning');
+                                            liTabs4.appendChild(aTag);
+                                        ulTabs.appendChild(liTabs4);
+
+                                        if(data.customFieldsData.length>0){
+                                            // let liTabs3 = cTag('li');
+                                            //     aTag = cTag('a',{ 'href': '#tabs-3' });
+                                            //     aTag.innerHTML = Translate('Custom Fields');
+                                            // liTabs3.appendChild(aTag);
+                                            // ulTabs.appendChild(liTabs3);
+                                        }
+
+                                divTabs.appendChild(ulTabs);
+
+                                    
+                            //======divTabs1 Start======//
+                            let divTabs1 = cTag('div',{ 'class': 'columnXS12 flexSpaBetRow','id': 'tabs-1' });
+
+                            let divCol7 = cTag('div',{ 'class': 'columnXS12 columnMD7' });
+                            divCol7.appendChild(cTag('input',{ 'type': 'hidden','readonly': '','name': 'product_type','id': 'product_type','value': 'Live Stocks','class': 'form-control' }));
 
 
                                 //#### Serial No or SKU barcode ######
@@ -2118,7 +2153,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 							    divCol7.appendChild(purposeDiv);
 
 
-                                // Age In Year
+                                //################### Age In Year ###################
 								const ageInYearDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
                                     const ageInYearRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
                                         const ageInYearTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
@@ -2135,7 +2170,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                 divCol7.appendChild(ageInYearDiv);
 
 
-                                // No of Teeth
+                                //################### No of Teeth ##################
 								const noOfTeethDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
                                 const noOfTeethRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
                                     const noOfTeethTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
@@ -2153,73 +2188,73 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 
 
                                 
-                                //     //Category Name
-								// 	const categoryRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
-                                //         const categoryTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                                //             const categoryLabel = cTag('label',{ 'for': 'category_id' });
-                                //             categoryLabel.innerHTML = Translate('Category Name');
-                                //         categoryTitle.appendChild(categoryLabel);
-                                //     categoryRow.appendChild(categoryTitle);
-                                //         const categoryDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
-                                //             const categoryInGroup = cTag('div',{ 'class': 'input-group' });
-                                //                 let selectCategory = cTag('select',{ 'class': 'form-control','name': 'category_id','id': 'category_id' });
-                                //                     const categoryOpt = cTag('option',{ 'value': '0' });
-                                //                     categoryOpt.innerHTML = '';
-                                //                 selectCategory.appendChild(categoryOpt);
-                                //                 setOptions(selectCategory, data.catOpt, 1, 1);                      
-                                //             categoryInGroup.appendChild(selectCategory);
-                                //             categoryInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '35','name': 'category_name','id': 'category_name','class': 'form-control',style:'display:none'}));
-                                //                 let newSpan = cTag('span', {'data-toggle':'tooltip', 'class':'input-group-addon cursor showNewInputOrSelect', 'title': Translate('Add New Category')});
-                                //                 newSpan.append(cTag('i', {'class':'fa fa-plus'}), ' ', Translate('New'));
-                                //             categoryInGroup.appendChild(newSpan);
-                                //         categoryDropDown.appendChild(categoryInGroup);
-                                //         categoryDropDown.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_category_id' }));
-                                //     categoryRow.appendChild(categoryDropDown);
-                                // divCol7.appendChild(categoryRow);
+                            //     //Category Name
+                            // 	const categoryRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                            //         const categoryTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                            //             const categoryLabel = cTag('label',{ 'for': 'category_id' });
+                            //             categoryLabel.innerHTML = Translate('Category Name');
+                            //         categoryTitle.appendChild(categoryLabel);
+                            //     categoryRow.appendChild(categoryTitle);
+                            //         const categoryDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+                            //             const categoryInGroup = cTag('div',{ 'class': 'input-group' });
+                            //                 let selectCategory = cTag('select',{ 'class': 'form-control','name': 'category_id','id': 'category_id' });
+                            //                     const categoryOpt = cTag('option',{ 'value': '0' });
+                            //                     categoryOpt.innerHTML = '';
+                            //                 selectCategory.appendChild(categoryOpt);
+                            //                 setOptions(selectCategory, data.catOpt, 1, 1);                      
+                            //             categoryInGroup.appendChild(selectCategory);
+                            //             categoryInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '35','name': 'category_name','id': 'category_name','class': 'form-control',style:'display:none'}));
+                            //                 let newSpan = cTag('span', {'data-toggle':'tooltip', 'class':'input-group-addon cursor showNewInputOrSelect', 'title': Translate('Add New Category')});
+                            //                 newSpan.append(cTag('i', {'class':'fa fa-plus'}), ' ', Translate('New'));
+                            //             categoryInGroup.appendChild(newSpan);
+                            //         categoryDropDown.appendChild(categoryInGroup);
+                            //         categoryDropDown.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_category_id' }));
+                            //     categoryRow.appendChild(categoryDropDown);
+                            // divCol7.appendChild(categoryRow);
 
-                                //     //Manufacturer Name
-                                //     const manufacturerDiv = cTag('div',{ 'class': ' LiveStocks' });
-                                //         const manufacturerRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
-                                //             const manufacturerTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                                //                 const manufacturerLabel = cTag('label',{ 'for': 'manufacturer_id' });
-								// 				manufacturerLabel.innerHTML = Translate('Manufacturer Name');
-                                //             manufacturerTitle.appendChild(manufacturerLabel);
-                                //         manufacturerRow.appendChild(manufacturerTitle);
-                                //     manufacturerDiv.appendChild(manufacturerRow);
-                                //             const manufacturerDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
-                                //                 const manufacturerInGroup = cTag('div',{ 'class': 'input-group' });
-								// 					let selectManufacturer = cTag('select',{ 'class': 'form-control','name': 'manufacturer_id','id': 'manufacturer_id' });
-                                //                         const manufacturerOpt = cTag('option',{ 'value': '0' });
-                                //                         manufacturerOpt.innerHTML = '';
-                                //                     selectManufacturer.appendChild(manufacturerOpt);
-                                //                     setOptions(selectManufacturer, data.manOpt, 1, 1);                       
-                                //                 manufacturerInGroup.appendChild(selectManufacturer);
-								// 				manufacturerInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '30','name': 'manufacture','id': 'manufacture','class': 'form-control', style:'display:none'}));
-								// 					let newManfacturerSpan = cTag('span',{ 'data-toggle': 'tooltip','title': Translate('Add New Manufacturer'),'class': 'input-group-addon cursor showNewInputOrSelect' });
-								// 					newManfacturerSpan.append(cTag('i',{ 'class': 'fa fa-plus' }), ' ', Translate('New'));
-                                //                 manufacturerInGroup.appendChild(newManfacturerSpan);
-                                //             manufacturerDropDown.appendChild(manufacturerInGroup);
-								// 			manufacturerDropDown.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_manufacturer_id' }));
-                                //         manufacturerRow.appendChild(manufacturerDropDown);
-                                //     manufacturerDiv.appendChild(manufacturerRow);
-                                // divCol7.appendChild(manufacturerDiv);
+                            //     //Manufacturer Name
+                            //     const manufacturerDiv = cTag('div',{ 'class': ' LiveStocks' });
+                            //         const manufacturerRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                            //             const manufacturerTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                            //                 const manufacturerLabel = cTag('label',{ 'for': 'manufacturer_id' });
+                            // 				manufacturerLabel.innerHTML = Translate('Manufacturer Name');
+                            //             manufacturerTitle.appendChild(manufacturerLabel);
+                            //         manufacturerRow.appendChild(manufacturerTitle);
+                            //     manufacturerDiv.appendChild(manufacturerRow);
+                            //             const manufacturerDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+                            //                 const manufacturerInGroup = cTag('div',{ 'class': 'input-group' });
+                            // 					let selectManufacturer = cTag('select',{ 'class': 'form-control','name': 'manufacturer_id','id': 'manufacturer_id' });
+                            //                         const manufacturerOpt = cTag('option',{ 'value': '0' });
+                            //                         manufacturerOpt.innerHTML = '';
+                            //                     selectManufacturer.appendChild(manufacturerOpt);
+                            //                     setOptions(selectManufacturer, data.manOpt, 1, 1);                       
+                            //                 manufacturerInGroup.appendChild(selectManufacturer);
+                            // 				manufacturerInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '30','name': 'manufacture','id': 'manufacture','class': 'form-control', style:'display:none'}));
+                            // 					let newManfacturerSpan = cTag('span',{ 'data-toggle': 'tooltip','title': Translate('Add New Manufacturer'),'class': 'input-group-addon cursor showNewInputOrSelect' });
+                            // 					newManfacturerSpan.append(cTag('i',{ 'class': 'fa fa-plus' }), ' ', Translate('New'));
+                            //                 manufacturerInGroup.appendChild(newManfacturerSpan);
+                            //             manufacturerDropDown.appendChild(manufacturerInGroup);
+                            // 			manufacturerDropDown.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_manufacturer_id' }));
+                            //         manufacturerRow.appendChild(manufacturerDropDown);
+                            //     manufacturerDiv.appendChild(manufacturerRow);
+                            // divCol7.appendChild(manufacturerDiv);
 								                       
 
-                        //     //Storage
-						// 		const storageDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
-                        //         const storageRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
-                        //             const storageTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                        //                 const storageLabel = cTag('label',{ 'for': 'storage','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select the internal memory capacity of the device you are entering.') });
-                        //                 storageLabel.innerHTML = Translate('Storage');
-                        //             storageTitle.appendChild(storageLabel);
-                        //         storageRow.appendChild(storageTitle);
-                        //     storageDiv.appendChild(storageRow);
-                        //             const storageField = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
-                        //             storageField.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'storage','id': 'storage','class': 'form-control','value': data.storage }));
-                        //         storageRow.appendChild(storageField);
-                        //     storageDiv.appendChild(storageRow);
-                        //     storageDiv.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_storage' }));
-                        // divCol7.appendChild(storageDiv);
+                            //     //Storage
+                            // 		const storageDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
+                            //         const storageRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                            //             const storageTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                            //                 const storageLabel = cTag('label',{ 'for': 'storage','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select the internal memory capacity of the device you are entering.') });
+                            //                 storageLabel.innerHTML = Translate('Storage');
+                            //             storageTitle.appendChild(storageLabel);
+                            //         storageRow.appendChild(storageTitle);
+                            //     storageDiv.appendChild(storageRow);
+                            //             const storageField = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
+                            //             storageField.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'storage','id': 'storage','class': 'form-control','value': data.storage }));
+                            //         storageRow.appendChild(storageField);
+                            //     storageDiv.appendChild(storageRow);
+                            //     storageDiv.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_storage' }));
+                            // divCol7.appendChild(storageDiv);
 
 
 							// 	//physical condition
@@ -2241,24 +2276,24 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                             //     physicalDiv.appendChild(physicalRow);
 							// divCol7.appendChild(physicalDiv);
 
-						// 		//regular price
-						// 		const regularRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
-                        //             const regularTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                        //                 const regularLabel = cTag('label',{ 'for': 'regular_price','data-placement': 'bottom' });
-						// 				regularLabel.innerHTML = Translate('Selling Price');
-                        //             regularTitle.appendChild(regularLabel);
-                        //         regularRow.appendChild(regularTitle);
-                        //             const regularDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
-						// 				let sellPrice = cTag('input',{ 'type': 'text','data-min':'-9999999.99','data-max':'9999999.99','data-format':'d.dd','class': 'form-control','name': 'regular_price','id': 'regular_price','value': round(data.regular_price,2) });
-						// 				controllNumericField(sellPrice,'#errmsg_regular_price');
-                        //                 sellPrice.addEventListener('blur',function(){
-						// 					if(this.value<0) document.getElementById('error_product').innerHTML = "Selling Price can't be < than 0"
-						// 				})
-                        //             regularDropDown.appendChild(sellPrice);
-						// 			regularDropDown.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_regular_price' }));
-                        //         regularRow.appendChild(regularDropDown);
-						// 	divCol7.appendChild(regularRow);
-						// divTabs1.appendChild(divCol7);
+                            // 		//regular price
+                            // 		const regularRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                            //             const regularTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                            //                 const regularLabel = cTag('label',{ 'for': 'regular_price','data-placement': 'bottom' });
+                            // 				regularLabel.innerHTML = Translate('Selling Price');
+                            //             regularTitle.appendChild(regularLabel);
+                            //         regularRow.appendChild(regularTitle);
+                            //             const regularDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+                            // 				let sellPrice = cTag('input',{ 'type': 'text','data-min':'-9999999.99','data-max':'9999999.99','data-format':'d.dd','class': 'form-control','name': 'regular_price','id': 'regular_price','value': round(data.regular_price,2) });
+                            // 				controllNumericField(sellPrice,'#errmsg_regular_price');
+                            //                 sellPrice.addEventListener('blur',function(){
+                            // 					if(this.value<0) document.getElementById('error_product').innerHTML = "Selling Price can't be < than 0"
+                            // 				})
+                            //             regularDropDown.appendChild(sellPrice);
+                            // 			regularDropDown.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_regular_price' }));
+                            //         regularRow.appendChild(regularDropDown);
+                            // 	divCol7.appendChild(regularRow);
+                            // divTabs1.appendChild(divCol7);
 
 								//Minimum Selling price
 							// 	const minimumSellingRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
@@ -2278,9 +2313,10 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 
 						divTabs1.appendChild(divCol7);
 
-							//taxable
-							let divCol5 = cTag('div',{ 'class': 'columnXS12 columnMD5', 'style': "padding: 5px 15px;" });
-								const taxRow = cTag('div',{ 'class': 'flex', 'style': "margin-bottom: 10px;" });
+                        let divCol5 = cTag('div',{ 'class': 'columnXS12 columnMD5', 'style': "padding: 5px 15px;" });
+                            
+                            //############### taxable ###############
+							const taxRow = cTag('div',{ 'class': 'flex', 'style': "margin-bottom: 10px;" });
                                     const taxLabel = cTag('label',{ 'for': 'taxable' });
 										inputField = cTag('input',{ 'type': 'checkbox','name': 'taxable','id': 'taxable','value': 1 });
 										if(data.taxable){
@@ -2291,8 +2327,8 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                 taxRow.appendChild(taxLabel);
 							divCol5.appendChild(taxRow);
 
-                                //Inventory count
-								const inventoryDiv = cTag('div',{ 'class': 'LiveStocks manage_inventory_count' });
+                            //############# Inventory count ############
+							const inventoryDiv = cTag('div',{ 'class': 'LiveStocks manage_inventory_count' });
                                     const inventoryRow = cTag('div',{ 'class': 'flex', 'style': "margin-bottom: 10px;" });
                                         let inventoryLabel = cTag('label',{ 'for': 'manage_inventory_count' });
 											inputField = cTag('input',{ 'type': 'checkbox','name': 'manage_inventory_count','id': 'manage_inventory_count','value': 1 });
@@ -2326,8 +2362,8 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 								divHidden.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_current_inventory' }));
 							divCol5.appendChild(divHidden);
 
-                                //manage inventory
-								const manageRow = cTag('div',{ 'class': 'manage_inventory' });
+                            //########### manage inventory ############
+                            const manageRow = cTag('div',{ 'class': 'manage_inventory' });
                                     const manageDiv = cTag('div',{ 'class': 'flex', 'style': "margin-bottom: 10px;" });
                                         const manageTitle = cTag('div',{ 'class': 'columnXS5', 'style': "padding-top: 5px; text-align: left;" });
                                             const manageLabel = cTag('label',{ 'for': 'low_inventory_alert' });
@@ -2342,8 +2378,8 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                 manageRow.appendChild(manageDiv);
 							divCol5.appendChild(manageRow);
 
-                                //Additional description
-                                const descriptionRow = cTag('div',{ 'class': 'flex', 'style': "margin-bottom: 10px;" });
+                            //############## Additional description ###################
+                            const descriptionRow = cTag('div',{ 'class': 'flex', 'style': "margin-bottom: 10px;" });
                                     const descriptionLabel = cTag('label',{ 'for': 'add_description' });
 									descriptionLabel.innerHTML = Translate('Additional Description');
                                 descriptionRow.appendChild(descriptionLabel);
@@ -2368,24 +2404,195 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 
 
 						divTabs1.appendChild(divCol5);
-					divTabs.appendChild(divTabs1);
+					divTabs.appendChild(divTabs1);             
+                              
 
-                            //======divTabs2 Start======//
-                            let divTabs2 = cTag('div',{ 'class': 'columnXS12','id': 'tabs-2' });
-                                let alertColumn = cTag('div',{ 'class': 'columnXS12'});
-                                    let messageArea = cTag('textarea',{ 'rows': '10','cols': '40', 'class': 'form-control','name': 'alert_message','id': 'alert_message' });
-                                    messageArea.innerHTML = data.alert_message;
-                                alertColumn.appendChild(messageArea);
-                            divTabs2.appendChild(alertColumn);
-                        divTabs.appendChild(divTabs2);
+                            // //####### Tag ###########
+                            // const tagRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                            //         const tagTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                            //             const tagLabel = cTag('label',{ 'for': 'tag','id': 'lbtag' });
+                            //             tagLabel.innerHTML = Translate('Tag');
 
-                        //======divTabs3 Start======//
-                        if(data.customFieldsData.length>0){
-                            let divTabs3 = cTag('div',{ 'class': 'columnXS12','id': 'tabs-3',style:'display:none' });
-                            generateCustomeFields(divTabs3,data.customFieldsData);
-                            divTabs.appendChild(divTabs3);
-                        }
-                    formFields2.appendChild(divTabs);
+                            //                 requireSpan = cTag('span',{ 'class': 'required' });
+                            //                 requireSpan.innerHTML = '*';
+                            //             tagLabel.appendChild(requireSpan);
+
+                            //         tagTitle.appendChild(tagLabel);
+                            //     tagRow.appendChild(tagTitle);
+
+                            //         const tagField = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+                            //         tagField.appendChild(cTag('input',{ 'type': 'text','class': 'form-control','name': 'tag','id': 'tag','value': '','maxlength': '100' }));
+                            //         tagField.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_tag' }));
+                            //     tagRow.appendChild(tagField);
+                            // divCol7.appendChild(tagRow); 
+
+
+
+
+                    //======divTabs2 Start======//
+                    let divTabs2 = cTag('div',{ 'class': 'columnXS12','id': 'tabs-2' });
+                   
+                        let tab2DivCol7 = cTag('div',{ 'class': 'columnXS12 columnMD7' });
+
+                            //########## Arrival Date ############        
+                            const arrivalDateRow = cTag('div', {class: "flex"});
+                                    const arrivalDateName = cTag('div', {class: "columnSM4", 'align': "left"});
+                                        const arrivalDateLabel = cTag('label', {'for': "arrival_date"});
+                                        arrivalDateLabel.innerHTML = Translate('Arrival Date');
+
+                                        let adrequiredField = cTag('span', {class: "required"});
+                                        adrequiredField.innerHTML = '*';
+                                            arrivalDateLabel.appendChild(adrequiredField);
+                                        arrivalDateName.appendChild(arrivalDateLabel);
+                                        
+                                    arrivalDateRow.appendChild(arrivalDateName);
+                                    const arrivalDateField = cTag('div', {class: "columnSM8", 'align': "left"});
+                                        inputField = cTag('input', {'autocomplete': "off", 'required': "required", 'type': "text", class: "form-control", name: "arrival_date", id: "arrival_date", 'value': '', 'maxlength': 10});
+                                        checkDateOnBlur(inputField,'#error_date','Invalid '+Translate('Arrival Date'));
+                                        arrivalDateField.appendChild(inputField);
+                                        arrivalDateField.appendChild(cTag('span',{id:'error_arrival_date',class:'errormsg'}));
+                                    arrivalDateRow.appendChild(arrivalDateField);
+                            tab2DivCol7.appendChild(arrivalDateRow);                        
+
+
+                            //########### Arrival Weight ##############
+                            const arrivalWeightDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
+                                const arrivalWeightRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                    const arrivalWeightTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                        const arrivalWeightLabel = cTag('label',{ 'for': 'arrival_weight','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select the internal memory capacity of the device you are entering.') });
+                                        arrivalWeightLabel.innerHTML = Translate('Arrival Weight');
+                                        arrivalWeightTitle.appendChild(arrivalWeightLabel);
+                                        arrivalWeightRow.appendChild(arrivalWeightTitle);
+                                        arrivalWeightDiv.appendChild(arrivalWeightRow);
+                                        const arrivalWeightField = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
+                                        arrivalWeightField.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'arrival_weight','id': 'arrival_weight','class': 'form-control','value': data.arrival_weight }));
+                                        arrivalWeightRow.appendChild(arrivalWeightField);
+                                        arrivalWeightDiv.appendChild(arrivalWeightRow);
+                                        arrivalWeightDiv.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_arrival_weight' }));
+                            tab2DivCol7.appendChild(arrivalWeightDiv);
+
+
+                            //############ Arrival Type ################        
+                            const arrivalTypeDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
+                                const arrivalTypeRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                    const arrivalTypeTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                        const arrivalTypeLabel = cTag('label',{ 'for': 'arrival_type' });
+                                        arrivalTypeLabel.innerHTML = Translate('Purpose');
+                                        arrivalTypeTitle.appendChild(arrivalTypeLabel);
+                                        arrivalTypeRow.appendChild(arrivalTypeTitle);
+                                        arrivalTypeDiv.appendChild(arrivalTypeRow);
+                                    const arrivalTypeDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+                                        const arrivalTypeInGroup = cTag('div',{ 'class': 'input-group' });
+                                            let arrivalTypePurpose = cTag('select',{ 'class': 'form-control','name': 'arrival_type','id': 'arrival_type' });
+                                            arrivalTypePurpose.appendChild(cTag('option',{ 'value': '' }));
+                                            setOptions(arrivalTypePurpose, data.arrvtypeOpt, 0, 1);                             
+                                            arrivalTypeInGroup.appendChild(arrivalTypePurpose);
+                                            let arrivalTypeSpan = cTag('span',{ 'data-toggle': 'tooltip','title': Translate('Add Arrival Type'),'class': 'input-group-addon cursor showNewInputOrSelect' });
+                                            arrivalTypeSpan.append(cTag('i',{ 'class': 'fa fa-plus' }), ' ', Translate('New'));
+                                            arrivalTypeInGroup.appendChild(arrivalTypeSpan);
+                                            arrivalTypeDropDown.appendChild(arrivalTypeInGroup);
+                                            arrivalTypeRow.appendChild(arrivalTypeDropDown);
+                                        arrivalTypeDiv.appendChild(arrivalTypeRow);
+                                    arrivalTypeDiv.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_arrival_type' }));
+                            tab2DivCol7.appendChild(arrivalTypeDiv);
+
+                            //############ Purchased From ################  
+                            const supplierNameRow = cTag('div',{ 'class':`flex`, 'style': "text-align: left;" });
+                                const customerNameTitle = cTag('div',{ 'class':`columnXS12 columnSM4` });
+                                    let customerNameLabel = cTag('label',{ 'for':`supplier_name`,'data-placement':`bottom` });
+                                        customerNameLabel.append(Translate('Purchased From'));
+                                            let errorSpan = cTag('span', {class: "errormsg"});
+                                            errorSpan.innerHTML = '*';
+                                        customerNameLabel.appendChild(errorSpan);
+                                    customerNameTitle.appendChild(customerNameLabel);
+                                    supplierNameRow.appendChild(customerNameTitle);
+                                    const customerNameField = cTag('div',{ 'class':`columnXS12 columnSM8` });
+                                        const customerInGroup = cTag('div',{ 'class':`input-group`,'id':`customerNameField` });
+                                            const customerName = cTag('input',{ 'autocomplete':`off`,'maxlength':`50`,'type':`text`,'value':``,'required':``,'name':`supplier_name`,'id':`supplier_name`,'class':`form-control ui-autocomplete-input`,'placeholder':Translate('Search Supplier') });
+                                            customerName.addEventListener('blur',updateSupplierId);
+                                        customerInGroup.appendChild(customerName);
+                                            let newSpan = cTag('span',{ 'id':'add_new_customer_btn','data-toggle':`tooltip`,'data-original-title':Translate('Add New Supplier'),'class':`input-group-addon cursor` });
+                                            newSpan.append(cTag('i',{ 'class':`fa fa-plus` }), ' ', Translate('New'));
+                                        customerInGroup.appendChild(newSpan);
+                                    customerNameField.appendChild(customerInGroup);
+                                    customerNameField.appendChild(cTag('input',{ 'type':`hidden`,'name':`supplier_id`,'id':`supplier_id`,'value':`0` }));
+                                    customerNameField.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_supplier_id` }));
+                                    supplierNameRow.appendChild(customerNameField);
+                                    const errorColumn = cTag('div',{ 'class':`columnXS12 columnSM6` });
+                                    errorColumn.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_customer_name` }));
+                                    supplierNameRow.appendChild(errorColumn);
+                            tab2DivCol7.appendChild(supplierNameRow);
+
+
+                            //########### Purchase Price ##############
+                            const pursPriceDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
+                                const pursPriceRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                    const pursPriceTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                        const pursPriceLabel = cTag('label',{ 'for': 'purchase_price','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select pp.') });
+                                        pursPriceLabel.innerHTML = Translate('Purchase Price');
+                                        pursPriceTitle.appendChild(pursPriceLabel);
+                                        pursPriceRow.appendChild(pursPriceTitle);
+                                        pursPriceDiv.appendChild(pursPriceRow);
+                                        const pursPriceField = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
+                                        pursPriceField.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'purchase_price','id': 'purchase_price','class': 'form-control','value': data.purchase_price }));
+                                        pursPriceRow.appendChild(pursPriceField);
+                                        pursPriceDiv.appendChild(pursPriceRow);
+                                        pursPriceDiv.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_purchase_price' }));
+                            tab2DivCol7.appendChild(pursPriceDiv);
+
+
+
+                            //############ Arrival Note ###################
+                            const arrivalNoteRow = cTag('div',{  'class': 'flex', 'style': "text-align: left;" });
+                                const arrivalNoteTitle = cTag('div',{ 'class': 'columnXS12 columnSM4'});
+                                    const arrivalNoteLabel = cTag('label',{ 'for': 'arrival_note','id': 'arrival_note' });
+                                    arrivalNoteLabel.innerHTML = Translate('Arrival Note4');
+                                    arrivalNoteTitle.appendChild(arrivalNoteLabel);
+                                    arrivalNoteRow.appendChild(arrivalNoteTitle);
+
+                                    const arrivalNoteArea = cTag('div',{ 'class': 'columnXS12 columnSM8' , 'id':'arrival_note_div'});
+                                    arrivalNoteArea.appendChild(cTag('textarea',{ 'rows': '4','cols': '20', 'class': 'form-control','name': 'arrival_note','id': 'arrival_note_ta' }));
+                                    anmlDescArea.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_arrival_note' }));
+                                    // arrivalNoteArea.innerHTML = data.arrival_note;
+                                    // arrivalNoteArea.val = data.arrival_note;
+                                    arrivalNoteRow.appendChild(arrivalNoteArea);
+                            tab2DivCol7.appendChild(arrivalNoteRow);
+
+
+
+                        divTabs2.appendChild(tab2DivCol7);
+                    divTabs.appendChild(divTabs2);
+
+
+
+                    //======divTabs3 Start======//
+                    let divTabs3 = cTag('div',{ 'class': 'columnXS12','id': 'tabs-3',style:'display:none' });
+                    
+
+                        // divTabs3.appendChild(divCol5);
+
+                    divTabs.appendChild(divTabs3);
+
+                    if(data.customFieldsData.length>0){
+                        // let divTabs3 = cTag('div',{ 'class': 'columnXS12','id': 'tabs-3',style:'display:none' });
+                        // generateCustomeFields(divTabs3,data.customFieldsData);
+                        // divTabs.appendChild(divTabs3);
+                    }
+
+
+
+                    //======divTabs4 Start======//
+                    let divTabs4 = cTag('div',{ 'class': 'columnXS12','id': 'tabs-4',style:'display:none' });
+                    
+                        // divTabs4.appendChild(divCol5);
+
+                    divTabs.appendChild(divTabs4);
+
+
+
+
+
+                formFields2.appendChild(divTabs);
                 productForm.appendChild(formFields2);
                 
 				productForm.appendChild(cTag('input',{ 'type': 'hidden','name': 'frompage','id': 'frompage','value': frompage }));
@@ -2395,6 +2602,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 
 			popup_dialog1000(Translate('Livestock Information'),formDialog,(hidePopup)=>AJsave_Livestocks(hidePopup,addCartCBF));
 
+            
 			setTimeout(function() {
 				if(parseInt(document.getElementById("product_id").value)===0){
 					document.getElementById("product_type").focus();
@@ -2409,18 +2617,22 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 					}
 				}
 
+                date_picker('#arrival_date');
+
 				document.getElementById("tag").value = data.tag;
 				document.getElementById("category_id").value = data.category_id;
 				document.getElementById("location_id").value = data.location_id;
 				document.getElementById("group_id").value = data.group_id;
 				document.getElementById("classification_id").value = data.classification_id;
 				document.getElementById("purpose").value = data.purpose;
+				document.getElementById("arrival_type").value = data.arrival_type;
 				document.getElementById("colour_name").value = data.colour_name;
 				document.getElementById("tag_color").value = data.tag_color;
 				document.getElementById("alt_tag").value = data.alt_tag;
 				// document.getElementById("breed_id").value = data.breed_id;
 				// document.getElementById("anml_description").value  = data.anml_description;
 				document.getElementById("anml_description_ta").innerHTML  = data.anml_description;
+				document.getElementById("arrival_note_ta").innerHTML  = data.arrival_note;
                 // console.log(data.anml_description);
 				// document.getElementById("manufacturer_id").value = data.manufacturer_id;
 				// document.getElementById("physical_condition_name").value = data.physical_condition_name;
@@ -2433,8 +2645,12 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                 }
 				
 				if(data.customFieldsData.length>0 && document.getElementsByClassName("DateField").length>0){					
-					date_picker('.DateField');
+					date_picker('.DateField');                    
 				}
+
+                if(data.arrival_date != null){
+                    document.getElementById("arrival_date").value = DBDateToViewDate(data.arrival_date);                    
+                }
 			
 				checkManageInventory();
 				checkLivestockType();
@@ -2488,6 +2704,18 @@ async function AJsave_Livestocks(hidePopup,addCartCBF){
 	}
     else {
         oField.classList.remove('errorFieldBorder');
+    }
+
+
+    if(arrival_date.value===''){
+        pTag = cTag('p', {'style': "margin: 0;"});
+        pTag.innerHTML = Translate('Missing Arrival Date');
+        error_date.appendChild(pTag);
+        arrival_date.focus();
+        arrival_date.classList.add('errorFieldBorder');
+        return false;
+    }else{
+        arrival_date.classList.remove('errorFieldBorder');
     }
     
 			
@@ -2556,6 +2784,27 @@ async function AJsave_Livestocks(hidePopup,addCartCBF){
     }
 
 	return false;
+}
+
+
+//=======add=========
+async function updateSupplierId(){
+	let customer_id = document.getElementById('customer_id');
+	let customer_name = document.getElementById('customer_name');
+	if(customer_id.value==='0' && customer_name.value!==''){
+		const jsonData = {"keyword_search":this.value, 'fieldIdName':'customer_name', 'frompage':segment1};
+		
+		const url = "/Common/AJautoComplete_supplier_name";
+		fetchData(afterFetch,url,jsonData);
+
+		function afterFetch(data){
+			if(data.returnStr.length>0) document.getElementById('customer_id').value = data.returnStr[0].id;
+			else{
+				customer_name.focus();
+				showTopMessage('error_msg','Please click the new button to add a new customer because no customer was found for the search name you entered');
+			}
+		}
+	}
 }
 
 function setLivestockType(product_type){
