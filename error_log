@@ -1405,3 +1405,241 @@ previous: http://livestock.skitsbdl.com/Livestocks/view/1/1
 2023-06-22 07:56:40 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 947: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
 2023-06-22 07:56:40 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 976: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
 2023-06-22 07:56:40 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1007: Undefined array key "alert_message", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-23 23:51:20 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'value')
+    at HTMLInputElement.updateSupplierId (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2794:17) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-24 00:39:22 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 951: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 00:39:22 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 980: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 00:39:22 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1011: Undefined array key "alert_message", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 01:41:45 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 643: Undefined property: stdClass::$birth_type, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 01:41:45 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 664: Undefined property: stdClass::$birth_type, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 01:41:45 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-24 01:41:47 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 643: Undefined property: stdClass::$birth_type, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 01:41:47 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 664: Undefined property: stdClass::$birth_type, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 01:41:47 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-24 01:41:49 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 643: Undefined property: stdClass::$birth_type, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 01:41:49 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 664: Undefined property: stdClass::$birth_type, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 01:41:49 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-24 01:41:51 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 643: Undefined property: stdClass::$birth_type, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 01:41:51 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 664: Undefined property: stdClass::$birth_type, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 01:41:51 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-24 01:41:53 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 643: Undefined property: stdClass::$birth_type, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 01:41:53 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 664: Undefined property: stdClass::$birth_type, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 01:41:53 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-24 01:44:48 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 643: Undefined property: stdClass::$birth_type, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 01:44:48 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 664: Undefined property: stdClass::$birth_type, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 01:44:48 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-24 01:44:50 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 643: Undefined property: stdClass::$birth_type, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 01:44:50 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 664: Undefined property: stdClass::$birth_type, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 01:44:50 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-24 01:44:52 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 643: Undefined property: stdClass::$birth_type, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 01:44:52 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 664: Undefined property: stdClass::$birth_type, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 01:44:52 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-24 01:44:54 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 643: Undefined property: stdClass::$birth_type, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 01:44:54 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 664: Undefined property: stdClass::$birth_type, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 01:44:54 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-24 01:44:56 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 643: Undefined property: stdClass::$birth_type, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 01:44:56 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 664: Undefined property: stdClass::$birth_type, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 01:44:56 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-24 01:47:41 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 986: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 01:47:41 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1011: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 01:47:41 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1042: Undefined array key "alert_message", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 01:49:24 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 986: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 01:49:24 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1011: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 01:49:24 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1042: Undefined array key "alert_message", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 01:53:24 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 986: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 01:53:24 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1011: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 01:53:24 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1042: Undefined array key "alert_message", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 01:57:50 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'value')
+    at HTMLInputElement.updateSupplierId (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2883:17) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-24 02:22:50 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 991: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 02:22:50 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1016: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 02:22:50 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1047: Undefined array key "alert_message", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 02:23:16 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'value')
+    at HTMLInputElement.updateSupplierId (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2901:17) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-24 02:46:09 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 669: Undefined property: stdClass::$calving_no, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 02:46:28 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 669: Undefined property: stdClass::$calving_no, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 02:47:34 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 669: Undefined property: stdClass::$calving_no, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 02:50:51 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 994: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 02:50:51 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1019: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 02:50:51 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1050: Undefined array key "alert_message", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 03:46:30 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 997: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 03:46:30 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1022: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 03:46:30 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1053: Undefined array key "alert_message", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 04:02:24 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1002: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 04:02:24 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1027: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 04:02:24 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1058: Undefined array key "alert_message", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 04:14:21 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'value')
+    at HTMLInputElement.updateSupplierId (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2980:17) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-24 04:15:12 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'value')
+    at HTMLInputElement.updateSupplierId (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2980:17) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-24 04:15:13 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'value')
+    at HTMLInputElement.updateSupplierId (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2980:17) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-24 04:15:26 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'value')
+    at HTMLInputElement.updateSupplierId (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2980:17) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-24 04:53:38 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1007: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 04:53:38 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1032: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 04:53:38 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1063: Undefined array key "alert_message", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 05:09:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1012: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 05:09:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1037: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 05:09:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1068: Undefined array key "alert_message", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 05:27:17 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1016: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 05:27:17 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1041: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 05:27:17 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1072: Undefined array key "alert_message", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 05:40:39 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1020: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 05:40:39 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1045: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 05:40:39 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1076: Undefined array key "alert_message", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 05:56:52 Script Error, Message: 2: ReferenceError: pTag is not defined
+    at AJsave_Livestocks (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2969:14)
+    at Object.click (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2848:80)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-24 05:56:53 Script Error, Message: 2: ReferenceError: pTag is not defined
+    at AJsave_Livestocks (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2969:14)
+    at Object.click (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2848:80)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-24 06:15:40 Script Error, Message: 2: ReferenceError: pTag is not defined
+    at AJsave_Livestocks (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2970:14)
+    at Object.click (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2849:80)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-24 06:19:48 Script Error, Message: 2: ReferenceError: pTag is not defined
+    at AJsave_Livestocks (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2970:14)
+    at Object.click (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2849:80)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-24 06:25:18 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at AJsave_Livestocks (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2960:27)
+    at Object.click (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2849:80)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-06-24 06:35:57 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1023: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 06:35:57 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1048: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 06:35:57 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1079: Undefined array key "alert_message", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 06:37:02 Script Error, Message: 2: TypeError: Cannot read properties of undefined (reading 'user_id')
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/common.js:622:61)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Manage_Data/lsgroups
+previous: http://livestock.skitsbdl.com/Manage_Data
+2023-06-24 06:37:27 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1023: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 06:37:27 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1048: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 06:37:27 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1079: Undefined array key "alert_message", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 06:37:51 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'value')
+    at HTMLInputElement.updateSupplierId (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:3088:17) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/3/1
+2023-06-24 06:38:00 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'value')
+    at HTMLInputElement.updateSupplierId (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:3088:17) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/3/1
+2023-06-24 06:38:37 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1023: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 06:38:37 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1048: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 06:38:37 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1079: Undefined array key "alert_message", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 06:39:11 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'value')
+    at HTMLInputElement.updateSupplierId (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:3088:17) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/3/1
+2023-06-24 06:39:13 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'value')
+    at HTMLInputElement.updateSupplierId (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:3088:17) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/3/1
+2023-06-24 06:41:30 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'value')
+    at HTMLInputElement.updateSupplierId (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:3088:17) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/3/1
+2023-06-24 06:41:32 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'style')
+    at HTMLSpanElement.showNewInputOrSelect (http://livestock.skitsbdl.com/assets/js-v3/common.js:3987:13) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/3/1
+2023-06-24 06:41:33 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'style')
+    at HTMLSpanElement.showNewInputOrSelect (http://livestock.skitsbdl.com/assets/js-v3/common.js:3987:13) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/3/1
+2023-06-24 06:41:34 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'style')
+    at HTMLSpanElement.showNewInputOrSelect (http://livestock.skitsbdl.com/assets/js-v3/common.js:3987:13) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/3/1
+2023-06-24 06:41:34 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'style')
+    at HTMLSpanElement.showNewInputOrSelect (http://livestock.skitsbdl.com/assets/js-v3/common.js:3987:13) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/3/1
+2023-06-24 06:41:35 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'style')
+    at HTMLSpanElement.showNewInputOrSelect (http://livestock.skitsbdl.com/assets/js-v3/common.js:3987:13) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/3/1
+2023-06-24 06:41:35 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'style')
+    at HTMLSpanElement.showNewInputOrSelect (http://livestock.skitsbdl.com/assets/js-v3/common.js:3987:13) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/3/1
+2023-06-24 06:41:35 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'style')
+    at HTMLSpanElement.showNewInputOrSelect (http://livestock.skitsbdl.com/assets/js-v3/common.js:3987:13) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/3/1
+2023-06-24 06:41:36 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'style')
+    at HTMLSpanElement.showNewInputOrSelect (http://livestock.skitsbdl.com/assets/js-v3/common.js:3987:13) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/3/1
+2023-06-24 06:41:38 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'style')
+    at HTMLSpanElement.showNewInputOrSelect (http://livestock.skitsbdl.com/assets/js-v3/common.js:3987:13) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/3/1
+2023-06-24 06:41:38 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'style')
+    at HTMLSpanElement.showNewInputOrSelect (http://livestock.skitsbdl.com/assets/js-v3/common.js:3987:13) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/3/1
+2023-06-24 06:41:50 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'style')
+    at HTMLSpanElement.showNewInputOrSelect (http://livestock.skitsbdl.com/assets/js-v3/common.js:3987:13) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/3/1
+2023-06-24 06:42:07 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'style')
+    at HTMLSpanElement.showNewInputOrSelect (http://livestock.skitsbdl.com/assets/js-v3/common.js:3987:13) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/3/1
+2023-06-24 06:47:19 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'style')
+    at HTMLSpanElement.showNewInputOrSelect (http://livestock.skitsbdl.com/assets/js-v3/common.js:3987:13) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/3/1
+2023-06-24 06:57:33 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'value')
+    at HTMLInputElement.updateSupplierId (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:3088:17) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/3/1
+2023-06-24 07:11:02 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'value')
+    at HTMLInputElement.updateSupplierId (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:3130:17) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/3/1
+2023-06-24 07:11:13 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'value')
+    at HTMLInputElement.updateSupplierId (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:3130:17) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/3/1
+2023-06-24 07:13:07 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'value')
+    at HTMLInputElement.updateSupplierId (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:3130:17) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/3/1
+2023-06-24 07:13:07 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1024: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 07:13:07 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1049: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 07:13:07 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1080: Undefined array key "alert_message", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 07:13:15 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'value')
+    at HTMLInputElement.updateSupplierId (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:3130:17) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/3/1
+2023-06-24 07:13:22 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'value')
+    at HTMLInputElement.updateSupplierId (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:3130:17) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/3/1
+2023-06-24 07:13:38 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'value')
+    at HTMLInputElement.updateSupplierId (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:3130:17) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/3/1
+2023-06-24 07:13:53 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'value')
+    at HTMLInputElement.updateSupplierId (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:3130:17) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/3/1
+2023-06-24 07:13:53 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1024: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 07:13:53 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1049: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 07:13:53 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1080: Undefined array key "alert_message", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-24 07:15:02 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'value')
+    at HTMLInputElement.updateSupplierId (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:3130:17) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/3/1
+2023-06-24 07:15:12 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'value')
+    at HTMLInputElement.updateSupplierId (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:3130:17) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/3/1

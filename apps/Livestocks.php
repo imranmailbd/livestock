@@ -565,7 +565,7 @@ class Livestocks{
 		$Common = new Common($this->db);
 
 		
-		$product_type = $purpose = $arrival_note = $purchase_price = $arrival_type = $colour_name = $tag_color = $storage = $age_in_year = $no_of_teeth = $arrival_weight = $physical_condition_name = $alert_message = '';
+		$product_type = $purpose = $arrival_weight = $arrival_type = $arrival_note = $calving_assist_reason = $birth_location = $wean_weight = $birth_weight = $birth_type = $calving_no = $creep_feed_days = $wean_avg_daily_gain = $purchase_price = $sibling_count = $colour_name = $tag_color = $storage = $age_in_year = $no_of_teeth = $physical_condition_name = $alert_message = '';
 		$category_id = $breed_id = $classification_id = $location_id = $group_id = $gender_id = $manufacturer_id = $low_inventory_alert = $require_serial_no = $manage_inventory_count = $allow_backorder = $ave_cost_is_percent = 0;
 		$taxable = 1;
 		
@@ -582,10 +582,23 @@ class Livestocks{
 		$productData['tag'] = '';
 		$productData['alt_tag'] = '';
 		$productData['arrival_date'] = '';
-		$productData['arrival_note'] = '';
 		$productData['arrival_weight'] = '';
-		$productData['purchase_price'] = '';
 		$productData['arrival_type'] = '';
+		$productData['arrival_note'] = '';
+		$productData['birth_date'] = '';
+		$productData['wean_date'] = '';
+		$productData['anml_description'] = '';
+		$productData['age_in_year'] = '';
+		$productData['no_of_teeth'] = '';
+		$productData['birth_weight'] = '';
+		$productData['wean_weight'] = '';
+		$productData['birth_type'] = '';
+		$productData['calving_assist_reason'] = '';
+		$productData['calving_no'] = '';
+		$productData['creep_feed_days'] = '';
+		$productData['wean_avg_daily_gain'] = '';
+		$productData['sibling_count'] = '';
+		$productData['purchase_price'] = '';
 		$productData['cnc'] = $cnc;
 		$productData['cne'] = $cne;
 		$productData['login'] = '';	
@@ -598,6 +611,7 @@ class Livestocks{
 		$productData['product_name'] = '';
 		$productData['description'] = '';
 		$productData['add_description'] = '';
+		$productData['birth_location'] = '';
 		$custom_data = '';
 		if($product_id>0 && $prod_cat_man>0){
 			$queryObj = $this->db->query("SELECT * FROM product WHERE product_id = :product_id AND accounts_id=$prod_cat_man AND product_publish=1", array('product_id'=>$product_id),1);
@@ -630,12 +644,19 @@ class Livestocks{
 					$group_id = $itemRow->group_id;
 					$gender_id = $itemRow->gender_id;
 					$classification_id = $itemRow->classification_id;
-					$purpose = $itemRow->purpose;
+					$arrival_weight = $itemRow->arrival_weight;
 					$arrival_type = $itemRow->arrival_type;
+					$arrival_note = $itemRow->arrival_note;
+					$purpose = $itemRow->purpose;
 					$age_in_year = $itemRow->age_in_year;
 					$no_of_teeth = $itemRow->no_of_teeth;
-					$arrival_weight = $itemRow->arrival_weight;
-					$arrival_note = $itemRow->arrival_note;
+					$birth_weight = $itemRow->birth_weight;
+					$birth_type = $itemRow->birth_type;
+					$calving_assist_reason = $itemRow->calving_assist_reason;
+					$birth_location = $itemRow->birth_location;
+					$wean_weight = $itemRow->wean_weight;
+					$wean_avg_daily_gain = $itemRow->wean_avg_daily_gain;
+					$creep_feed_days = $itemRow->creep_feed_days;
 
 					$productData['tag'] = $itemRow->tag;
 					$productData['alt_tag'] = $itemRow->alt_tag;
@@ -647,14 +668,24 @@ class Livestocks{
 					$productData['classification_id'] = $itemRow->classification_id;
 					$productData['age_in_year'] = $itemRow->age_in_year;
 					$productData['no_of_teeth'] = $itemRow->no_of_teeth;
-					$productData['arrival_weight'] = $itemRow->arrival_weight;
 					$productData['purpose'] = $itemRow->purpose;
-					$productData['arrival_type'] = $itemRow->arrival_type;
 					$productData['anml_description'] = $itemRow->anml_description;
 					$productData['purchase_price'] = $itemRow->purchase_price;
-					$productData['arrival_note'] = $itemRow->arrival_note;
-
 					$productData['arrival_date'] = $itemRow->arrival_date;
+					$productData['arrival_weight'] = $itemRow->arrival_weight;
+					$productData['arrival_type'] = $itemRow->arrival_type;
+					$productData['arrival_note'] = $itemRow->arrival_note;
+					$productData['birth_date'] = $itemRow->birth_date;
+					$productData['birth_weight'] = $itemRow->birth_weight;
+					$productData['birth_type'] = $itemRow->birth_type;
+					$productData['calving_assist_reason'] = $itemRow->calving_assist_reason;
+					$productData['birth_location'] = $itemRow->birth_location;
+					$productData['calving_no'] = $itemRow->calving_no;
+					$productData['creep_feed_days'] = $itemRow->creep_feed_days;
+					$productData['sibling_count'] = $itemRow->sibling_count;
+					$productData['wean_date'] = $itemRow->wean_date;
+					$productData['wean_weight'] = $itemRow->wean_weight;
+					$productData['wean_avg_daily_gain'] = $itemRow->wean_avg_daily_gain;
 				}
 				
 				$queryInvObj = $this->db->query("SELECT * FROM inventory WHERE product_id = $product_id AND accounts_id=$accounts_id", array());
@@ -897,7 +928,28 @@ class Livestocks{
 				$arrvtypeOpt[] = $oneOption;
 			}
 		}
-		$productData['arrvtypeOpt'] = $arrvtypeOpt; 		
+		$productData['arrvtypeOpt'] = $arrvtypeOpt; 
+		
+		
+		//Birth Type
+		$birthTypeData = $this->birthTypeData();		
+		$sqlBirthType= "SELECT birth_type FROM item WHERE product_id = $product_id AND accounts_id = $accounts_id";
+		$birthTypeObj = $this->db->query($sqlBirthType, array());
+		if($birthTypeObj){
+			while($birthTypeRow = $birthTypeObj->fetch(PDO::FETCH_OBJ)){
+				if(!empty($birthTypeRow->birth_type) && !in_array($birthTypeRow->birth_type, $birthTypeData)){
+					$birthTypeData[] = stripslashes(trim((string) $birthTypeRow->birth_type));
+				}
+			}
+		}
+		$colNamOpt = array();
+		if (!empty($birthTypeData)){
+			sort($birthTypeData);
+			foreach ($birthTypeData as $oneOption) {
+				$birthtypeOpt[] = $oneOption;
+			}
+		}
+		$productData['birthtypeOpt'] = $birthtypeOpt; 	
 
 		
 		$productData['taxable'] = intval($taxable);				
@@ -930,28 +982,49 @@ class Livestocks{
 		$age_in_year = intval($POST['age_in_year']??0);
 		$no_of_teeth = intval($POST['no_of_teeth']??0);
 		$purchase_price = intval($POST['purchase_price']??0);
+		$sibling_count = intval($POST['sibling_count']??0);
 		$product_type = $POST['product_type']??'';
 		$product_type = $this->db->checkCharLen('product.product_type', $product_type);
 		$category_name = trim((string) $POST['category_name']??'');
 		$category_name = $this->db->checkCharLen('category.category_name', $category_name);
-		$arrival_weight = trim((string) $POST['arrival_weight']??'');
-		$arrival_weight = $this->db->checkCharLen('item.arrival_weight', $arrival_weight);
-		$manufacturer_id = intval($POST['manufacturer_id']??0);
-		$breed_id = intval($POST['breed_id']??0);
-		$location_id = intval($POST['location_id']??0);
-		$group_id = intval($POST['group_id']??0);
 		$arrival_date = $POST['arrival_date']??'';
 		if($arrival_date !=''){$arrival_date = date('Y-m-d', strtotime(trim((string) $arrival_date)));}
 		else{$arrival_date = '1000-01-01';}
+		$arrival_weight = trim((string) $POST['arrival_weight']??'');
+		$arrival_weight = $this->db->checkCharLen('item.arrival_weight', $arrival_weight);
+		$arrival_type = addslashes(trim((string) $POST['arrival_type']??''));
+		$arrival_type = $this->db->checkCharLen('item.arrival_type', $arrival_type);
+		$arrival_note = addslashes(trim((string) $POST['arrival_note']??''));
+		$arrival_note = $this->db->checkCharLen('item.arrival_note', $arrival_note);
+		$manufacturer_id = intval($POST['manufacturer_id']??0);
+		$breed_id = intval($POST['breed_id']??0);
+		$location_id = intval($POST['location_id']??0);
+		$location_id2 = intval($POST['location_id2']??0);
+		$group_id = intval($POST['group_id']??0);
+		$birth_date = $POST['birth_date']??'';
+		if($birth_date !=''){$birth_date = date('Y-m-d', strtotime(trim((string) $birth_date)));}
+		else{$birth_date = '1000-01-01';}
+		$wean_date = $POST['wean_date']??'';
+		if($wean_date !=''){$wean_date = date('Y-m-d', strtotime(trim((string) $wean_date)));}
+		else{$wean_date = '1000-01-01';}
+		$birth_weight = trim((string) $POST['birth_weight']??'');
+		$birth_weight = $this->db->checkCharLen('item.birth_weight', $birth_weight);
+		$wean_weight = trim((string) $POST['wean_weight']??'');
+		$wean_weight = $this->db->checkCharLen('item.wean_weight', $wean_weight);
+		$birth_type = addslashes(trim((string) $POST['birth_type']??''));
+		$birth_type = $this->db->checkCharLen('item.birth_type', $birth_type);
+		$calving_assist_reason = addslashes(trim((string) $POST['calving_assist_reason']??''));
+		$calving_assist_reason = $this->db->checkCharLen('item.calving_assist_reason', $calving_assist_reason);
+		$calving_no = intval($POST['calving_no']??0);
+		$wean_avg_daily_gain = intval($POST['wean_avg_daily_gain']??0);
+		$creep_feed_days = intval($POST['creep_feed_days']??0);
+		$birth_location = addslashes(trim((string) $POST['birth_location']??''));
+		$birth_location = $this->db->checkCharLen('item.birth_location', $birth_location);
 		$classification_id = intval($POST['classification_id']??0);
 		$manufacture = addslashes(trim((string) $POST['manufacture']??''));
 		$manufacture = $this->db->checkCharLen('manufacturer.name', $manufacture);
 		$purpose = addslashes(trim((string) $POST['purpose']??''));
 		$purpose = $this->db->checkCharLen('item.purpose', $purpose);
-		$arrival_note = addslashes(trim((string) $POST['arrival_note']??''));
-		$arrival_note = $this->db->checkCharLen('item.arrival_note', $arrival_note);
-		$arrival_type = addslashes(trim((string) $POST['arrival_type']??''));
-		$arrival_type = $this->db->checkCharLen('item.arrival_type', $arrival_type);
 		$product_name = addslashes(trim((string) $POST['product_name']??''));
 		$product_name = $this->db->checkCharLen('product.product_name', $product_name);
 		$anml_description = addslashes(trim((string) $POST['anml_description']??''));
@@ -1041,6 +1114,7 @@ class Livestocks{
 		}
 
 		if($colour_name == '' && $colour_name2 !=''){$colour_name = $colour_name2;}
+		if($location_id == '' && $location_id2 !=''){$location_id = $location_id2;}
 		if($tag_color == '' && $tag_color2 !=''){$tag_color = $tag_color2;}
 		$sku = str_replace(' ', '-', strtoupper($sku));
 		if($sku =='' && $product_id>0){$sku = $product_id;}
@@ -1078,23 +1152,34 @@ class Livestocks{
 		$itemdata['group_id'] = $group_id;
 		$itemdata['classification_id'] = $classification_id;
 		$itemdata['purpose'] = $purpose;
-		$itemdata['arrival_type'] = $arrival_type;
 		$itemdata['gender_id'] = $gender_id;
 		$itemdata['age_in_year'] = $age_in_year;
 		$itemdata['no_of_teeth'] = $no_of_teeth;
-		$itemdata['arrival_weight'] = $arrival_weight;
 		$itemdata['purchase_price'] = $purchase_price;
 		$itemdata['item_number'] = $tag;
 		$itemdata['tag'] = $tag;
 		$itemdata['tag_color'] = $tag_color;
 		$itemdata['anml_description'] = $anml_description;
-		$itemdata['arrival_note'] = $arrival_note;
 		$itemdata['alt_tag'] = $alt_tag;
 		$itemdata['carrier_name'] = '';
 		$itemdata['in_inventory'] = 1;
 		$itemdata['is_pos'] = 0;
 		$itemdata['custom_data'] = '';
 		$itemdata['arrival_date'] = $arrival_date;
+		$itemdata['arrival_weight'] = $arrival_weight;
+		$itemdata['arrival_type'] = $arrival_type;
+		$itemdata['arrival_note'] = $arrival_note;
+		$itemdata['birth_date'] = $birth_date;
+		$itemdata['birth_weight'] = $birth_weight;
+		$itemdata['birth_type'] = $birth_type;
+		$itemdata['calving_assist_reason'] = $calving_assist_reason;
+		$itemdata['birth_location'] = $birth_location;
+		$itemdata['calving_no'] = $calving_no;
+		$itemdata['sibling_count'] = $sibling_count;
+		$itemdata['wean_date'] = $wean_date;
+		$itemdata['wean_weight'] = $wean_weight;
+		$itemdata['wean_avg_daily_gain'] = $wean_avg_daily_gain;
+		$itemdata['creep_feed_days'] = $creep_feed_days;
 		
 
 		$inventorydata = array();
@@ -1816,6 +1901,13 @@ class Livestocks{
 							'Gift',
 							'BirthInhouse',
 							'Other'
+							);				
+		return $returnarray;
+	} 
+
+	public function birthTypeData(){
+		$returnarray =array('Live',
+							'Immature'
 							);				
 		return $returnarray;
 	}

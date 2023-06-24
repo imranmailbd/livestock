@@ -384,7 +384,13 @@ async function  AJ_view_MoreInfo(){
             //     arrivalDateValue.innerHTML = DBDateToViewDate(data.arrival_date);
             //     viewLeft.append(arrivalDateLabel, arrivalDateValue);
 
-                viewBasicInfo.appendChild(viewLeft);    
+            // const birthlDateLabel = cTag('label');
+            // birthDateLabel.innerHTML = Translate('Arrival Date')+' : ';
+            //     const birthDateValue = cTag('span');
+            //     birthDateValue.innerHTML = DBDateToViewDate(data.birth_date);
+            //     viewLeft.append(birthDateLabel, birthDateValue);
+
+            viewBasicInfo.appendChild(viewLeft);    
 
             let productInfoDiv = cTag('div', {class: "flex", 'style': "padding: 5px 0px;"});
                 let categoryLabel = cTag('label');
@@ -2033,7 +2039,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                                 selectLocation.appendChild(locationOpt);
                                             setOptions(selectLocation, data.locationOpt, 1, 1);                      
                                             locationInGroup.appendChild(selectLocation);
-                                            // locationInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '10','name': 'location_id','id': 'location_id','class': 'form-control',style:'display:none'}));
+                                            locationInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '10','name': 'location_id2','id': 'location_id2','class': 'form-control',style:'display:none'}));
                                             let locationSpan = cTag('span', {'data-toggle':'tooltip', 'class':'input-group-addon cursor showNewInputOrSelect', 'title': Translate('Add New Location')});
                                             locationSpan.append(cTag('i', {'class':'fa fa-plus'}), ' ', Translate('New'));
                                             locationInGroup.appendChild(locationSpan);
@@ -2452,7 +2458,8 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                         arrivalDateField.appendChild(inputField);
                                         arrivalDateField.appendChild(cTag('span',{id:'error_arrival_date',class:'errormsg'}));
                                     arrivalDateRow.appendChild(arrivalDateField);
-                            tab2DivCol7.appendChild(arrivalDateRow);                        
+                            tab2DivCol7.appendChild(arrivalDateRow);     
+                                              
 
 
                             //########### Arrival Weight ##############
@@ -2477,7 +2484,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                 const arrivalTypeRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
                                     const arrivalTypeTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
                                         const arrivalTypeLabel = cTag('label',{ 'for': 'arrival_type' });
-                                        arrivalTypeLabel.innerHTML = Translate('Purpose');
+                                        arrivalTypeLabel.innerHTML = Translate('Arrival Type');
                                         arrivalTypeTitle.appendChild(arrivalTypeLabel);
                                         arrivalTypeRow.appendChild(arrivalTypeTitle);
                                         arrivalTypeDiv.appendChild(arrivalTypeRow);
@@ -2496,21 +2503,29 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                     arrivalTypeDiv.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_arrival_type' }));
                             tab2DivCol7.appendChild(arrivalTypeDiv);
 
+
+                             //########### Location ###################                        
+
                             //############ Purchased From ################  
                             const supplierNameRow = cTag('div',{ 'class':`flex`, 'style': "text-align: left;" });
                                 const customerNameTitle = cTag('div',{ 'class':`columnXS12 columnSM4` });
-                                    let customerNameLabel = cTag('label',{ 'for':`supplier_name`,'data-placement':`bottom` });
+                                    let customerNameLabel = cTag('label',{ 'for':`supplier_id`,'data-placement':`bottom` });
                                         customerNameLabel.append(Translate('Purchased From'));
+
                                             let errorSpan = cTag('span', {class: "errormsg"});
                                             errorSpan.innerHTML = '*';
                                         customerNameLabel.appendChild(errorSpan);
+                                        
                                     customerNameTitle.appendChild(customerNameLabel);
                                     supplierNameRow.appendChild(customerNameTitle);
                                     const customerNameField = cTag('div',{ 'class':`columnXS12 columnSM8` });
                                         const customerInGroup = cTag('div',{ 'class':`input-group`,'id':`customerNameField` });
-                                            const customerName = cTag('input',{ 'autocomplete':`off`,'maxlength':`50`,'type':`text`,'value':``,'required':``,'name':`supplier_name`,'id':`supplier_name`,'class':`form-control ui-autocomplete-input`,'placeholder':Translate('Search Supplier') });
+
+                                            const customerName = cTag('input',{ 'autocomplete':`off`,'maxlength':`50`,'type':`text`,'value':``,'required':``,'name':`supplier_id`,'id':`supplier_id`,'class':`form-control ui-autocomplete-input`,'placeholder':Translate('Search Supplier') });
                                             customerName.addEventListener('blur',updateSupplierId);
                                         customerInGroup.appendChild(customerName);
+
+                                        customerInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '10','name': 'supplier_id2','id': 'supplier_id2','class': 'form-control',style:'display:none'}));
                                             let newSpan = cTag('span',{ 'id':'add_new_customer_btn','data-toggle':`tooltip`,'data-original-title':Translate('Add New Supplier'),'class':`input-group-addon cursor` });
                                             newSpan.append(cTag('i',{ 'class':`fa fa-plus` }), ' ', Translate('New'));
                                         customerInGroup.appendChild(newSpan);
@@ -2522,6 +2537,40 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                     errorColumn.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_customer_name` }));
                                     supplierNameRow.appendChild(errorColumn);
                             tab2DivCol7.appendChild(supplierNameRow);
+
+
+
+                              //############ Purchased From ################  
+                        //       const supplierNameRow = cTag('div',{ 'class':`flex`, 'style': "text-align: left;" });
+                        //       const customerNameTitle = cTag('div',{ 'class':`columnXS12 columnSM4` });
+                        //           let customerNameLabel = cTag('label',{ 'for':`supplier_name`,'data-placement':`bottom` });
+                        //               customerNameLabel.append(Translate('Purchased From'));
+
+                        //                   let errorSpan = cTag('span', {class: "errormsg"});
+                        //                   errorSpan.innerHTML = '*';
+                        //               customerNameLabel.appendChild(errorSpan);
+                                      
+                        //           customerNameTitle.appendChild(customerNameLabel);
+                        //           supplierNameRow.appendChild(customerNameTitle);
+                        //           const customerNameField = cTag('div',{ 'class':`columnXS12 columnSM8` });
+                        //               const customerInGroup = cTag('div',{ 'class':`input-group`,'id':`customerNameField` });
+
+                        //                   const customerName = cTag('input',{ 'autocomplete':`off`,'maxlength':`50`,'type':`text`,'value':``,'required':``,'name':`supplier_name`,'id':`supplier_name`,'class':`form-control ui-autocomplete-input`,'placeholder':Translate('Search Supplier') });
+                        //                   customerName.addEventListener('blur',updateSupplierId);
+                        //               customerInGroup.appendChild(customerName);
+
+                        //                   let newSpan = cTag('span',{ 'id':'add_new_customer_btn','data-toggle':`tooltip`,'data-original-title':Translate('Add New Supplier'),'class':`input-group-addon cursor` });
+                        //                   newSpan.append(cTag('i',{ 'class':`fa fa-plus` }), ' ', Translate('New'));
+                        //               customerInGroup.appendChild(newSpan);
+                        //           customerNameField.appendChild(customerInGroup);
+                        //           customerNameField.appendChild(cTag('input',{ 'type':`hidden`,'name':`supplier_id`,'id':`supplier_id`,'value':`0` }));
+                        //           customerNameField.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_supplier_id` }));
+                        //           supplierNameRow.appendChild(customerNameField);
+                        //           const errorColumn = cTag('div',{ 'class':`columnXS12 columnSM6` });
+                        //           errorColumn.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_customer_name` }));
+                        //           supplierNameRow.appendChild(errorColumn);
+                        //   tab2DivCol7.appendChild(supplierNameRow);
+
 
 
                             //########### Purchase Price ##############
@@ -2546,7 +2595,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                             const arrivalNoteRow = cTag('div',{  'class': 'flex', 'style': "text-align: left;" });
                                 const arrivalNoteTitle = cTag('div',{ 'class': 'columnXS12 columnSM4'});
                                     const arrivalNoteLabel = cTag('label',{ 'for': 'arrival_note','id': 'arrival_note' });
-                                    arrivalNoteLabel.innerHTML = Translate('Arrival Note4');
+                                    arrivalNoteLabel.innerHTML = Translate('Arrival Note');
                                     arrivalNoteTitle.appendChild(arrivalNoteLabel);
                                     arrivalNoteRow.appendChild(arrivalNoteTitle);
 
@@ -2566,10 +2615,171 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 
 
                     //======divTabs3 Start======//
-                    let divTabs3 = cTag('div',{ 'class': 'columnXS12','id': 'tabs-3',style:'display:none' });
-                    
+                    let divTabs3 = cTag('div',{ 'class': 'columnXS12','id': 'tabs-3' });
+                   
+                        let tab3DivCol7 = cTag('div',{ 'class': 'columnXS12 columnMD7' });
 
-                        // divTabs3.appendChild(divCol5);
+                        
+                        //########## Birth Date ############        
+                        const birthDateRow = cTag('div', {class: "flex"});
+                                const birthDateName = cTag('div', {class: "columnSM4", 'align': "left"});
+                                    const birthDateLabel = cTag('label', {'for': "birth_date"});
+                                    birthDateLabel.innerHTML = Translate('Birth Date');
+
+                                    let bdrequiredField = cTag('span', {class: "required"});
+                                    bdrequiredField.innerHTML = '*';
+                                    birthDateLabel.appendChild(bdrequiredField);
+                                        birthDateName.appendChild(birthDateLabel);
+                                    
+                                    birthDateRow.appendChild(birthDateName);
+                                const birthDateField = cTag('div', {class: "columnSM8", 'align': "left"});
+                                    inputField = cTag('input', {'autocomplete': "off", 'required': "required", 'type': "text", class: "form-control", name: "birth_date", id: "birth_date", 'value': '', 'maxlength': 10});
+                                    checkDateOnBlur(inputField,'#error_date','Invalid '+Translate('Birth Date'));
+                                    birthDateField.appendChild(inputField);
+                                    birthDateField.appendChild(cTag('span',{id:'error_birth_date',class:'errormsg'}));
+                                    birthDateRow.appendChild(birthDateField);
+                        tab3DivCol7.appendChild(birthDateRow);                        
+
+
+                        //########### Birth Weight ##############
+                        const birthWeightDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
+                            const birthWeightRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                const birthWeightTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                    const birthWeightLabel = cTag('label',{ 'for': 'birth_weight','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select the internal memory capacity of the device you are entering.') });
+                                    birthWeightLabel.innerHTML = Translate('Birth Weight');
+                                    birthWeightTitle.appendChild(birthWeightLabel);
+                                    birthWeightRow.appendChild(birthWeightTitle);
+                                    birthWeightDiv.appendChild(birthWeightRow);
+                                    const birthWeightField = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
+                                    birthWeightField.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'birth_weight','id': 'birth_weight','class': 'form-control','value': data.birth_weight }));
+                                    birthWeightRow.appendChild(birthWeightField);
+                                    birthWeightDiv.appendChild(birthWeightRow);
+                                    birthWeightDiv.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_birth_weight' }));
+                        tab3DivCol7.appendChild(birthWeightDiv);
+
+
+                        //############ Birth Type ################        
+                        const birthTypeDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
+                            const birthTypeRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                const birthTypeTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                    const birthTypeLabel = cTag('label',{ 'for': 'birth_type' });
+                                    birthTypeLabel.innerHTML = Translate('Birth Type');
+                                    birthTypeTitle.appendChild(birthTypeLabel);
+                                    birthTypeRow.appendChild(birthTypeTitle);
+                                    birthTypeDiv.appendChild(birthTypeRow);
+                                const birthTypeDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+                                    const birthTypeInGroup = cTag('div',{ 'class': 'input-group' });
+                                        let birthTypePurpose = cTag('select',{ 'class': 'form-control','name': 'birth_type','id': 'birth_type' });
+                                        birthTypePurpose.appendChild(cTag('option',{ 'value': '' }));
+                                        setOptions(birthTypePurpose, data.birthtypeOpt, 0, 1);                             
+                                        birthTypeInGroup.appendChild(birthTypePurpose);
+                                        let birthTypeSpan = cTag('span',{ 'data-toggle': 'tooltip','title': Translate('Add Arrival Type'),'class': 'input-group-addon cursor showNewInputOrSelect' });
+                                        birthTypeSpan.append(cTag('i',{ 'class': 'fa fa-plus' }), ' ', Translate('New'));
+                                        birthTypeInGroup.appendChild(birthTypeSpan);
+                                        birthTypeDropDown.appendChild(birthTypeInGroup);
+                                        birthTypeRow.appendChild(birthTypeDropDown);
+                                    birthTypeDiv.appendChild(birthTypeRow);
+                                birthTypeDiv.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_birth_type' }));
+                        tab3DivCol7.appendChild(birthTypeDiv);
+                        
+
+                        //############ Calving Assist Reason ###################
+                        const clavingAssReasonRow = cTag('div',{  'class': 'flex', 'style': "text-align: left;" });
+                        const clavingAssReasonTitle = cTag('div',{ 'class': 'columnXS12 columnSM4'});
+                            const clavingAssReasonLabel = cTag('label',{ 'for': 'calving_assist_reason','id': 'calving_assist_reason' });
+                            clavingAssReasonLabel.innerHTML = Translate('Calving Assist Reason');
+                            clavingAssReasonTitle.appendChild(clavingAssReasonLabel);
+                            clavingAssReasonRow.appendChild(clavingAssReasonTitle);
+
+                            const clavingAssReasonArea = cTag('div',{ 'class': 'columnXS12 columnSM8' , 'id':'calving_assist_reason_div'});
+                            clavingAssReasonArea.appendChild(cTag('textarea',{ 'rows': '4','cols': '20', 'class': 'form-control','name': 'calving_assist_reason','id': 'calving_assist_reason_ta' }));
+                            anmlDescArea.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_calving_assist_reason' }));
+                            // clavingAssReasonArea.innerHTML = data.calving_assist_reason;
+                            // clavingAssReasonArea.val = data.calving_assist_reason;
+                            clavingAssReasonRow.appendChild(clavingAssReasonArea);
+                        tab3DivCol7.appendChild(clavingAssReasonRow);
+
+
+                        //########### Calving Number ##############
+                        const calvingNoDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
+                            const calvingNoRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                const calvingNoTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                    const calvingNoLabel = cTag('label',{ 'for': 'calving_no','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select pp.') });
+                                    calvingNoLabel.innerHTML = Translate('Calving No.');
+                                    calvingNoTitle.appendChild(calvingNoLabel);
+                                    calvingNoRow.appendChild(calvingNoTitle);
+                                    calvingNoDiv.appendChild(calvingNoRow);
+                                    const calvingNoField = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
+                                    calvingNoField.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'calving_no','id': 'calving_no','class': 'form-control','value': data.calving_no }));
+                                    calvingNoRow.appendChild(calvingNoField);
+                                    calvingNoDiv.appendChild(calvingNoRow);
+                                    calvingNoDiv.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_calving_no' }));
+                        tab3DivCol7.appendChild(calvingNoDiv);
+
+
+                        //########### Sibling Count ##############
+                        const siblingCountDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
+                            const siblingCountRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                const siblingCountTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                    const siblingCount = cTag('label',{ 'for': 'sibling_count','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select pp.') });
+                                    siblingCount.innerHTML = Translate('Sibling Count');
+                                    siblingCountTitle.appendChild(siblingCount);
+                                    siblingCountRow.appendChild(siblingCountTitle);
+                                    siblingCountDiv.appendChild(siblingCountRow);
+                                    const siblingCountField = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
+                                    siblingCountField.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'sibling_count','id': 'sibling_count','class': 'form-control','value': data.sibling_count }));
+                                    siblingCountRow.appendChild(siblingCountField);
+                                    siblingCountDiv.appendChild(siblingCountRow);
+                                    siblingCountDiv.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_sibling_count' }));
+                        tab3DivCol7.appendChild(siblingCountDiv);
+
+
+                        //############ Birth Location ###################
+                        const birthLocationRow = cTag('div',{  'class': 'flex', 'style': "text-align: left;" });
+                        const birthLocationTitle = cTag('div',{ 'class': 'columnXS12 columnSM4'});
+                            const birthLocationLabel = cTag('label',{ 'for': 'birth_location','id': 'birth_location' });
+                            birthLocationLabel.innerHTML = Translate('Birth Location');
+                            birthLocationTitle.appendChild(birthLocationLabel);
+                            birthLocationRow.appendChild(birthLocationTitle);
+
+                            const birthLocationArea = cTag('div',{ 'class': 'columnXS12 columnSM8' , 'id':'birth_location_div'});
+                            birthLocationArea.appendChild(cTag('textarea',{ 'rows': '4','cols': '20', 'class': 'form-control','name': 'birth_location','id': 'birth_location_ta' }));
+                            anmlDescArea.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_birth_location' }));
+                            // birthLocationArea.innerHTML = data.birth_location;
+                            // birthLocationArea.val = data.birth_location;
+                            birthLocationRow.appendChild(birthLocationArea);
+                        tab3DivCol7.appendChild(birthLocationRow);
+
+
+                        //############ Parents Information ################  
+                        const parentsInfoRow = cTag('div',{ 'class':`flex`, 'style': "text-align: left;" });
+                        const parentsInfoTitle = cTag('div',{ 'class':`columnXS12 columnSM4` });
+                            let parentsInfoLabel = cTag('label',{ 'for':`supplier_name`,'data-placement':`bottom` });
+                            parentsInfoLabel.append(Translate('Parents Info'));
+                                    let pierrorSpan = cTag('span', {class: "errormsg"});
+                                    pierrorSpan.innerHTML = '*';
+                                    parentsInfoLabel.appendChild(pierrorSpan);
+                                parentsInfoTitle.appendChild(parentsInfoLabel);
+                            parentsInfoRow.appendChild(parentsInfoTitle);
+                            const parentsInfoField = cTag('div',{ 'class':`columnXS12 columnSM8` });
+                                const parentsInfoInGroup = cTag('div',{ 'class':`input-group`,'id':`customerNameField` });
+                                    const parentsInfoInName = cTag('input',{ 'autocomplete':`off`,'maxlength':`50`,'type':`text`,'value':``,'required':``,'name':`supplier_name`,'id':`supplier_name`,'class':`form-control ui-autocomplete-input`,'placeholder':Translate('Search Parent') });
+                                    parentsInfoInName.addEventListener('blur',updateSupplierId);
+                                    parentsInfoInGroup.appendChild(parentsInfoInName);
+                                    let pinewSpan = cTag('span',{ 'id':'add_new_customer_btn','data-toggle':`tooltip`,'data-original-title':Translate('Add New Supplier'),'class':`input-group-addon cursor` });
+                                    pinewSpan.append(cTag('i',{ 'class':`fa fa-plus` }), ' ', Translate('New'));
+                                    parentsInfoInGroup.appendChild(pinewSpan);
+                                parentsInfoField.appendChild(parentsInfoInGroup);
+                                parentsInfoField.appendChild(cTag('input',{ 'type':`hidden`,'name':`supplier_id`,'id':`supplier_id`,'value':`0` }));
+                                parentsInfoField.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_supplier_id` }));
+                            parentsInfoRow.appendChild(parentsInfoField);
+                            const pierrorColumn = cTag('div',{ 'class':`columnXS12 columnSM6` });
+                            pierrorColumn.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_customer_name` }));
+                            parentsInfoRow.appendChild(pierrorColumn);
+                        tab3DivCol7.appendChild(parentsInfoRow);
+
+
+                        divTabs3.appendChild(tab3DivCol7);  
 
                     divTabs.appendChild(divTabs3);
 
@@ -2582,9 +2792,87 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 
 
                     //======divTabs4 Start======//
-                    let divTabs4 = cTag('div',{ 'class': 'columnXS12','id': 'tabs-4',style:'display:none' });
-                    
-                        // divTabs4.appendChild(divCol5);
+                    let divTabs4 = cTag('div',{ 'class': 'columnXS12','id': 'tabs-4'});
+                   
+                        let tab4DivCol7 = cTag('div',{ 'class': 'columnXS12 columnMD7' });
+
+
+                        //########## Wean Date ############        
+                        const weanDateRow = cTag('div', {class: "flex"});
+                                const weanDateName = cTag('div', {class: "columnSM4", 'align': "left"});
+                                    const weanDateLabel = cTag('label', {'for': "wean_date"});
+                                    weanDateLabel.innerHTML = Translate('Wean Date');
+
+                                    let wdrequiredField = cTag('span', {class: "required"});
+                                    wdrequiredField.innerHTML = '*';
+                                    weanDateLabel.appendChild(wdrequiredField);
+                                    weanDateName.appendChild(weanDateLabel);
+                                    
+                                    weanDateRow.appendChild(weanDateName);
+                                const weanDateField = cTag('div', {class: "columnSM8", 'align': "left"});
+                                    inputField = cTag('input', {'autocomplete': "off", 'required': "required", 'type': "text", class: "form-control", name: "wean_date", id: "wean_date", 'value': '', 'maxlength': 10});
+                                    checkDateOnBlur(inputField,'#error_date','Invalid '+Translate('Birth Date'));
+                                    weanDateField.appendChild(inputField);
+                                    weanDateField.appendChild(cTag('span',{id:'error_wean_date',class:'errormsg'}));
+                                    weanDateRow.appendChild(weanDateField);
+                        tab4DivCol7.appendChild(weanDateRow);                        
+
+
+                        //########### Wean Weight ##############
+                        const weanWeightDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
+                            const weanWeightRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                const weanWeightTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                    const weanWeightLabel = cTag('label',{ 'for': 'wean_weight','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select the internal memory capacity of the device you are entering.') });
+                                    weanWeightLabel.innerHTML = Translate('Wean Weight');
+                                    weanWeightTitle.appendChild(weanWeightLabel);
+                                    weanWeightRow.appendChild(weanWeightTitle);
+                                    weanWeightDiv.appendChild(weanWeightRow);
+                                    const weanWeightField = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
+                                    weanWeightField.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'wean_weight','id': 'wean_weight','class': 'form-control','value': data.wean_weight }));
+                                    weanWeightRow.appendChild(weanWeightField);
+                                    weanWeightDiv.appendChild(weanWeightRow);
+                                    weanWeightDiv.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_wean_weight' }));
+                        tab4DivCol7.appendChild(weanWeightDiv);
+
+
+                        //########### Wean Avg. Daily Gain ##############
+                        const weanADGDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
+                            const weanADGRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                const weanADGTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                    const weanADGLabel = cTag('label',{ 'for': 'wean_avg_daily_gain','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select pp.') });
+                                    weanADGLabel.innerHTML = Translate('Wean Avg. Daily Gain');
+                                    weanADGTitle.appendChild(weanADGLabel);
+                                    weanADGRow.appendChild(weanADGTitle);
+                                    weanADGDiv.appendChild(weanADGRow);
+                                    const weanADGField = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
+                                    weanADGField.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'wean_avg_daily_gain','id': 'wean_avg_daily_gain','class': 'form-control','value': data.wean_avg_daily_gain }));
+                                    weanADGRow.appendChild(weanADGField);
+                                    weanADGDiv.appendChild(weanADGRow);
+                                    weanADGDiv.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_wean_avg_daily_gain' }));
+                        tab4DivCol7.appendChild(weanADGDiv);
+
+
+                        //########### Creep Feed Days ##############
+                        const creepFeedDaysDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
+                            const creepFeedDaysRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                const creepFeedDaysTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                    const creepFeedDaysLabel = cTag('label',{ 'for': 'creep_feed_days','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select pp.') });
+                                    creepFeedDaysLabel.innerHTML = Translate('Creep Feed Days');
+                                    creepFeedDaysTitle.appendChild(creepFeedDaysLabel);
+                                    creepFeedDaysRow.appendChild(creepFeedDaysTitle);
+                                    creepFeedDaysDiv.appendChild(creepFeedDaysRow);
+                                    const creepFeedDaysField = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
+                                    creepFeedDaysField.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'creep_feed_days','id': 'creep_feed_days','class': 'form-control','value': data.creep_feed_days }));
+                                    creepFeedDaysRow.appendChild(creepFeedDaysField);
+                                    creepFeedDaysDiv.appendChild(creepFeedDaysRow);
+                                    creepFeedDaysDiv.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_creep_feed_days' }));
+                        tab4DivCol7.appendChild(creepFeedDaysDiv);
+
+
+
+
+                        
+                        divTabs4.appendChild(tab4DivCol7); 
 
                     divTabs.appendChild(divTabs4);
 
@@ -2618,6 +2906,8 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 				}
 
                 date_picker('#arrival_date');
+                date_picker('#birth_date');
+                date_picker('#wean_date');
 
 				document.getElementById("tag").value = data.tag;
 				document.getElementById("category_id").value = data.category_id;
@@ -2626,6 +2916,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 				document.getElementById("classification_id").value = data.classification_id;
 				document.getElementById("purpose").value = data.purpose;
 				document.getElementById("arrival_type").value = data.arrival_type;
+				document.getElementById("birth_type").value = data.birth_type;
 				document.getElementById("colour_name").value = data.colour_name;
 				document.getElementById("tag_color").value = data.tag_color;
 				document.getElementById("alt_tag").value = data.alt_tag;
@@ -2633,6 +2924,8 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 				// document.getElementById("anml_description").value  = data.anml_description;
 				document.getElementById("anml_description_ta").innerHTML  = data.anml_description;
 				document.getElementById("arrival_note_ta").innerHTML  = data.arrival_note;
+				document.getElementById("calving_assist_reason_ta").innerHTML  = data.calving_assist_reason;
+				document.getElementById("birth_location_ta").innerHTML  = data.birth_location;
                 // console.log(data.anml_description);
 				// document.getElementById("manufacturer_id").value = data.manufacturer_id;
 				// document.getElementById("physical_condition_name").value = data.physical_condition_name;
@@ -2650,6 +2943,14 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 
                 if(data.arrival_date != null){
                     document.getElementById("arrival_date").value = DBDateToViewDate(data.arrival_date);                    
+                }
+
+                if(data.birth_date != null){
+                    document.getElementById("birth_date").value = DBDateToViewDate(data.birth_date);                    
+                }
+
+                if(data.wean_date != null){
+                    document.getElementById("wean_date").value = DBDateToViewDate(data.wean_date);                    
                 }
 			
 				checkManageInventory();
@@ -2692,6 +2993,19 @@ async function AJsave_Livestocks(hidePopup,addCartCBF){
 	// oElement = document.getElementById('errmsg_minimum_price');
 	// oElement.innerHTML = "";
 
+    // const errorStatus = document.getElementById("errmsg_tag");
+    // const error_vendor = document.getElementById("errmsg_product_name");
+    // const error_date = document.getElementById("errmsg_arrival_date");
+    // const error_bill = document.getElementById("errmsg_birth_date");
+    // const error_bill_amount = document.getElementById("errmsg_wean_date");
+    // errorStatus.innerHTML = '';
+    // error_vendor.innerHTML = '';
+    // error_date.innerHTML = '';
+    // error_bill.innerHTML = '';
+    // error_bill_amount.innerHTML = '';
+    // let pTag;
+
+
     oField = document.querySelector('#frmproduct #tag');
 	// oElement = document.getElementById('errmsg_tag');
 	// oElement.innerHTML = "";
@@ -2707,16 +3021,38 @@ async function AJsave_Livestocks(hidePopup,addCartCBF){
     }
 
 
-    if(arrival_date.value===''){
-        pTag = cTag('p', {'style': "margin: 0;"});
-        pTag.innerHTML = Translate('Missing Arrival Date');
-        error_date.appendChild(pTag);
-        arrival_date.focus();
-        arrival_date.classList.add('errorFieldBorder');
-        return false;
-    }else{
-        arrival_date.classList.remove('errorFieldBorder');
-    }
+    // if(arrival_date.value===''){
+    //     pTag = cTag('p', {'style': "margin: 0;"});
+    //     pTag.innerHTML = Translate('Missing Arrival Date');
+    //     error_date.appendChild(pTag);
+    //     arrival_date.focus();
+    //     arrival_date.classList.add('errorFieldBorder');
+    //     return false;
+    // }else{
+    //     arrival_date.classList.remove('errorFieldBorder');
+    // }
+
+    // if(birth_date.value===''){
+    //     pTag = cTag('p', {'style': "margin: 0;"});
+    //     pTag.innerHTML = Translate('Missing Birth Date');
+    //     error_date.appendChild(pTag);
+    //     birth_date.focus();
+    //     birth_date.classList.add('errorFieldBorder');
+    //     return false;
+    // }else{
+    //     birth_date.classList.remove('errorFieldBorder');
+    // }
+
+    // if(wean_date.value===''){
+    //     pTag = cTag('p', {'style': "margin: 0;"});
+    //     pTag.innerHTML = Translate('Missing Wean Date');
+    //     error_date.appendChild(pTag);
+    //     wean_date.focus();
+    //     wean_date.classList.add('errorFieldBorder');
+    //     return false;
+    // }else{
+    //     wean_date.classList.remove('errorFieldBorder');
+    // }
     
 			
 	oField = document.querySelector('#frmproduct #product_name');
