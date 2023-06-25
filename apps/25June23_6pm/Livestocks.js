@@ -4,10 +4,8 @@ import {
     addPaginationRowFlex, checkAndSetSessionData, upload_dialog, AJremove_tableRow, popup_dialog600, popup_dialog1000, date_picker, 
     checkDateOnBlur, dynamicImport, applySanitizer, archiveData, unarchiveData, alert_dialog,createTabs, validateRequiredField, alert_label_missing,
     generateCustomeFields, fetchData, listenToEnterKey, actionBtnClick, showNewInputOrSelect, serialize, multiSelectAction, controllNumericField,
-    onClickPagination, wysiwyrEditor, historyTable, AJautoComplete, addCustomeEventListener, activityFieldAttributes, AJremove_Picture, stripslashes, validifyCustomField
+    onClickPagination, wysiwyrEditor, historyTable, addCustomeEventListener, activityFieldAttributes, AJremove_Picture, stripslashes, validifyCustomField
 } from './common.js';
-
-
 
 if(segment2 === ''){segment2 = 'lists'}
 
@@ -2192,7 +2190,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                         noOfTeethRow.appendChild(noOfTeethField);
                                         noOfTeethDiv.appendChild(noOfTeethRow);
                                         noOfTeethDiv.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_no_of_teeth' }));
-                                divCol7.appendChild(noOfTeethDiv);
+                            divCol7.appendChild(noOfTeethDiv);
 
 
                                 
@@ -2506,40 +2504,40 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                             tab2DivCol7.appendChild(arrivalTypeDiv);
 
 
-                            //########### Location ###################                         
-                                                  
-                            //############ Purchased From ############ 
+                             //########### Location ###################                        
+
+                            //############ Purchased From ################  
                             const supplierNameRow = cTag('div',{ 'class':`flex`, 'style': "text-align: left;" });
                                 const customerNameTitle = cTag('div',{ 'class':`columnXS12 columnSM4` });
-                                    let customerNameLabel = cTag('label',{ 'for':`supplier`,'data-placement':`bottom` });
+                                    let customerNameLabel = cTag('label',{ 'for':`supplier_id`,'data-placement':`bottom` });
                                         customerNameLabel.append(Translate('Purchased From'));
 
-                                            let errorSpan = cTag('span', {class: "required"});
+                                            let errorSpan = cTag('span', {class: "errormsg"});
                                             errorSpan.innerHTML = '*';
                                         customerNameLabel.appendChild(errorSpan);
                                         
                                     customerNameTitle.appendChild(customerNameLabel);
                                     supplierNameRow.appendChild(customerNameTitle);
-                                    //==================================================
                                     const customerNameField = cTag('div',{ 'class':`columnXS12 columnSM8` });
                                         const customerInGroup = cTag('div',{ 'class':`input-group`,'id':`customerNameField` });
 
-                                        customerInGroup.appendChild(cTag('input',{ 'autocomplete':`off`,'maxlength':`50`,'type':`text`,'value':``,'required':``,'name':`supplier`,'id':`supplier`,'class':`form-control ui-autocomplete-input`,'placeholder':Translate('Search Supplier') }));
-                                            let newSpan = cTag('span',{ 'id':'add_new_supplier','data-toggle':`tooltip`,'data-original-title':Translate('Add New Supplier'),'class':`input-group-addon cursor` });
+                                            const customerName = cTag('input',{ 'autocomplete':`off`,'maxlength':`50`,'type':`text`,'value':``,'required':``,'name':`supplier_id`,'id':`supplier_id`,'class':`form-control ui-autocomplete-input`,'placeholder':Translate('Search Supplier') });
+                                            customerName.addEventListener('blur',updateSupplierId);
+                                        customerInGroup.appendChild(customerName);
+
+                                        customerInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '10','name': 'supplier_id2','id': 'supplier_id2','class': 'form-control',style:'display:none'}));
+                                            let newSpan = cTag('span',{ 'id':'add_new_customer_btn','data-toggle':`tooltip`,'data-original-title':Translate('Add New Supplier'),'class':`input-group-addon cursor` });
                                             newSpan.append(cTag('i',{ 'class':`fa fa-plus` }), ' ', Translate('New'));
                                         customerInGroup.appendChild(newSpan);
-
                                     customerNameField.appendChild(customerInGroup);
                                     customerNameField.appendChild(cTag('input',{ 'type':`hidden`,'name':`supplier_id`,'id':`supplier_id`,'value':`0` }));
                                     customerNameField.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_supplier_id` }));
                                     supplierNameRow.appendChild(customerNameField);
-
                                     const errorColumn = cTag('div',{ 'class':`columnXS12 columnSM6` });
-                                    errorColumn.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_supplier` }));
+                                    errorColumn.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_customer_name` }));
                                     supplierNameRow.appendChild(errorColumn);
                             tab2DivCol7.appendChild(supplierNameRow);
-                            //==================================================
-                                                        
+
 
 
                               //############ Purchased From ################  
@@ -2892,24 +2890,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 
 			popup_dialog1000(Translate('Livestock Information'),formDialog,(hidePopup)=>AJsave_Livestocks(hidePopup,addCartCBF));
 
-            // setTimeout(function() {document.getElementById("customer_name").focus();}, 500);
-            // AJautoComplete('customer_name')
-            // AJ_add_MoreInfo();
-
-            //OK
-            // if(document.querySelector("#supplier")){AJautoComplete('supplier');}
-
-            if(document.querySelector("#supplier")){
-                AJautoComplete('supplier');
             
-                // document.getElementById("supplier").addEventListener('keyup', e => {
-                //     if(document.getElementById("suppliers_id")){
-                //         document.getElementById("suppliers_id").value = 0;
-                //     }
-                // });
-            }
-
-
 			setTimeout(function() {
 				if(parseInt(document.getElementById("product_id").value)===0){
 					document.getElementById("product_type").focus();
@@ -3003,19 +2984,6 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 		}
     }
 	return true;
-}
-
-
-async function AJ_add_MoreInfo(){
-    const url = '/'+segment1+'/AJ_add_MoreInfo';
-    fetchData(afterFetch,url,{});
-
-    function afterFetch(data){
-        document.querySelector('#add_new_supplier').addEventListener('click',()=>dynamicImport('./Customers.js','AJget_CustomersPopup',[0]));
-        const salesman_id = document.querySelector('#salesman_id');
-        setOptions(salesman_id,data.salManOpt,1,1);
-        salesman_id.value = data.salesman_id;
-    }
 }
 
 async function AJsave_Livestocks(hidePopup,addCartCBF){
@@ -3162,7 +3130,7 @@ async function updateSupplierId(){
 	if(customer_id.value==='0' && customer_name.value!==''){
 		const jsonData = {"keyword_search":this.value, 'fieldIdName':'customer_name', 'frompage':segment1};
 		
-		const url = "/Common/AJautoComplete_supplier";
+		const url = "/Common/AJautoComplete_supplier_name";
 		fetchData(afterFetch,url,jsonData);
 
 		function afterFetch(data){

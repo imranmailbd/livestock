@@ -966,8 +966,6 @@ class Livestocks{
 		
 		return json_encode($productData);
 	}	
-
-	
 	
 	public function AJsave_Livestocks(){
 		$POST = $_POST;

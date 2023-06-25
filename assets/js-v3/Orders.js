@@ -260,6 +260,7 @@ function add(){
     dashBoard.appendChild(titleRow);
         const newOrderColumn = cTag('div',{ 'class':`columnSM12`});
             const callOutDiv = cTag('div',{ 'class':`innerContainer`});
+
                 const newOrderForm = cTag('form',{ 'id':`frmAddOrders`,'action':`#`,'name':`frmAddOrders`,'enctype':`multipart/form-data`,'method':`post`,'accept-charset':`utf-8` });
                 newOrderForm.addEventListener('submit',AJsave_Orders);
                     const quoteRow = cTag('div',{ 'class':`flexStartRow` });
@@ -274,6 +275,7 @@ function add(){
                         quoteDropDown.appendChild(selectQuote);
                     quoteRow.appendChild(quoteDropDown);
                 newOrderForm.appendChild(quoteRow);
+
                     const customerRow = cTag('div',{ 'class':`flexStartRow` });
                         const customerColumn = cTag('div',{ 'class':`columnXS12 columnSM4 columnLG2` });
                             const customerLabel = cTag('label',{ 'for':`customer_name`,'data-placement':`bottom` });
@@ -297,6 +299,7 @@ function add(){
                         errorColumn.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_customer_name` }));
                     customerRow.appendChild(errorColumn);
                 newOrderForm.appendChild(customerRow);
+
                     const salesPersonRow = cTag('div',{ 'class':`flexStartRow` });
                         const salesPersonColumn = cTag('div',{ 'class':`columnXS12 columnSM4 columnLG2` });
                             const salesPersonLabel = cTag('label',{ 'for':`salesman_id`,'data-placement':`bottom` });
@@ -313,6 +316,7 @@ function add(){
                         errorMessage.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_salesman_id` }));
                     salesPersonRow.appendChild(errorMessage);
                 newOrderForm.appendChild(salesPersonRow);
+                
                     const buttonNames = cTag('div',{ 'class':`flex` });
                         let buttonTitle = cTag('div',{ 'class':`columnXS12 columnSM10 columnLG6`, 'style': "text-align: right;" });
                         buttonTitle.appendChild(cTag('input',{ 'type':`hidden`,'name':`pos_id`,'id':`pos_id`,'value':`0` }));
