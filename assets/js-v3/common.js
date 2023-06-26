@@ -5295,6 +5295,12 @@ export function AJautoComplete(fieldIdName,selectCBF){
 					selectCBF('customer_id',info);
 					document.getElementById('editCustomerHide').style.display = '';
 				}
+				else if(frompage==='Livestocks'){
+					if(fieldIdName==='supplier'){
+						document.getElementById('supplier').value = info.label;
+						node.parentElement.querySelector("#supplier_id").value = info.id;
+					}					
+				}
 				else if(frompage==='Repairs'){
 					if(segment2==='edit') document.getElementById('customer_name').setAttribute('readonly','');
 					else if(document.getElementsByClassName("notify_how").length>0 && document.frmrepairs.notify_how.checked){
@@ -5358,6 +5364,7 @@ export function AJautoComplete(fieldIdName,selectCBF){
                         document.querySelector("#tosuppliers_id").value = info.id;
                     }
 				}
+
 				if(document.querySelector( "#customerNameField" )){
 					document.getElementById('customer_name').value = info.label;
 					document.getElementById('customer_name').setAttribute('readonly', '');

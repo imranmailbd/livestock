@@ -1749,3 +1749,281 @@ previous: http://livestock.skitsbdl.com/Home
     at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5362:53)
     at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
 previous: http://livestock.skitsbdl.com/Home
+2023-06-26 00:33:21 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5362:53)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 00:42:52 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5362:53)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 00:47:37 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'addEventListener')
+    at date_picker_dialog (http://livestock.skitsbdl.com/assets/js-v3/common.js:2118:10)
+    at date_picker (http://livestock.skitsbdl.com/assets/js-v3/common.js:2307:3)
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2928:17 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 00:48:38 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5362:53)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 01:01:56 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'addEventListener')
+    at date_picker_dialog (http://livestock.skitsbdl.com/assets/js-v3/common.js:2118:10)
+    at date_picker (http://livestock.skitsbdl.com/assets/js-v3/common.js:2307:3)
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2928:17 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 01:07:45 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'addEventListener')
+    at date_picker_dialog (http://livestock.skitsbdl.com/assets/js-v3/common.js:2118:10)
+    at date_picker (http://livestock.skitsbdl.com/assets/js-v3/common.js:2307:3)
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2934:17 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 01:07:45 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Livestocks/AJ_add_MoreInfo, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-26 01:07:47 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Livestocks/AJ_add_MoreInfo, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-26 01:07:49 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Livestocks/AJ_add_MoreInfo, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-26 01:07:51 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Livestocks/AJ_add_MoreInfo, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-26 01:07:54 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Livestocks/AJ_add_MoreInfo, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-26 01:08:19 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'addEventListener')
+    at date_picker_dialog (http://livestock.skitsbdl.com/assets/js-v3/common.js:2118:10)
+    at date_picker (http://livestock.skitsbdl.com/assets/js-v3/common.js:2307:3)
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2934:17 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 01:29:14 Encountered error 2 in D:\wamp64\www\livestock\apps\Purchase_orders.php, line 400: Trying to access array offset on value of type null, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-26 01:32:05 Encountered error 2 in D:\wamp64\www\livestock\apps\Activity_Feed.php, line 776: Undefined property: stdClass::$workstation, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-26 01:57:29 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'addEventListener')
+    at date_picker_dialog (http://livestock.skitsbdl.com/assets/js-v3/common.js:2118:10)
+    at date_picker (http://livestock.skitsbdl.com/assets/js-v3/common.js:2307:3)
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2940:17 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 01:59:03 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'addEventListener')
+    at date_picker_dialog (http://livestock.skitsbdl.com/assets/js-v3/common.js:2118:10)
+    at date_picker (http://livestock.skitsbdl.com/assets/js-v3/common.js:2307:3)
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2940:17 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 01:59:43 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2926:54 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 01:59:44 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2926:54 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 01:59:44 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2926:54 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 01:59:45 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2926:54 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 02:00:05 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'addEventListener')
+    at date_picker_dialog (http://livestock.skitsbdl.com/assets/js-v3/common.js:2118:10)
+    at date_picker (http://livestock.skitsbdl.com/assets/js-v3/common.js:2307:3)
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2940:17 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 02:02:47 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'addEventListener')
+    at date_picker_dialog (http://livestock.skitsbdl.com/assets/js-v3/common.js:2118:10)
+    at date_picker (http://livestock.skitsbdl.com/assets/js-v3/common.js:2307:3)
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2941:17 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 02:02:57 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2951:49 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 02:03:58 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'addEventListener')
+    at date_picker_dialog (http://livestock.skitsbdl.com/assets/js-v3/common.js:2118:10)
+    at date_picker (http://livestock.skitsbdl.com/assets/js-v3/common.js:2307:3)
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2941:17 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 02:04:34 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'addEventListener')
+    at date_picker_dialog (http://livestock.skitsbdl.com/assets/js-v3/common.js:2118:10)
+    at date_picker (http://livestock.skitsbdl.com/assets/js-v3/common.js:2307:3)
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2941:17 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 02:07:36 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'addEventListener')
+    at date_picker_dialog (http://livestock.skitsbdl.com/assets/js-v3/common.js:2118:10)
+    at date_picker (http://livestock.skitsbdl.com/assets/js-v3/common.js:2307:3)
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2941:17 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 02:09:07 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'addEventListener')
+    at date_picker_dialog (http://livestock.skitsbdl.com/assets/js-v3/common.js:2118:10)
+    at date_picker (http://livestock.skitsbdl.com/assets/js-v3/common.js:2307:3)
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2941:17 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 02:10:53 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'style')
+    at HTMLSpanElement.showNewInputOrSelect (http://livestock.skitsbdl.com/assets/js-v3/common.js:3987:13) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 02:10:56 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'style')
+    at HTMLSpanElement.showNewInputOrSelect (http://livestock.skitsbdl.com/assets/js-v3/common.js:3987:13) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 02:13:02 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5362:53)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 02:13:21 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'style')
+    at HTMLSpanElement.showNewInputOrSelect (http://livestock.skitsbdl.com/assets/js-v3/common.js:3987:13) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 02:28:07 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Manage_Data.js:2265:100 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 02:30:04 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Manage_Data.js:2265:100 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 02:31:22 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Manage_Data.js:2265:100 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 02:31:39 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'value')
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Manage_Data.js:2356:68)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 02:32:28 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'value')
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Manage_Data.js:2356:68)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 02:34:26 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Livestocks/AJ_add_MoreInfo, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-26 02:34:28 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Livestocks/AJ_add_MoreInfo, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-26 02:34:30 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Livestocks/AJ_add_MoreInfo, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-26 02:34:32 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Livestocks/AJ_add_MoreInfo, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-26 02:34:34 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Livestocks/AJ_add_MoreInfo, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-26 02:34:41 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Manage_Data.js:2265:100 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 02:38:20 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Livestocks/AJ_add_MoreInfo, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-26 02:38:22 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Livestocks/AJ_add_MoreInfo, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-26 02:38:24 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Livestocks/AJ_add_MoreInfo, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-26 02:38:26 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Livestocks/AJ_add_MoreInfo, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-26 02:38:28 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Livestocks/AJ_add_MoreInfo, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-26 02:38:50 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Livestocks/AJ_add_MoreInfo, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-26 02:38:52 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Livestocks/AJ_add_MoreInfo, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-26 02:38:55 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Livestocks/AJ_add_MoreInfo, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-26 02:38:58 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Livestocks/AJ_add_MoreInfo, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-26 02:39:01 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Livestocks/AJ_add_MoreInfo, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-26 02:39:07 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Livestocks/AJ_add_MoreInfo, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-26 02:39:09 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Livestocks/AJ_add_MoreInfo, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-26 02:39:11 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Livestocks/AJ_add_MoreInfo, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-26 02:39:13 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Livestocks/AJ_add_MoreInfo, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-26 02:39:15 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Livestocks/AJ_add_MoreInfo, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-26 02:40:05 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Livestocks/AJ_add_MoreInfo, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-26 02:40:07 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Livestocks/AJ_add_MoreInfo, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-26 02:40:10 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Livestocks/AJ_add_MoreInfo, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-26 02:40:13 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Livestocks/AJ_add_MoreInfo, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-26 02:40:16 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Livestocks/AJ_add_MoreInfo, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-26 02:40:32 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Manage_Data.js:2265:100 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 02:41:54 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5362:53)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 02:47:08 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5370:53)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 02:47:24 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5370:53)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 02:49:09 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5370:53)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 02:50:35 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5369:53)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 02:51:53 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Manage_Data.js:2265:100 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 02:52:02 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Manage_Data.js:2265:100 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 02:52:19 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'value')
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Manage_Data.js:2356:68)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 03:02:36 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5369:53)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 03:02:38 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at AJsave_Livestocks (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:3058:32)
+    at Object.click (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2862:80)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 03:02:39 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at AJsave_Livestocks (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:3058:32)
+    at Object.click (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2862:80)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 03:47:25 Script Error, Message: 1: TypeError: node.parentElement is not a function
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5301:12)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 03:50:46 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at AJsave_Livestocks (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:3055:32)
+    at Object.click (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2859:80)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-06-26 03:54:17 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1059: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-26 03:54:17 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1084: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-26 03:54:17 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1115: Undefined array key "alert_message", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-26 04:04:12 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Manage_Data.js:2265:100 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/1/1
+previous: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-06-26 04:38:59 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1059: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-26 04:38:59 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1084: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-26 04:38:59 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1115: Undefined array key "alert_message", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-26 05:24:05 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:24:07 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:24:09 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:24:11 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:24:14 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:24:32 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:24:34 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:24:36 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:24:38 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:24:40 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:25:15 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:25:17 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:25:19 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:25:21 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:25:24 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:25:46 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1048: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-26 05:25:46 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1073: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-26 05:25:46 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1104: Undefined array key "alert_message", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-26 05:26:11 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:26:13 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:26:15 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:26:17 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:26:19 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:30:36 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:30:38 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:30:40 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:30:43 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:30:46 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:31:21 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1047: Undefined array key "manufacture", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-26 05:31:21 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1072: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-26 05:31:21 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 1103: Undefined array key "alert_message", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-06-26 05:32:24 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:32:26 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:32:28 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:32:30 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:32:33 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:33:21 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:33:23 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:33:25 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:33:27 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:33:30 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:34:24 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:34:26 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:34:28 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:34:31 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:34:34 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:35:17 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:35:19 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:35:22 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:35:24 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:35:26 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:36:31 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:36:33 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:36:35 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:36:38 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:36:40 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:37:25 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:37:27 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:37:29 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:37:31 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1
+2023-06-26 05:37:33 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJget_LivestocksPopup, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1/1

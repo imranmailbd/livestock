@@ -2360,10 +2360,14 @@ async function save_supplier(hidePopup){
                     document.getElementById('errmsg_supplier_id').innerHTML = '';
                 }
             }
+            else if(['addLiveStocks'].includes(frompage)){
+                document.querySelector("#supplier_id").value = data.suppliers_id;
+                document.querySelector("#supplier").value = data.supplier_name;
+            }
             else{
                 window.location = '/Manage_Data/sview/'+data.suppliers_id
             }			
-            hidePopup();	
+            hidePopup();
         }
         else{
             if(frompage==='addpo'){

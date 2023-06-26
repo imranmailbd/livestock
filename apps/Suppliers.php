@@ -7,7 +7,8 @@ class Suppliers{
 	protected $db;
 	private int $page, $totalRows, $suppliers_id;
 	private string $sorting_type, $data_type, $keyword_search, $history_type;
-	
+	private array $actFeeTitOpt;
+		
 	public function __construct($db){$this->db = $db;}
 	
 	public function lists(){}
@@ -334,13 +335,16 @@ class Suppliers{
 				$savemsg = 'update-success';
 				
 			}
-			
+		}
+
+		$supplier_name = '';
+		if($suppliers_id>0 && in_array($savemsg, ['add-success','update-success'])){
 			if($company !='')
 				$supplier_name .= "$company, ";
 			$supplier_name .= $first_name.' '.$last_name;
 			if($email !='')
 				$supplier_name .= " ($email)";
-		}			
+		}
 	
 		$supplierOpt = array();
 		if($frompage=='addpo' || $frompage=='Products'){

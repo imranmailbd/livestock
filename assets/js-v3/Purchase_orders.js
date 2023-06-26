@@ -2195,6 +2195,7 @@ function add(){
 			if(OS =='unknown'){padding0 = '';}
 			let callOutDiv = cTag('div',{ 'class':`innerContainer`, style: `background: #fff;${padding0}`});
 				const addForm = cTag('form',{ 'action':`#`,'name':`frmpo`,'id':`frmpo`,'submit':savePO,'enctype':`multipart/form-data`,'method':`post`,'accept-charset':`utf-8` });
+					
 					const supplierNameRow = cTag('div',{ 'class':`flexStartRow`, 'style': "align-items: center;" });
 						const supplierTitle = cTag('div',{ 'class':`columnXS4 columnSM3 columnMD2` });
 							const supplierLabel = cTag('label',{ 'for':`supplier_name`,'data-placement':`bottom` });

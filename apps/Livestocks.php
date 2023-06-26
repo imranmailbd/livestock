@@ -565,8 +565,8 @@ class Livestocks{
 		$Common = new Common($this->db);
 
 		
-		$product_type = $purpose = $arrival_weight = $arrival_type = $arrival_note = $calving_assist_reason = $birth_location = $wean_weight = $birth_weight = $birth_type = $calving_no = $creep_feed_days = $wean_avg_daily_gain = $purchase_price = $sibling_count = $colour_name = $tag_color = $storage = $age_in_year = $no_of_teeth = $physical_condition_name = $alert_message = '';
-		$category_id = $breed_id = $classification_id = $location_id = $group_id = $gender_id = $manufacturer_id = $low_inventory_alert = $require_serial_no = $manage_inventory_count = $allow_backorder = $ave_cost_is_percent = 0;
+		$product_type = $purpose = $arrival_weight = $supplier = $arrival_type = $arrival_note = $calving_assist_reason = $birth_location = $wean_weight = $birth_weight = $birth_type = $calving_no = $creep_feed_days = $wean_avg_daily_gain = $purchase_price = $sibling_count = $colour_name = $tag_color = $storage = $age_in_year = $no_of_teeth = $physical_condition_name = $alert_message = '';
+		$category_id = $breed_id = $classification_id = $suppliers_id = $location_id = $group_id = $gender_id = $manufacturer_id = $low_inventory_alert = $require_serial_no = $manage_inventory_count = $allow_backorder = $ave_cost_is_percent = 0;
 		$taxable = 1;
 		
 		$productData = array();
@@ -612,6 +612,7 @@ class Livestocks{
 		$productData['description'] = '';
 		$productData['add_description'] = '';
 		$productData['birth_location'] = '';
+		$productData['supplier'] = '';
 		$custom_data = '';
 		if($product_id>0 && $prod_cat_man>0){
 			$queryObj = $this->db->query("SELECT * FROM product WHERE product_id = :product_id AND accounts_id=$prod_cat_man AND product_publish=1", array('product_id'=>$product_id),1);
@@ -657,6 +658,7 @@ class Livestocks{
 					$wean_weight = $itemRow->wean_weight;
 					$wean_avg_daily_gain = $itemRow->wean_avg_daily_gain;
 					$creep_feed_days = $itemRow->creep_feed_days;
+					$suppliers_id = $itemRow->suppliers_id;
 
 					$productData['tag'] = $itemRow->tag;
 					$productData['alt_tag'] = $itemRow->alt_tag;
@@ -686,7 +688,26 @@ class Livestocks{
 					$productData['wean_date'] = $itemRow->wean_date;
 					$productData['wean_weight'] = $itemRow->wean_weight;
 					$productData['wean_avg_daily_gain'] = $itemRow->wean_avg_daily_gain;
+					$productData['supplier_id'] = $itemRow->suppliers_id;
+					if($suppliers_id){	
+						
+						$bindData = array();
+						$bindData['suppliers_id'] = $suppliers_id;
+						
+						$sqlquery = "SELECT CONCAT(company, ' ', contact_no) as supplier_info FROM suppliers WHERE accounts_id = $prod_cat_man and  suppliers_id = :suppliers_id LIMIT 0, 1";
+						$query = $this->db->querypagination($sqlquery, $bindData);
+						if($query){
+							foreach($query as $onegrouprow){
+								$productData['supplier'] = $onegrouprow['supplier_info'];
+								// var_dump($onegrouprow['supplier_info']);exit;
+							}
+						}
+
+					}
+
 				}
+
+				
 				
 				$queryInvObj = $this->db->query("SELECT * FROM inventory WHERE product_id = $product_id AND accounts_id=$accounts_id", array());
 				if($queryInvObj){
@@ -981,6 +1002,7 @@ class Livestocks{
 		$product_id = intval($POST['product_id']??0);
 		$category_id = intval($POST['category_id']??0);
 		$gender_id = intval($POST['gender_id']??0);
+		$suppliers_id = intval($POST['supplier_id']??0);
 		$age_in_year = intval($POST['age_in_year']??0);
 		$no_of_teeth = intval($POST['no_of_teeth']??0);
 		$purchase_price = intval($POST['purchase_price']??0);
@@ -1182,6 +1204,8 @@ class Livestocks{
 		$itemdata['wean_weight'] = $wean_weight;
 		$itemdata['wean_avg_daily_gain'] = $wean_avg_daily_gain;
 		$itemdata['creep_feed_days'] = $creep_feed_days;
+		$itemdata['suppliers_id'] = $suppliers_id;
+		
 		
 
 		$inventorydata = array();
