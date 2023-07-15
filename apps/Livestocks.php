@@ -2394,7 +2394,9 @@ class Livestocks{
 
 			$prodImgUrl = '';
 			$filePath = "./assets/accounts/a_$prod_cat_man/prod_$product_id".'_';
-			$pics = glob($filePath."*.jpg");
+			// $pics = glob($filePath."*.{jpg,png}", GLOB_BRACE);
+			$pics = glob($filePath."*.png");
+			// var_dump($filePath);exit;
 			if($pics){
 				foreach($pics as $onePicture){
 					$prodImg = str_replace("./assets/accounts/a_$prod_cat_man/", '', $onePicture);
