@@ -1678,13 +1678,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                             aTag = cTag('a',{ 'href': '#tabs-2' });
                                             aTag.innerHTML =Translate('Arrival');
                                             liTabs2.appendChild(aTag);
-                                        ulTabs.appendChild(liTabs2);
-
-                                        // let liTabs3 = cTag('li');
-                                        //     aTag = cTag('a',{ 'href': '#tabs-3' });
-                                        //     aTag.innerHTML = Translate('Birth');
-                                        //     liTabs3.appendChild(aTag);
-                                        // ulTabs.appendChild(liTabs3);
+                                        ulTabs.appendChild(liTabs2);                                        
 
                                         let liTabs3 = cTag('li');
                                             aTag = cTag('a',{ 'href': '#tabs-3' });
@@ -1698,9 +1692,15 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                             liTabs4.appendChild(aTag);
                                         ulTabs.appendChild(liTabs4);
 
+                                        // let liTabs5 = cTag('li');
+                                        //     aTag = cTag('a',{ 'href': '#tabs-5' });
+                                        //     aTag.innerHTML = Translate('Birth');
+                                        //     liTabs5.appendChild(aTag);
+                                        // ulTabs.appendChild(liTabs5);
+
                                         if(data.customFieldsData.length>0){
                                             // let liTabs3 = cTag('li');
-                                            //     aTag = cTag('a',{ 'href': '#tabs-3' });
+                                            //     aTag = cTag('a',{ 'href': '#tabs-5' });
                                             //     aTag.innerHTML = Translate('Custom Fields');
                                             // liTabs3.appendChild(aTag);
                                             // ulTabs.appendChild(liTabs3);
@@ -2436,142 +2436,244 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                     divTabs.appendChild(divTabs2);
 
 
+                                  
+                    
+
 
                     //======divTabs3 Start======//
-                    /*let divTabs3 = cTag('div',{ 'class': 'columnXS12','id': 'tabs-3' });
+                    let divTabs3 = cTag('div',{ 'class': 'columnXS12','id': 'tabs-3' , 'style': "border:0px solid red;"});
                    
-                        let tab3DivCol7 = cTag('div',{ 'class': 'columnXS12 columnMD7' });
+                        let tab3DivCol7 = cTag('div',{ 'class': 'columnXS12 columnMD6', 'style': "border:0px solid red; float:left;" });
+
+                        // let tab3DivCol7_1 = cTag('div',{ 'class': 'columnXS12 columnMD6' , 'style': "border:0px solid red; float:left;"});
+                        // let tab3DivCol7_2 = cTag('div',{ 'class': 'columnXS12 columnMD6' , 'style': "border:0px solid red; float:right;"});
 
                         
-                        //########## Birth Date ############        
-                        const birthDateRow = cTag('div', {class: "flex"});
-                                const birthDateName = cTag('div', {class: "columnSM4", 'align': "left"});
-                                    const birthDateLabel = cTag('label', {'for': "birth_date"});
-                                    birthDateLabel.innerHTML = Translate('Birth Date');
+                        tab3DivCol7.appendChild(cTag('input',{ 'type': 'hidden','readonly': '','name': 'product_type','id': 'product_type','value': 'Live Stocks','class': 'form-control' }));
 
-                                    let bdrequiredField = cTag('span', {class: "required"});
-                                    bdrequiredField.innerHTML = '*';
-                                    birthDateLabel.appendChild(bdrequiredField);
-                                        birthDateName.appendChild(birthDateLabel);
+
+                        //############# Inventory count ############
+						const maternalDiv = cTag('div',{ 'class': 'LiveStocks manage_maternal_block' });
+                            const maternalRow = cTag('div',{ 'class': 'flex', 'style': "margin-bottom: 10px;" });
+                                let maternalLabel = cTag('label',{ 'for': 'manage_maternal_block' });
+                                    inputField = cTag('input',{ 'type': 'checkbox','name': 'manage_maternal_block','id': 'manage_maternal_block','value': 0 });
+                                    // if(data.manage_inventory_count){
+                                    //     inputField.setAttribute('checked',true);
+                                    // }
+                                    inputField.addEventListener('click',checkMaternalBlock);
+                                    maternalLabel.appendChild(inputField);
+                                    maternalLabel.append(' '+Translate('External Parent'));
+                                maternalRow.appendChild(maternalLabel);
+                            maternalDiv.appendChild(maternalRow);
+                            maternalDiv.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_manage_inventory_count' }));
+                        tab3DivCol7.appendChild(maternalDiv);
+
+
+                        //############ Parent Info Maternal ############ 
+                        const motherNameRow = cTag('div',{ 'class':`flex`, 'style': "text-align: left;" });
+                        const motherNameTitle = cTag('div',{ 'class':`columnXS12 columnSM4` });
+                            let motherNameLabel = cTag('label',{ 'for':`supplier`,'data-placement':`bottom` });
+                            motherNameLabel.append(Translate('Mother Tag'));
+
+                                let motherErrSpan = cTag('span', {class: "required"});
+                                motherErrSpan.innerHTML = '*';
+                                motherNameLabel.appendChild(motherErrSpan);
                                     
-                                    birthDateRow.appendChild(birthDateName);
-                                const birthDateField = cTag('div', {class: "columnSM8", 'align': "left"});
-                                    inputField = cTag('input', {'autocomplete': "off", 'required': "required", 'type': "text", class: "form-control", name: "birth_date", id: "birth_date", 'value': '', 'maxlength': 10});
-                                    checkDateOnBlur(inputField,'#error_date','Invalid '+Translate('Birth Date'));
-                                    birthDateField.appendChild(inputField);
-                                    birthDateField.appendChild(cTag('span',{id:'error_birth_date',class:'errormsg'}));
-                                    birthDateRow.appendChild(birthDateField);
-                        tab3DivCol7.appendChild(birthDateRow);                        
+                                motherNameTitle.appendChild(motherNameLabel);
+                                motherNameRow.appendChild(motherNameTitle);
+                                //==================================================
+                                const motherNameField = cTag('div',{ 'class':`columnXS12 columnSM8` });
+                                    const motherInGroup = cTag('div',{ 'class':`input-group`,'id':`supplierNameField` });
+
+                                    motherInGroup.appendChild(cTag('input',{ 'autocomplete':`off`,'maxlength':`50`,'type':`text`,'value':``,'required':``,'name':`supplier`,'id':`supplier`,'class':`form-control ui-autocomplete-input`,'placeholder':Translate('Search Mother') }));
+                                    motherInGroup.appendChild(cTag('input',{ 'type':`hidden`,'name':`supplier_id`,'value':`0`,'id':'supplier_id' }));
+                                        let motherNewSpan = cTag('span',{ 'id':'add_new_supplier','data-toggle':`tooltip`,'data-original-title':Translate('Add New Supplier'),'class':`input-group-addon cursor` });
+                                        motherNewSpan.addEventListener('click',()=>dynamicImport('./Manage_Data.js','addnewsupplierform',['addLiveStocks', 0]))
+                                        motherNewSpan.append(cTag('i',{ 'class':`fa fa-plus` }), ' ', Translate('New'));
+                                        motherInGroup.appendChild(motherNewSpan);
+
+                                    motherNameField.appendChild(motherInGroup);
+                                    motherNameField.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_suppliers_id` }));
+                                motherNameRow.appendChild(motherNameField);
+                                const motherErrColumn = cTag('div',{ 'class':`columnXS12 columnSM6` });
+                                motherErrColumn.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_supplier` }));
+                                motherNameRow.appendChild(motherErrColumn);
+                                tab3DivCol7.appendChild(motherNameRow);
+                        //==================================================  
+
+
+                        
+
+                    //     let divHidden = cTag('div',{ style:'display:none' });
+                    //         let currentInventoryColumn = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                    //             let currentInventoryLabel = cTag('label',{ 'for': 'current_inventory' });
+                    //             currentInventoryLabel.innerHTML = Translate('Current Inventory');
+                    //         currentInventoryColumn.appendChild(currentInventoryLabel);
+                    //     divHidden.appendChild(currentInventoryColumn);
+                    //         let currentInventoryDiv = cTag('div',{ 'class': 'columnXS2', 'style': "padding-right: 0;" });
+                    //                 inputField = cTag('input',{ 'maxlength': '9','type': 'number' });
+                    //         if(data.current_inventoryReadonly !==''){
+                    //             inputField.setAttribute('checked',true);
+                    //         }
+                    //             inputField.setAttribute('class', 'form-control qtyfield');
+                    //             inputField.setAttribute('name', 'current_inventory');
+                    //             inputField.setAttribute('id', 'current_inventory');
+                    //             inputField.setAttribute('value', data.current_inventory);
+                    //         currentInventoryDiv.appendChild(inputField);
+                    //     divHidden.appendChild(currentInventoryDiv);
+                    //     divHidden.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_current_inventory' }));
+                    // divCol5.appendChild(divHidden);
+
+
+
+                        //########### manage inventory ############
+                        // const manageRow = cTag('div',{ 'class': 'manage_inventory' });
+                        //         const manageDiv = cTag('div',{ 'class': 'flex', 'style': "margin-bottom: 10px;" });
+                        //             const manageTitle = cTag('div',{ 'class': 'columnXS5', 'style': "padding-top: 5px; text-align: left;" });
+                        //                 const manageLabel = cTag('label',{ 'for': 'low_inventory_alert' });
+                        //                 manageLabel.innerHTML = Translate('Alert Below');
+                        //             manageTitle.appendChild(manageLabel);
+                        //         manageDiv.appendChild(manageTitle);
+                        //     manageRow.appendChild(manageDiv);
+                        //             const manageField = cTag('div',{ 'class': 'columnXS7' });
+                        //             manageField.appendChild(cTag('input',{ 'type': 'number','maxlength': '2','class': 'form-control','name': 'low_inventory_alert','id': 'low_inventory_alert','value': data.low_inventory_alert }));
+                        //             manageField.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_low_inventory_alert' }));
+                        //         manageDiv.appendChild(manageField);
+                        //     manageRow.appendChild(manageDiv);
+                        // divCol5.appendChild(manageRow);
+
+
+                        
+                        
+                        //########## Birth Date ############        
+                        // const birthDateRow = cTag('div', {class: "flex"});
+                        //         const birthDateName = cTag('div', {class: "columnSM4", 'align': "left"});
+                        //             const birthDateLabel = cTag('label', {'for': "birth_date"});
+                        //             birthDateLabel.innerHTML = Translate('Birth Date');
+
+                        //             let bdrequiredField = cTag('span', {class: "required"});
+                        //             bdrequiredField.innerHTML = '*';
+                        //             birthDateLabel.appendChild(bdrequiredField);
+                        //                 birthDateName.appendChild(birthDateLabel);
+                                    
+                        //             birthDateRow.appendChild(birthDateName);
+                        //         const birthDateField = cTag('div', {class: "columnSM8", 'align': "left"});
+                        //             inputField = cTag('input', {'autocomplete': "off", 'required': "required", 'type': "text", class: "form-control", name: "birth_date", id: "birth_date", 'value': '', 'maxlength': 10});
+                        //             checkDateOnBlur(inputField,'#error_date','Invalid '+Translate('Birth Date'));
+                        //             birthDateField.appendChild(inputField);
+                        //             birthDateField.appendChild(cTag('span',{id:'error_birth_date',class:'errormsg'}));
+                        //             birthDateRow.appendChild(birthDateField);
+                        // tab3DivCol7.appendChild(birthDateRow);                        
 
 
                         //########### Birth Weight ##############
-                        const birthWeightDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
-                            const birthWeightRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
-                                const birthWeightTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                                    const birthWeightLabel = cTag('label',{ 'for': 'birth_weight','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select the internal memory capacity of the device you are entering.') });
-                                    birthWeightLabel.innerHTML = Translate('Birth Weight');
-                                    birthWeightTitle.appendChild(birthWeightLabel);
-                                    birthWeightRow.appendChild(birthWeightTitle);
-                                    birthWeightDiv.appendChild(birthWeightRow);
-                                    const birthWeightField = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
-                                    birthWeightField.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'birth_weight','id': 'birth_weight','class': 'form-control','value': data.birth_weight }));
-                                    birthWeightRow.appendChild(birthWeightField);
-                                    birthWeightDiv.appendChild(birthWeightRow);
-                                    birthWeightDiv.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_birth_weight' }));
-                        tab3DivCol7.appendChild(birthWeightDiv);
+                        // const birthWeightDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
+                        //     const birthWeightRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                        //         const birthWeightTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                        //             const birthWeightLabel = cTag('label',{ 'for': 'birth_weight','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select the internal memory capacity of the device you are entering.') });
+                        //             birthWeightLabel.innerHTML = Translate('Birth Weight');
+                        //             birthWeightTitle.appendChild(birthWeightLabel);
+                        //             birthWeightRow.appendChild(birthWeightTitle);
+                        //             birthWeightDiv.appendChild(birthWeightRow);
+                        //             const birthWeightField = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
+                        //             birthWeightField.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'birth_weight','id': 'birth_weight','class': 'form-control','value': data.birth_weight }));
+                        //             birthWeightRow.appendChild(birthWeightField);
+                        //             birthWeightDiv.appendChild(birthWeightRow);
+                        //             birthWeightDiv.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_birth_weight' }));
+                        // tab3DivCol7.appendChild(birthWeightDiv);
 
 
                         //############ Birth Type ################        
-                        const birthTypeDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
-                            const birthTypeRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
-                                const birthTypeTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                                    const birthTypeLabel = cTag('label',{ 'for': 'birth_type' });
-                                    birthTypeLabel.innerHTML = Translate('Birth Type');
-                                    birthTypeTitle.appendChild(birthTypeLabel);
-                                    birthTypeRow.appendChild(birthTypeTitle);
-                                    birthTypeDiv.appendChild(birthTypeRow);
-                                const birthTypeDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
-                                    const birthTypeInGroup = cTag('div',{ 'class': 'input-group' });
-                                        let birthTypePurpose = cTag('select',{ 'class': 'form-control','name': 'birth_type','id': 'birth_type' });
-                                        birthTypePurpose.appendChild(cTag('option',{ 'value': '' }));
-                                        setOptions(birthTypePurpose, data.birthtypeOpt, 0, 1);                             
-                                        birthTypeInGroup.appendChild(birthTypePurpose);
-                                        let birthTypeSpan = cTag('span',{ 'data-toggle': 'tooltip','title': Translate('Add Arrival Type'),'class': 'input-group-addon cursor showNewInputOrSelect' });
-                                        birthTypeSpan.append(cTag('i',{ 'class': 'fa fa-plus' }), ' ', Translate('New'));
-                                        birthTypeInGroup.appendChild(birthTypeSpan);
-                                        birthTypeDropDown.appendChild(birthTypeInGroup);
-                                        birthTypeRow.appendChild(birthTypeDropDown);
-                                    birthTypeDiv.appendChild(birthTypeRow);
-                                birthTypeDiv.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_birth_type' }));
-                        tab3DivCol7.appendChild(birthTypeDiv);
+                        // const birthTypeDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
+                        //     const birthTypeRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                        //         const birthTypeTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                        //             const birthTypeLabel = cTag('label',{ 'for': 'birth_type' });
+                        //             birthTypeLabel.innerHTML = Translate('Birth Type');
+                        //             birthTypeTitle.appendChild(birthTypeLabel);
+                        //             birthTypeRow.appendChild(birthTypeTitle);
+                        //             birthTypeDiv.appendChild(birthTypeRow);
+                        //         const birthTypeDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+                        //             const birthTypeInGroup = cTag('div',{ 'class': 'input-group' });
+                        //                 let birthTypePurpose = cTag('select',{ 'class': 'form-control','name': 'birth_type','id': 'birth_type' });
+                        //                 birthTypePurpose.appendChild(cTag('option',{ 'value': '' }));
+                        //                 setOptions(birthTypePurpose, data.birthtypeOpt, 0, 1);                             
+                        //                 birthTypeInGroup.appendChild(birthTypePurpose);
+                        //                 let birthTypeSpan = cTag('span',{ 'data-toggle': 'tooltip','title': Translate('Add Arrival Type'),'class': 'input-group-addon cursor showNewInputOrSelect' });
+                        //                 birthTypeSpan.append(cTag('i',{ 'class': 'fa fa-plus' }), ' ', Translate('New'));
+                        //                 birthTypeInGroup.appendChild(birthTypeSpan);
+                        //                 birthTypeDropDown.appendChild(birthTypeInGroup);
+                        //                 birthTypeRow.appendChild(birthTypeDropDown);
+                        //             birthTypeDiv.appendChild(birthTypeRow);
+                        //         birthTypeDiv.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_birth_type' }));
+                        // tab3DivCol7.appendChild(birthTypeDiv);
                         
 
                         //############ Calving Assist Reason ###################
-                        const clavingAssReasonRow = cTag('div',{  'class': 'flex', 'style': "text-align: left;" });
-                        const clavingAssReasonTitle = cTag('div',{ 'class': 'columnXS12 columnSM4'});
-                            const clavingAssReasonLabel = cTag('label',{ 'for': 'calving_assist_reason','id': 'calving_assist_reason' });
-                            clavingAssReasonLabel.innerHTML = Translate('Calving Assist Reason');
-                            clavingAssReasonTitle.appendChild(clavingAssReasonLabel);
-                            clavingAssReasonRow.appendChild(clavingAssReasonTitle);
+                        // const clavingAssReasonRow = cTag('div',{  'class': 'flex', 'style': "text-align: left;" });
+                        // const clavingAssReasonTitle = cTag('div',{ 'class': 'columnXS12 columnSM4'});
+                        //     const clavingAssReasonLabel = cTag('label',{ 'for': 'calving_assist_reason','id': 'calving_assist_reason' });
+                        //     clavingAssReasonLabel.innerHTML = Translate('Calving Assist Reason');
+                        //     clavingAssReasonTitle.appendChild(clavingAssReasonLabel);
+                        //     clavingAssReasonRow.appendChild(clavingAssReasonTitle);
 
-                            const clavingAssReasonArea = cTag('div',{ 'class': 'columnXS12 columnSM8' , 'id':'calving_assist_reason_div'});
-                            clavingAssReasonArea.appendChild(cTag('textarea',{ 'rows': '4','cols': '20', 'class': 'form-control','name': 'calving_assist_reason','id': 'calving_assist_reason_ta' }));
-                            anmlDescArea.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_calving_assist_reason' }));
-                            // clavingAssReasonArea.innerHTML = data.calving_assist_reason;
-                            // clavingAssReasonArea.val = data.calving_assist_reason;
-                            clavingAssReasonRow.appendChild(clavingAssReasonArea);
-                        tab3DivCol7.appendChild(clavingAssReasonRow);
+                        //     const clavingAssReasonArea = cTag('div',{ 'class': 'columnXS12 columnSM8' , 'id':'calving_assist_reason_div'});
+                        //     clavingAssReasonArea.appendChild(cTag('textarea',{ 'rows': '4','cols': '20', 'class': 'form-control','name': 'calving_assist_reason','id': 'calving_assist_reason_ta' }));
+                        //     anmlDescArea.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_calving_assist_reason' }));
+                        //     // clavingAssReasonArea.innerHTML = data.calving_assist_reason;
+                        //     // clavingAssReasonArea.val = data.calving_assist_reason;
+                        //     clavingAssReasonRow.appendChild(clavingAssReasonArea);
+                        // tab3DivCol7.appendChild(clavingAssReasonRow);
 
 
                         //########### Calving Number ##############
-                        const calvingNoDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
-                            const calvingNoRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
-                                const calvingNoTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                                    const calvingNoLabel = cTag('label',{ 'for': 'calving_no','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select pp.') });
-                                    calvingNoLabel.innerHTML = Translate('Calving No.');
-                                    calvingNoTitle.appendChild(calvingNoLabel);
-                                    calvingNoRow.appendChild(calvingNoTitle);
-                                    calvingNoDiv.appendChild(calvingNoRow);
-                                    const calvingNoField = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
-                                    calvingNoField.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'calving_no','id': 'calving_no','class': 'form-control','value': data.calving_no }));
-                                    calvingNoRow.appendChild(calvingNoField);
-                                    calvingNoDiv.appendChild(calvingNoRow);
-                                    calvingNoDiv.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_calving_no' }));
-                        tab3DivCol7.appendChild(calvingNoDiv);
+                        // const calvingNoDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
+                        //     const calvingNoRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                        //         const calvingNoTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                        //             const calvingNoLabel = cTag('label',{ 'for': 'calving_no','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select pp.') });
+                        //             calvingNoLabel.innerHTML = Translate('Calving No.');
+                        //             calvingNoTitle.appendChild(calvingNoLabel);
+                        //             calvingNoRow.appendChild(calvingNoTitle);
+                        //             calvingNoDiv.appendChild(calvingNoRow);
+                        //             const calvingNoField = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
+                        //             calvingNoField.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'calving_no','id': 'calving_no','class': 'form-control','value': data.calving_no }));
+                        //             calvingNoRow.appendChild(calvingNoField);
+                        //             calvingNoDiv.appendChild(calvingNoRow);
+                        //             calvingNoDiv.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_calving_no' }));
+                        // tab3DivCol7.appendChild(calvingNoDiv);
 
 
                         //########### Sibling Count ##############
-                        const siblingCountDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
-                            const siblingCountRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
-                                const siblingCountTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                                    const siblingCount = cTag('label',{ 'for': 'sibling_count','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select pp.') });
-                                    siblingCount.innerHTML = Translate('Sibling Count');
-                                    siblingCountTitle.appendChild(siblingCount);
-                                    siblingCountRow.appendChild(siblingCountTitle);
-                                    siblingCountDiv.appendChild(siblingCountRow);
-                                    const siblingCountField = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
-                                    siblingCountField.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'sibling_count','id': 'sibling_count','class': 'form-control','value': data.sibling_count }));
-                                    siblingCountRow.appendChild(siblingCountField);
-                                    siblingCountDiv.appendChild(siblingCountRow);
-                                    siblingCountDiv.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_sibling_count' }));
-                        tab3DivCol7.appendChild(siblingCountDiv);
+                        // const siblingCountDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
+                        //     const siblingCountRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                        //         const siblingCountTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                        //             const siblingCount = cTag('label',{ 'for': 'sibling_count','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select pp.') });
+                        //             siblingCount.innerHTML = Translate('Sibling Count');
+                        //             siblingCountTitle.appendChild(siblingCount);
+                        //             siblingCountRow.appendChild(siblingCountTitle);
+                        //             siblingCountDiv.appendChild(siblingCountRow);
+                        //             const siblingCountField = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
+                        //             siblingCountField.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'sibling_count','id': 'sibling_count','class': 'form-control','value': data.sibling_count }));
+                        //             siblingCountRow.appendChild(siblingCountField);
+                        //             siblingCountDiv.appendChild(siblingCountRow);
+                        //             siblingCountDiv.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_sibling_count' }));
+                        // tab3DivCol7.appendChild(siblingCountDiv);
 
 
                         //############ Birth Location ###################
-                        const birthLocationRow = cTag('div',{  'class': 'flex', 'style': "text-align: left;" });
-                        const birthLocationTitle = cTag('div',{ 'class': 'columnXS12 columnSM4'});
-                            const birthLocationLabel = cTag('label',{ 'for': 'birth_location','id': 'birth_location' });
-                            birthLocationLabel.innerHTML = Translate('Birth Location');
-                            birthLocationTitle.appendChild(birthLocationLabel);
-                            birthLocationRow.appendChild(birthLocationTitle);
+                        // const birthLocationRow = cTag('div',{  'class': 'flex', 'style': "text-align: left;" });
+                        // const birthLocationTitle = cTag('div',{ 'class': 'columnXS12 columnSM4'});
+                        //     const birthLocationLabel = cTag('label',{ 'for': 'birth_location','id': 'birth_location' });
+                        //     birthLocationLabel.innerHTML = Translate('Birth Location');
+                        //     birthLocationTitle.appendChild(birthLocationLabel);
+                        //     birthLocationRow.appendChild(birthLocationTitle);
 
-                            const birthLocationArea = cTag('div',{ 'class': 'columnXS12 columnSM8' , 'id':'birth_location_div'});
-                            birthLocationArea.appendChild(cTag('textarea',{ 'rows': '4','cols': '20', 'class': 'form-control','name': 'birth_location','id': 'birth_location_ta' }));
-                            anmlDescArea.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_birth_location' }));
-                            // birthLocationArea.innerHTML = data.birth_location;
-                            // birthLocationArea.val = data.birth_location;
-                            birthLocationRow.appendChild(birthLocationArea);
-                        tab3DivCol7.appendChild(birthLocationRow);
+                        //     const birthLocationArea = cTag('div',{ 'class': 'columnXS12 columnSM8' , 'id':'birth_location_div'});
+                        //     birthLocationArea.appendChild(cTag('textarea',{ 'rows': '4','cols': '20', 'class': 'form-control','name': 'birth_location','id': 'birth_location_ta' }));
+                        //     anmlDescArea.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_birth_location' }));
+                        //     // birthLocationArea.innerHTML = data.birth_location;
+                        //     // birthLocationArea.val = data.birth_location;
+                        //     birthLocationRow.appendChild(birthLocationArea);
+                        // tab3DivCol7.appendChild(birthLocationRow);
 
 
                         //############ Parents Information ################  
@@ -2604,183 +2706,61 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 
                         divTabs3.appendChild(tab3DivCol7);  
 
-                    divTabs.appendChild(divTabs3);
 
-                    // if(data.customFieldsData.length>0){
-                        // let divTabs3 = cTag('div',{ 'class': 'columnXS12','id': 'tabs-3',style:'display:none' });
-                        // generateCustomeFields(divTabs3,data.customFieldsData);
-                        // divTabs.appendChild(divTabs3);
-                    // }
+                        let tab3DivCol7_2 = cTag('div',{ 'class': 'columnXS12 columnMD6', 'style': "border:0px solid red; float:right;" });
 
-                    */
+                        //############# Inventory count ############
+						const paternalDiv = cTag('div',{ 'class': 'LiveStocks manage_paternal_block' });
+                            const paternalRow = cTag('div',{ 'class': 'flex', 'style': "margin-bottom: 10px;" });
+                                let paternalLabel = cTag('label',{ 'for': 'manage_paternal_block' });
+                                    inputField = cTag('input',{ 'type': 'checkbox','name': 'manage_paternal_block','id': 'manage_paternal_block','value': 0 });
+                                    // if(data.manage_inventory_count){
+                                    //     inputField.setAttribute('checked',true);
+                                    // }
+                                    // inputField.addEventListener('click',checkManageInventory);
+                                    paternalLabel.appendChild(inputField);
+                                    paternalLabel.append(' '+Translate('External Parent'));
+                                paternalRow.appendChild(paternalLabel);
+                            paternalDiv.appendChild(paternalRow);
+                            paternalDiv.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_manage_inventory_count' }));
+                        tab3DivCol7_2.appendChild(paternalDiv);
 
+                        //############ Parent Info Paternal ############ 
+                        const fatherNameRow = cTag('div',{ 'class':`flex`, 'style': "text-align: left;" });
+                        const fatherNameTitle = cTag('div',{ 'class':`columnXS12 columnSM4` });
+                            let fatherNameLabel = cTag('label',{ 'for':`supplier`,'data-placement':`bottom` });
+                            fatherNameLabel.append(Translate('Father Tag'));
 
-                    //======divTabs3 Start======//
-                    let divTabs3 = cTag('div',{ 'class': 'columnXS12','id': 'tabs-3' });
-                   
-                        let tab3DivCol7 = cTag('div',{ 'class': 'columnXS12 columnMD7' });
-
-                        
-                        //########## Birth Date ############        
-                        const birthDateRow = cTag('div', {class: "flex"});
-                                const birthDateName = cTag('div', {class: "columnSM4", 'align': "left"});
-                                    const birthDateLabel = cTag('label', {'for': "birth_date"});
-                                    birthDateLabel.innerHTML = Translate('Birth Date');
-
-                                    let bdrequiredField = cTag('span', {class: "required"});
-                                    bdrequiredField.innerHTML = '*';
-                                    birthDateLabel.appendChild(bdrequiredField);
-                                        birthDateName.appendChild(birthDateLabel);
+                                let fatherErrSpan = cTag('span', {class: "required"});
+                                fatherErrSpan.innerHTML = '*';
+                                fatherNameLabel.appendChild(fatherErrSpan);
                                     
-                                    birthDateRow.appendChild(birthDateName);
-                                const birthDateField = cTag('div', {class: "columnSM8", 'align': "left"});
-                                    inputField = cTag('input', {'autocomplete': "off", 'required': "required", 'type': "text", class: "form-control", name: "birth_date", id: "birth_date", 'value': '', 'maxlength': 10});
-                                    checkDateOnBlur(inputField,'#error_date','Invalid '+Translate('Birth Date'));
-                                    birthDateField.appendChild(inputField);
-                                    birthDateField.appendChild(cTag('span',{id:'error_birth_date',class:'errormsg'}));
-                                    birthDateRow.appendChild(birthDateField);
-                        tab3DivCol7.appendChild(birthDateRow);                        
+                                fatherNameTitle.appendChild(fatherNameLabel);
+                                fatherNameRow.appendChild(fatherNameTitle);
+                                //==================================================
+                                const fatherNameField = cTag('div',{ 'class':`columnXS12 columnSM8` });
+                                    const fatherInGroup = cTag('div',{ 'class':`input-group`,'id':`supplierNameField` });
 
+                                    fatherInGroup.appendChild(cTag('input',{ 'autocomplete':`off`,'maxlength':`50`,'type':`text`,'value':``,'required':``,'name':`supplier`,'id':`supplier`,'class':`form-control ui-autocomplete-input`,'placeholder':Translate('Search Father') }));
+                                    fatherInGroup.appendChild(cTag('input',{ 'type':`hidden`,'name':`supplier_id`,'value':`0`,'id':'supplier_id' }));
+                                        let fatherNewSpan = cTag('span',{ 'id':'add_new_supplier','data-toggle':`tooltip`,'data-original-title':Translate('Add New Supplier'),'class':`input-group-addon cursor` });
+                                        fatherNewSpan.addEventListener('click',()=>dynamicImport('./Manage_Data.js','addnewsupplierform',['addLiveStocks', 0]))
+                                        fatherNewSpan.append(cTag('i',{ 'class':`fa fa-plus` }), ' ', Translate('New'));
+                                        fatherInGroup.appendChild(fatherNewSpan);
 
-                        //########### Birth Weight ##############
-                        const birthWeightDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
-                            const birthWeightRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
-                                const birthWeightTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                                    const birthWeightLabel = cTag('label',{ 'for': 'birth_weight','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select the internal memory capacity of the device you are entering.') });
-                                    birthWeightLabel.innerHTML = Translate('Birth Weight');
-                                    birthWeightTitle.appendChild(birthWeightLabel);
-                                    birthWeightRow.appendChild(birthWeightTitle);
-                                    birthWeightDiv.appendChild(birthWeightRow);
-                                    const birthWeightField = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
-                                    birthWeightField.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'birth_weight','id': 'birth_weight','class': 'form-control','value': data.birth_weight }));
-                                    birthWeightRow.appendChild(birthWeightField);
-                                    birthWeightDiv.appendChild(birthWeightRow);
-                                    birthWeightDiv.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_birth_weight' }));
-                        tab3DivCol7.appendChild(birthWeightDiv);
-
-
-                        //############ Birth Type ################        
-                        const birthTypeDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
-                            const birthTypeRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
-                                const birthTypeTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                                    const birthTypeLabel = cTag('label',{ 'for': 'birth_type' });
-                                    birthTypeLabel.innerHTML = Translate('Birth Type');
-                                    birthTypeTitle.appendChild(birthTypeLabel);
-                                    birthTypeRow.appendChild(birthTypeTitle);
-                                    birthTypeDiv.appendChild(birthTypeRow);
-                                const birthTypeDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
-                                    const birthTypeInGroup = cTag('div',{ 'class': 'input-group' });
-                                        let birthTypePurpose = cTag('select',{ 'class': 'form-control','name': 'birth_type','id': 'birth_type' });
-                                        birthTypePurpose.appendChild(cTag('option',{ 'value': '' }));
-                                        setOptions(birthTypePurpose, data.birthtypeOpt, 0, 1);                             
-                                        birthTypeInGroup.appendChild(birthTypePurpose);
-                                        let birthTypeSpan = cTag('span',{ 'data-toggle': 'tooltip','title': Translate('Add Arrival Type'),'class': 'input-group-addon cursor showNewInputOrSelect' });
-                                        birthTypeSpan.append(cTag('i',{ 'class': 'fa fa-plus' }), ' ', Translate('New'));
-                                        birthTypeInGroup.appendChild(birthTypeSpan);
-                                        birthTypeDropDown.appendChild(birthTypeInGroup);
-                                        birthTypeRow.appendChild(birthTypeDropDown);
-                                    birthTypeDiv.appendChild(birthTypeRow);
-                                birthTypeDiv.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_birth_type' }));
-                        tab3DivCol7.appendChild(birthTypeDiv);
+                                    fatherNameField.appendChild(fatherInGroup);
+                                    fatherNameField.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_suppliers_id` }));
+                                    fatherNameRow.appendChild(fatherNameField);
+                                const fatherErrColumn = cTag('div',{ 'class':`columnXS12 columnSM6` });
+                                fatherErrColumn.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_supplier` }));
+                                fatherNameRow.appendChild(fatherErrColumn);
+                                tab3DivCol7_2.appendChild(fatherNameRow);
+                        //================================================== 
+                        
+                        divTabs3.appendChild(tab3DivCol7_2); 
+                        
                         
 
-                        //############ Calving Assist Reason ###################
-                        const clavingAssReasonRow = cTag('div',{  'class': 'flex', 'style': "text-align: left;" });
-                        const clavingAssReasonTitle = cTag('div',{ 'class': 'columnXS12 columnSM4'});
-                            const clavingAssReasonLabel = cTag('label',{ 'for': 'calving_assist_reason','id': 'calving_assist_reason' });
-                            clavingAssReasonLabel.innerHTML = Translate('Calving Assist Reason');
-                            clavingAssReasonTitle.appendChild(clavingAssReasonLabel);
-                            clavingAssReasonRow.appendChild(clavingAssReasonTitle);
-
-                            const clavingAssReasonArea = cTag('div',{ 'class': 'columnXS12 columnSM8' , 'id':'calving_assist_reason_div'});
-                            clavingAssReasonArea.appendChild(cTag('textarea',{ 'rows': '4','cols': '20', 'class': 'form-control','name': 'calving_assist_reason','id': 'calving_assist_reason_ta' }));
-                            anmlDescArea.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_calving_assist_reason' }));
-                            // clavingAssReasonArea.innerHTML = data.calving_assist_reason;
-                            // clavingAssReasonArea.val = data.calving_assist_reason;
-                            clavingAssReasonRow.appendChild(clavingAssReasonArea);
-                        tab3DivCol7.appendChild(clavingAssReasonRow);
-
-
-                        //########### Calving Number ##############
-                        const calvingNoDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
-                            const calvingNoRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
-                                const calvingNoTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                                    const calvingNoLabel = cTag('label',{ 'for': 'calving_no','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select pp.') });
-                                    calvingNoLabel.innerHTML = Translate('Calving No.');
-                                    calvingNoTitle.appendChild(calvingNoLabel);
-                                    calvingNoRow.appendChild(calvingNoTitle);
-                                    calvingNoDiv.appendChild(calvingNoRow);
-                                    const calvingNoField = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
-                                    calvingNoField.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'calving_no','id': 'calving_no','class': 'form-control','value': data.calving_no }));
-                                    calvingNoRow.appendChild(calvingNoField);
-                                    calvingNoDiv.appendChild(calvingNoRow);
-                                    calvingNoDiv.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_calving_no' }));
-                        tab3DivCol7.appendChild(calvingNoDiv);
-
-
-                        //########### Sibling Count ##############
-                        const siblingCountDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
-                            const siblingCountRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
-                                const siblingCountTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                                    const siblingCount = cTag('label',{ 'for': 'sibling_count','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select pp.') });
-                                    siblingCount.innerHTML = Translate('Sibling Count');
-                                    siblingCountTitle.appendChild(siblingCount);
-                                    siblingCountRow.appendChild(siblingCountTitle);
-                                    siblingCountDiv.appendChild(siblingCountRow);
-                                    const siblingCountField = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
-                                    siblingCountField.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'sibling_count','id': 'sibling_count','class': 'form-control','value': data.sibling_count }));
-                                    siblingCountRow.appendChild(siblingCountField);
-                                    siblingCountDiv.appendChild(siblingCountRow);
-                                    siblingCountDiv.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_sibling_count' }));
-                        tab3DivCol7.appendChild(siblingCountDiv);
-
-
-                        //############ Birth Location ###################
-                        const birthLocationRow = cTag('div',{  'class': 'flex', 'style': "text-align: left;" });
-                        const birthLocationTitle = cTag('div',{ 'class': 'columnXS12 columnSM4'});
-                            const birthLocationLabel = cTag('label',{ 'for': 'birth_location','id': 'birth_location' });
-                            birthLocationLabel.innerHTML = Translate('Birth Location');
-                            birthLocationTitle.appendChild(birthLocationLabel);
-                            birthLocationRow.appendChild(birthLocationTitle);
-
-                            const birthLocationArea = cTag('div',{ 'class': 'columnXS12 columnSM8' , 'id':'birth_location_div'});
-                            birthLocationArea.appendChild(cTag('textarea',{ 'rows': '4','cols': '20', 'class': 'form-control','name': 'birth_location','id': 'birth_location_ta' }));
-                            anmlDescArea.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_birth_location' }));
-                            // birthLocationArea.innerHTML = data.birth_location;
-                            // birthLocationArea.val = data.birth_location;
-                            birthLocationRow.appendChild(birthLocationArea);
-                        tab3DivCol7.appendChild(birthLocationRow);
-
-
-                        //############ Parents Information ################  
-                        // const parentsInfoRow = cTag('div',{ 'class':`flex`, 'style': "text-align: left;" });
-                        // const parentsInfoTitle = cTag('div',{ 'class':`columnXS12 columnSM4` });
-                        //     let parentsInfoLabel = cTag('label',{ 'for':`supplier_name`,'data-placement':`bottom` });
-                        //     parentsInfoLabel.append(Translate('Parents Info'));
-                        //             let pierrorSpan = cTag('span', {class: "errormsg"});
-                        //             pierrorSpan.innerHTML = '*';
-                        //             parentsInfoLabel.appendChild(pierrorSpan);
-                        //         parentsInfoTitle.appendChild(parentsInfoLabel);
-                        //     parentsInfoRow.appendChild(parentsInfoTitle);
-                        //     const parentsInfoField = cTag('div',{ 'class':`columnXS12 columnSM8` });
-                        //         const parentsInfoInGroup = cTag('div',{ 'class':`input-group`,'id':`supplierNameField` });
-                        //             const parentsInfoInName = cTag('input',{ 'autocomplete':`off`,'maxlength':`50`,'type':`text`,'value':``,'required':``,'name':`supplier_name`,'id':`supplier_name`,'class':`form-control ui-autocomplete-input`,'placeholder':Translate('Search Parent') });
-                        //             parentsInfoInName.addEventListener('blur',updateSupplierId);
-                        //             parentsInfoInGroup.appendChild(parentsInfoInName);
-                        //             let pinewSpan = cTag('span',{ 'id':'add_new_customer_btn','data-toggle':`tooltip`,'data-original-title':Translate('Add New Supplier'),'class':`input-group-addon cursor` });
-                        //             pinewSpan.append(cTag('i',{ 'class':`fa fa-plus` }), ' ', Translate('New'));
-                        //             parentsInfoInGroup.appendChild(pinewSpan);
-                        //         parentsInfoField.appendChild(parentsInfoInGroup);
-                        //         parentsInfoField.appendChild(cTag('input',{ 'type':`hidden`,'name':`supplier_id`,'id':`supplier_id`,'value':`0` }));
-                        //         parentsInfoField.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_supplier_id` }));
-                        //     parentsInfoRow.appendChild(parentsInfoField);
-                        //     const pierrorColumn = cTag('div',{ 'class':`columnXS12 columnSM6` });
-                        //     pierrorColumn.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_customer_name` }));
-                        //     parentsInfoRow.appendChild(pierrorColumn);
-                        // tab3DivCol7.appendChild(parentsInfoRow);
-
-
-                        divTabs3.appendChild(tab3DivCol7);  
 
                     divTabs.appendChild(divTabs3);
 
@@ -2789,6 +2769,8 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                         // generateCustomeFields(divTabs3,data.customFieldsData);
                         // divTabs.appendChild(divTabs3);
                     // }
+
+                    //======divTabs3 End======//
 
 
 
@@ -2871,12 +2853,190 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 
 
 
-
                         
                         divTabs4.appendChild(tab4DivCol7); 
 
                     divTabs.appendChild(divTabs4);
 
+
+
+
+                    //======divTabs5 Start (Birth Tab)======//
+                    /* let divTabs5 = cTag('div',{ 'class': 'columnXS12','id': 'tabs-5' });
+                   
+                        let tab5DivCol7 = cTag('div',{ 'class': 'columnXS12 columnMD7' });
+
+                        
+                        //########## Birth Date ############        
+                        const birthDateRow = cTag('div', {class: "flex"});
+                                const birthDateName = cTag('div', {class: "columnSM4", 'align': "left"});
+                                    const birthDateLabel = cTag('label', {'for': "birth_date"});
+                                    birthDateLabel.innerHTML = Translate('Birth Date');
+
+                                    let bdrequiredField = cTag('span', {class: "required"});
+                                    bdrequiredField.innerHTML = '*';
+                                    birthDateLabel.appendChild(bdrequiredField);
+                                        birthDateName.appendChild(birthDateLabel);
+                                    
+                                    birthDateRow.appendChild(birthDateName);
+                                const birthDateField = cTag('div', {class: "columnSM8", 'align': "left"});
+                                    inputField = cTag('input', {'autocomplete': "off", 'required': "required", 'type': "text", class: "form-control", name: "birth_date", id: "birth_date", 'value': '', 'maxlength': 10});
+                                    checkDateOnBlur(inputField,'#error_date','Invalid '+Translate('Birth Date'));
+                                    birthDateField.appendChild(inputField);
+                                    birthDateField.appendChild(cTag('span',{id:'error_birth_date',class:'errormsg'}));
+                                    birthDateRow.appendChild(birthDateField);
+                        tab5DivCol7.appendChild(birthDateRow);                        
+
+
+                        //########### Birth Weight ##############
+                        const birthWeightDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
+                            const birthWeightRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                const birthWeightTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                    const birthWeightLabel = cTag('label',{ 'for': 'birth_weight','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select the internal memory capacity of the device you are entering.') });
+                                    birthWeightLabel.innerHTML = Translate('Birth Weight');
+                                    birthWeightTitle.appendChild(birthWeightLabel);
+                                    birthWeightRow.appendChild(birthWeightTitle);
+                                    birthWeightDiv.appendChild(birthWeightRow);
+                                    const birthWeightField = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
+                                    birthWeightField.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'birth_weight','id': 'birth_weight','class': 'form-control','value': data.birth_weight }));
+                                    birthWeightRow.appendChild(birthWeightField);
+                                    birthWeightDiv.appendChild(birthWeightRow);
+                                    birthWeightDiv.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_birth_weight' }));
+                        tab5DivCol7.appendChild(birthWeightDiv);
+
+
+                        //############ Birth Type ################        
+                        const birthTypeDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
+                            const birthTypeRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                const birthTypeTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                    const birthTypeLabel = cTag('label',{ 'for': 'birth_type' });
+                                    birthTypeLabel.innerHTML = Translate('Birth Type');
+                                    birthTypeTitle.appendChild(birthTypeLabel);
+                                    birthTypeRow.appendChild(birthTypeTitle);
+                                    birthTypeDiv.appendChild(birthTypeRow);
+                                const birthTypeDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+                                    const birthTypeInGroup = cTag('div',{ 'class': 'input-group' });
+                                        let birthTypePurpose = cTag('select',{ 'class': 'form-control','name': 'birth_type','id': 'birth_type' });
+                                        birthTypePurpose.appendChild(cTag('option',{ 'value': '' }));
+                                        setOptions(birthTypePurpose, data.birthtypeOpt, 0, 1);                             
+                                        birthTypeInGroup.appendChild(birthTypePurpose);
+                                        let birthTypeSpan = cTag('span',{ 'data-toggle': 'tooltip','title': Translate('Add Arrival Type'),'class': 'input-group-addon cursor showNewInputOrSelect' });
+                                        birthTypeSpan.append(cTag('i',{ 'class': 'fa fa-plus' }), ' ', Translate('New'));
+                                        birthTypeInGroup.appendChild(birthTypeSpan);
+                                        birthTypeDropDown.appendChild(birthTypeInGroup);
+                                        birthTypeRow.appendChild(birthTypeDropDown);
+                                    birthTypeDiv.appendChild(birthTypeRow);
+                                birthTypeDiv.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_birth_type' }));
+                        tab5DivCol7.appendChild(birthTypeDiv);
+                        
+
+                        //############ Calving Assist Reason ###################
+                        const clavingAssReasonRow = cTag('div',{  'class': 'flex', 'style': "text-align: left;" });
+                        const clavingAssReasonTitle = cTag('div',{ 'class': 'columnXS12 columnSM4'});
+                            const clavingAssReasonLabel = cTag('label',{ 'for': 'calving_assist_reason','id': 'calving_assist_reason' });
+                            clavingAssReasonLabel.innerHTML = Translate('Calving Assist Reason');
+                            clavingAssReasonTitle.appendChild(clavingAssReasonLabel);
+                            clavingAssReasonRow.appendChild(clavingAssReasonTitle);
+
+                            const clavingAssReasonArea = cTag('div',{ 'class': 'columnXS12 columnSM8' , 'id':'calving_assist_reason_div'});
+                            clavingAssReasonArea.appendChild(cTag('textarea',{ 'rows': '4','cols': '20', 'class': 'form-control','name': 'calving_assist_reason','id': 'calving_assist_reason_ta' }));
+                            anmlDescArea.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_calving_assist_reason' }));
+                            // clavingAssReasonArea.innerHTML = data.calving_assist_reason;
+                            // clavingAssReasonArea.val = data.calving_assist_reason;
+                            clavingAssReasonRow.appendChild(clavingAssReasonArea);
+                        tab5DivCol7.appendChild(clavingAssReasonRow);
+
+
+                        //########### Calving Number ##############
+                        const calvingNoDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
+                            const calvingNoRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                const calvingNoTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                    const calvingNoLabel = cTag('label',{ 'for': 'calving_no','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select pp.') });
+                                    calvingNoLabel.innerHTML = Translate('Calving No.');
+                                    calvingNoTitle.appendChild(calvingNoLabel);
+                                    calvingNoRow.appendChild(calvingNoTitle);
+                                    calvingNoDiv.appendChild(calvingNoRow);
+                                    const calvingNoField = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
+                                    calvingNoField.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'calving_no','id': 'calving_no','class': 'form-control','value': data.calving_no }));
+                                    calvingNoRow.appendChild(calvingNoField);
+                                    calvingNoDiv.appendChild(calvingNoRow);
+                                    calvingNoDiv.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_calving_no' }));
+                        tab5DivCol7.appendChild(calvingNoDiv);
+
+
+                        //########### Sibling Count ##############
+                        const siblingCountDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
+                            const siblingCountRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                const siblingCountTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                    const siblingCount = cTag('label',{ 'for': 'sibling_count','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select pp.') });
+                                    siblingCount.innerHTML = Translate('Sibling Count');
+                                    siblingCountTitle.appendChild(siblingCount);
+                                    siblingCountRow.appendChild(siblingCountTitle);
+                                    siblingCountDiv.appendChild(siblingCountRow);
+                                    const siblingCountField = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
+                                    siblingCountField.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'sibling_count','id': 'sibling_count','class': 'form-control','value': data.sibling_count }));
+                                    siblingCountRow.appendChild(siblingCountField);
+                                    siblingCountDiv.appendChild(siblingCountRow);
+                                    siblingCountDiv.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_sibling_count' }));
+                        tab5DivCol7.appendChild(siblingCountDiv);
+
+
+                        //############ Birth Location ###################
+                        const birthLocationRow = cTag('div',{  'class': 'flex', 'style': "text-align: left;" });
+                        const birthLocationTitle = cTag('div',{ 'class': 'columnXS12 columnSM4'});
+                            const birthLocationLabel = cTag('label',{ 'for': 'birth_location','id': 'birth_location' });
+                            birthLocationLabel.innerHTML = Translate('Birth Location');
+                            birthLocationTitle.appendChild(birthLocationLabel);
+                            birthLocationRow.appendChild(birthLocationTitle);
+
+                            const birthLocationArea = cTag('div',{ 'class': 'columnXS12 columnSM8' , 'id':'birth_location_div'});
+                            birthLocationArea.appendChild(cTag('textarea',{ 'rows': '4','cols': '20', 'class': 'form-control','name': 'birth_location','id': 'birth_location_ta' }));
+                            anmlDescArea.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_birth_location' }));
+                            // birthLocationArea.innerHTML = data.birth_location;
+                            // birthLocationArea.val = data.birth_location;
+                            birthLocationRow.appendChild(birthLocationArea);
+                        tab5DivCol7.appendChild(birthLocationRow);
+
+
+                        //############ Child Information ################  
+                        const parentsInfoRow = cTag('div',{ 'class':`flex`, 'style': "text-align: left;" });
+                        const parentsInfoTitle = cTag('div',{ 'class':`columnXS12 columnSM4` });
+                            let parentsInfoLabel = cTag('label',{ 'for':`supplier_name`,'data-placement':`bottom` });
+                            parentsInfoLabel.append(Translate('Child Info'));
+                                    let pierrorSpan = cTag('span', {class: "errormsg"});
+                                    pierrorSpan.innerHTML = '*';
+                                    parentsInfoLabel.appendChild(pierrorSpan);
+                                parentsInfoTitle.appendChild(parentsInfoLabel);
+                            parentsInfoRow.appendChild(parentsInfoTitle);
+                            const parentsInfoField = cTag('div',{ 'class':`columnXS12 columnSM8` });
+                                const parentsInfoInGroup = cTag('div',{ 'class':`input-group`,'id':`supplierNameField` });
+                                    const parentsInfoInName = cTag('input',{ 'autocomplete':`off`,'maxlength':`50`,'type':`text`,'value':``,'required':``,'name':`supplier_name`,'id':`supplier_name`,'class':`form-control ui-autocomplete-input`,'placeholder':Translate('Search Child') });
+                                    parentsInfoInName.addEventListener('blur',updateSupplierId);
+                                    parentsInfoInGroup.appendChild(parentsInfoInName);
+                                    let pinewSpan = cTag('span',{ 'id':'add_new_customer_btn','data-toggle':`tooltip`,'data-original-title':Translate('Add New Supplier'),'class':`input-group-addon cursor` });
+                                    pinewSpan.append(cTag('i',{ 'class':`fa fa-plus` }), ' ', Translate('New'));
+                                    parentsInfoInGroup.appendChild(pinewSpan);
+                                parentsInfoField.appendChild(parentsInfoInGroup);
+                                parentsInfoField.appendChild(cTag('input',{ 'type':`hidden`,'name':`supplier_id`,'id':`supplier_id`,'value':`0` }));
+                                parentsInfoField.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_supplier_id` }));
+                            parentsInfoRow.appendChild(parentsInfoField);
+                            const pierrorColumn = cTag('div',{ 'class':`columnXS12 columnSM6` });
+                            pierrorColumn.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_customer_name` }));
+                            parentsInfoRow.appendChild(pierrorColumn);
+                        tab5DivCol7.appendChild(parentsInfoRow);
+
+
+                        divTabs5.appendChild(tab5DivCol7);  
+
+                    divTabs.appendChild(divTabs5);   */
+
+                    // if(data.customFieldsData.length>0){
+                        // let divTabs3 = cTag('div',{ 'class': 'columnXS12','id': 'tabs-3',style:'display:none' });
+                        // generateCustomeFields(divTabs3,data.customFieldsData);
+                        // divTabs.appendChild(divTabs3);
+                    // }
+
+                    //======divTabs5 End (Birth Tab)======//                 
 
 
 
@@ -2939,7 +3099,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 				}
 
                 date_picker('#arrival_date');
-                date_picker('#birth_date');
+                // date_picker('#birth_date');
                 date_picker('#wean_date');
 
 				document.getElementById("tag").value = data.tag;
@@ -2949,14 +3109,14 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 				document.getElementById("classification_id").value = data.classification_id;
 				document.getElementById("purpose").value = data.purpose;
 				document.getElementById("arrival_type").value = data.arrival_type;
-				document.getElementById("birth_type").value = data.birth_type;
+				// document.getElementById("birth_type").value = data.birth_type;
 				document.getElementById("colour_name").value = data.colour_name;
 				document.getElementById("tag_color").value = data.tag_color;
 				document.getElementById("alt_tag").value = data.alt_tag;
 				document.getElementById("anml_description_ta").innerHTML  = data.anml_description;
 				document.getElementById("arrival_note_ta").innerHTML  = data.arrival_note;
-				document.getElementById("calving_assist_reason_ta").innerHTML  = data.calving_assist_reason;
-				document.getElementById("birth_location_ta").innerHTML  = data.birth_location;
+				// document.getElementById("calving_assist_reason_ta").innerHTML  = data.calving_assist_reason;
+				// document.getElementById("birth_location_ta").innerHTML  = data.birth_location;
 				document.getElementById("supplier").value  = data.supplier;
                 // console.log(data.anml_description);
 				// document.getElementById("manufacturer_id").value = data.manufacturer_id;
@@ -2977,9 +3137,9 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                     document.getElementById("arrival_date").value = DBDateToViewDate(data.arrival_date);                    
                 }
 
-                if(data.birth_date != null){
-                    document.getElementById("birth_date").value = DBDateToViewDate(data.birth_date);                    
-                }
+                // if(data.birth_date != null){
+                //     document.getElementById("birth_date").value = DBDateToViewDate(data.birth_date);                    
+                // }
 
                 if(data.wean_date != null){
                     document.getElementById("wean_date").value = DBDateToViewDate(data.wean_date);                    
@@ -3105,16 +3265,16 @@ async function AJsave_Livestocks(hidePopup,addCartCBF){
     //     arrival_date.classList.remove('errorFieldBorder');
     // }
 
-    if(birth_date.value===''){
-        pTag = cTag('p', {'style': "margin: 0;"});
-        pTag.innerHTML = Translate('Missing Birth Date');
-        error_date.appendChild(pTag);
-        birth_date.focus();
-        birth_date.classList.add('errorFieldBorder');
-        return false;
-    }else{
-        birth_date.classList.remove('errorFieldBorder');
-    }
+    // if(birth_date.value===''){
+    //     pTag = cTag('p', {'style': "margin: 0;"});
+    //     pTag.innerHTML = Translate('Missing Birth Date');
+    //     error_date.appendChild(pTag);
+    //     birth_date.focus();
+    //     birth_date.classList.add('errorFieldBorder');
+    //     return false;
+    // }else{
+    //     birth_date.classList.remove('errorFieldBorder');
+    // }
 
     // if(wean_date.value===''){
     //     pTag = cTag('p', {'style': "margin: 0;"});
@@ -3256,6 +3416,41 @@ function checkManageInventory(){
 		document.getElementById("low_inventory_alert").value = 0;
 	}
 }
+
+
+function checkMaternalBlock(){
+	// let product_id = 0;
+	// if(document.getElementById("product_id")){product_id = parseInt(document.getElementById("product_id").value);}
+	// if(isNaN(product_id)){product_id = 0;}
+	// let product_type = document.getElementById("product_type").value;
+	// if(product_type==='Live Stocks'){
+	// 	document.getElementById("manage_inventory_count").checked=true;
+	// }
+
+    let matBlock = document.getElementById("manage_maternal_block");
+    let isChecked = matBlock.checked;
+    console.log(isChecked); // true (if checked at the time)
+    // $('#element').prop("checked")
+
+
+	// let manage_inventory_countid = document.getElementById("manage_inventory_count");
+	// if(manage_inventory_countid.checked===true){	
+    //     document.querySelectorAll(".manage_inventory").forEach(oneFieldObj=>{
+	// 		if(oneFieldObj.style.display === 'none'){
+	// 			oneFieldObj.style.display = '';
+	// 		}
+	// 	});
+    // }
+	// else{
+	// 	document.querySelectorAll(".manage_inventory").forEach(oneFieldObj=>{
+	// 		if(oneFieldObj.style.display !== 'none'){
+	// 			oneFieldObj.style.display = 'none';
+	// 		}
+	// 	});
+	// 	document.getElementById("low_inventory_alert").value = 0;
+	// }
+}
+
 
 function checkLivestockType(){
 	let productName, requiredField;

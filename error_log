@@ -688,3 +688,94 @@ previous: https://livestock.skitsbd.com/Livestocks/lists/1
 2023-07-09 03:58:57 JSON Issue, Message: Unexpected token '<', "<br />
 <fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
 <fo"... is not valid JSON for API: /Livestocks/AJ_view_MoreInfo, Page Url: http://livestock.skitsbdl.com/Livestocks/view/1
+2023-07-18 01:12:30 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'value')
+    at HTMLInputElement.updateSupplierId (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:3203:17) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-18 01:45:29 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'value')
+    at HTMLInputElement.updateSupplierId (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:3208:17) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-18 04:21:30 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'addEventListener')
+    at date_picker_dialog (http://livestock.skitsbdl.com/assets/js-v3/common.js:2118:10)
+    at date_picker (http://livestock.skitsbdl.com/assets/js-v3/common.js:2307:3)
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2947:17 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-18 04:22:15 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2957:49 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-18 04:38:23 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'addEventListener')
+    at date_picker_dialog (http://livestock.skitsbdl.com/assets/js-v3/common.js:2118:10)
+    at date_picker (http://livestock.skitsbdl.com/assets/js-v3/common.js:2307:3)
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2979:17 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-18 04:39:10 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'addEventListener')
+    at date_picker_dialog (http://livestock.skitsbdl.com/assets/js-v3/common.js:2118:10)
+    at date_picker (http://livestock.skitsbdl.com/assets/js-v3/common.js:2307:3)
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2979:17 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-18 04:40:06 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'addEventListener')
+    at date_picker_dialog (http://livestock.skitsbdl.com/assets/js-v3/common.js:2118:10)
+    at date_picker (http://livestock.skitsbdl.com/assets/js-v3/common.js:2307:3)
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2979:17 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-18 04:41:50 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2989:49 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-18 04:42:34 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2995:68 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-18 04:42:56 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2996:61 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-18 05:41:25 Encountered error 2 in D:\wamp64\www\livestock\apps\Activity_Feed.php, line 776: Undefined property: stdClass::$workstation, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-07-18 05:55:36 Script Error, Message: 2: ReferenceError: flase is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2199:83)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-18 05:55:37 Script Error, Message: 2: ReferenceError: flase is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2199:83)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-18 05:55:37 Script Error, Message: 2: ReferenceError: flase is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2199:83)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-18 05:55:38 Script Error, Message: 2: ReferenceError: flase is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2199:83)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-18 05:55:38 Script Error, Message: 2: ReferenceError: flase is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2199:83)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-18 05:55:38 Script Error, Message: 2: ReferenceError: flase is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2199:83)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-18 05:55:38 Script Error, Message: 2: ReferenceError: flase is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2199:83)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-18 07:12:42 Script Error, Message: 1: TypeError: matBlock.is is not a function
+    at HTMLInputElement.checkMaternalBlock (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:3431:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-18 07:12:46 Script Error, Message: 1: TypeError: matBlock.is is not a function
+    at HTMLInputElement.checkMaternalBlock (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:3431:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-18 07:12:47 Script Error, Message: 1: TypeError: matBlock.is is not a function
+    at HTMLInputElement.checkMaternalBlock (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:3431:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-18 07:12:48 Script Error, Message: 1: TypeError: matBlock.is is not a function
+    at HTMLInputElement.checkMaternalBlock (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:3431:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-18 07:13:02 Script Error, Message: 1: TypeError: matBlock.is is not a function
+    at HTMLInputElement.checkMaternalBlock (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:3431:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-18 07:13:03 Script Error, Message: 1: TypeError: matBlock.is is not a function
+    at HTMLInputElement.checkMaternalBlock (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:3431:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-18 07:13:35 Script Error, Message: 1: TypeError: matBlock.prop is not a function
+    at HTMLInputElement.checkMaternalBlock (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:3431:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-18 07:13:37 Script Error, Message: 1: TypeError: matBlock.prop is not a function
+    at HTMLInputElement.checkMaternalBlock (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:3431:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
