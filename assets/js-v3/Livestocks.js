@@ -2452,7 +2452,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                         tab3DivCol7.appendChild(cTag('input',{ 'type': 'hidden','readonly': '','name': 'product_type','id': 'product_type','value': 'Live Stocks','class': 'form-control' }));
 
 
-                        //############# Inventory count ############
+                        //############# Check Maternal ############
 						const maternalDiv = cTag('div',{ 'class': 'LiveStocks manage_maternal_block' });
                             const maternalRow = cTag('div',{ 'class': 'flex', 'style': "margin-bottom: 10px;" });
                                 let maternalLabel = cTag('label',{ 'for': 'manage_maternal_block' });
@@ -2470,7 +2470,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 
 
                         //############ Parent Info Maternal ############ 
-                        const motherNameRow = cTag('div',{ 'class':`flex`, 'style': "text-align: left;" });
+                        const motherNameRow = cTag('div',{ 'class':'flex manage_maternal_block_in', 'style': 'text-align: left;' });
                         const motherNameTitle = cTag('div',{ 'class':`columnXS12 columnSM4` });
                             let motherNameLabel = cTag('label',{ 'for':`supplier`,'data-placement':`bottom` });
                             motherNameLabel.append(Translate('Mother Tag'));
@@ -2498,31 +2498,133 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                 const motherErrColumn = cTag('div',{ 'class':`columnXS12 columnSM6` });
                                 motherErrColumn.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_supplier` }));
                                 motherNameRow.appendChild(motherErrColumn);
-                                tab3DivCol7.appendChild(motherNameRow);
+                         tab3DivCol7.appendChild(motherNameRow);
                         //==================================================  
 
 
+
+                        //######## Alternate RFID Tag Maternal ################    
+                        const altTagRowMaternal = cTag('div',{ 'class': 'flex manage_maternal_block_out', 'style': "text-align: left; display:none" });
+                            const altTagTitleMaternal = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                const altTagLabelMaternal = cTag('label',{ 'for': 'alt_tag','id': 'alt_tag' });
+                                altTagLabelMaternal.innerHTML = Translate('Alternate/RFID Tag of Mother');
+                                altTagTitleMaternal.appendChild(altTagLabelMaternal);
+                                altTagRowMaternal.appendChild(altTagTitleMaternal);
+                            const altTagFieldMother = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+                            altTagFieldMother.appendChild(cTag('input',{ 'type': 'text','class': 'form-control','name': 'alt_tag','id': 'alt_tag','value': data.alt_tag,'maxlength': '150' }));
+                            altTagFieldMother.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_alt_tag' }));
+                            altTagRowMaternal.appendChild(altTagFieldMother);
+                        tab3DivCol7.appendChild(altTagRowMaternal);
+
+
+                        //############## Maternal Breed #################
+                        const breedRowMaternal = cTag('div',{ 'class': 'flex manage_maternal_block_out', 'style': "text-align: left; display:none" });
+                            const breedTitleMaternal = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                const breedLabelMaternal = cTag('label',{ 'for': 'category_id_maternal' });
+                                breedLabelMaternal.innerHTML = Translate('Mother Breed Name');
+                                breedTitleMaternal.appendChild(breedLabelMaternal);
+                                breedRowMaternal.appendChild(breedTitleMaternal);
+                            const breedDropDownMaternal = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+                                const breedInGroupMaternal = cTag('div',{ 'class': 'input-group' });
+                                    let selectBreedMaternal = cTag('select',{ 'class': 'form-control','name': 'category_id_maternal','id': 'category_id_maternal' });
+                                        const breedOptMaternal = cTag('option',{ 'value': '0' });
+                                        breedOptMaternal.innerHTML = '';
+                                        selectBreedMaternal.appendChild(breedOptMaternal);
+                                    setOptions(selectBreedMaternal, data.breedOpt, 1, 1);                      
+                                    breedInGroupMaternal.appendChild(selectBreedMaternal);
+                                    breedInGroupMaternal.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '35','name': 'category_name_maternal','id': 'category_name_maternal','class': 'form-control',style:'display:none'}));
+                                    let breedSpanMaternal = cTag('span', {'data-toggle':'tooltip', 'class':'input-group-addon cursor showNewInputOrSelect', 'title': Translate('Add New Category')});
+                                    breedSpanMaternal.append(cTag('i', {'class':'fa fa-plus'}), ' ', Translate('New'));
+                                    breedInGroupMaternal.appendChild(breedSpanMaternal);
+                                    breedDropDownMaternal.appendChild(breedInGroupMaternal);
+                                    breedDropDownMaternal.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_category_id_maternal' }));
+                                breedRowMaternal.appendChild(breedDropDownMaternal);
+                        tab3DivCol7.appendChild(breedRowMaternal);
+
                         
 
-                    //     let divHidden = cTag('div',{ style:'display:none' });
-                    //         let currentInventoryColumn = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                    //             let currentInventoryLabel = cTag('label',{ 'for': 'current_inventory' });
-                    //             currentInventoryLabel.innerHTML = Translate('Current Inventory');
-                    //         currentInventoryColumn.appendChild(currentInventoryLabel);
-                    //     divHidden.appendChild(currentInventoryColumn);
-                    //         let currentInventoryDiv = cTag('div',{ 'class': 'columnXS2', 'style': "padding-right: 0;" });
-                    //                 inputField = cTag('input',{ 'maxlength': '9','type': 'number' });
-                    //         if(data.current_inventoryReadonly !==''){
-                    //             inputField.setAttribute('checked',true);
-                    //         }
-                    //             inputField.setAttribute('class', 'form-control qtyfield');
-                    //             inputField.setAttribute('name', 'current_inventory');
-                    //             inputField.setAttribute('id', 'current_inventory');
-                    //             inputField.setAttribute('value', data.current_inventory);
-                    //         currentInventoryDiv.appendChild(inputField);
-                    //     divHidden.appendChild(currentInventoryDiv);
-                    //     divHidden.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_current_inventory' }));
-                    // divCol5.appendChild(divHidden);
+
+                        //############# Maternal Livestock Name ################
+                        const maternalNameRow = cTag('div',{ 'class': 'flex manage_maternal_block_out', 'style': "text-align: left; display:none" });
+                            const maternalNameTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                const maternalNameLabel = cTag('label',{ 'for': 'mother_name','id': 'lbmother_name' });
+                                maternalNameLabel.innerHTML = Translate('Mother Name');
+                                    requireSpan = cTag('span',{ 'class': 'required' });
+                                    requireSpan.innerHTML = '*';
+                                    maternalNameLabel.appendChild(requireSpan);
+                                maternalNameTitle.appendChild(maternalNameLabel);
+                                maternalNameRow.appendChild(maternalNameTitle);
+                                const maternalNameField = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+                                maternalNameField.appendChild(cTag('input',{ 'type': 'text','class': 'form-control','name': 'mother_name','id': 'mother_name','value': '','maxlength': '100' }));
+                                maternalNameField.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_mother_name' }));
+                                maternalNameRow.appendChild(maternalNameField);
+                        tab3DivCol7.appendChild(maternalNameRow);
+
+
+                        //############## Mother Cattle Color ###################
+                        const colorDivMother = cTag('div',{ 'class': 'displayNotAll manage_maternal_block_out', 'style': "text-align: left; display:none" });
+                            const colorRowMother = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                const colorTitleMother = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                    const colorLabelMother = cTag('label',{ 'for': 'colour_name' });
+                                    colorLabelMother.innerHTML = Translate('Color Name');
+                                    colorTitleMother.appendChild(colorLabelMother);
+                                colorRowMother.appendChild(colorTitleMother);
+                            colorDivMother.appendChild(colorRowMother);
+                        const colorNameDropDownMother = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+                            const colorNameInGroupMother = cTag('div',{ 'class': 'input-group' });
+                                let selectColorMother = cTag('select',{ 'class': 'form-control','name': 'colour_name_mother','id': 'colour_name_mother' });
+                                selectColorMother.appendChild(cTag('option',{ 'value': '' }));
+                                setOptions(selectColorMother, data.colNamOpt, 0, 1);                             
+                                colorNameInGroupMother.appendChild(selectColorMother);
+                                colorNameInGroupMother.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '15','name': 'colour_name_mother2','id': 'colour_name_mother2','class': 'form-control', 'style': 'display:none'}));
+                                    let newColorSpanMother = cTag('span',{ 'data-toggle': 'tooltip','title': Translate('Add New Color Name'),'class': 'input-group-addon cursor showNewInputOrSelect' });
+                                    newColorSpanMother.append(cTag('i',{ 'class': 'fa fa-plus' }), ' ', Translate('New'));
+                                    colorNameInGroupMother.appendChild(newColorSpanMother);
+                                colorNameDropDownMother.appendChild(colorNameInGroupMother);
+                            colorRowMother.appendChild(colorNameDropDownMother);
+                        colorDivMother.appendChild(colorRowMother);
+                        colorDivMother.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_colour_name' }));
+                        tab3DivCol7.appendChild(colorDivMother);
+
+
+                        //############ Maternal Animal Description ###################
+                        const anmlDescriptionRowMother = cTag('div',{  'class': 'flex manage_maternal_block_out', 'style': "text-align: left; display:none" });
+                            const anmlDescriptionTitleMother = cTag('div',{ 'class': 'columnXS12 columnSM4'});
+                                const anmlDescriptionLabelMother = cTag('label',{ 'for': 'anml_description_mother','id': 'anml_description_mother' });
+                                anmlDescriptionLabelMother.innerHTML = Translate('Description');
+                                anmlDescriptionTitleMother.appendChild(anmlDescriptionLabelMother);
+                                anmlDescriptionRowMother.appendChild(anmlDescriptionTitleMother);
+
+                                const anmlDescAreaMother = cTag('div',{ 'class': 'columnXS12 columnSM8' , 'id':'anml_description_mother_div'});
+                                anmlDescAreaMother.appendChild(cTag('textarea',{ 'rows': '4','cols': '20', 'class': 'form-control','name': 'anml_description_mother','id': 'anml_description_mother_ta' }));
+                                anmlDescAreaMother.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_anml_description_mother' }));
+                                // anmlDescAreaMother.innerHTML = data.anml_description;
+                                // anmlDescAreaMother.val = data.anml_description;
+                                anmlDescriptionRowMother.appendChild(anmlDescAreaMother);
+                        tab3DivCol7.appendChild(anmlDescriptionRowMother);
+
+
+
+
+                        //     let divHidden = cTag('div',{ style:'display:none' });
+                        //         let currentInventoryColumn = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                        //             let currentInventoryLabel = cTag('label',{ 'for': 'current_inventory' });
+                        //             currentInventoryLabel.innerHTML = Translate('Current Inventory');
+                        //         currentInventoryColumn.appendChild(currentInventoryLabel);
+                        //     divHidden.appendChild(currentInventoryColumn);
+                        //         let currentInventoryDiv = cTag('div',{ 'class': 'columnXS2', 'style': "padding-right: 0;" });
+                        //                 inputField = cTag('input',{ 'maxlength': '9','type': 'number' });
+                        //         if(data.current_inventoryReadonly !==''){
+                        //             inputField.setAttribute('checked',true);
+                        //         }
+                        //             inputField.setAttribute('class', 'form-control qtyfield');
+                        //             inputField.setAttribute('name', 'current_inventory');
+                        //             inputField.setAttribute('id', 'current_inventory');
+                        //             inputField.setAttribute('value', data.current_inventory);
+                        //         currentInventoryDiv.appendChild(inputField);
+                        //     divHidden.appendChild(currentInventoryDiv);
+                        //     divHidden.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_current_inventory' }));
+                        // divCol5.appendChild(divHidden);
 
 
 
@@ -2707,9 +2809,10 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                         divTabs3.appendChild(tab3DivCol7);  
 
 
+
                         let tab3DivCol7_2 = cTag('div',{ 'class': 'columnXS12 columnMD6', 'style': "border:0px solid red; float:right;" });
 
-                        //############# Inventory count ############
+                        //############# Check Paternal ############
 						const paternalDiv = cTag('div',{ 'class': 'LiveStocks manage_paternal_block' });
                             const paternalRow = cTag('div',{ 'class': 'flex', 'style': "margin-bottom: 10px;" });
                                 let paternalLabel = cTag('label',{ 'for': 'manage_paternal_block' });
@@ -2717,7 +2820,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                     // if(data.manage_inventory_count){
                                     //     inputField.setAttribute('checked',true);
                                     // }
-                                    // inputField.addEventListener('click',checkManageInventory);
+                                    inputField.addEventListener('click',checkPaternalBlock);
                                     paternalLabel.appendChild(inputField);
                                     paternalLabel.append(' '+Translate('External Parent'));
                                 paternalRow.appendChild(paternalLabel);
@@ -2726,7 +2829,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                         tab3DivCol7_2.appendChild(paternalDiv);
 
                         //############ Parent Info Paternal ############ 
-                        const fatherNameRow = cTag('div',{ 'class':`flex`, 'style': "text-align: left;" });
+                        const fatherNameRow = cTag('div',{ 'class':'flex manage_paternal_block_in', 'style': "text-align: left;" });
                         const fatherNameTitle = cTag('div',{ 'class':`columnXS12 columnSM4` });
                             let fatherNameLabel = cTag('label',{ 'for':`supplier`,'data-placement':`bottom` });
                             fatherNameLabel.append(Translate('Father Tag'));
@@ -2754,12 +2857,111 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                 const fatherErrColumn = cTag('div',{ 'class':`columnXS12 columnSM6` });
                                 fatherErrColumn.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_supplier` }));
                                 fatherNameRow.appendChild(fatherErrColumn);
-                                tab3DivCol7_2.appendChild(fatherNameRow);
+                         tab3DivCol7_2.appendChild(fatherNameRow);
                         //================================================== 
+
+
+                        //######## Alternate RFID Tag Paternal ################    
+                        const altTagRowPaternal = cTag('div',{ 'class': 'flex manage_paternal_block_out', 'style': "text-align: left; display:none" });
+                            const altTagTitlePaternal = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                const altTagLabelPaternal = cTag('label',{ 'for': 'alt_tag','id': 'alt_tag' });
+                                altTagLabelPaternal.innerHTML = Translate('Alternate/RFID Tag of Father');
+                                altTagTitlePaternal.appendChild(altTagLabelPaternal);
+                                altTagRowPaternal.appendChild(altTagTitlePaternal);
+                            const altTagFieldFather = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+                            altTagFieldFather.appendChild(cTag('input',{ 'type': 'text','class': 'form-control','name': 'alt_tag','id': 'alt_tag','value': data.alt_tag,'maxlength': '150' }));
+                            altTagFieldFather.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_alt_tag' }));
+                            altTagRowPaternal.appendChild(altTagFieldFather);
+                        tab3DivCol7_2.appendChild(altTagRowPaternal);
+
+
+                        //############## Paternal Breed #################
+                        const breedRowPaternal = cTag('div',{ 'class': 'flex manage_paternal_block_out', 'style': "text-align: left; display:none" });
+                            const breedTitlePaternal = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                const breedLabelPaternal = cTag('label',{ 'for': 'category_id_paternal' });
+                                breedLabelPaternal.innerHTML = Translate('Father Breed Name');
+                                breedTitlePaternal.appendChild(breedLabelPaternal);
+                                breedRowPaternal.appendChild(breedTitlePaternal);
+                            const breedDropDownPaternal = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+                                const breedInGroupPaternal = cTag('div',{ 'class': 'input-group' });
+                                    let selectBreedPaternal = cTag('select',{ 'class': 'form-control','name': 'category_id_paternal','id': 'category_id_paternal' });
+                                        const breedOptPaternal = cTag('option',{ 'value': '0' });
+                                        breedOptPaternal.innerHTML = '';
+                                        selectBreedPaternal.appendChild(breedOptPaternal);
+                                    setOptions(selectBreedPaternal, data.breedOpt, 1, 1);                      
+                                    breedInGroupPaternal.appendChild(selectBreedPaternal);
+                                    breedInGroupPaternal.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '35','name': 'category_name_paternal','id': 'category_name_paternal','class': 'form-control',style:'display:none'}));
+                                    let breedSpanPaternal = cTag('span', {'data-toggle':'tooltip', 'class':'input-group-addon cursor showNewInputOrSelect', 'title': Translate('Add New Category')});
+                                    breedSpanPaternal.append(cTag('i', {'class':'fa fa-plus'}), ' ', Translate('New'));
+                                    breedInGroupPaternal.appendChild(breedSpanPaternal);
+                                    breedDropDownPaternal.appendChild(breedInGroupPaternal);
+                                    breedDropDownPaternal.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_category_id_paternal' }));
+                                breedRowPaternal.appendChild(breedDropDownPaternal);
+                        tab3DivCol7_2.appendChild(breedRowPaternal);
+
+
+                        //############# Paternal Livestock Name ################
+                        const paternalNameRow = cTag('div',{ 'class': 'flex manage_paternal_block_out', 'style': "text-align: left; display:none" });
+                            const paternalNameTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                const paternalNameLabel = cTag('label',{ 'for': 'father_name','id': 'lbfather_name' });
+                                paternalNameLabel.innerHTML = Translate('Father Name');
+                                    requireSpan = cTag('span',{ 'class': 'required' });
+                                    requireSpan.innerHTML = '*';
+                                    paternalNameLabel.appendChild(requireSpan);
+                                paternalNameTitle.appendChild(paternalNameLabel);
+                                paternalNameRow.appendChild(paternalNameTitle);
+                                const paternalNameField = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+                                paternalNameField.appendChild(cTag('input',{ 'type': 'text','class': 'form-control','name': 'father_name','id': 'father_name','value': '','maxlength': '100' }));
+                                paternalNameField.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_father_name' }));
+                                paternalNameRow.appendChild(paternalNameField);
+                        tab3DivCol7_2.appendChild(paternalNameRow);
+
+
+                        //############## Paternal Cattle Color ###################
+                        const colorDivFather = cTag('div',{ 'class': 'displayNotAll manage_paternal_block_out', 'style': "text-align: left; display:none" });
+                            const colorRowFather = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                const colorTitleFather = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                    const colorLabelFather = cTag('label',{ 'for': 'colour_name' });
+                                    colorLabelFather.innerHTML = Translate('Color Name');
+                                    colorTitleFather.appendChild(colorLabelFather);
+                                colorRowFather.appendChild(colorTitleFather);
+                            colorDivFather.appendChild(colorRowFather);
+                        const colorNameDropDownFather = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+                            const colorNameInGroupFather = cTag('div',{ 'class': 'input-group' });
+                                let selectColorFather = cTag('select',{ 'class': 'form-control','name': 'colour_name_father','id': 'colour_name_father' });
+                                selectColorFather.appendChild(cTag('option',{ 'value': '' }));
+                                setOptions(selectColorFather, data.colNamOpt, 0, 1);                             
+                                colorNameInGroupFather.appendChild(selectColorFather);
+                                colorNameInGroupFather.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '15','name': 'colour_name_father2','id': 'colour_name_father2','class': 'form-control', 'style': 'display:none'}));
+                                    let newColorSpanFather = cTag('span',{ 'data-toggle': 'tooltip','title': Translate('Add New Color Name'),'class': 'input-group-addon cursor showNewInputOrSelect' });
+                                    newColorSpanFather.append(cTag('i',{ 'class': 'fa fa-plus' }), ' ', Translate('New'));
+                                    colorNameInGroupFather.appendChild(newColorSpanFather);
+                                colorNameDropDownFather.appendChild(colorNameInGroupFather);
+                            colorRowFather.appendChild(colorNameDropDownFather);
+                        colorDivFather.appendChild(colorRowFather);
+                        colorDivFather.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_colour_name' }));
+                        tab3DivCol7_2.appendChild(colorDivFather);
+
+
+                        //############ Paternal Animal Description ###################
+                        const anmlDescriptionRowFather = cTag('div',{  'class': 'flex manage_paternal_block_out', 'style': "text-align: left; display:none" });
+                            const anmlDescriptionTitleFather = cTag('div',{ 'class': 'columnXS12 columnSM4'});
+                                const anmlDescriptionLabelFather = cTag('label',{ 'for': 'anml_description_father','id': 'anml_description_father' });
+                                anmlDescriptionLabelFather.innerHTML = Translate('Description');
+                                anmlDescriptionTitleFather.appendChild(anmlDescriptionLabelFather);
+                                anmlDescriptionRowFather.appendChild(anmlDescriptionTitleFather);
+
+                                const anmlDescAreaFather = cTag('div',{ 'class': 'columnXS12 columnSM8' , 'id':'anml_description_father_div'});
+                                anmlDescAreaFather.appendChild(cTag('textarea',{ 'rows': '4','cols': '20', 'class': 'form-control','name': 'anml_description_father','id': 'anml_description_father_ta' }));
+                                anmlDescAreaFather.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_anml_description_father' }));
+                                // anmlDescAreaFather.innerHTML = data.anml_description;
+                                // anmlDescAreaFather.val = data.anml_description;
+                                anmlDescriptionRowFather.appendChild(anmlDescAreaFather);
+                        tab3DivCol7_2.appendChild(anmlDescriptionRowFather);
+
+
                         
-                        divTabs3.appendChild(tab3DivCol7_2); 
-                        
-                        
+                        divTabs3.appendChild(tab3DivCol7_2);  
 
 
                     divTabs.appendChild(divTabs3);
@@ -3429,26 +3631,69 @@ function checkMaternalBlock(){
 
     let matBlock = document.getElementById("manage_maternal_block");
     let isChecked = matBlock.checked;
-    console.log(isChecked); // true (if checked at the time)
-    // $('#element').prop("checked")
+    console.log(isChecked);
+
+	let manage_maternal_blockid = document.getElementById("manage_maternal_block");
+	if(manage_maternal_blockid.checked===true){	
+        document.querySelectorAll(".manage_maternal_block_out").forEach(oneFieldObj=>{
+			if(oneFieldObj.style.display === 'none'){
+				oneFieldObj.style.display = '';
+			}
+		});
+        document.querySelectorAll(".manage_maternal_block_in").forEach(oneFieldObj=>{
+			if(oneFieldObj.style.display === ''){
+				oneFieldObj.style.display = 'none';
+			}
+		});
+    }
+	else{
+		document.querySelectorAll(".manage_maternal_block_out").forEach(oneFieldObj=>{
+			if(oneFieldObj.style.display === ''){
+				oneFieldObj.style.display = 'none';
+			}
+		});
+        document.querySelectorAll(".manage_maternal_block_in").forEach(oneFieldObj=>{
+			if(oneFieldObj.style.display === 'none'){
+				oneFieldObj.style.display = '';
+			}            
+		});
+	}
+    
+}
 
 
-	// let manage_inventory_countid = document.getElementById("manage_inventory_count");
-	// if(manage_inventory_countid.checked===true){	
-    //     document.querySelectorAll(".manage_inventory").forEach(oneFieldObj=>{
-	// 		if(oneFieldObj.style.display === 'none'){
-	// 			oneFieldObj.style.display = '';
-	// 		}
-	// 	});
-    // }
-	// else{
-	// 	document.querySelectorAll(".manage_inventory").forEach(oneFieldObj=>{
-	// 		if(oneFieldObj.style.display !== 'none'){
-	// 			oneFieldObj.style.display = 'none';
-	// 		}
-	// 	});
-	// 	document.getElementById("low_inventory_alert").value = 0;
-	// }
+function checkPaternalBlock(){
+	
+    let matBlock = document.getElementById("manage_paternal_block");
+    let isChecked = matBlock.checked;
+    console.log(isChecked);
+
+	let manage_maternal_blockid = document.getElementById("manage_paternal_block");
+	if(manage_maternal_blockid.checked===true){	
+        document.querySelectorAll(".manage_paternal_block_out").forEach(oneFieldObj=>{
+			if(oneFieldObj.style.display === 'none'){
+				oneFieldObj.style.display = '';
+			}
+		});
+        document.querySelectorAll(".manage_paternal_block_in").forEach(oneFieldObj=>{
+			if(oneFieldObj.style.display === ''){
+				oneFieldObj.style.display = 'none';
+			}
+		});
+    }
+	else{
+		document.querySelectorAll(".manage_paternal_block_out").forEach(oneFieldObj=>{
+			if(oneFieldObj.style.display === ''){
+				oneFieldObj.style.display = 'none';
+			}
+		});
+        document.querySelectorAll(".manage_paternal_block_in").forEach(oneFieldObj=>{
+			if(oneFieldObj.style.display === 'none'){
+				oneFieldObj.style.display = '';
+			}            
+		});
+	}
+    
 }
 
 

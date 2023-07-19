@@ -779,3 +779,65 @@ previous: http://livestock.skitsbdl.com/Livestocks/lists/1
 2023-07-18 07:13:37 Script Error, Message: 1: TypeError: matBlock.prop is not a function
     at HTMLInputElement.checkMaternalBlock (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:3431:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
 previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-19 06:10:38 Script Error, Message: 2: TypeError: Cannot convert undefined or null to object
+    at Function.entries (<anonymous>)
+    at setOptions (http://livestock.skitsbdl.com/assets/js-v3/common.js:1044:36)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2533:37)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-19 06:10:40 Script Error, Message: 2: TypeError: Cannot convert undefined or null to object
+    at Function.entries (<anonymous>)
+    at setOptions (http://livestock.skitsbdl.com/assets/js-v3/common.js:1044:36)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2533:37)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-19 06:10:40 Script Error, Message: 2: TypeError: Cannot convert undefined or null to object
+    at Function.entries (<anonymous>)
+    at setOptions (http://livestock.skitsbdl.com/assets/js-v3/common.js:1044:36)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2533:37)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-19 07:23:29 Script Error, Message: 2: ReferenceError: anmlDescriptionLabelfather is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2951:72)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-19 07:23:30 Script Error, Message: 2: ReferenceError: anmlDescriptionLabelfather is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2951:72)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-19 07:23:31 Script Error, Message: 2: ReferenceError: anmlDescriptionLabelfather is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2951:72)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-19 07:24:56 Script Error, Message: 2: ReferenceError: anmlDescriptionLabelfather is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2951:72)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-19 07:24:57 Script Error, Message: 2: ReferenceError: anmlDescriptionLabelfather is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2951:72)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-19 07:24:58 Script Error, Message: 2: ReferenceError: anmlDescriptionLabelfather is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2951:72)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-19 07:24:58 Script Error, Message: 2: ReferenceError: anmlDescriptionLabelfather is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2951:72)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-19 07:24:59 Script Error, Message: 2: ReferenceError: anmlDescriptionLabelfather is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2951:72)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-19 07:27:04 Script Error, Message: 2: ReferenceError: anmlDescriptionLabelfather is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2951:72)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-19 07:27:26 Script Error, Message: 2: ReferenceError: anmlDescriptionTitlefather is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2952:70)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-19 07:27:28 Script Error, Message: 2: ReferenceError: anmlDescriptionTitlefather is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2952:70)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
