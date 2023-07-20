@@ -841,3 +841,75 @@ previous: http://livestock.skitsbdl.com/Home
     at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2952:70)
     at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
 previous: http://livestock.skitsbdl.com/Home
+2023-07-20 00:32:35 Script Error, Message: 2: ReferenceError: inputFieldMother is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2621:54)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-20 00:32:37 Script Error, Message: 2: ReferenceError: inputFieldMother is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2621:54)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-20 00:32:37 Script Error, Message: 2: ReferenceError: inputFieldMother is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2621:54)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-20 00:32:38 Script Error, Message: 2: ReferenceError: inputFieldMother is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2621:54)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-20 00:32:38 Script Error, Message: 2: ReferenceError: inputFieldMother is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2621:54)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-20 02:33:45 Script Error, Message: 2: ReferenceError: Cannot access 'anmlDescAreaMother' before initialization
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2657:29)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-20 02:33:47 Script Error, Message: 2: ReferenceError: Cannot access 'anmlDescAreaMother' before initialization
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2657:29)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-20 02:33:47 Script Error, Message: 2: ReferenceError: Cannot access 'anmlDescAreaMother' before initialization
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2657:29)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-20 02:44:37 Script Error, Message: 2: ReferenceError: Cannot access 'anmlDescAreaMother' before initialization
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2657:29)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-20 05:35:17 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5304:62)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-20 06:12:26 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5371:79)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-20 06:18:32 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5371:79)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-20 06:23:22 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5371:79)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-20 06:34:19 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5371:79)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-20 06:39:11 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5307:63)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-20 06:41:33 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5371:79)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-20 06:51:19 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5308:63)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-20 06:51:24 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5311:64)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home

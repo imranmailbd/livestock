@@ -2444,11 +2444,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                     let divTabs3 = cTag('div',{ 'class': 'columnXS12','id': 'tabs-3' , 'style': "border:0px solid red;"});
                    
                         let tab3DivCol7 = cTag('div',{ 'class': 'columnXS12 columnMD6', 'style': "border:0px solid red; float:left;" });
-
-                        // let tab3DivCol7_1 = cTag('div',{ 'class': 'columnXS12 columnMD6' , 'style': "border:0px solid red; float:left;"});
-                        // let tab3DivCol7_2 = cTag('div',{ 'class': 'columnXS12 columnMD6' , 'style': "border:0px solid red; float:right;"});
-
-                        
+                                              
                         tab3DivCol7.appendChild(cTag('input',{ 'type': 'hidden','readonly': '','name': 'product_type','id': 'product_type','value': 'Live Stocks','class': 'form-control' }));
 
 
@@ -2485,22 +2481,52 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                 const motherNameField = cTag('div',{ 'class':`columnXS12 columnSM8` });
                                     const motherInGroup = cTag('div',{ 'class':`input-group`,'id':`supplierNameField` });
 
-                                    motherInGroup.appendChild(cTag('input',{ 'autocomplete':`off`,'maxlength':`50`,'type':`text`,'value':``,'required':``,'name':`supplier`,'id':`supplier`,'class':`form-control ui-autocomplete-input`,'placeholder':Translate('Search Mother') }));
-                                    motherInGroup.appendChild(cTag('input',{ 'type':`hidden`,'name':`supplier_id`,'value':`0`,'id':'supplier_id' }));
-                                        let motherNewSpan = cTag('span',{ 'id':'add_new_supplier','data-toggle':`tooltip`,'data-original-title':Translate('Add New Supplier'),'class':`input-group-addon cursor` });
+                                    motherInGroup.appendChild(cTag('input',{ 'autocomplete':`off`,'maxlength':`50`,'type':`text`,'value':``,'required':``,'name':`lsproduct`,'id':`lsproduct`,'class':`form-control ui-autocomplete-input`,'placeholder':Translate('Search Mother') }));
+                                    motherInGroup.appendChild(cTag('input',{ 'type':`hidden`,'name':`product_id`,'value':`0`,'id':'product_id' }));
+                                        let motherNewSpan = cTag('span',{ 'id':'add_new_supplier','data-toggle':`tooltip`,'data-original-title':Translate('Add New Pedigree'),'class':`input-group-addon cursor` });
                                         motherNewSpan.addEventListener('click',()=>dynamicImport('./Manage_Data.js','addnewsupplierform',['addLiveStocks', 0]))
                                         motherNewSpan.append(cTag('i',{ 'class':`fa fa-plus` }), ' ', Translate('New'));
                                         motherInGroup.appendChild(motherNewSpan);
 
                                     motherNameField.appendChild(motherInGroup);
-                                    motherNameField.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_suppliers_id` }));
+                                    motherNameField.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_lsproduct_id` }));
                                 motherNameRow.appendChild(motherNameField);
                                 const motherErrColumn = cTag('div',{ 'class':`columnXS12 columnSM6` });
-                                motherErrColumn.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_supplier` }));
+                                motherErrColumn.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_lsproduct` }));
                                 motherNameRow.appendChild(motherErrColumn);
                          tab3DivCol7.appendChild(motherNameRow);
                         //==================================================  
 
+
+                         // const supplierNameRow = cTag('div',{ 'class':`flex`, 'style': "text-align: left;" });
+                        //         const customerNameTitle = cTag('div',{ 'class':`columnXS12 columnSM4` });
+                        //             let customerNameLabel = cTag('label',{ 'for':`supplier`,'data-placement':`bottom` });
+                        //                 customerNameLabel.append(Translate('Purchased From'));
+
+                        //                     let errorSpan = cTag('span', {class: "required"});
+                        //                     errorSpan.innerHTML = '*';
+                        //                 customerNameLabel.appendChild(errorSpan);
+                                        
+                        //             customerNameTitle.appendChild(customerNameLabel);
+                        //             supplierNameRow.appendChild(customerNameTitle);
+                        //             //==================================================
+                        //             const supplierNameField = cTag('div',{ 'class':`columnXS12 columnSM8` });
+                        //                 const customerInGroup = cTag('div',{ 'class':`input-group`,'id':`supplierNameField` });
+
+                        //                 customerInGroup.appendChild(cTag('input',{ 'autocomplete':`off`,'maxlength':`50`,'type':`text`,'value':``,'required':``,'name':`supplier`,'id':`supplier`,'class':`form-control ui-autocomplete-input`,'placeholder':Translate('Search Supplier') }));
+                        //                 customerInGroup.appendChild(cTag('input',{ 'type':`hidden`,'name':`supplier_id`,'value':`0`,'id':'supplier_id' }));
+                        //                     let newSpan = cTag('span',{ 'id':'add_new_supplier','data-toggle':`tooltip`,'data-original-title':Translate('Add New Supplier'),'class':`input-group-addon cursor` });
+                        //                     newSpan.addEventListener('click',()=>dynamicImport('./Manage_Data.js','addnewsupplierform',['addLiveStocks', 0]))
+                        //                     newSpan.append(cTag('i',{ 'class':`fa fa-plus` }), ' ', Translate('New'));
+                        //                 customerInGroup.appendChild(newSpan);
+
+                        //             supplierNameField.appendChild(customerInGroup);
+                        //             supplierNameField.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_suppliers_id` }));
+                        //             supplierNameRow.appendChild(supplierNameField);
+                        //             const errorColumn = cTag('div',{ 'class':`columnXS12 columnSM6` });
+                        //             errorColumn.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_supplier` }));
+                        //             supplierNameRow.appendChild(errorColumn);
+                        //     tab2DivCol7.appendChild(supplierNameRow);
 
 
                         //######## Alternate RFID Tag Maternal ################    
@@ -2542,8 +2568,6 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                         tab3DivCol7.appendChild(breedRowMaternal);
 
                         
-
-
                         //############# Maternal Livestock Name ################
                         const maternalNameRow = cTag('div',{ 'class': 'flex manage_maternal_block_out', 'style': "text-align: left; display:none" });
                             const maternalNameTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
@@ -2585,8 +2609,80 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                         colorDivMother.appendChild(colorRowMother);
                         colorDivMother.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_colour_name' }));
                         tab3DivCol7.appendChild(colorDivMother);
+                        
+
+                        //########## Maternal Birth Date ############        
+                        const birthDateRowMother = cTag('div', {class: 'flex manage_maternal_block_out', 'style': "text-align: left; display:none" });
+                                const birthDateNameMother = cTag('div', {class: "columnSM4", 'align': "left"});
+                                    const birthDateLabelMother = cTag('label', {'for': "birth_date_mother"});
+                                    birthDateLabelMother.innerHTML = Translate('Birth Date');
+
+                                    let bdrequiredFieldMother = cTag('span', {class: "required"});
+                                    bdrequiredFieldMother.innerHTML = '*';
+                                    birthDateLabelMother.appendChild(bdrequiredFieldMother);
+                                    birthDateNameMother.appendChild(birthDateLabelMother);
+                                    
+                                    birthDateRowMother.appendChild(birthDateNameMother);
+                                const birthDateFieldMother = cTag('div', {class: "columnSM8", 'align': "left"});
+                                    let inputFieldMother = cTag('input', {'autocomplete': "off", 'required': "required", 'type': "text", class: "form-control", name: "birth_date_mother", id: "birth_date_mother", 'value': '', 'maxlength': 10});
+                                    checkDateOnBlur(inputFieldMother,'#error_date','Invalid '+Translate('Birth Date'));
+                                    birthDateFieldMother.appendChild(inputFieldMother);
+                                    birthDateFieldMother.appendChild(cTag('span',{id:'error_birth_date_mother',class:'errormsg'}));
+                                    birthDateRowMother.appendChild(birthDateFieldMother);
+                        tab3DivCol7.appendChild(birthDateRowMother);                        
+                        
+
+                        //########### Maternal Weight ##############
+                        const birthWeightDivMother = cTag('div',{ 'class': 'manage_maternal_block_out', 'style': "text-align: left; display:none" });
+                            const birthWeightRowMother = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                const birthWeightTitleMother = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                    const birthWeightLabelMother = cTag('label',{ 'for': 'birth_weight_mother','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select the internal memory capacity of the device you are entering.') });
+                                    birthWeightLabelMother.innerHTML = Translate('Weight');
+                                    birthWeightTitleMother.appendChild(birthWeightLabelMother);
+                                    birthWeightRowMother.appendChild(birthWeightTitleMother);
+                                    birthWeightDivMother.appendChild(birthWeightRowMother);
+                                    const birthWeightFieldMother = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
+                                    birthWeightFieldMother.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'birth_weight_mother','id': 'birth_weight_mother','class': 'form-control','value': data.birth_weight_mother }));
+                                    birthWeightRowMother.appendChild(birthWeightFieldMother);
+                                    birthWeightDivMother.appendChild(birthWeightRowMother);
+                                    birthWeightDivMother.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_birth_weight_mother' }));
+                        tab3DivCol7.appendChild(birthWeightDivMother);
 
 
+                        //########### Maternal Height ##############
+                        const birthHeightDivMother = cTag('div',{ 'class': 'manage_maternal_block_out', 'style': "text-align: left; display:none" });
+                            const birthHeightRowMother = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                const birthHeightTitleMother = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                    const birthHeightLabelMother = cTag('label',{ 'for': 'birth_height_mother','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select the internal memory capacity of the device you are entering.') });
+                                    birthHeightLabelMother.innerHTML = Translate('Height');
+                                    birthHeightTitleMother.appendChild(birthHeightLabelMother);
+                                    birthHeightRowMother.appendChild(birthHeightTitleMother);
+                                    birthHeightDivMother.appendChild(birthHeightRowMother);
+                                    const birthHeightFieldMother = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
+                                    birthHeightFieldMother.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'birth_height_mother','id': 'birth_height_mother','class': 'form-control','value': data.birth_height_mother }));
+                                    birthHeightRowMother.appendChild(birthHeightFieldMother);
+                                    birthHeightDivMother.appendChild(birthHeightRowMother);
+                                    birthHeightDivMother.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_birth_height_mother' }));
+                        tab3DivCol7.appendChild(birthHeightDivMother);
+
+
+                        //############ Metarnal Current Address ###################
+                        const currentAddressRowMother = cTag('div',{  'class': 'flex manage_maternal_block_out', 'style': "text-align: left; display:none" });
+                        const currentAddressTitleMother = cTag('div',{ 'class': 'columnXS12 columnSM4'});
+                            const currentAddressLabelMother = cTag('label',{ 'for': 'current_address_mother','id': 'current_address_mother' });
+                            currentAddressLabelMother.innerHTML = Translate('Current Address');
+                            currentAddressTitleMother.appendChild(currentAddressLabelMother);
+                            currentAddressRowMother.appendChild(currentAddressTitleMother);
+
+                            const currentAddressAreaMother = cTag('div',{ 'class': 'columnXS12 columnSM8' , 'id':'current_address_mother_div'});
+                            currentAddressAreaMother.appendChild(cTag('textarea',{ 'rows': '4','cols': '20', 'class': 'form-control','name': 'current_address_mother','id': 'current_address_mother_ta' }));
+                            currentAddressRowMother.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_current_address_mother' }));
+                            // currentAddressAreaMother.innerHTML = data.current_address_mother;
+                            // currentAddressAreaMother.val = data.current_address_mother;
+                            currentAddressRowMother.appendChild(currentAddressAreaMother);
+                        tab3DivCol7.appendChild(currentAddressRowMother);
+
+                      
                         //############ Maternal Animal Description ###################
                         const anmlDescriptionRowMother = cTag('div',{  'class': 'flex manage_maternal_block_out', 'style': "text-align: left; display:none" });
                             const anmlDescriptionTitleMother = cTag('div',{ 'class': 'columnXS12 columnSM4'});
@@ -2605,212 +2701,12 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 
 
 
-
-                        //     let divHidden = cTag('div',{ style:'display:none' });
-                        //         let currentInventoryColumn = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                        //             let currentInventoryLabel = cTag('label',{ 'for': 'current_inventory' });
-                        //             currentInventoryLabel.innerHTML = Translate('Current Inventory');
-                        //         currentInventoryColumn.appendChild(currentInventoryLabel);
-                        //     divHidden.appendChild(currentInventoryColumn);
-                        //         let currentInventoryDiv = cTag('div',{ 'class': 'columnXS2', 'style': "padding-right: 0;" });
-                        //                 inputField = cTag('input',{ 'maxlength': '9','type': 'number' });
-                        //         if(data.current_inventoryReadonly !==''){
-                        //             inputField.setAttribute('checked',true);
-                        //         }
-                        //             inputField.setAttribute('class', 'form-control qtyfield');
-                        //             inputField.setAttribute('name', 'current_inventory');
-                        //             inputField.setAttribute('id', 'current_inventory');
-                        //             inputField.setAttribute('value', data.current_inventory);
-                        //         currentInventoryDiv.appendChild(inputField);
-                        //     divHidden.appendChild(currentInventoryDiv);
-                        //     divHidden.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_current_inventory' }));
-                        // divCol5.appendChild(divHidden);
-
-
-
-                        //########### manage inventory ############
-                        // const manageRow = cTag('div',{ 'class': 'manage_inventory' });
-                        //         const manageDiv = cTag('div',{ 'class': 'flex', 'style': "margin-bottom: 10px;" });
-                        //             const manageTitle = cTag('div',{ 'class': 'columnXS5', 'style': "padding-top: 5px; text-align: left;" });
-                        //                 const manageLabel = cTag('label',{ 'for': 'low_inventory_alert' });
-                        //                 manageLabel.innerHTML = Translate('Alert Below');
-                        //             manageTitle.appendChild(manageLabel);
-                        //         manageDiv.appendChild(manageTitle);
-                        //     manageRow.appendChild(manageDiv);
-                        //             const manageField = cTag('div',{ 'class': 'columnXS7' });
-                        //             manageField.appendChild(cTag('input',{ 'type': 'number','maxlength': '2','class': 'form-control','name': 'low_inventory_alert','id': 'low_inventory_alert','value': data.low_inventory_alert }));
-                        //             manageField.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_low_inventory_alert' }));
-                        //         manageDiv.appendChild(manageField);
-                        //     manageRow.appendChild(manageDiv);
-                        // divCol5.appendChild(manageRow);
-
-
-                        
-                        
-                        //########## Birth Date ############        
-                        // const birthDateRow = cTag('div', {class: "flex"});
-                        //         const birthDateName = cTag('div', {class: "columnSM4", 'align': "left"});
-                        //             const birthDateLabel = cTag('label', {'for': "birth_date"});
-                        //             birthDateLabel.innerHTML = Translate('Birth Date');
-
-                        //             let bdrequiredField = cTag('span', {class: "required"});
-                        //             bdrequiredField.innerHTML = '*';
-                        //             birthDateLabel.appendChild(bdrequiredField);
-                        //                 birthDateName.appendChild(birthDateLabel);
-                                    
-                        //             birthDateRow.appendChild(birthDateName);
-                        //         const birthDateField = cTag('div', {class: "columnSM8", 'align': "left"});
-                        //             inputField = cTag('input', {'autocomplete': "off", 'required': "required", 'type': "text", class: "form-control", name: "birth_date", id: "birth_date", 'value': '', 'maxlength': 10});
-                        //             checkDateOnBlur(inputField,'#error_date','Invalid '+Translate('Birth Date'));
-                        //             birthDateField.appendChild(inputField);
-                        //             birthDateField.appendChild(cTag('span',{id:'error_birth_date',class:'errormsg'}));
-                        //             birthDateRow.appendChild(birthDateField);
-                        // tab3DivCol7.appendChild(birthDateRow);                        
-
-
-                        //########### Birth Weight ##############
-                        // const birthWeightDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
-                        //     const birthWeightRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
-                        //         const birthWeightTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                        //             const birthWeightLabel = cTag('label',{ 'for': 'birth_weight','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select the internal memory capacity of the device you are entering.') });
-                        //             birthWeightLabel.innerHTML = Translate('Birth Weight');
-                        //             birthWeightTitle.appendChild(birthWeightLabel);
-                        //             birthWeightRow.appendChild(birthWeightTitle);
-                        //             birthWeightDiv.appendChild(birthWeightRow);
-                        //             const birthWeightField = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
-                        //             birthWeightField.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'birth_weight','id': 'birth_weight','class': 'form-control','value': data.birth_weight }));
-                        //             birthWeightRow.appendChild(birthWeightField);
-                        //             birthWeightDiv.appendChild(birthWeightRow);
-                        //             birthWeightDiv.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_birth_weight' }));
-                        // tab3DivCol7.appendChild(birthWeightDiv);
-
-
-                        //############ Birth Type ################        
-                        // const birthTypeDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
-                        //     const birthTypeRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
-                        //         const birthTypeTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                        //             const birthTypeLabel = cTag('label',{ 'for': 'birth_type' });
-                        //             birthTypeLabel.innerHTML = Translate('Birth Type');
-                        //             birthTypeTitle.appendChild(birthTypeLabel);
-                        //             birthTypeRow.appendChild(birthTypeTitle);
-                        //             birthTypeDiv.appendChild(birthTypeRow);
-                        //         const birthTypeDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
-                        //             const birthTypeInGroup = cTag('div',{ 'class': 'input-group' });
-                        //                 let birthTypePurpose = cTag('select',{ 'class': 'form-control','name': 'birth_type','id': 'birth_type' });
-                        //                 birthTypePurpose.appendChild(cTag('option',{ 'value': '' }));
-                        //                 setOptions(birthTypePurpose, data.birthtypeOpt, 0, 1);                             
-                        //                 birthTypeInGroup.appendChild(birthTypePurpose);
-                        //                 let birthTypeSpan = cTag('span',{ 'data-toggle': 'tooltip','title': Translate('Add Arrival Type'),'class': 'input-group-addon cursor showNewInputOrSelect' });
-                        //                 birthTypeSpan.append(cTag('i',{ 'class': 'fa fa-plus' }), ' ', Translate('New'));
-                        //                 birthTypeInGroup.appendChild(birthTypeSpan);
-                        //                 birthTypeDropDown.appendChild(birthTypeInGroup);
-                        //                 birthTypeRow.appendChild(birthTypeDropDown);
-                        //             birthTypeDiv.appendChild(birthTypeRow);
-                        //         birthTypeDiv.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_birth_type' }));
-                        // tab3DivCol7.appendChild(birthTypeDiv);
-                        
-
-                        //############ Calving Assist Reason ###################
-                        // const clavingAssReasonRow = cTag('div',{  'class': 'flex', 'style': "text-align: left;" });
-                        // const clavingAssReasonTitle = cTag('div',{ 'class': 'columnXS12 columnSM4'});
-                        //     const clavingAssReasonLabel = cTag('label',{ 'for': 'calving_assist_reason','id': 'calving_assist_reason' });
-                        //     clavingAssReasonLabel.innerHTML = Translate('Calving Assist Reason');
-                        //     clavingAssReasonTitle.appendChild(clavingAssReasonLabel);
-                        //     clavingAssReasonRow.appendChild(clavingAssReasonTitle);
-
-                        //     const clavingAssReasonArea = cTag('div',{ 'class': 'columnXS12 columnSM8' , 'id':'calving_assist_reason_div'});
-                        //     clavingAssReasonArea.appendChild(cTag('textarea',{ 'rows': '4','cols': '20', 'class': 'form-control','name': 'calving_assist_reason','id': 'calving_assist_reason_ta' }));
-                        //     anmlDescArea.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_calving_assist_reason' }));
-                        //     // clavingAssReasonArea.innerHTML = data.calving_assist_reason;
-                        //     // clavingAssReasonArea.val = data.calving_assist_reason;
-                        //     clavingAssReasonRow.appendChild(clavingAssReasonArea);
-                        // tab3DivCol7.appendChild(clavingAssReasonRow);
-
-
-                        //########### Calving Number ##############
-                        // const calvingNoDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
-                        //     const calvingNoRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
-                        //         const calvingNoTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                        //             const calvingNoLabel = cTag('label',{ 'for': 'calving_no','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select pp.') });
-                        //             calvingNoLabel.innerHTML = Translate('Calving No.');
-                        //             calvingNoTitle.appendChild(calvingNoLabel);
-                        //             calvingNoRow.appendChild(calvingNoTitle);
-                        //             calvingNoDiv.appendChild(calvingNoRow);
-                        //             const calvingNoField = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
-                        //             calvingNoField.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'calving_no','id': 'calving_no','class': 'form-control','value': data.calving_no }));
-                        //             calvingNoRow.appendChild(calvingNoField);
-                        //             calvingNoDiv.appendChild(calvingNoRow);
-                        //             calvingNoDiv.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_calving_no' }));
-                        // tab3DivCol7.appendChild(calvingNoDiv);
-
-
-                        //########### Sibling Count ##############
-                        // const siblingCountDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
-                        //     const siblingCountRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
-                        //         const siblingCountTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                        //             const siblingCount = cTag('label',{ 'for': 'sibling_count','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select pp.') });
-                        //             siblingCount.innerHTML = Translate('Sibling Count');
-                        //             siblingCountTitle.appendChild(siblingCount);
-                        //             siblingCountRow.appendChild(siblingCountTitle);
-                        //             siblingCountDiv.appendChild(siblingCountRow);
-                        //             const siblingCountField = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
-                        //             siblingCountField.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'sibling_count','id': 'sibling_count','class': 'form-control','value': data.sibling_count }));
-                        //             siblingCountRow.appendChild(siblingCountField);
-                        //             siblingCountDiv.appendChild(siblingCountRow);
-                        //             siblingCountDiv.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_sibling_count' }));
-                        // tab3DivCol7.appendChild(siblingCountDiv);
-
-
-                        //############ Birth Location ###################
-                        // const birthLocationRow = cTag('div',{  'class': 'flex', 'style': "text-align: left;" });
-                        // const birthLocationTitle = cTag('div',{ 'class': 'columnXS12 columnSM4'});
-                        //     const birthLocationLabel = cTag('label',{ 'for': 'birth_location','id': 'birth_location' });
-                        //     birthLocationLabel.innerHTML = Translate('Birth Location');
-                        //     birthLocationTitle.appendChild(birthLocationLabel);
-                        //     birthLocationRow.appendChild(birthLocationTitle);
-
-                        //     const birthLocationArea = cTag('div',{ 'class': 'columnXS12 columnSM8' , 'id':'birth_location_div'});
-                        //     birthLocationArea.appendChild(cTag('textarea',{ 'rows': '4','cols': '20', 'class': 'form-control','name': 'birth_location','id': 'birth_location_ta' }));
-                        //     anmlDescArea.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_birth_location' }));
-                        //     // birthLocationArea.innerHTML = data.birth_location;
-                        //     // birthLocationArea.val = data.birth_location;
-                        //     birthLocationRow.appendChild(birthLocationArea);
-                        // tab3DivCol7.appendChild(birthLocationRow);
-
-
-                        //############ Parents Information ################  
-                        // const parentsInfoRow = cTag('div',{ 'class':`flex`, 'style': "text-align: left;" });
-                        // const parentsInfoTitle = cTag('div',{ 'class':`columnXS12 columnSM4` });
-                        //     let parentsInfoLabel = cTag('label',{ 'for':`supplier_name`,'data-placement':`bottom` });
-                        //     parentsInfoLabel.append(Translate('Parents Info'));
-                        //             let pierrorSpan = cTag('span', {class: "errormsg"});
-                        //             pierrorSpan.innerHTML = '*';
-                        //             parentsInfoLabel.appendChild(pierrorSpan);
-                        //         parentsInfoTitle.appendChild(parentsInfoLabel);
-                        //     parentsInfoRow.appendChild(parentsInfoTitle);
-                        //     const parentsInfoField = cTag('div',{ 'class':`columnXS12 columnSM8` });
-                        //         const parentsInfoInGroup = cTag('div',{ 'class':`input-group`,'id':`supplierNameField` });
-                        //             const parentsInfoInName = cTag('input',{ 'autocomplete':`off`,'maxlength':`50`,'type':`text`,'value':``,'required':``,'name':`supplier_name`,'id':`supplier_name`,'class':`form-control ui-autocomplete-input`,'placeholder':Translate('Search Parent') });
-                        //             parentsInfoInName.addEventListener('blur',updateSupplierId);
-                        //             parentsInfoInGroup.appendChild(parentsInfoInName);
-                        //             let pinewSpan = cTag('span',{ 'id':'add_new_customer_btn','data-toggle':`tooltip`,'data-original-title':Translate('Add New Supplier'),'class':`input-group-addon cursor` });
-                        //             pinewSpan.append(cTag('i',{ 'class':`fa fa-plus` }), ' ', Translate('New'));
-                        //             parentsInfoInGroup.appendChild(pinewSpan);
-                        //         parentsInfoField.appendChild(parentsInfoInGroup);
-                        //         parentsInfoField.appendChild(cTag('input',{ 'type':`hidden`,'name':`supplier_id`,'id':`supplier_id`,'value':`0` }));
-                        //         parentsInfoField.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_supplier_id` }));
-                        //     parentsInfoRow.appendChild(parentsInfoField);
-                        //     const pierrorColumn = cTag('div',{ 'class':`columnXS12 columnSM6` });
-                        //     pierrorColumn.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_customer_name` }));
-                        //     parentsInfoRow.appendChild(pierrorColumn);
-                        // tab3DivCol7.appendChild(parentsInfoRow);
-
-
                         divTabs3.appendChild(tab3DivCol7);  
 
-
-
                         let tab3DivCol7_2 = cTag('div',{ 'class': 'columnXS12 columnMD6', 'style': "border:0px solid red; float:right;" });
+
+
+
 
                         //############# Check Paternal ############
 						const paternalDiv = cTag('div',{ 'class': 'LiveStocks manage_paternal_block' });
@@ -2828,6 +2724,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                             paternalDiv.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_manage_inventory_count' }));
                         tab3DivCol7_2.appendChild(paternalDiv);
 
+
                         //############ Parent Info Paternal ############ 
                         const fatherNameRow = cTag('div',{ 'class':'flex manage_paternal_block_in', 'style': "text-align: left;" });
                         const fatherNameTitle = cTag('div',{ 'class':`columnXS12 columnSM4` });
@@ -2844,21 +2741,23 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                 const fatherNameField = cTag('div',{ 'class':`columnXS12 columnSM8` });
                                     const fatherInGroup = cTag('div',{ 'class':`input-group`,'id':`supplierNameField` });
 
-                                    fatherInGroup.appendChild(cTag('input',{ 'autocomplete':`off`,'maxlength':`50`,'type':`text`,'value':``,'required':``,'name':`supplier`,'id':`supplier`,'class':`form-control ui-autocomplete-input`,'placeholder':Translate('Search Father') }));
-                                    fatherInGroup.appendChild(cTag('input',{ 'type':`hidden`,'name':`supplier_id`,'value':`0`,'id':'supplier_id' }));
+                                    fatherInGroup.appendChild(cTag('input',{ 'autocomplete':`off`,'maxlength':`50`,'type':`text`,'value':``,'required':``,'name':`plsproduct`,'id':`plsproduct`,'class':`form-control ui-autocomplete-input`,'placeholder':Translate('Search Father') }));
+                                    fatherInGroup.appendChild(cTag('input',{ 'type':`hidden`,'name':`product_id`,'value':`0`,'id':'product_id' }));
                                         let fatherNewSpan = cTag('span',{ 'id':'add_new_supplier','data-toggle':`tooltip`,'data-original-title':Translate('Add New Supplier'),'class':`input-group-addon cursor` });
                                         fatherNewSpan.addEventListener('click',()=>dynamicImport('./Manage_Data.js','addnewsupplierform',['addLiveStocks', 0]))
                                         fatherNewSpan.append(cTag('i',{ 'class':`fa fa-plus` }), ' ', Translate('New'));
                                         fatherInGroup.appendChild(fatherNewSpan);
 
                                     fatherNameField.appendChild(fatherInGroup);
-                                    fatherNameField.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_suppliers_id` }));
+                                    fatherNameField.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_plsproduct_id` }));
                                     fatherNameRow.appendChild(fatherNameField);
                                 const fatherErrColumn = cTag('div',{ 'class':`columnXS12 columnSM6` });
-                                fatherErrColumn.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_supplier` }));
+                                fatherErrColumn.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_plsproduct` }));
                                 fatherNameRow.appendChild(fatherErrColumn);
                          tab3DivCol7_2.appendChild(fatherNameRow);
                         //================================================== 
+
+                   
 
 
                         //######## Alternate RFID Tag Paternal ################    
@@ -2941,6 +2840,78 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                         colorDivFather.appendChild(colorRowFather);
                         colorDivFather.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_colour_name' }));
                         tab3DivCol7_2.appendChild(colorDivFather);
+                        
+
+                        //########## Paternal Birth Date ############        
+                        const birthDateRowFather = cTag('div', {class: 'flex manage_paternal_block_out', 'style': "text-align: left; display:none" });
+                                const birthDateNameFather = cTag('div', {class: "columnSM4", 'align': "left"});
+                                    const birthDateLabelFather = cTag('label', {'for': "birth_date_father"});
+                                    birthDateLabelFather.innerHTML = Translate('Birth Date');
+
+                                    let bdrequiredFieldFather = cTag('span', {class: "required"});
+                                    bdrequiredFieldFather.innerHTML = '*';
+                                    birthDateLabelFather.appendChild(bdrequiredFieldFather);
+                                    birthDateNameFather.appendChild(birthDateLabelFather);
+                                    
+                                    birthDateRowFather.appendChild(birthDateNameFather);
+                                const birthDateFieldFather = cTag('div', {class: "columnSM8", 'align': "left"});
+                                    let inputFieldFather = cTag('input', {'autocomplete': "off", 'required': "required", 'type': "text", class: "form-control", name: "birth_date_father", id: "birth_date_father", 'value': '', 'maxlength': 10});
+                                    checkDateOnBlur(inputFieldFather,'#error_date','Invalid '+Translate('Birth Date'));
+                                    birthDateFieldFather.appendChild(inputFieldFather);
+                                    birthDateFieldFather.appendChild(cTag('span',{id:'error_birth_date_father',class:'errormsg'}));
+                                    birthDateRowFather.appendChild(birthDateFieldFather);
+                        tab3DivCol7_2.appendChild(birthDateRowFather);                        
+                        
+
+                        //########### Paternal Weight ##############
+                        const birthWeightDivFather = cTag('div',{ 'class': 'manage_paternal_block_out', 'style': "text-align: left; display:none" });
+                            const birthWeightRowFather = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                const birthWeightTitleFather = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                    const birthWeightLabelFather = cTag('label',{ 'for': 'birth_weight_father','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select the internal memory capacity of the device you are entering.') });
+                                    birthWeightLabelFather.innerHTML = Translate('Weight');
+                                    birthWeightTitleFather.appendChild(birthWeightLabelFather);
+                                    birthWeightRowFather.appendChild(birthWeightTitleFather);
+                                    birthWeightDivFather.appendChild(birthWeightRowFather);
+                                    const birthWeightFieldFather = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
+                                    birthWeightFieldFather.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'birth_weight_father','id': 'birth_weight_father','class': 'form-control','value': data.birth_weight_father }));
+                                    birthWeightRowFather.appendChild(birthWeightFieldFather);
+                                    birthWeightDivFather.appendChild(birthWeightRowFather);
+                                    birthWeightDivFather.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_birth_weight_father' }));
+                        tab3DivCol7_2.appendChild(birthWeightDivFather);
+
+
+                        //########### Paternal Height ##############
+                        const birthHeightDivFather = cTag('div',{ 'class': 'manage_paternal_block_out', 'style': "text-align: left; display:none" });
+                            const birthHeightRowFather = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                const birthHeightTitleFather = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                    const birthHeightLabelFather = cTag('label',{ 'for': 'birth_height_father','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select the internal memory capacity of the device you are entering.') });
+                                    birthHeightLabelFather.innerHTML = Translate('Height');
+                                    birthHeightTitleFather.appendChild(birthHeightLabelFather);
+                                    birthHeightRowFather.appendChild(birthHeightTitleFather);
+                                    birthHeightDivFather.appendChild(birthHeightRowFather);
+                                    const birthHeightFieldFather = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
+                                    birthHeightFieldFather.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'birth_height_father','id': 'birth_height_father','class': 'form-control','value': data.birth_height_father }));
+                                    birthHeightRowFather.appendChild(birthHeightFieldFather);
+                                    birthHeightDivFather.appendChild(birthHeightRowFather);
+                                    birthHeightDivFather.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_birth_height_father' }));
+                        tab3DivCol7_2.appendChild(birthHeightDivFather);
+
+
+                        //############ Metarnal Current Address ###################
+                        const currentAddressRowFather = cTag('div',{  'class': 'flex manage_paternal_block_out', 'style': "text-align: left; display:none" });
+                        const currentAddressTitleFather = cTag('div',{ 'class': 'columnXS12 columnSM4'});
+                            const currentAddressLabelFather = cTag('label',{ 'for': 'current_address_father','id': 'current_address_father' });
+                            currentAddressLabelFather.innerHTML = Translate('Current Address');
+                            currentAddressTitleFather.appendChild(currentAddressLabelFather);
+                            currentAddressRowFather.appendChild(currentAddressTitleFather);
+
+                            const currentAddressAreaFather = cTag('div',{ 'class': 'columnXS12 columnSM8' , 'id':'current_address_father_div'});
+                            currentAddressAreaFather.appendChild(cTag('textarea',{ 'rows': '4','cols': '20', 'class': 'form-control','name': 'current_address_father','id': 'current_address_father_ta' }));
+                            currentAddressRowFather.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_current_address_father' }));
+                            // currentAddressAreaFather.innerHTML = data.current_address_father;
+                            // currentAddressAreaFather.val = data.current_address_father;
+                            currentAddressRowFather.appendChild(currentAddressAreaFather);
+                        tab3DivCol7_2.appendChild(currentAddressRowFather);
 
 
                         //############ Paternal Animal Description ###################
@@ -2960,17 +2931,11 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                         tab3DivCol7_2.appendChild(anmlDescriptionRowFather);
 
 
+
                         
                         divTabs3.appendChild(tab3DivCol7_2);  
 
-
                     divTabs.appendChild(divTabs3);
-
-                    // if(data.customFieldsData.length>0){
-                        // let divTabs3 = cTag('div',{ 'class': 'columnXS12','id': 'tabs-3',style:'display:none' });
-                        // generateCustomeFields(divTabs3,data.customFieldsData);
-                        // divTabs.appendChild(divTabs3);
-                    // }
 
                     //======divTabs3 End======//
 
@@ -3282,6 +3247,45 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                 });
             }
 
+
+            
+            if(document.querySelector("#product")){
+                
+                AJautoComplete('product');
+            
+                document.getElementById("supplier").addEventListener('keyup', e => {
+                    if(document.getElementById("suppliers_id")){
+                        document.getElementById("suppliers_id").value = 0;
+                    }
+                });
+
+            }
+
+
+            if(document.querySelector("#lsproduct")){
+                
+                AJautoComplete('lsproduct');
+            
+                document.getElementById("supplier").addEventListener('keyup', e => {
+                    if(document.getElementById("suppliers_id")){
+                        document.getElementById("suppliers_id").value = 0;
+                    }
+                });
+
+            }
+
+            if(document.querySelector("#plsproduct")){
+                
+                AJautoComplete('plsproduct');
+            
+                document.getElementById("supplier").addEventListener('keyup', e => {
+                    if(document.getElementById("suppliers_id")){
+                        document.getElementById("suppliers_id").value = 0;
+                    }
+                });
+
+            }
+
             // AJ_add_MoreInfo()
 
 
@@ -3301,7 +3305,8 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 				}
 
                 date_picker('#arrival_date');
-                // date_picker('#birth_date');
+                date_picker('#birth_date_mother');
+                date_picker('#birth_date_father');
                 date_picker('#wean_date');
 
 				document.getElementById("tag").value = data.tag;
@@ -3342,6 +3347,12 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                 // if(data.birth_date != null){
                 //     document.getElementById("birth_date").value = DBDateToViewDate(data.birth_date);                    
                 // }
+                if(data.birth_date_mother != null){
+                    document.getElementById("birth_date_mother").value = DBDateToViewDate(data.birth_date_mother);                    
+                }
+                if(data.birth_date_father != null){
+                    document.getElementById("birth_date_father").value = DBDateToViewDate(data.birth_date_father);                    
+                }
 
                 if(data.wean_date != null){
                     document.getElementById("wean_date").value = DBDateToViewDate(data.wean_date);                    
@@ -3392,6 +3403,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
     fetchData(afterFetch,url,{});
 
     function afterFetch(data){
+        // alert('test');
         const supplier_id = document.querySelector('#supplier_id')
         if(data.suppliers_id>0){
             if(data.supplier_name !== ''){
@@ -3477,6 +3489,29 @@ async function AJsave_Livestocks(hidePopup,addCartCBF){
     // }else{
     //     birth_date.classList.remove('errorFieldBorder');
     // }
+
+    if(birth_date_mother.value===''){
+        pTag = cTag('p', {'style': "margin: 0;"});
+        pTag.innerHTML = Translate('Missing Mother Birth Date');
+        error_date.appendChild(pTag);
+        birth_date_mother.focus();
+        birth_date_mother.classList.add('errorFieldBorder');
+        return false;
+    }else{
+        birth_date_mother.classList.remove('errorFieldBorder');
+    }
+
+    if(birth_date_father.value===''){
+        pTag = cTag('p', {'style': "margin: 0;"});
+        pTag.innerHTML = Translate('Missing Father Birth Date');
+        error_date.appendChild(pTag);
+        birth_date_father.focus();
+        birth_date_father.classList.add('errorFieldBorder');
+        return false;
+    }else{
+        birth_date_father.classList.remove('errorFieldBorder');
+    }
+
 
     // if(wean_date.value===''){
     //     pTag = cTag('p', {'style': "margin: 0;"});

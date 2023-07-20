@@ -5269,6 +5269,7 @@ export function AJautoComplete(fieldIdName,selectCBF){
 				}
 			},
 			select: function( event, info ) {
+				
 				node.value = info.label;
 				if(frompage==='Purchase_orders'){
 					selectCBF(info);
@@ -5299,6 +5300,15 @@ export function AJautoComplete(fieldIdName,selectCBF){
 					if(fieldIdName==='supplier'){
 						document.getElementById('supplier').value = info.label;
 						node.parentElement.querySelector("#supplier_id").value = info.id;
+					} else if(fieldIdName==='product'){
+						document.getElementById('product').value = info.label;
+						node.parentElement.querySelector("#supplier_id").value = info.id;
+					} else if(fieldIdName==='lsproduct'){
+						document.getElementById('lsproduct').value = info.label;
+						node.parentElement.querySelector("#lsproduct_id").value = info.id;
+					} else if(fieldIdName==='plsproduct'){
+						document.getElementById('plsproduct').value = info.label;
+						node.parentElement.querySelector("#plsproduct_id").value = info.id;
 					}					
 				}
 				else if(frompage==='Repairs'){
@@ -5330,7 +5340,7 @@ export function AJautoComplete(fieldIdName,selectCBF){
 					document.getElementById('customer_name').setAttribute('readonly','');
 				}
 				
-				if((fieldIdName==='customer_name' && document.querySelector( "#toCustomerInfo" ))||(fieldIdName==='supplier' && document.querySelector( "#toSupplierInfo" ))){
+				if((fieldIdName==='customer_name' && document.querySelector( "#toCustomerInfo" ))||(fieldIdName==='supplier' && document.querySelector( "#toSupplierInfo" )) ||(fieldIdName==='product' ) ||(fieldIdName==='lsproduct' ) ||(fieldIdName==='plsproduct' )){
                     document.querySelectorAll('.popup_footer_button')[1].style.display = '';//show Merge
                     document.getElementById(fieldIdName).value = '';
 					const nameSplit = info.label.split('(');

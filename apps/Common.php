@@ -1551,6 +1551,113 @@ $repairTicketLabel = "{{FirstName}} {{LastName}} {{DueDate}}
 		
 		return json_encode(array('login'=>'', 'returnStr'=>$responseData));
 	}
+
+
+	public function AJautoComplete_lsproduct(){
+		$POST = json_decode(file_get_contents('php://input'), true);
+		$prod_cat_man = $_SESSION["prod_cat_man"]??0;
+		$keyword_search = $POST['keyword_search']??0;
+		$CellPhone = $POST['CellPhone']??1;
+		$extrastr = "";
+		$bindData = array();
+		if($CellPhone==0){
+			$extrastr .= " AND p.product_type != 'Live Stocks'";
+		}
+		if($keyword_search !=''){
+			$keyword_search = addslashes(trim((string) $keyword_search));
+			if ( $keyword_search == "" ) { $keyword_search = " "; }
+			$keyword_searchs = explode (" ", $keyword_search);
+			if ( strpos($keyword_search, " ") === false ) {$keyword_searchs[0] = $keyword_search;}
+			$num = 0;
+			while ( $num < sizeof($keyword_searchs) ) {
+				$extrastr .= " AND TRIM(CONCAT_WS(' ', p.sku, manufacturer.name, p.product_name, p.colour_name, p.storage, p.physical_condition_name, item.tag, item.alt_tag)) LIKE CONCAT('%', :keyword_search$num, '%')";
+				$bindData['keyword_search'.$num] = trim((string) $keyword_searchs[$num]);
+				$num++;
+			}
+		}
+		
+		$responseData = array();
+		$sql = "SELECT p.sku, manufacturer.name AS manufacture, p.product_name, p.colour_name, p.storage, p.physical_condition_name, item.tag, item.alt_tag FROM product p LEFT JOIN manufacturer ON (p.manufacturer_id = manufacturer.manufacturer_id) LEFT JOIN item ON (p.product_id = item.product_id) WHERE p.accounts_id = $prod_cat_man AND p.product_publish = 1 $extrastr ORDER BY CONCAT(manufacture, ' ', p.product_name, ' ', p.colour_name, ' ', p.storage, ' ', p.physical_condition_name) ASC";
+		$queryObj = $this->db->query($sql, $bindData);
+		if($queryObj){
+			while($onerow = $queryObj->fetch(PDO::FETCH_OBJ)){
+				$name = stripslashes((string) $onerow->manufacture);
+				$product_name = trim(stripslashes($name.' '.$onerow->product_name));
+				$tag = trim(stripslashes($name.' '.$onerow->tag));
+				
+				$colour_name = $onerow->colour_name;
+				if($colour_name !=''){$product_name .= ' '.$colour_name;}
+				
+				$storage = $onerow->storage;
+				if($storage !=''){$product_name .= ' '.$storage;}
+				
+				$physical_condition_name = $onerow->physical_condition_name;
+				if($physical_condition_name !=''){$product_name .= ' '.$physical_condition_name;}
+
+				$sku = $onerow->sku;
+				// $label = "$product_name ($sku)";
+				$label = "$tag ($sku)";
+				
+				$responseData[] =array('label' => $label, 'sku' => $sku, 'type' => 'lsproduct');
+			}
+		}
+		
+		return json_encode(array('login'=>'', 'returnStr'=>$responseData));
+	}
+
+
+	public function AJautoComplete_plsproduct(){
+		$POST = json_decode(file_get_contents('php://input'), true);
+		$prod_cat_man = $_SESSION["prod_cat_man"]??0;
+		$keyword_search = $POST['keyword_search']??0;
+		$CellPhone = $POST['CellPhone']??1;
+		$extrastr = "";
+		$bindData = array();
+		if($CellPhone==0){
+			$extrastr .= " AND p.product_type != 'Live Stocks'";
+		}
+		if($keyword_search !=''){
+			$keyword_search = addslashes(trim((string) $keyword_search));
+			if ( $keyword_search == "" ) { $keyword_search = " "; }
+			$keyword_searchs = explode (" ", $keyword_search);
+			if ( strpos($keyword_search, " ") === false ) {$keyword_searchs[0] = $keyword_search;}
+			$num = 0;
+			while ( $num < sizeof($keyword_searchs) ) {
+				$extrastr .= " AND TRIM(CONCAT_WS(' ', p.sku, manufacturer.name, p.product_name, p.colour_name, p.storage, p.physical_condition_name, item.tag, item.alt_tag)) LIKE CONCAT('%', :keyword_search$num, '%')";
+				$bindData['keyword_search'.$num] = trim((string) $keyword_searchs[$num]);
+				$num++;
+			}
+		}
+		
+		$responseData = array();
+		$sql = "SELECT p.sku, manufacturer.name AS manufacture, p.product_name, p.colour_name, p.storage, p.physical_condition_name, item.tag, item.alt_tag FROM product p LEFT JOIN manufacturer ON (p.manufacturer_id = manufacturer.manufacturer_id) LEFT JOIN item ON (p.product_id = item.product_id) WHERE p.accounts_id = $prod_cat_man AND p.product_publish = 1 $extrastr ORDER BY CONCAT(manufacture, ' ', p.product_name, ' ', p.colour_name, ' ', p.storage, ' ', p.physical_condition_name) ASC";
+		$queryObj = $this->db->query($sql, $bindData);
+		if($queryObj){
+			while($onerow = $queryObj->fetch(PDO::FETCH_OBJ)){
+				$name = stripslashes((string) $onerow->manufacture);
+				$product_name = trim(stripslashes($name.' '.$onerow->product_name));
+				$tag = trim(stripslashes($name.' '.$onerow->tag));
+				
+				$colour_name = $onerow->colour_name;
+				if($colour_name !=''){$product_name .= ' '.$colour_name;}
+				
+				$storage = $onerow->storage;
+				if($storage !=''){$product_name .= ' '.$storage;}
+				
+				$physical_condition_name = $onerow->physical_condition_name;
+				if($physical_condition_name !=''){$product_name .= ' '.$physical_condition_name;}
+
+				$sku = $onerow->sku;
+				// $label = "$product_name ($sku)";
+				$label = "$tag ($sku)";
+				
+				$responseData[] =array('label' => $label, 'sku' => $sku, 'type' => 'plsproduct');
+			}
+		}
+		
+		return json_encode(array('login'=>'', 'returnStr'=>$responseData));
+	}
+
 	
 	public function AJautoComplete_supplier(){
 		$POST = json_decode(file_get_contents('php://input'), true);
@@ -1867,6 +1974,57 @@ $repairTicketLabel = "{{FirstName}} {{LastName}} {{DueDate}}
 			}
 		}
 		return json_encode(array('login'=>'', 'returnStr'=>$results));		
+	}
+
+
+	public function AJautoComplete_productNew(){
+		$POST = json_decode(file_get_contents('php://input'), true);
+		$accounts_id = $_SESSION["accounts_id"]??0;
+		$prod_cat_man = $_SESSION["prod_cat_man"]??0;
+		$keyword_search = $POST['keyword_search']??'';
+		$fieldIdName = $POST['fieldIdName']??'';
+		$extrastr = "";
+		$bindData = array();
+		if($keyword_search !=''){
+			$keyword_search = addslashes(trim((string) $keyword_search));
+			if ( $keyword_search == "" ) { $keyword_search = " "; }
+			$keyword_searchs = explode (" ", $keyword_search);
+			if ( strpos($keyword_search, " ") === false ) {$keyword_searchs[0] = $keyword_search;}
+			$num = 0;
+			while ( $num < sizeof($keyword_searchs) ) {
+				// $extrastr .= " AND TRIM(CONCAT_WS(' ', ";
+				// if($fieldIdName=='posupplier'){$extrastr .= " s.company, s.contact_no, s.email";}
+				// else{$extrastr .= " company, contact_no, email";}
+				// $extrastr .= " company, contact_no, email";
+				$extrastr .= " LIKE CONCAT('%', :keyword_search$num, '%')";
+				$bindData['keyword_search'.$num] = trim((string) $keyword_searchs[$num]);
+				$num++;
+			}
+		}
+		
+		$responseData = array();
+		if($fieldIdName=='posupplier'){
+			// $supplierSql = "SELECT s.suppliers_id, s.company, s.contact_no, s.email FROM suppliers s, po WHERE po.accounts_id = $accounts_id $extrastr AND po.po_publish = 1 AND po.supplier_id = s.suppliers_id GROUP BY po.supplier_id ORDER BY s.company ASC, s.email ASC";
+			$pedigreeSql = "SELECT s.product_id, s.product_name FROM product s, item WHERE item.product_id = $accounts_id $extrastr AND po.item_publish = 1 AND item.product_id = s.product_id GROUP BY item.product_id ORDER BY s.name ASC, s.product_id ASC";
+		}
+		else{
+			$pedigreeSql = "SELECT product_id, product_name, category_id FROM product WHERE accounts_id = $prod_cat_man $extrastr AND product_publish = 1 ORDER BY product_name ASC, product_id ASC";
+		}
+		$pedigreeObj = $this->db->querypagination($pedigreeSql, $bindData);
+		if($pedigreeObj){
+			foreach($pedigreeObj as $onerow){
+				$product_name = stripslashes($onerow['product_name']);
+				$product_id = $onerow['product_id'];
+				$category_id = $onerow['category_id'];
+				$label = "$product_name";
+				
+				if($product_id !=''){$label .= " ($product_id)";}
+				elseif($category_id !=''){$label .= " ($category_id)";}
+
+				$responseData[] =array('id' => $onerow['product_id'], 'product_name' => $onerow['product_name'], 'category_id' => $onerow['category_id'], 'label' => $label);
+			}
+		}
+		return json_encode(array('login'=>'', 'returnStr'=>$responseData));
 	}
 	
 	public function getTaxesData($frompage){

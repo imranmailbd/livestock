@@ -586,11 +586,16 @@ class Livestocks{
 		$productData['arrival_type'] = '';
 		$productData['arrival_note'] = '';
 		$productData['birth_date'] = '';
+		$productData['birth_weight_mother'] = '';
+		$productData['birth_weight_father'] = '';
+		$productData['birth_height_mother'] = '';
+		$productData['birth_height_father'] = '';
 		$productData['wean_date'] = '';
 		$productData['anml_description'] = '';
 		$productData['age_in_year'] = '';
 		$productData['no_of_teeth'] = '';
 		$productData['birth_weight'] = '';
+		$productData['birth_height'] = '';
 		$productData['wean_weight'] = '';
 		$productData['birth_type'] = '';
 		$productData['calving_assist_reason'] = '';
@@ -612,6 +617,8 @@ class Livestocks{
 		$productData['description'] = '';
 		$productData['add_description'] = '';
 		$productData['birth_location'] = '';
+		$productData['current_address_mother'] = '';
+		$productData['current_address_father'] = '';
 		$productData['supplier'] = '';
 		$custom_data = '';
 		if($product_id>0 && $prod_cat_man>0){
