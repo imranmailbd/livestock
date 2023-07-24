@@ -2446,6 +2446,44 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                         let tab3DivCol7 = cTag('div',{ 'class': 'columnXS12 columnMD6', 'style': "border:0px solid red; float:left;" });
                                               
                         tab3DivCol7.appendChild(cTag('input',{ 'type': 'hidden','readonly': '','name': 'product_type','id': 'product_type','value': 'Live Stocks','class': 'form-control' }));
+                        
+
+                        //############ Parent Info Maternal ############ 
+                        const motherNameRow = cTag('div',{ 'class':'flex manage_maternal_block_in', 'style': 'text-align: left;' });
+                        const motherNameTitle = cTag('div',{ 'class':'columnXS12 columnSM4' });
+                            let motherNameLabel = cTag('label',{ 'for':'product_id','data-placement':'bottom' });
+                            motherNameLabel.append(Translate('Mother Tag'));
+
+                                let motherErrSpan = cTag('span', {class: 'required'});
+                                motherErrSpan.innerHTML = '*';
+                                motherNameLabel.appendChild(motherErrSpan);
+                                    
+                                motherNameTitle.appendChild(motherNameLabel);
+                                motherNameRow.appendChild(motherNameTitle);
+                                //==================================================
+                                const motherNameField = cTag('div',{ 'class':'columnXS12 columnSM8' });
+                                    const motherInGroup = cTag('div',{ 'class':'input-group columnXS12 columnSM8','id':'toPedigreeInfo' });
+                                    motherNameField.appendChild(cTag('input',{ 'type':'text', 'class':'form-control ui-autocomplete-input', 'name':'lsproduct','id':'lsproduct', 'maxlength':'50', 'autocomplete':'off', 'required':'', 'placeholder':Translate('Search Mother') }));
+                                    motherNameField.appendChild(cTag('input',{ 'type':'hidden','name':'lsproduct_id','value':'0','id':'lsproduct_id' }));
+                                        // let motherNewSpan = cTag('span',{ 'id':'add_new_supplier','data-toggle':'tooltip','data-original-title':Translate('Add New Pedigree'),'class':'input-group-addon cursor' });
+                                        // motherNewSpan.addEventListener('click',()=>dynamicImport('./Manage_Data.js','addnewsupplierform',['addLiveStocks', 0]))
+                                        // motherNewSpan.append(cTag('i',{ 'class':'fa fa-plus' }), ' ', Translate('New'));
+                                        // motherInGroup.appendChild(motherNewSpan);
+                                    motherNameField.appendChild(motherInGroup);
+                                    motherNameField.appendChild(cTag('span',{ 'class':'error_msg','id':'errmsg_lsproduct_id' }));
+                                motherNameRow.appendChild(motherNameField);
+                                const motherErrColumn = cTag('div',{ 'class':'columnXS12 columnSM6' });
+                                motherErrColumn.appendChild(cTag('span',{ 'class':'error_msg','id':'errmsg_lsproduct' }));
+                                motherNameRow.appendChild(motherErrColumn);
+                         tab3DivCol7.appendChild(motherNameRow);
+                        //==================================================  
+
+                    //     const supplierInfoRow = cTag('div', {class: "flexSpaBetRow"});
+					// 		  const supplierInfoColumn = cTag('div', {class: "columnSM12 image_content", 'style': "text-align: left;",  id: "toSupplierInfo"});
+					// 	 supplierInfoRow.appendChild(supplierInfoColumn);
+					// mergeSupplierForm.appendChild(supplierInfoRow);
+
+                        
 
 
                         //############# Check Maternal ############
@@ -2461,72 +2499,9 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                     maternalLabel.append(' '+Translate('External Parent'));
                                 maternalRow.appendChild(maternalLabel);
                             maternalDiv.appendChild(maternalRow);
-                            maternalDiv.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_manage_inventory_count' }));
+                            maternalDiv.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_manage_maternal_block' }));
                         tab3DivCol7.appendChild(maternalDiv);
 
-
-                        //############ Parent Info Maternal ############ 
-                        const motherNameRow = cTag('div',{ 'class':'flex manage_maternal_block_in', 'style': 'text-align: left;' });
-                        const motherNameTitle = cTag('div',{ 'class':`columnXS12 columnSM4` });
-                            let motherNameLabel = cTag('label',{ 'for':`supplier`,'data-placement':`bottom` });
-                            motherNameLabel.append(Translate('Mother Tag'));
-
-                                let motherErrSpan = cTag('span', {class: "required"});
-                                motherErrSpan.innerHTML = '*';
-                                motherNameLabel.appendChild(motherErrSpan);
-                                    
-                                motherNameTitle.appendChild(motherNameLabel);
-                                motherNameRow.appendChild(motherNameTitle);
-                                //==================================================
-                                const motherNameField = cTag('div',{ 'class':`columnXS12 columnSM8` });
-                                    const motherInGroup = cTag('div',{ 'class':`input-group`,'id':`supplierNameField` });
-
-                                    motherInGroup.appendChild(cTag('input',{ 'autocomplete':`off`,'maxlength':`50`,'type':`text`,'value':``,'required':``,'name':`lsproduct`,'id':`lsproduct`,'class':`form-control ui-autocomplete-input`,'placeholder':Translate('Search Mother') }));
-                                    motherInGroup.appendChild(cTag('input',{ 'type':`hidden`,'name':`product_id`,'value':`0`,'id':'product_id' }));
-                                        let motherNewSpan = cTag('span',{ 'id':'add_new_supplier','data-toggle':`tooltip`,'data-original-title':Translate('Add New Pedigree'),'class':`input-group-addon cursor` });
-                                        motherNewSpan.addEventListener('click',()=>dynamicImport('./Manage_Data.js','addnewsupplierform',['addLiveStocks', 0]))
-                                        motherNewSpan.append(cTag('i',{ 'class':`fa fa-plus` }), ' ', Translate('New'));
-                                        motherInGroup.appendChild(motherNewSpan);
-
-                                    motherNameField.appendChild(motherInGroup);
-                                    motherNameField.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_lsproduct_id` }));
-                                motherNameRow.appendChild(motherNameField);
-                                const motherErrColumn = cTag('div',{ 'class':`columnXS12 columnSM6` });
-                                motherErrColumn.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_lsproduct` }));
-                                motherNameRow.appendChild(motherErrColumn);
-                         tab3DivCol7.appendChild(motherNameRow);
-                        //==================================================  
-
-
-                         // const supplierNameRow = cTag('div',{ 'class':`flex`, 'style': "text-align: left;" });
-                        //         const customerNameTitle = cTag('div',{ 'class':`columnXS12 columnSM4` });
-                        //             let customerNameLabel = cTag('label',{ 'for':`supplier`,'data-placement':`bottom` });
-                        //                 customerNameLabel.append(Translate('Purchased From'));
-
-                        //                     let errorSpan = cTag('span', {class: "required"});
-                        //                     errorSpan.innerHTML = '*';
-                        //                 customerNameLabel.appendChild(errorSpan);
-                                        
-                        //             customerNameTitle.appendChild(customerNameLabel);
-                        //             supplierNameRow.appendChild(customerNameTitle);
-                        //             //==================================================
-                        //             const supplierNameField = cTag('div',{ 'class':`columnXS12 columnSM8` });
-                        //                 const customerInGroup = cTag('div',{ 'class':`input-group`,'id':`supplierNameField` });
-
-                        //                 customerInGroup.appendChild(cTag('input',{ 'autocomplete':`off`,'maxlength':`50`,'type':`text`,'value':``,'required':``,'name':`supplier`,'id':`supplier`,'class':`form-control ui-autocomplete-input`,'placeholder':Translate('Search Supplier') }));
-                        //                 customerInGroup.appendChild(cTag('input',{ 'type':`hidden`,'name':`supplier_id`,'value':`0`,'id':'supplier_id' }));
-                        //                     let newSpan = cTag('span',{ 'id':'add_new_supplier','data-toggle':`tooltip`,'data-original-title':Translate('Add New Supplier'),'class':`input-group-addon cursor` });
-                        //                     newSpan.addEventListener('click',()=>dynamicImport('./Manage_Data.js','addnewsupplierform',['addLiveStocks', 0]))
-                        //                     newSpan.append(cTag('i',{ 'class':`fa fa-plus` }), ' ', Translate('New'));
-                        //                 customerInGroup.appendChild(newSpan);
-
-                        //             supplierNameField.appendChild(customerInGroup);
-                        //             supplierNameField.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_suppliers_id` }));
-                        //             supplierNameRow.appendChild(supplierNameField);
-                        //             const errorColumn = cTag('div',{ 'class':`columnXS12 columnSM6` });
-                        //             errorColumn.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_supplier` }));
-                        //             supplierNameRow.appendChild(errorColumn);
-                        //     tab2DivCol7.appendChild(supplierNameRow);
 
 
                         //######## Alternate RFID Tag Maternal ################    
@@ -2629,7 +2604,59 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                     birthDateFieldMother.appendChild(inputFieldMother);
                                     birthDateFieldMother.appendChild(cTag('span',{id:'error_birth_date_mother',class:'errormsg'}));
                                     birthDateRowMother.appendChild(birthDateFieldMother);
-                        tab3DivCol7.appendChild(birthDateRowMother);                        
+                        tab3DivCol7.appendChild(birthDateRowMother);      
+                        
+                        
+                        //########### Maternal No Of Teeth ##############
+                        const noTeethDivMother = cTag('div',{ 'class': 'manage_maternal_block_out', 'style': "text-align: left; display:none" });
+                            const noTeethRowMother = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                const noTeethTitleMother = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                    const noTeethLabelMother = cTag('label',{ 'for': 'no_teeth_mother','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select the internal memory capacity of the device you are entering.') });
+                                    noTeethLabelMother.innerHTML = Translate('No Of Teeth');
+                                    noTeethTitleMother.appendChild(noTeethLabelMother);
+                                    noTeethRowMother.appendChild(noTeethTitleMother);
+                                    noTeethDivMother.appendChild(noTeethRowMother);
+                                    const noTeethFieldMother = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
+                                    noTeethFieldMother.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'no_teeth_mother','id': 'no_teeth_mother','class': 'form-control','value': data.no_teeth_parent }));
+                                    noTeethRowMother.appendChild(noTeethFieldMother);
+                                    noTeethDivMother.appendChild(noTeethRowMother);
+                                    noTeethDivMother.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_no_teeth_mother' }));
+                        tab3DivCol7.appendChild(noTeethDivMother);
+
+
+                        //############ Maternal Physical Condition ###################
+                        const physicConditionRowMother = cTag('div',{  'class': 'flex manage_maternal_block_out', 'style': "text-align: left; display:none" });
+                            const physicConditionTitleMother = cTag('div',{ 'class': 'columnXS12 columnSM4'});
+                                const physicConditionLabelMother = cTag('label',{ 'for': 'physical_condition_parent' });
+                                physicConditionLabelMother.innerHTML = Translate('Physical Condition');
+                                physicConditionTitleMother.appendChild(physicConditionLabelMother);
+                                physicConditionRowMother.appendChild(physicConditionTitleMother);
+
+                                const physicCondAreaMother = cTag('div',{ 'class': 'columnXS12 columnSM8' , 'id':'physical_condition_parent_div'});
+                                physicCondAreaMother.appendChild(cTag('textarea',{ 'rows': '4','cols': '20', 'class': 'form-control','name': 'physical_condition_parent','id': 'physical_condition_parent_ta' }));
+                                physicConditionRowMother.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_physical_condition_parent' }));
+                                // physicCondAreaMother.innerHTML = data.physical_condition_parent;
+                                // physicCondAreaMother.val = data.physical_condition_parent;
+                                physicConditionRowMother.appendChild(physicCondAreaMother);
+                        tab3DivCol7.appendChild(physicConditionRowMother);
+
+
+                     
+                        // //########### Maternal Calving Count ##############
+                        const calvingCountDivMother = cTag('div',{ 'class': 'manage_maternal_block_out', 'style': "text-align: left; display:none" });
+                            const calvingCountRowMother = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                const calvingCountTitleMother = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                    const calvingCountLabelMother = cTag('label',{ 'for': 'calving_count','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select the internal memory capacity of the device you are entering.') });
+                                    calvingCountLabelMother.innerHTML = Translate('Calving Count');
+                                    calvingCountTitleMother.appendChild(calvingCountLabelMother);
+                                    calvingCountRowMother.appendChild(calvingCountTitleMother);
+                                    calvingCountDivMother.appendChild(calvingCountRowMother);
+                                    const calvingCountFieldMother = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
+                                    calvingCountFieldMother.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'calving_count','id': 'calving_count','class': 'form-control','value': data.calving_count }));
+                                    calvingCountRowMother.appendChild(calvingCountFieldMother);
+                                    calvingCountDivMother.appendChild(calvingCountRowMother);
+                                    calvingCountDivMother.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_calving_count' }));
+                        tab3DivCol7.appendChild(calvingCountDivMother);
                         
 
                         //########### Maternal Weight ##############
@@ -2707,6 +2734,37 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 
 
 
+                        //############ Parent Info Paternal ############ 
+                        const fatherNameRow = cTag('div',{ 'class':'flex manage_paternal_block_in', 'style': 'text-align: left;' });
+                        const fatherNameTitle = cTag('div',{ 'class':'columnXS12 columnSM4' });
+                            let fatherNameLabel = cTag('label',{ 'for':'supplier','data-placement':'bottom' });
+                            fatherNameLabel.append(Translate('Father Tag'));
+
+                                let fatherErrSpan = cTag('span', {class: 'required'});
+                                fatherErrSpan.innerHTML = '*';
+                                fatherNameLabel.appendChild(fatherErrSpan);
+                                    
+                                fatherNameTitle.appendChild(fatherNameLabel);
+                                fatherNameRow.appendChild(fatherNameTitle);
+                                //==================================================
+                                const fatherNameField = cTag('div',{ 'class':'columnXS12 columnSM8' });
+                                    // const fatherInGroup = cTag('div',{ 'class':`input-group`,'id':`supplierNameField` });
+                                    fatherNameField.appendChild(cTag('input',{ 'autocomplete':'off','maxlength':'50','type':'text','value':'','required':'','name':'plsproduct','id':'plsproduct','class':'form-control ui-autocomplete-input','placeholder':Translate('Search Father') }));
+                                    fatherNameField.appendChild(cTag('input',{ 'type':`hidden`,'name':`plsproduct_id`,'value':`0`,'id':'plsproduct_id' }));
+                                        // let fatherNewSpan = cTag('span',{ 'id':'add_new_supplier','data-toggle':`tooltip`,'data-original-title':Translate('Add New Supplier'),'class':`input-group-addon cursor` });
+                                        // fatherNewSpan.addEventListener('click',()=>dynamicImport('./Manage_Data.js','addnewsupplierform',['addLiveStocks', 0]))
+                                        // fatherNewSpan.append(cTag('i',{ 'class':`fa fa-plus` }), ' ', Translate('New'));
+                                        // fatherInGroup.appendChild(fatherNewSpan);
+
+                                    // fatherNameField.appendChild(fatherInGroup);
+                                    fatherNameField.appendChild(cTag('span',{ 'class':'error_msg','id':'errmsg_plsproduct_id' }));
+                                    fatherNameRow.appendChild(fatherNameField);
+                                const fatherErrColumn = cTag('div',{ 'class':'columnXS12 columnSM6' });
+                                fatherErrColumn.appendChild(cTag('span',{ 'class':'error_msg','id':'errmsg_plsproduct' }));
+                                fatherNameRow.appendChild(fatherErrColumn);
+                         tab3DivCol7_2.appendChild(fatherNameRow);
+                        //================================================== 
+
 
                         //############# Check Paternal ############
 						const paternalDiv = cTag('div',{ 'class': 'LiveStocks manage_paternal_block' });
@@ -2725,39 +2783,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                         tab3DivCol7_2.appendChild(paternalDiv);
 
 
-                        //############ Parent Info Paternal ############ 
-                        const fatherNameRow = cTag('div',{ 'class':'flex manage_paternal_block_in', 'style': "text-align: left;" });
-                        const fatherNameTitle = cTag('div',{ 'class':`columnXS12 columnSM4` });
-                            let fatherNameLabel = cTag('label',{ 'for':`supplier`,'data-placement':`bottom` });
-                            fatherNameLabel.append(Translate('Father Tag'));
-
-                                let fatherErrSpan = cTag('span', {class: "required"});
-                                fatherErrSpan.innerHTML = '*';
-                                fatherNameLabel.appendChild(fatherErrSpan);
-                                    
-                                fatherNameTitle.appendChild(fatherNameLabel);
-                                fatherNameRow.appendChild(fatherNameTitle);
-                                //==================================================
-                                const fatherNameField = cTag('div',{ 'class':`columnXS12 columnSM8` });
-                                    const fatherInGroup = cTag('div',{ 'class':`input-group`,'id':`supplierNameField` });
-
-                                    fatherInGroup.appendChild(cTag('input',{ 'autocomplete':`off`,'maxlength':`50`,'type':`text`,'value':``,'required':``,'name':`plsproduct`,'id':`plsproduct`,'class':`form-control ui-autocomplete-input`,'placeholder':Translate('Search Father') }));
-                                    fatherInGroup.appendChild(cTag('input',{ 'type':`hidden`,'name':`product_id`,'value':`0`,'id':'product_id' }));
-                                        let fatherNewSpan = cTag('span',{ 'id':'add_new_supplier','data-toggle':`tooltip`,'data-original-title':Translate('Add New Supplier'),'class':`input-group-addon cursor` });
-                                        fatherNewSpan.addEventListener('click',()=>dynamicImport('./Manage_Data.js','addnewsupplierform',['addLiveStocks', 0]))
-                                        fatherNewSpan.append(cTag('i',{ 'class':`fa fa-plus` }), ' ', Translate('New'));
-                                        fatherInGroup.appendChild(fatherNewSpan);
-
-                                    fatherNameField.appendChild(fatherInGroup);
-                                    fatherNameField.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_plsproduct_id` }));
-                                    fatherNameRow.appendChild(fatherNameField);
-                                const fatherErrColumn = cTag('div',{ 'class':`columnXS12 columnSM6` });
-                                fatherErrColumn.appendChild(cTag('span',{ 'class':`error_msg`,'id':`errmsg_plsproduct` }));
-                                fatherNameRow.appendChild(fatherErrColumn);
-                         tab3DivCol7_2.appendChild(fatherNameRow);
-                        //================================================== 
-
-                   
+                                      
 
 
                         //######## Alternate RFID Tag Paternal ################    
@@ -2860,7 +2886,41 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                     birthDateFieldFather.appendChild(inputFieldFather);
                                     birthDateFieldFather.appendChild(cTag('span',{id:'error_birth_date_father',class:'errormsg'}));
                                     birthDateRowFather.appendChild(birthDateFieldFather);
-                        tab3DivCol7_2.appendChild(birthDateRowFather);                        
+                        tab3DivCol7_2.appendChild(birthDateRowFather);     
+                        
+                        
+                        //########### Paternal No Of Teeth ##############
+                        const noTeethDivFather = cTag('div',{ 'class': 'manage_paternal_block_out', 'style': "text-align: left; display:none" });
+                            const noTeethRowFather = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                                const noTeethTitleFather = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                                    const noTeethLabelFather = cTag('label',{ 'for': 'no_teeth_father','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select the internal memory capacity of the device you are entering.') });
+                                    noTeethLabelFather.innerHTML = Translate('No Of Teeth');
+                                    noTeethTitleFather.appendChild(noTeethLabelFather);
+                                    noTeethRowFather.appendChild(noTeethTitleFather);
+                                    noTeethDivFather.appendChild(noTeethRowFather);
+                                    const noTeethFieldFather = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
+                                    noTeethFieldFather.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'no_teeth_father','id': 'no_teeth_Father','class': 'form-control','value': data.no_teeth_parent }));
+                                    noTeethRowFather.appendChild(noTeethFieldFather);
+                                    noTeethDivFather.appendChild(noTeethRowFather);
+                                    noTeethDivFather.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_no_teeth_father' }));
+                        tab3DivCol7_2.appendChild(noTeethDivFather);
+
+
+                        //############ Maternal Physical Condition ###################
+                        const physicConditionRowFather = cTag('div',{  'class': 'flex manage_paternal_block_out', 'style': "text-align: left; display:none" });
+                            const physicConditionTitleFather = cTag('div',{ 'class': 'columnXS12 columnSM4'});
+                                const physicConditionLabelFather = cTag('label',{ 'for': 'physical_condition_parent' });
+                                physicConditionLabelFather.innerHTML = Translate('Physical Condition');
+                                physicConditionTitleFather.appendChild(physicConditionLabelFather);
+                                physicConditionRowFather.appendChild(physicConditionTitleFather);
+
+                                const physicCondAreaFather = cTag('div',{ 'class': 'columnXS12 columnSM8' , 'id':'physical_condition_parent_div'});
+                                physicCondAreaFather.appendChild(cTag('textarea',{ 'rows': '4','cols': '20', 'class': 'form-control','name': 'physical_condition_parent','id': 'physical_condition_parent_ta' }));
+                                physicConditionRowFather.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_physical_condition_parent' }));
+                                // physicCondAreaFather.innerHTML = data.physical_condition_parent;
+                                // physicCondAreaFather.val = data.physical_condition_parent;
+                                physicConditionRowFather.appendChild(physicCondAreaFather);
+                                tab3DivCol7_2.appendChild(physicConditionRowFather);
                         
 
                         //########### Paternal Weight ##############
@@ -3322,6 +3382,8 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 				document.getElementById("alt_tag").value = data.alt_tag;
 				document.getElementById("anml_description_ta").innerHTML  = data.anml_description;
 				document.getElementById("arrival_note_ta").innerHTML  = data.arrival_note;
+				document.getElementById("lsproduct_id").innerHTML  = data.lsproduct_id;
+				document.getElementById("lsproduct").innerHTML  = data.lsproduct;
 				// document.getElementById("calving_assist_reason_ta").innerHTML  = data.calving_assist_reason;
 				// document.getElementById("birth_location_ta").innerHTML  = data.birth_location;
 				document.getElementById("supplier").value  = data.supplier;

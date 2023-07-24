@@ -5269,7 +5269,7 @@ export function AJautoComplete(fieldIdName,selectCBF){
 				}
 			},
 			select: function( event, info ) {
-				
+				// console.log(fieldIdName);
 				node.value = info.label;
 				if(frompage==='Purchase_orders'){
 					selectCBF(info);
@@ -5297,21 +5297,30 @@ export function AJautoComplete(fieldIdName,selectCBF){
 					document.getElementById('editCustomerHide').style.display = '';
 				}
 				else if(frompage==='Livestocks'){
+					// debugger					
 					if(fieldIdName==='supplier'){
+						
 						document.getElementById('supplier').value = info.label;
 						node.parentElement.querySelector("#supplier_id").value = info.id;
 					} else if(fieldIdName==='product'){
+						
 						document.getElementById('product').value = info.label;
 						node.parentElement.querySelector("#supplier_id").value = info.id;
 					} else if(fieldIdName==='lsproduct'){
+						
 						document.getElementById('lsproduct').value = info.label;
+						// console.log(info.label);
 						node.parentElement.querySelector("#lsproduct_id").value = info.id;
+						return true;
 					} else if(fieldIdName==='plsproduct'){
+						
 						document.getElementById('plsproduct').value = info.label;
 						node.parentElement.querySelector("#plsproduct_id").value = info.id;
+						return true;
 					}					
 				}
 				else if(frompage==='Repairs'){
+					
 					if(segment2==='edit') document.getElementById('customer_name').setAttribute('readonly','');
 					else if(document.getElementsByClassName("notify_how").length>0 && document.frmrepairs.notify_how.checked){
 						const notify_how = document.frmrepairs.notify_how.value;
@@ -5337,6 +5346,7 @@ export function AJautoComplete(fieldIdName,selectCBF){
 					if(document.querySelector("#customer_devices")){selectCBF();}
 				}
 				else if(frompage==='Orders' && segment2==='edit'){
+					
 					document.getElementById('customer_name').setAttribute('readonly','');
 				}
 				
@@ -5367,6 +5377,10 @@ export function AJautoComplete(fieldIdName,selectCBF){
                         document.querySelector( "#toCustomerInfo" ).innerHTML = '';
                         document.querySelector( "#toCustomerInfo" ).append(htmlStr);
                         document.querySelector("#tocustomers_id").value = info.id;
+                    } else if(fieldIdName==='lsproduct'){
+                        // document.querySelector( "#toPedigreeInfo" ).innerHTML = '';
+                        // document.querySelector( "#toPedigreeInfo" ).append(htmlStr);
+                        // document.querySelector("#tocustomers_id").value = info.id;
                     }
                     else{
                         document.querySelector( "#toSupplierInfo" ).innerHTML = '';
@@ -5374,7 +5388,7 @@ export function AJautoComplete(fieldIdName,selectCBF){
                         document.querySelector("#tosuppliers_id").value = info.id;
                     }
 				}
-
+				
 				if(document.querySelector( "#customerNameField" )){
 					document.getElementById('customer_name').value = info.label;
 					document.getElementById('customer_name').setAttribute('readonly', '');

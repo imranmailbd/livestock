@@ -913,3 +913,188 @@ previous: http://livestock.skitsbdl.com/Home
     at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5311:64)
     at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
 previous: http://livestock.skitsbdl.com/Home
+2023-07-24 01:35:19 Script Error, Message: 2: ReferenceError: Cannot access 'anmlDescAreaMother' before initialization
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2662:33)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-24 01:38:42 Script Error, Message: 2: ReferenceError: Cannot access 'anmlDescAreaMother' before initialization
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2662:33)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-24 02:41:12 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5308:63)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-24 02:43:16 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5308:63)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-24 02:44:32 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5308:63)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-24 03:48:30 Script Error, Message: 2: ReferenceError: motherInGroup is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2466:37)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-24 03:48:31 Script Error, Message: 2: ReferenceError: motherInGroup is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2466:37)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-24 03:48:32 Script Error, Message: 2: ReferenceError: motherInGroup is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2466:37)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-24 03:49:13 Script Error, Message: 2: ReferenceError: motherInGroup is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2476:65)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-24 03:50:25 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5308:63)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-24 03:51:06 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5308:63)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-24 04:00:37 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5308:63)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-24 04:02:26 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5308:63)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-24 04:10:38 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Common/AJautoComplete_lsproduct, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-24 04:10:39 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Common/AJautoComplete_lsproduct, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-24 04:10:40 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Common/AJautoComplete_lsproduct, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-24 04:10:41 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Common/AJautoComplete_lsproduct, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-24 04:10:42 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Common/AJautoComplete_lsproduct, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-24 04:10:43 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Common/AJautoComplete_lsproduct, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-24 04:10:44 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Common/AJautoComplete_lsproduct, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-24 04:10:45 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Common/AJautoComplete_lsproduct, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-24 04:10:46 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Common/AJautoComplete_lsproduct, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-24 04:10:47 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Common/AJautoComplete_lsproduct, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-24 04:10:48 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Common/AJautoComplete_lsproduct, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-24 04:10:49 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Common/AJautoComplete_lsproduct, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-24 04:10:50 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Common/AJautoComplete_lsproduct, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-24 04:10:52 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Common/AJautoComplete_lsproduct, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-24 04:10:54 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Common/AJautoComplete_lsproduct, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-24 04:10:57 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Common/AJautoComplete_lsproduct, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-24 04:11:00 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Common/AJautoComplete_lsproduct, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-24 04:11:15 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Common/AJautoComplete_lsproduct, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-24 04:11:17 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Common/AJautoComplete_lsproduct, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-24 04:11:19 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Common/AJautoComplete_lsproduct, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-24 04:11:21 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Common/AJautoComplete_lsproduct, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-24 04:11:23 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Common/AJautoComplete_lsproduct, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-24 04:11:25 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Common/AJautoComplete_lsproduct, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-24 04:12:54 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5308:63)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-24 04:13:30 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5308:63)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-24 04:16:41 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5372:79)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-24 04:17:50 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5308:63)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-24 05:13:45 Script Error, Message: 2: ReferenceError: fatherInGroup is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2769:37)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-24 05:13:46 Script Error, Message: 2: ReferenceError: fatherInGroup is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:2769:37)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-24 05:20:21 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5308:63)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-24 05:20:26 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5311:64)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-24 05:31:28 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5309:63)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5212:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-24 05:38:58 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5372:79)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-24 05:45:19 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5374:73)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-24 05:48:41 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5374:73)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-24 05:53:20 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5373:73)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-24 05:55:53 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5308:63)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-24 06:04:06 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5309:63)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-24 06:28:27 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at Object.select (http://livestock.skitsbdl.com/assets/js-v3/common.js:5318:64)
+    at HTMLLIElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:5211:16) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home

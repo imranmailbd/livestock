@@ -1577,7 +1577,7 @@ $repairTicketLabel = "{{FirstName}} {{LastName}} {{DueDate}}
 		}
 		
 		$responseData = array();
-		$sql = "SELECT p.sku, manufacturer.name AS manufacture, p.product_name, p.colour_name, p.storage, p.physical_condition_name, item.tag, item.alt_tag FROM product p LEFT JOIN manufacturer ON (p.manufacturer_id = manufacturer.manufacturer_id) LEFT JOIN item ON (p.product_id = item.product_id) WHERE p.accounts_id = $prod_cat_man AND p.product_publish = 1 $extrastr ORDER BY CONCAT(manufacture, ' ', p.product_name, ' ', p.colour_name, ' ', p.storage, ' ', p.physical_condition_name) ASC";
+		$sql = "SELECT p.sku, manufacturer.name AS manufacture, p.product_id AS id, p.product_name, p.colour_name, p.storage, p.physical_condition_name, item.tag, item.alt_tag FROM product p LEFT JOIN manufacturer ON (p.manufacturer_id = manufacturer.manufacturer_id) LEFT JOIN item ON (p.product_id = item.product_id) WHERE p.accounts_id = $prod_cat_man AND p.product_publish = 1 $extrastr ORDER BY CONCAT(manufacture, ' ', p.product_name, ' ', p.colour_name, ' ', p.storage, ' ', p.physical_condition_name) ASC";
 		$queryObj = $this->db->query($sql, $bindData);
 		if($queryObj){
 			while($onerow = $queryObj->fetch(PDO::FETCH_OBJ)){
@@ -1585,6 +1585,8 @@ $repairTicketLabel = "{{FirstName}} {{LastName}} {{DueDate}}
 				$product_name = trim(stripslashes($name.' '.$onerow->product_name));
 				$tag = trim(stripslashes($name.' '.$onerow->tag));
 				
+				$pid = $onerow->id;
+
 				$colour_name = $onerow->colour_name;
 				if($colour_name !=''){$product_name .= ' '.$colour_name;}
 				
@@ -1598,7 +1600,7 @@ $repairTicketLabel = "{{FirstName}} {{LastName}} {{DueDate}}
 				// $label = "$product_name ($sku)";
 				$label = "$tag ($sku)";
 				
-				$responseData[] =array('label' => $label, 'sku' => $sku, 'type' => 'lsproduct');
+				$responseData[] =array('label' => $label, 'sku' => $sku, 'type' => 'lsproduct', 'id'=>$pid);
 			}
 		}
 		
@@ -1630,13 +1632,15 @@ $repairTicketLabel = "{{FirstName}} {{LastName}} {{DueDate}}
 		}
 		
 		$responseData = array();
-		$sql = "SELECT p.sku, manufacturer.name AS manufacture, p.product_name, p.colour_name, p.storage, p.physical_condition_name, item.tag, item.alt_tag FROM product p LEFT JOIN manufacturer ON (p.manufacturer_id = manufacturer.manufacturer_id) LEFT JOIN item ON (p.product_id = item.product_id) WHERE p.accounts_id = $prod_cat_man AND p.product_publish = 1 $extrastr ORDER BY CONCAT(manufacture, ' ', p.product_name, ' ', p.colour_name, ' ', p.storage, ' ', p.physical_condition_name) ASC";
+		$sql = "SELECT p.sku, manufacturer.name AS manufacture, p.product_id AS id, p.product_name, p.colour_name, p.storage, p.physical_condition_name, item.tag, item.alt_tag FROM product p LEFT JOIN manufacturer ON (p.manufacturer_id = manufacturer.manufacturer_id) LEFT JOIN item ON (p.product_id = item.product_id) WHERE p.accounts_id = $prod_cat_man AND p.product_publish = 1 $extrastr ORDER BY CONCAT(manufacture, ' ', p.product_name, ' ', p.colour_name, ' ', p.storage, ' ', p.physical_condition_name) ASC";
 		$queryObj = $this->db->query($sql, $bindData);
 		if($queryObj){
 			while($onerow = $queryObj->fetch(PDO::FETCH_OBJ)){
 				$name = stripslashes((string) $onerow->manufacture);
 				$product_name = trim(stripslashes($name.' '.$onerow->product_name));
 				$tag = trim(stripslashes($name.' '.$onerow->tag));
+				
+				$pid = $onerow->id;
 				
 				$colour_name = $onerow->colour_name;
 				if($colour_name !=''){$product_name .= ' '.$colour_name;}
@@ -1651,7 +1655,7 @@ $repairTicketLabel = "{{FirstName}} {{LastName}} {{DueDate}}
 				// $label = "$product_name ($sku)";
 				$label = "$tag ($sku)";
 				
-				$responseData[] =array('label' => $label, 'sku' => $sku, 'type' => 'plsproduct');
+				$responseData[] =array('label' => $label, 'sku' => $sku, 'type' => 'plsproduct', 'id'=>$pid);
 			}
 		}
 		

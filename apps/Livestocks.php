@@ -566,7 +566,7 @@ class Livestocks{
 
 		
 		$product_type = $purpose = $arrival_weight = $supplier = $arrival_type = $arrival_note = $calving_assist_reason = $birth_location = $wean_weight = $birth_weight = $birth_type = $calving_no = $creep_feed_days = $wean_avg_daily_gain = $purchase_price = $sibling_count = $colour_name = $tag_color = $storage = $age_in_year = $no_of_teeth = $physical_condition_name = $alert_message = '';
-		$category_id = $breed_id = $classification_id = $suppliers_id = $location_id = $group_id = $gender_id = $manufacturer_id = $low_inventory_alert = $require_serial_no = $manage_inventory_count = $allow_backorder = $ave_cost_is_percent = 0;
+		$category_id = $lsproduct_id = $lsproduct = $plsproduct_id = $plsproduct = $breed_id = $classification_id = $suppliers_id = $location_id = $group_id = $gender_id = $manufacturer_id = $low_inventory_alert = $require_serial_no = $manage_inventory_count = $allow_backorder = $ave_cost_is_percent = 0;
 		$taxable = 1;
 		
 		$productData = array();
@@ -600,6 +600,8 @@ class Livestocks{
 		$productData['birth_type'] = '';
 		$productData['calving_assist_reason'] = '';
 		$productData['calving_no'] = '';
+		$productData['no_teeth_parent'] = '';
+		$productData['calving_count'] = '';
 		$productData['creep_feed_days'] = '';
 		$productData['wean_avg_daily_gain'] = '';
 		$productData['sibling_count'] = '';
@@ -620,6 +622,10 @@ class Livestocks{
 		$productData['current_address_mother'] = '';
 		$productData['current_address_father'] = '';
 		$productData['supplier'] = '';
+		$productData['lsproduct_id'] = '';
+		$productData['lsproduct'] = '';
+		$productData['plsproduct_id'] = '';
+		$productData['plsproduct'] = '';
 		$custom_data = '';
 		if($product_id>0 && $prod_cat_man>0){
 			$queryObj = $this->db->query("SELECT * FROM product WHERE product_id = :product_id AND accounts_id=$prod_cat_man AND product_publish=1", array('product_id'=>$product_id),1);
@@ -696,6 +702,7 @@ class Livestocks{
 					$productData['wean_weight'] = $itemRow->wean_weight;
 					$productData['wean_avg_daily_gain'] = $itemRow->wean_avg_daily_gain;
 					$productData['supplier_id'] = $itemRow->suppliers_id;
+					
 					if($suppliers_id){	
 						
 						$bindData = array();
@@ -711,6 +718,29 @@ class Livestocks{
 						}
 
 					}
+
+				}
+
+
+				$itemObj3 = $this->db->query("SELECT * FROM pedigree WHERE product_id = $product_id AND gender_id=1 AND accounts_id = $accounts_id", array());
+				if($itemObj3){
+					$itemRow = $itemObj3->fetch(PDO::FETCH_OBJ);
+					$breed_id = $itemRow->breed_id;					
+					$gender_id = $itemRow->gender_id;					
+					$weight = $itemRow->last_weight;
+					$age_in_year = $itemRow->age_in_year;
+					$height = $itemRow->last_height;
+					$no_of_teeth = $itemRow->no_of_teeth;
+
+					$productData['breed_id'] = $itemRow->breed_id;
+					$productData['gender_id'] = $itemRow->gender_id;
+					$productData['weight'] = $itemRow->last_weight;
+					$productData['age_in_year'] = $itemRow->age_in_year;
+					$productData['height'] = $itemRow->last_height;
+					$productData['rfid_tag'] = $itemRow->rfid_tag;
+					$productData['no_of_teeth'] = $itemRow->no_of_teeth;
+					$productData['birth_date'] = $itemRow->birth_date;
+					$productData['supplier_id'] = $itemRow->suppliers_id;
 
 				}
 
