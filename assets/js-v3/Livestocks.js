@@ -2525,7 +2525,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                     noTeethRowMother.appendChild(noTeethTitleMother);
                                     noTeethDivMother.appendChild(noTeethRowMother);
                                     const noTeethFieldMother = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
-                                    noTeethFieldMother.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'no_teeth_mother','id': 'no_teeth_mother','class': 'form-control','value': data.no_teeth_parent }));
+                                    noTeethFieldMother.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'no_teeth_mother', 'id': 'no_teeth_mother','class': 'form-control','value': data.no_of_teeth_mother }));
                                     noTeethRowMother.appendChild(noTeethFieldMother);
                                     noTeethDivMother.appendChild(noTeethRowMother);
                                     noTeethDivMother.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_no_teeth_mother' }));
@@ -2541,7 +2541,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                 physicConditionRowMother.appendChild(physicConditionTitleMother);
 
                                 const physicCondAreaMother = cTag('div',{ 'class': 'columnXS12 columnSM8' , 'id':'physical_condition_parent_div'});
-                                physicCondAreaMother.appendChild(cTag('textarea',{ 'rows': '4','cols': '20', 'class': 'form-control','name': 'physical_condition_parent[]','id': 'physical_condition_parent_ta' }));
+                                physicCondAreaMother.appendChild(cTag('textarea',{ 'rows': '4','cols': '20', 'class': 'form-control','name': 'physical_condition_parent[]','id': 'physical_condition_mother_ta' }));
                                 physicConditionRowMother.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_physical_condition_parent' }));
                                 // physicCondAreaMother.innerHTML = data.physical_condition_parent;
                                 // physicCondAreaMother.val = data.physical_condition_parent;
@@ -3283,6 +3283,8 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 				document.getElementById("tag_color").value = data.tag_color;
 				document.getElementById("alt_tag").value = data.alt_tag;
 				document.getElementById("anml_description_ta").innerHTML  = data.anml_description;
+				document.getElementById("anml_description_mother_ta").innerHTML  = data.description_mother;
+				document.getElementById("physical_condition_mother_ta").innerHTML  = data.physical_condition_mother;
 				document.getElementById("arrival_note_ta").innerHTML  = data.arrival_note;
 				document.getElementById("lsproduct_id").innerHTML  = data.lsproduct_id;
 				document.getElementById("lsproduct").innerHTML  = data.lsproduct;
