@@ -743,8 +743,9 @@ class Livestocks{
 					$productData['height'] = $itemRow->last_height;
 					$productData['rfid_tag'] = $itemRow->rfid_tag;
 					$productData['no_of_teeth'] = $itemRow->no_of_teeth;
-					$productData['birth_date'] = $itemRow->birth_date;
+					$productData['birth_date_mother'] = $itemRow->birth_date;
 					$productData['supplier_id'] = $itemRow->suppliers_id;
+					$productData['pedigree_name_mother'] = $itemRow->pedigree_name;
 
 				}
 

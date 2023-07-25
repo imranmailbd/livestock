@@ -2462,7 +2462,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                 maternalNameTitle.appendChild(maternalNameLabel);
                                 maternalNameRow.appendChild(maternalNameTitle);
                                 const maternalNameField = cTag('div',{ 'class': 'columnXS12 columnSM8' });
-                                maternalNameField.appendChild(cTag('input',{ 'type': 'text','class': 'form-control','name': 'mother_name','id': 'mother_name','value': '','maxlength': '100' }));
+                                maternalNameField.appendChild(cTag('input',{ 'type': 'text','class': 'form-control','name': 'mother_name','id': 'mother_name','value': data.pedigree_name_mother,'maxlength': '100' }));
                                 maternalNameField.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_mother_name' }));
                                 maternalNameRow.appendChild(maternalNameField);
                         tab3DivCol7.appendChild(maternalNameRow);
@@ -3306,6 +3306,10 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 
                 if(data.arrival_date != null){
                     document.getElementById("arrival_date").value = DBDateToViewDate(data.arrival_date);                    
+                }
+
+                if(data.birth_date_mother != null){
+                    document.getElementById("birth_date_mother").value = DBDateToViewDate(data.birth_date_mother);                    
                 }
 
                 // if(data.birth_date != null){
