@@ -2050,128 +2050,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                 divCol7.appendChild(noOfTeethDiv);
 
 
-                                
-                            //     //Category Name
-                            // 	const categoryRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
-                            //         const categoryTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                            //             const categoryLabel = cTag('label',{ 'for': 'category_id' });
-                            //             categoryLabel.innerHTML = Translate('Category Name');
-                            //         categoryTitle.appendChild(categoryLabel);
-                            //     categoryRow.appendChild(categoryTitle);
-                            //         const categoryDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
-                            //             const categoryInGroup = cTag('div',{ 'class': 'input-group' });
-                            //                 let selectCategory = cTag('select',{ 'class': 'form-control','name': 'category_id','id': 'category_id' });
-                            //                     const categoryOpt = cTag('option',{ 'value': '0' });
-                            //                     categoryOpt.innerHTML = '';
-                            //                 selectCategory.appendChild(categoryOpt);
-                            //                 setOptions(selectCategory, data.catOpt, 1, 1);                      
-                            //             categoryInGroup.appendChild(selectCategory);
-                            //             categoryInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '35','name': 'category_name','id': 'category_name','class': 'form-control',style:'display:none'}));
-                            //                 let newSpan = cTag('span', {'data-toggle':'tooltip', 'class':'input-group-addon cursor showNewInputOrSelect', 'title': Translate('Add New Category')});
-                            //                 newSpan.append(cTag('i', {'class':'fa fa-plus'}), ' ', Translate('New'));
-                            //             categoryInGroup.appendChild(newSpan);
-                            //         categoryDropDown.appendChild(categoryInGroup);
-                            //         categoryDropDown.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_category_id' }));
-                            //     categoryRow.appendChild(categoryDropDown);
-                            // divCol7.appendChild(categoryRow);
-
-                            //     //Manufacturer Name
-                            //     const manufacturerDiv = cTag('div',{ 'class': ' LiveStocks' });
-                            //         const manufacturerRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
-                            //             const manufacturerTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                            //                 const manufacturerLabel = cTag('label',{ 'for': 'manufacturer_id' });
-                            // 				manufacturerLabel.innerHTML = Translate('Manufacturer Name');
-                            //             manufacturerTitle.appendChild(manufacturerLabel);
-                            //         manufacturerRow.appendChild(manufacturerTitle);
-                            //     manufacturerDiv.appendChild(manufacturerRow);
-                            //             const manufacturerDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
-                            //                 const manufacturerInGroup = cTag('div',{ 'class': 'input-group' });
-                            // 					let selectManufacturer = cTag('select',{ 'class': 'form-control','name': 'manufacturer_id','id': 'manufacturer_id' });
-                            //                         const manufacturerOpt = cTag('option',{ 'value': '0' });
-                            //                         manufacturerOpt.innerHTML = '';
-                            //                     selectManufacturer.appendChild(manufacturerOpt);
-                            //                     setOptions(selectManufacturer, data.manOpt, 1, 1);                       
-                            //                 manufacturerInGroup.appendChild(selectManufacturer);
-                            // 				manufacturerInGroup.appendChild(cTag('input',{ 'type': 'text','value': '','maxlength': '30','name': 'manufacture','id': 'manufacture','class': 'form-control', style:'display:none'}));
-                            // 					let newManfacturerSpan = cTag('span',{ 'data-toggle': 'tooltip','title': Translate('Add New Manufacturer'),'class': 'input-group-addon cursor showNewInputOrSelect' });
-                            // 					newManfacturerSpan.append(cTag('i',{ 'class': 'fa fa-plus' }), ' ', Translate('New'));
-                            //                 manufacturerInGroup.appendChild(newManfacturerSpan);
-                            //             manufacturerDropDown.appendChild(manufacturerInGroup);
-                            // 			manufacturerDropDown.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_manufacturer_id' }));
-                            //         manufacturerRow.appendChild(manufacturerDropDown);
-                            //     manufacturerDiv.appendChild(manufacturerRow);
-                            // divCol7.appendChild(manufacturerDiv);
-								                       
-
-                            //     //Storage
-                            // 		const storageDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
-                            //         const storageRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
-                            //             const storageTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                            //                 const storageLabel = cTag('label',{ 'for': 'storage','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select the internal memory capacity of the device you are entering.') });
-                            //                 storageLabel.innerHTML = Translate('Storage');
-                            //             storageTitle.appendChild(storageLabel);
-                            //         storageRow.appendChild(storageTitle);
-                            //     storageDiv.appendChild(storageRow);
-                            //             const storageField = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
-                            //             storageField.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'storage','id': 'storage','class': 'form-control','value': data.storage }));
-                            //         storageRow.appendChild(storageField);
-                            //     storageDiv.appendChild(storageRow);
-                            //     storageDiv.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_storage' }));
-                            // divCol7.appendChild(storageDiv);
-
-
-							// 	//physical condition
-							// 	const physicalDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
-                            //         const physicalRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
-                            //             const physicalTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                            //                 const physicalLabel = cTag('label',{ 'for': 'physical_condition_name','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('What would you grade the device in terms of cosmetic appearance?') });
-							// 				physicalLabel.innerHTML = Translate('Physical Condition');
-                            //             physicalTitle.appendChild(physicalLabel);
-                            //         physicalRow.appendChild(physicalTitle);
-                            //     physicalDiv.appendChild(physicalRow);
-                            //             const physicalConditionDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left' });
-							// 				let selectCondition = cTag('select',{ 'class': 'form-control','id': 'physical_condition_name','name': 'physical_condition_name' });
-							// 				selectCondition.appendChild(cTag('option',{ 'value': '' }));
-							// 				setOptions(selectCondition, data.phyConNamOpt, 0, 1);  
-                            //             physicalConditionDropDown.appendChild(selectCondition);
-							// 			physicalConditionDropDown.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_physical_condition_name' }));
-                            //         physicalRow.appendChild(physicalConditionDropDown);
-                            //     physicalDiv.appendChild(physicalRow);
-							// divCol7.appendChild(physicalDiv);
-
-                            // 		//regular price
-                            // 		const regularRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
-                            //             const regularTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                            //                 const regularLabel = cTag('label',{ 'for': 'regular_price','data-placement': 'bottom' });
-                            // 				regularLabel.innerHTML = Translate('Selling Price');
-                            //             regularTitle.appendChild(regularLabel);
-                            //         regularRow.appendChild(regularTitle);
-                            //             const regularDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
-                            // 				let sellPrice = cTag('input',{ 'type': 'text','data-min':'-9999999.99','data-max':'9999999.99','data-format':'d.dd','class': 'form-control','name': 'regular_price','id': 'regular_price','value': round(data.regular_price,2) });
-                            // 				controllNumericField(sellPrice,'#errmsg_regular_price');
-                            //                 sellPrice.addEventListener('blur',function(){
-                            // 					if(this.value<0) document.getElementById('error_product').innerHTML = "Selling Price can't be < than 0"
-                            // 				})
-                            //             regularDropDown.appendChild(sellPrice);
-                            // 			regularDropDown.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_regular_price' }));
-                            //         regularRow.appendChild(regularDropDown);
-                            // 	divCol7.appendChild(regularRow);
-                            // divTabs1.appendChild(divCol7);
-
-								//Minimum Selling price
-							// 	const minimumSellingRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
-                            //         const minimumSellingTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                            //             const minimumSellingLabel = cTag('label',{ 'for': 'minimum_price'});
-							// 			minimumSellingLabel.innerHTML = Translate('Minimum Selling Price');
-                            //         minimumSellingTitle.appendChild(minimumSellingLabel);
-                            //     minimumSellingRow.appendChild(minimumSellingTitle);
-                            //         const minimumSellingField = cTag('div',{ 'class': 'columnXS12 columnSM8' });
-							// 			let sellPriceInput = cTag('input',{ 'type': 'text','data-min':'-9999999.99','data-max':'9999999.99','data-format':'d.dd','class': 'form-control','name': 'minimum_price','id': 'minimum_price','value': round(data.minimum_price,2)});
-							// 			controllNumericField(sellPriceInput,'#errmsg_minimum_price');
-                            //         minimumSellingField.appendChild(sellPriceInput);
-							// 		minimumSellingField.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_minimum_price' }));
-                            //     minimumSellingRow.appendChild(minimumSellingField);
-							// divCol7.appendChild(minimumSellingRow);
+                           
 
 
 						divTabs1.appendChild(divCol7);
@@ -2255,7 +2134,8 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 								addDescriptionRow.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_add_description' }));
 							divCol5.appendChild(addDescriptionRow);
 
-							// 	const imeiLivestockDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
+
+                            // 	const imeiLivestockDiv = cTag('div',{ 'class': 'displayNotAll LiveStocks' });
                             //         const imeiLivestockRow = cTag('div',{ 'class': 'flex' });
                             //             const imeiLivestockColumn = cTag('div',{ 'class': 'columnXS12 roundborder bgcoolblue', 'style': "padding-left: 20px; padding-right: 20px; padding-top: 15px; padding-bottom: 15px;" });
 							// 				let pTag = cTag('p');
@@ -2266,11 +2146,42 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 							// divCol5.appendChild(imeiLivestockDiv);
 
 
-						divTabs1.appendChild(divCol5);
-					divTabs.appendChild(divTabs1);             
-                              
+                             // 		//regular price
+                            // 		const regularRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                            //             const regularTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                            //                 const regularLabel = cTag('label',{ 'for': 'regular_price','data-placement': 'bottom' });
+                            // 				regularLabel.innerHTML = Translate('Selling Price');
+                            //             regularTitle.appendChild(regularLabel);
+                            //         regularRow.appendChild(regularTitle);
+                            //             const regularDropDown = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+                            // 				let sellPrice = cTag('input',{ 'type': 'text','data-min':'-9999999.99','data-max':'9999999.99','data-format':'d.dd','class': 'form-control','name': 'regular_price','id': 'regular_price','value': round(data.regular_price,2) });
+                            // 				controllNumericField(sellPrice,'#errmsg_regular_price');
+                            //                 sellPrice.addEventListener('blur',function(){
+                            // 					if(this.value<0) document.getElementById('error_product').innerHTML = "Selling Price can't be < than 0"
+                            // 				})
+                            //             regularDropDown.appendChild(sellPrice);
+                            // 			regularDropDown.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_regular_price' }));
+                            //         regularRow.appendChild(regularDropDown);
+                            // 	divCol7.appendChild(regularRow);
+                            // divTabs1.appendChild(divCol7);
 
-                            // //####### Tag ###########
+								//Minimum Selling price
+							// 	const minimumSellingRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
+                            //         const minimumSellingTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
+                            //             const minimumSellingLabel = cTag('label',{ 'for': 'minimum_price'});
+							// 			minimumSellingLabel.innerHTML = Translate('Minimum Selling Price');
+                            //         minimumSellingTitle.appendChild(minimumSellingLabel);
+                            //     minimumSellingRow.appendChild(minimumSellingTitle);
+                            //         const minimumSellingField = cTag('div',{ 'class': 'columnXS12 columnSM8' });
+							// 			let sellPriceInput = cTag('input',{ 'type': 'text','data-min':'-9999999.99','data-max':'9999999.99','data-format':'d.dd','class': 'form-control','name': 'minimum_price','id': 'minimum_price','value': round(data.minimum_price,2)});
+							// 			controllNumericField(sellPriceInput,'#errmsg_minimum_price');
+                            //         minimumSellingField.appendChild(sellPriceInput);
+							// 		minimumSellingField.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_minimum_price' }));
+                            //     minimumSellingRow.appendChild(minimumSellingField);
+							// divCol7.appendChild(minimumSellingRow);
+
+
+						    // //####### Tag ###########
                             // const tagRow = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
                             //         const tagTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
                             //             const tagLabel = cTag('label',{ 'for': 'tag','id': 'lbtag' });
@@ -2288,6 +2199,13 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                             //         tagField.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_tag' }));
                             //     tagRow.appendChild(tagField);
                             // divCol7.appendChild(tagRow); 
+
+
+						divTabs1.appendChild(divCol5);
+					divTabs.appendChild(divTabs1);             
+                              
+
+                            
 
 
 
@@ -2464,11 +2382,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                 const motherNameField = cTag('div',{ 'class':'columnXS12 columnSM8' });
                                     const motherInGroup = cTag('div',{ 'class':'input-group columnXS12 columnSM8','id':'toPedigreeInfo' });
                                     motherNameField.appendChild(cTag('input',{ 'type':'text', 'class':'form-control ui-autocomplete-input', 'name':'lsproduct','id':'lsproduct', 'maxlength':'50', 'autocomplete':'off', 'required':'', 'placeholder':Translate('Search Mother') }));
-                                    motherNameField.appendChild(cTag('input',{ 'type':'hidden','name':'lsproduct_id','value':'0','id':'lsproduct_id' }));
-                                        // let motherNewSpan = cTag('span',{ 'id':'add_new_supplier','data-toggle':'tooltip','data-original-title':Translate('Add New Pedigree'),'class':'input-group-addon cursor' });
-                                        // motherNewSpan.addEventListener('click',()=>dynamicImport('./Manage_Data.js','addnewsupplierform',['addLiveStocks', 0]))
-                                        // motherNewSpan.append(cTag('i',{ 'class':'fa fa-plus' }), ' ', Translate('New'));
-                                        // motherInGroup.appendChild(motherNewSpan);
+                                    motherNameField.appendChild(cTag('input',{ 'type':'hidden','name':'lsproduct_id','value':'0','id':'lsproduct_id' }));                                       
                                     motherNameField.appendChild(motherInGroup);
                                     motherNameField.appendChild(cTag('span',{ 'class':'error_msg','id':'errmsg_lsproduct_id' }));
                                 motherNameRow.appendChild(motherNameField);
@@ -2477,13 +2391,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                 motherNameRow.appendChild(motherErrColumn);
                          tab3DivCol7.appendChild(motherNameRow);
                         //==================================================  
-
-                    //     const supplierInfoRow = cTag('div', {class: "flexSpaBetRow"});
-					// 		  const supplierInfoColumn = cTag('div', {class: "columnSM12 image_content", 'style': "text-align: left;",  id: "toSupplierInfo"});
-					// 	 supplierInfoRow.appendChild(supplierInfoColumn);
-					// mergeSupplierForm.appendChild(supplierInfoRow);
-
-                        
+                       
 
 
                         //############# Check Maternal ############
@@ -2507,13 +2415,13 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                         //######## Alternate RFID Tag Maternal ################    
                         const altTagRowMaternal = cTag('div',{ 'class': 'flex manage_maternal_block_out', 'style': "text-align: left; display:none" });
                             const altTagTitleMaternal = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                                const altTagLabelMaternal = cTag('label',{ 'for': 'alt_tag','id': 'alt_tag' });
+                                const altTagLabelMaternal = cTag('label',{ 'for': 'pedigree_rfid_tag' });
                                 altTagLabelMaternal.innerHTML = Translate('Alternate/RFID Tag of Mother');
                                 altTagTitleMaternal.appendChild(altTagLabelMaternal);
                                 altTagRowMaternal.appendChild(altTagTitleMaternal);
                             const altTagFieldMother = cTag('div',{ 'class': 'columnXS12 columnSM8' });
-                            altTagFieldMother.appendChild(cTag('input',{ 'type': 'text','class': 'form-control','name': 'alt_tag','id': 'alt_tag','value': data.alt_tag,'maxlength': '150' }));
-                            altTagFieldMother.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_alt_tag' }));
+                            altTagFieldMother.appendChild(cTag('input',{ 'type': 'text','class': 'form-control','name': 'pedigree_rfid_tag[]','id': 'pedigree_rfid_tag','value': data.pedigree_rfid_tag,'maxlength': '150' }));
+                            altTagFieldMother.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_pedigree_rfid_tag' }));
                             altTagRowMaternal.appendChild(altTagFieldMother);
                         tab3DivCol7.appendChild(altTagRowMaternal);
 
@@ -2521,13 +2429,13 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                         //############## Maternal Breed #################
                         const breedRowMaternal = cTag('div',{ 'class': 'flex manage_maternal_block_out', 'style': "text-align: left; display:none" });
                             const breedTitleMaternal = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                                const breedLabelMaternal = cTag('label',{ 'for': 'category_id_maternal' });
+                                const breedLabelMaternal = cTag('label',{ 'for': 'breed_id_maternal' });
                                 breedLabelMaternal.innerHTML = Translate('Mother Breed Name');
                                 breedTitleMaternal.appendChild(breedLabelMaternal);
                                 breedRowMaternal.appendChild(breedTitleMaternal);
                             const breedDropDownMaternal = cTag('div',{ 'class': 'columnXS12 columnSM8' });
                                 const breedInGroupMaternal = cTag('div',{ 'class': 'input-group' });
-                                    let selectBreedMaternal = cTag('select',{ 'class': 'form-control','name': 'category_id_maternal','id': 'category_id_maternal' });
+                                    let selectBreedMaternal = cTag('select',{ 'class': 'form-control','name': 'breed_id_maternal','id': 'breed_id_maternal' });
                                         const breedOptMaternal = cTag('option',{ 'value': '0' });
                                         breedOptMaternal.innerHTML = '';
                                         selectBreedMaternal.appendChild(breedOptMaternal);
@@ -2546,7 +2454,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                         //############# Maternal Livestock Name ################
                         const maternalNameRow = cTag('div',{ 'class': 'flex manage_maternal_block_out', 'style': "text-align: left; display:none" });
                             const maternalNameTitle = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                                const maternalNameLabel = cTag('label',{ 'for': 'mother_name','id': 'lbmother_name' });
+                                const maternalNameLabel = cTag('label',{ 'for': 'mother_name' });
                                 maternalNameLabel.innerHTML = Translate('Mother Name');
                                     requireSpan = cTag('span',{ 'class': 'required' });
                                     requireSpan.innerHTML = '*';
@@ -2611,7 +2519,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                         const noTeethDivMother = cTag('div',{ 'class': 'manage_maternal_block_out', 'style': "text-align: left; display:none" });
                             const noTeethRowMother = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
                                 const noTeethTitleMother = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                                    const noTeethLabelMother = cTag('label',{ 'for': 'no_teeth_mother','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select the internal memory capacity of the device you are entering.') });
+                                    const noTeethLabelMother = cTag('label',{ 'for': 'no_teeth_mother','data-toggle': 'tooltip','data-placement': 'bottom' });
                                     noTeethLabelMother.innerHTML = Translate('No Of Teeth');
                                     noTeethTitleMother.appendChild(noTeethLabelMother);
                                     noTeethRowMother.appendChild(noTeethTitleMother);
@@ -2633,7 +2541,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                 physicConditionRowMother.appendChild(physicConditionTitleMother);
 
                                 const physicCondAreaMother = cTag('div',{ 'class': 'columnXS12 columnSM8' , 'id':'physical_condition_parent_div'});
-                                physicCondAreaMother.appendChild(cTag('textarea',{ 'rows': '4','cols': '20', 'class': 'form-control','name': 'physical_condition_parent','id': 'physical_condition_parent_ta' }));
+                                physicCondAreaMother.appendChild(cTag('textarea',{ 'rows': '4','cols': '20', 'class': 'form-control','name': 'physical_condition_parent[]','id': 'physical_condition_parent_ta' }));
                                 physicConditionRowMother.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_physical_condition_parent' }));
                                 // physicCondAreaMother.innerHTML = data.physical_condition_parent;
                                 // physicCondAreaMother.val = data.physical_condition_parent;
@@ -2646,7 +2554,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                         const calvingCountDivMother = cTag('div',{ 'class': 'manage_maternal_block_out', 'style': "text-align: left; display:none" });
                             const calvingCountRowMother = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
                                 const calvingCountTitleMother = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                                    const calvingCountLabelMother = cTag('label',{ 'for': 'calving_count','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select the internal memory capacity of the device you are entering.') });
+                                    const calvingCountLabelMother = cTag('label',{ 'for': 'calving_count','data-toggle': 'tooltip','data-placement': 'bottom' });
                                     calvingCountLabelMother.innerHTML = Translate('Calving Count');
                                     calvingCountTitleMother.appendChild(calvingCountLabelMother);
                                     calvingCountRowMother.appendChild(calvingCountTitleMother);
@@ -2663,7 +2571,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                         const birthWeightDivMother = cTag('div',{ 'class': 'manage_maternal_block_out', 'style': "text-align: left; display:none" });
                             const birthWeightRowMother = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
                                 const birthWeightTitleMother = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                                    const birthWeightLabelMother = cTag('label',{ 'for': 'birth_weight_mother','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select the internal memory capacity of the device you are entering.') });
+                                    const birthWeightLabelMother = cTag('label',{ 'for': 'birth_weight_mother','data-toggle': 'tooltip','data-placement': 'bottom' });
                                     birthWeightLabelMother.innerHTML = Translate('Weight');
                                     birthWeightTitleMother.appendChild(birthWeightLabelMother);
                                     birthWeightRowMother.appendChild(birthWeightTitleMother);
@@ -2680,7 +2588,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                         const birthHeightDivMother = cTag('div',{ 'class': 'manage_maternal_block_out', 'style': "text-align: left; display:none" });
                             const birthHeightRowMother = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
                                 const birthHeightTitleMother = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                                    const birthHeightLabelMother = cTag('label',{ 'for': 'birth_height_mother','data-toggle': 'tooltip','data-placement': 'bottom','title': Translate('Select the internal memory capacity of the device you are entering.') });
+                                    const birthHeightLabelMother = cTag('label',{ 'for': 'birth_height_mother','data-toggle': 'tooltip','data-placement': 'bottom' });
                                     birthHeightLabelMother.innerHTML = Translate('Height');
                                     birthHeightTitleMother.appendChild(birthHeightLabelMother);
                                     birthHeightRowMother.appendChild(birthHeightTitleMother);
@@ -2696,7 +2604,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                         //############ Metarnal Current Address ###################
                         const currentAddressRowMother = cTag('div',{  'class': 'flex manage_maternal_block_out', 'style': "text-align: left; display:none" });
                         const currentAddressTitleMother = cTag('div',{ 'class': 'columnXS12 columnSM4'});
-                            const currentAddressLabelMother = cTag('label',{ 'for': 'current_address_mother','id': 'current_address_mother' });
+                            const currentAddressLabelMother = cTag('label',{ 'for': 'current_address_mother' });
                             currentAddressLabelMother.innerHTML = Translate('Current Address');
                             currentAddressTitleMother.appendChild(currentAddressLabelMother);
                             currentAddressRowMother.appendChild(currentAddressTitleMother);
@@ -2713,7 +2621,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                         //############ Maternal Animal Description ###################
                         const anmlDescriptionRowMother = cTag('div',{  'class': 'flex manage_maternal_block_out', 'style': "text-align: left; display:none" });
                             const anmlDescriptionTitleMother = cTag('div',{ 'class': 'columnXS12 columnSM4'});
-                                const anmlDescriptionLabelMother = cTag('label',{ 'for': 'anml_description_mother','id': 'anml_description_mother' });
+                                const anmlDescriptionLabelMother = cTag('label',{ 'for': 'anml_description_mother' });
                                 anmlDescriptionLabelMother.innerHTML = Translate('Description');
                                 anmlDescriptionTitleMother.appendChild(anmlDescriptionLabelMother);
                                 anmlDescriptionRowMother.appendChild(anmlDescriptionTitleMother);
@@ -2727,10 +2635,10 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                         tab3DivCol7.appendChild(anmlDescriptionRowMother);
 
 
-
                         divTabs3.appendChild(tab3DivCol7);  
 
                         let tab3DivCol7_2 = cTag('div',{ 'class': 'columnXS12 columnMD6', 'style': "border:0px solid red; float:right;" });
+
 
 
 
@@ -2751,12 +2659,6 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                     // const fatherInGroup = cTag('div',{ 'class':`input-group`,'id':`supplierNameField` });
                                     fatherNameField.appendChild(cTag('input',{ 'autocomplete':'off','maxlength':'50','type':'text','value':'','required':'','name':'plsproduct','id':'plsproduct','class':'form-control ui-autocomplete-input','placeholder':Translate('Search Father') }));
                                     fatherNameField.appendChild(cTag('input',{ 'type':`hidden`,'name':`plsproduct_id`,'value':`0`,'id':'plsproduct_id' }));
-                                        // let fatherNewSpan = cTag('span',{ 'id':'add_new_supplier','data-toggle':`tooltip`,'data-original-title':Translate('Add New Supplier'),'class':`input-group-addon cursor` });
-                                        // fatherNewSpan.addEventListener('click',()=>dynamicImport('./Manage_Data.js','addnewsupplierform',['addLiveStocks', 0]))
-                                        // fatherNewSpan.append(cTag('i',{ 'class':`fa fa-plus` }), ' ', Translate('New'));
-                                        // fatherInGroup.appendChild(fatherNewSpan);
-
-                                    // fatherNameField.appendChild(fatherInGroup);
                                     fatherNameField.appendChild(cTag('span',{ 'class':'error_msg','id':'errmsg_plsproduct_id' }));
                                     fatherNameRow.appendChild(fatherNameField);
                                 const fatherErrColumn = cTag('div',{ 'class':'columnXS12 columnSM6' });
@@ -2789,13 +2691,13 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                         //######## Alternate RFID Tag Paternal ################    
                         const altTagRowPaternal = cTag('div',{ 'class': 'flex manage_paternal_block_out', 'style': "text-align: left; display:none" });
                             const altTagTitlePaternal = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                                const altTagLabelPaternal = cTag('label',{ 'for': 'alt_tag','id': 'alt_tag' });
+                                const altTagLabelPaternal = cTag('label',{ 'for': 'ppedigree_rfid_tag' });
                                 altTagLabelPaternal.innerHTML = Translate('Alternate/RFID Tag of Father');
                                 altTagTitlePaternal.appendChild(altTagLabelPaternal);
                                 altTagRowPaternal.appendChild(altTagTitlePaternal);
                             const altTagFieldFather = cTag('div',{ 'class': 'columnXS12 columnSM8' });
-                            altTagFieldFather.appendChild(cTag('input',{ 'type': 'text','class': 'form-control','name': 'alt_tag','id': 'alt_tag','value': data.alt_tag,'maxlength': '150' }));
-                            altTagFieldFather.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_alt_tag' }));
+                            altTagFieldFather.appendChild(cTag('input',{ 'type': 'text','class': 'form-control','name': 'pedigree_rfid_tag[]','id': 'ppedigree_rfid_tag','value': data.pedigree_rfid_tag,'maxlength': '150' }));
+                            altTagFieldFather.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_ppedigree_rfid_tag' }));
                             altTagRowPaternal.appendChild(altTagFieldFather);
                         tab3DivCol7_2.appendChild(altTagRowPaternal);
 
@@ -2906,7 +2808,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                         tab3DivCol7_2.appendChild(noTeethDivFather);
 
 
-                        //############ Maternal Physical Condition ###################
+                        //############ Paternal Physical Condition ###################
                         const physicConditionRowFather = cTag('div',{  'class': 'flex manage_paternal_block_out', 'style': "text-align: left; display:none" });
                             const physicConditionTitleFather = cTag('div',{ 'class': 'columnXS12 columnSM4'});
                                 const physicConditionLabelFather = cTag('label',{ 'for': 'physical_condition_parent' });
@@ -2915,7 +2817,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                 physicConditionRowFather.appendChild(physicConditionTitleFather);
 
                                 const physicCondAreaFather = cTag('div',{ 'class': 'columnXS12 columnSM8' , 'id':'physical_condition_parent_div'});
-                                physicCondAreaFather.appendChild(cTag('textarea',{ 'rows': '4','cols': '20', 'class': 'form-control','name': 'physical_condition_parent','id': 'physical_condition_parent_ta' }));
+                                physicCondAreaFather.appendChild(cTag('textarea',{ 'rows': '4','cols': '20', 'class': 'form-control','name': 'physical_condition_parent[]','id': 'physical_condition_parent_ta' }));
                                 physicConditionRowFather.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_physical_condition_parent' }));
                                 // physicCondAreaFather.innerHTML = data.physical_condition_parent;
                                 // physicCondAreaFather.val = data.physical_condition_parent;
@@ -3552,27 +3454,27 @@ async function AJsave_Livestocks(hidePopup,addCartCBF){
     //     birth_date.classList.remove('errorFieldBorder');
     // }
 
-    if(birth_date_mother.value===''){
-        pTag = cTag('p', {'style': "margin: 0;"});
-        pTag.innerHTML = Translate('Missing Mother Birth Date');
-        error_date.appendChild(pTag);
-        birth_date_mother.focus();
-        birth_date_mother.classList.add('errorFieldBorder');
-        return false;
-    }else{
-        birth_date_mother.classList.remove('errorFieldBorder');
-    }
+    // if(birth_date_mother.value===''){
+    //     pTag = cTag('p', {'style': "margin: 0;"});
+    //     pTag.innerHTML = Translate('Missing Mother Birth Date');
+    //     error_date.appendChild(pTag);
+    //     birth_date_mother.focus();
+    //     birth_date_mother.classList.add('errorFieldBorder');
+    //     return false;
+    // }else{
+    //     birth_date_mother.classList.remove('errorFieldBorder');
+    // }
 
-    if(birth_date_father.value===''){
-        pTag = cTag('p', {'style': "margin: 0;"});
-        pTag.innerHTML = Translate('Missing Father Birth Date');
-        error_date.appendChild(pTag);
-        birth_date_father.focus();
-        birth_date_father.classList.add('errorFieldBorder');
-        return false;
-    }else{
-        birth_date_father.classList.remove('errorFieldBorder');
-    }
+    // if(birth_date_father.value===''){
+    //     pTag = cTag('p', {'style': "margin: 0;"});
+    //     pTag.innerHTML = Translate('Missing Father Birth Date');
+    //     error_date.appendChild(pTag);
+    //     birth_date_father.focus();
+    //     birth_date_father.classList.add('errorFieldBorder');
+    //     return false;
+    // }else{
+    //     birth_date_father.classList.remove('errorFieldBorder');
+    // }
 
 
     // if(wean_date.value===''){
