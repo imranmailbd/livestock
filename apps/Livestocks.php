@@ -563,7 +563,6 @@ class Livestocks{
 		$product_id = intval($POST['product_id']??0);
 
 		$Common = new Common($this->db);
-
 		
 		$product_type = $purpose = $arrival_weight = $supplier = $arrival_type = $arrival_note = $calving_assist_reason = $birth_location = $wean_weight = $birth_weight = $birth_type = $calving_no = $creep_feed_days = $wean_avg_daily_gain = $purchase_price = $sibling_count = $colour_name = $tag_color = $storage = $age_in_year = $no_of_teeth = $physical_condition_name = $alert_message = '';
 		$category_id = $category_id_maternal = $lsproduct_id = $lsproduct = $plsproduct_id = $plsproduct = $breed_id = $classification_id = $suppliers_id = $location_id = $group_id = $gender_id = $manufacturer_id = $low_inventory_alert = $require_serial_no = $manage_inventory_count = $allow_backorder = $ave_cost_is_percent = 0;
@@ -629,16 +628,19 @@ class Livestocks{
 		$productData['plsproduct_id'] = '';
 		$productData['plsproduct'] = '';
 		$custom_data = '';
+
 		if($product_id>0 && $prod_cat_man>0){
+
 			$queryObj = $this->db->query("SELECT * FROM product WHERE product_id = :product_id AND accounts_id=$prod_cat_man AND product_publish=1", array('product_id'=>$product_id),1);
+			
 			if($queryObj){
+
 				$productRow = $queryObj->fetch(PDO::FETCH_OBJ);
 				$product_id = $productRow->product_id;
 				$product_type = $productRow->product_type;
 				$category_id = $productRow->category_id;
 				$manufacturer_id = $productRow->manufacturer_id;
-				$colour_name = stripslashes(trim((string) $productRow->colour_name));
-				
+				$colour_name = stripslashes(trim((string) $productRow->colour_name));				
 				$storage = $productRow->storage;
 				$physical_condition_name = stripslashes(trim((string) $productRow->physical_condition_name));
 				$taxable = $productRow->taxable;
@@ -652,7 +654,9 @@ class Livestocks{
 				$productData['add_description'] = stripslashes(trim((string) $productRow->add_description));
 				$alert_message = stripslashes(trim((string) $productRow->alert_message));
 
+
 				$itemObj2 = $this->db->query("SELECT * FROM item WHERE product_id = $product_id AND accounts_id = $accounts_id", array());
+				
 				if($itemObj2){
 					$itemRow = $itemObj2->fetch(PDO::FETCH_OBJ);
 					$breed_id = $itemRow->breed_id;
@@ -724,34 +728,67 @@ class Livestocks{
 				}
 
 
-				$itemObj3 = $this->db->query("SELECT * FROM pedigree WHERE product_id = $product_id AND gender_id=1 AND accounts_id = $accounts_id", array());
+				$itemObj3 = $this->db->query("SELECT * FROM pedigree_relations WHERE product_id = $product_id AND accounts_id = $accounts_id AND relation_type_id=2 ", array());
 				if($itemObj3){
 					$itemRow = $itemObj3->fetch(PDO::FETCH_OBJ);
-					$breed_id_maternal = $itemRow->breed_id;					
-					$gender_id = $itemRow->gender_id;					
-					$weight = $itemRow->last_weight;
-					$age_in_year = $itemRow->age_in_year;
-					$height = $itemRow->last_height;
-					$no_of_teeth = $itemRow->no_of_teeth;
-					$category_id_maternal = $itemRow->category_id_maternal;
+					$relation_type_id = $itemRow->relation_type_id;					
+					$relation_product_id = $itemRow->relation_product_id;					
+					$entity_location = $itemRow->entity_location;					
 
-					$productData['breed_id_maternal'] = $itemRow->breed_id_maternal;
-					$productData['pedigree_rfid_tag'] = $itemRow->rfid_tag;
-					$productData['category_id_maternal'] = $itemRow->category_id_maternal;
-					$productData['weight'] = $itemRow->last_weight;
-					$productData['age_in_year'] = $itemRow->age_in_year;
-					$productData['height'] = $itemRow->last_height;
-					$productData['rfid_tag'] = $itemRow->rfid_tag;
-					$productData['no_of_teeth_mother'] = $itemRow->no_of_teeth;
-					$productData['birth_date_mother'] = $itemRow->birth_date;
-					$productData['supplier_id'] = $itemRow->suppliers_id;
-					$productData['pedigree_name_mother'] = $itemRow->pedigree_name;
-					$productData['description_mother'] = $itemRow->description;
-					$productData['physical_condition_mother'] = $itemRow->physical_condition;
+					if($entity_location == 1){
+
+						$productData['manage_maternal_block'] = 0;						
+						$productData['lsproduct'] = $relation_product_id;	
+						$bindData = array();
+						$bindData['relation_product_id'] = $relation_product_id;
+						$sqlquery = "SELECT * FROM item WHERE accounts_id = $prod_cat_man and  product_id = :relation_product_id LIMIT 0, 1";
+						$query = $this->db->querypagination($sqlquery, $bindData);
+						if($query){
+							foreach($query as $onegrouprow){
+								$productData['mother_tag'] = $onegrouprow['tag'];
+							}
+						}		
+								
+					} else if($entity_location == 2){
+
+						$productData['manage_maternal_block'] = 1;
+						$productData['lsproduct'] = null;
+
+						$itemObj4 = $this->db->query("SELECT * FROM pedigree WHERE pedigree_id = $relation_product_id AND product_id = $product_id AND gender_id=1 AND accounts_id = $accounts_id", array());
+						if($itemObj4){
+							$itemRow = $itemObj4->fetch(PDO::FETCH_OBJ);
+							$breed_id_maternal = $itemRow->breed_id;					
+							$gender_id = $itemRow->gender_id;					
+							$weight = $itemRow->last_weight;
+							$age_in_year = $itemRow->age_in_year;
+							$height = $itemRow->last_height;
+							$no_of_teeth = $itemRow->no_of_teeth;
+							$category_id_maternal = $itemRow->category_id_maternal;
+
+							$productData['breed_id_maternal'] = $itemRow->breed_id;
+							$productData['pedigree_rfid_tag'] = $itemRow->rfid_tag;
+							$productData['category_id_maternal'] = $itemRow->category_id_maternal;
+							$productData['last_weight_mother'] = $itemRow->last_weight;
+							$productData['age_in_year'] = $itemRow->age_in_year;
+							$productData['last_height_mother'] = $itemRow->last_height;
+							$productData['current_address_mother'] = $itemRow->current_address;
+							$productData['rfid_tag'] = $itemRow->rfid_tag;
+							$productData['no_of_teeth_mother'] = $itemRow->no_of_teeth;
+							$productData['birth_date_mother'] = $itemRow->birth_date;
+							$productData['supplier_id'] = $itemRow->suppliers_id;
+							$productData['pedigree_name_mother'] = $itemRow->pedigree_name;
+							$productData['description_mother'] = $itemRow->description;
+							$productData['physical_condition_mother'] = $itemRow->physical_condition;
+							$productData['calving_count'] = $itemRow->calving_count;
+
+						}
+
+					}					
 
 				}
-
+				// var_dump($entity_location);exit;
 				
+						
 				
 				$queryInvObj = $this->db->query("SELECT * FROM inventory WHERE product_id = $product_id AND accounts_id=$accounts_id", array());
 				if($queryInvObj){
@@ -769,16 +806,21 @@ class Livestocks{
 					$productData['current_inventory'] = floatval($inventoryRow->current_inventory);
 					
 					$productData['current_inventoryReadonly'] = ' readonly';
-				}					
+				}	
+				
+				
 			}
 			
 		}
 		
+
+		//=============================================================================================================
+
 		$productData['product_type'] = $product_type;
 		$productData['alert_message'] = $alert_message;
 
 
-		//Category dropdonm		
+		//Category dropdown	
 		$productData['category_id'] = intval($category_id);
 		$catOpt = array();
 		if($prod_cat_man>0){
@@ -826,7 +868,6 @@ class Livestocks{
 		}
 		$productData['locationOpt'] = $locationOpt;
 
-
 		//Group Dropdown 
 		// $productData['group_id'] = intval($group_id);
 		$groupOpt = array();
@@ -842,7 +883,6 @@ class Livestocks{
 			}
 		}
 		$productData['groupOpt'] = $groupOpt;
-
 
 		//Classification Dropdown 
 		// $productData['classification_id'] = intval($classification_id);
@@ -1119,14 +1159,22 @@ class Livestocks{
 		$physical_condition_name = addslashes(trim((string) array_key_exists('physical_condition_name', $POST)?$POST['physical_condition_name']:''));
 		$physical_condition_name = $this->db->checkCharLen('product.physical_condition_name', $physical_condition_name);
 		
+		
+		$manage_maternal_block = $POST['manage_maternal_block'];
+		// var_dump($manage_maternal_block);exit;
+
+
 		$pedigree_rfid_tag = $POST['pedigree_rfid_tag'];
 		$physical_condition_parent = $POST['physical_condition_parent'];
 		$birth_date_mother = $POST['birth_date_mother']??'';
 		// echo $birth_date_mother;exit;	
 
-		//Maternal Pedigree
+		//If Internal Maternal Pedigree
+		$lsproduct_id = $POST['lsproduct_id'];
+		//If External Maternal Pedigree
 		$pedigree_rfid_tag_maternal = $pedigree_rfid_tag[0];
 		$category_id_maternal = $POST['category_id_maternal'];
+		$pedigree_breed_id_maternal = $POST['breed_id_maternal'];
 		$pedigree_mother_name = $POST['mother_name'];
 		$colour_name_mother = $POST['colour_name_mother'];		
 		if($birth_date_mother !=''){$birth_date_mother = date('Y-m-d', strtotime(trim((string) $birth_date_mother)));}
@@ -1294,17 +1342,19 @@ class Livestocks{
 		
 
 		$pedigreedata_maternal = array();
-		$pedigreedata_maternal['rfid_tag'] = $pedigree_rfid_tag_maternal;
 		$pedigreedata_maternal['pedigree_name'] = $pedigree_mother_name;
-		$pedigreedata_maternal['colour_name'] = $colour_name_mother;
+		$pedigreedata_maternal['rfid_tag'] = $pedigree_rfid_tag_maternal;
+		$pedigreedata_maternal['breed_id'] = $pedigree_breed_id_maternal;
+		$pedigreedata_maternal['gender_id'] = 1;
 		$pedigreedata_maternal['birth_date'] = $birth_date_mother;
 		$pedigreedata_maternal['no_of_teeth'] = $no_teeth_mother;
-		$pedigreedata_maternal['physical_condition'] = $physical_condition_parent_maternal;
-		$pedigreedata_maternal['calving_count'] = $calving_count;
 		$pedigreedata_maternal['last_weight'] = $birth_weight_mother;
 		$pedigreedata_maternal['last_height'] = $birth_height_mother;
-		$pedigreedata_maternal['current_address'] = $current_address_mother;
+		$pedigreedata_maternal['colour_name'] = $colour_name_mother;
+		$pedigreedata_maternal['physical_condition'] = $physical_condition_parent_maternal;
 		$pedigreedata_maternal['description'] = $anml_description_mother;
+		$pedigreedata_maternal['current_address'] = $current_address_mother;
+		$pedigreedata_maternal['calving_count'] = $calving_count;
 		
 		
 
@@ -1386,7 +1436,8 @@ class Livestocks{
 				}
 			}
 			else{
-				$product_id = $this->db->insert('product', $productdata);
+				$product_id = $lastInsertId = $this->db->insert('product', $productdata);
+				
 				if($product_id){
 					$custom_data = $Common->postCustomFormFields('product');
 					
@@ -1410,6 +1461,55 @@ class Livestocks{
 					$itemdata['product_id'] = $product_id;
 					
 					$item_id = $this->db->insert('item', $itemdata);
+
+
+
+					$queryPedigreeRelObj = $this->db->querypagination("SELECT pedigree_id FROM pedigree_relations WHERE accounts_id = $accounts_id AND product_id = $product_id AND relation_type_id=2", array());
+					if($queryPedigreeRelObj){
+						// var_dump($queryPedigreeRelObj);exit;
+						$pedigree_id = $queryPedigreeRelObj[0]['pedigree_id'];		
+						$pedigreedata_relation_maternal['last_updated'] = date('Y-m-d H:i:s');			
+						$update = $this->db->update('pedigree', $pedigreedata_relation_maternal, $pedigree_id);
+					}
+					else{					
+						$pedigreedata_relation_maternal['relation_publish'] = 1;
+						$pedigreedata_relation_maternal['created_on'] = date('Y-m-d H:i:s');
+						$pedigreedata_relation_maternal['last_updated'] = date('Y-m-d H:i:s');
+						$pedigreedata_relation_maternal['accounts_id'] = 1;
+						$pedigreedata_relation_maternal['user_id'] = 1;
+						$pedigreedata_relation_maternal['product_id'] = $product_id;	
+						if($manage_maternal_block == "on" && $pedigree_mother_name && $pedigree_rfid_tag_maternal){
+							$pedigreedata_relation_maternal['relation_product_id'] = $lastInsertId;					
+							$pedigreedata_relation_maternal['entity_location'] = 2;	
+						} else {
+							$pedigreedata_relation_maternal['relation_product_id'] = $lsproduct_id;					
+							$pedigreedata_relation_maternal['entity_location'] = 1;
+						}				
+						$pedigree_id = $this->db->insert('pedigree_relations', $pedigreedata_relation_maternal);
+					}
+
+
+					if($manage_maternal_block == "on"){
+					
+						$queryPedigreeObj = $this->db->querypagination("SELECT pedigree_id FROM pedigree WHERE accounts_id = $accounts_id AND product_id = $product_id AND gender_id=1", array());
+						if($queryPedigreeObj){
+							// var_dump($queryPedigreeObj);exit;
+							$pedigree_id = $queryPedigreeObj[0]['pedigree_id'];		
+							$pedigreedata_maternal['last_updated'] = date('Y-m-d H:i:s');			
+							$update = $this->db->update('pedigree', $pedigreedata_maternal, $pedigree_id);
+						}
+						else{					
+							$pedigreedata_maternal['pedigree_publish'] = 1;
+							$pedigreedata_maternal['created_on'] = date('Y-m-d H:i:s');
+							$pedigreedata_maternal['last_updated'] = date('Y-m-d H:i:s');
+							$pedigreedata_maternal['accounts_id'] = 1;
+							$pedigreedata_maternal['user_id'] = 1;
+							$pedigreedata_maternal['product_id'] = $product_id;	
+							$pedigree_id = $this->db->insert('pedigree', $pedigreedata_maternal);
+						}
+
+					}
+				
 					
 
 					if($sku ==''){
@@ -1549,24 +1649,8 @@ class Livestocks{
 				}
 
 
-				$queryPedigreeObj = $this->db->querypagination("SELECT pedigree_id FROM pedigree WHERE accounts_id = $accounts_id AND product_id = $product_id", array());
-				if($queryPedigreeObj){
-					// var_dump($queryPedigreeObj);exit;
-					$pedigree_id = $queryPedigreeObj[0]['pedigree_id'];		
-					$pedigreedata_maternal['last_updated'] = date('Y-m-d H:i:s');			
-					$update = $this->db->update('pedigree', $pedigreedata_maternal, $pedigree_id);
-				}
-				else{					
-					$pedigreedata_maternal['created_on'] = date('Y-m-d H:i:s');
-					$pedigreedata_maternal['product_id'] = $product_id;
-					$pedigreedata_maternal['pedigree_publish'] = 1;
-					$pedigreedata_maternal['last_updated'] = date('Y-m-d H:i:s');
-					$pedigreedata_maternal['accounts_id'] = 1;
-					$pedigreedata_maternal['user_id'] = 1;
-					$pedigreedata_maternal['gender_id'] = 1;
-					$pedigree_id = $this->db->insert('pedigree', $pedigreedata_maternal);
-				}
 
+				//###############################
 
 				if(!empty($changed)){
 					$moreInfo = array();

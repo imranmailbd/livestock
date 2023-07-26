@@ -2369,7 +2369,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                         //############ Parent Info Maternal ############ 
                         const motherNameRow = cTag('div',{ 'class':'flex manage_maternal_block_in', 'style': 'text-align: left;' });
                         const motherNameTitle = cTag('div',{ 'class':'columnXS12 columnSM4' });
-                            let motherNameLabel = cTag('label',{ 'for':'product_id','data-placement':'bottom' });
+                            let motherNameLabel = cTag('label',{ 'for':'lsproduct','data-placement':'bottom' });
                             motherNameLabel.append(Translate('Mother Tag'));
 
                                 let motherErrSpan = cTag('span', {class: 'required'});
@@ -2389,7 +2389,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                 const motherErrColumn = cTag('div',{ 'class':'columnXS12 columnSM6' });
                                 motherErrColumn.appendChild(cTag('span',{ 'class':'error_msg','id':'errmsg_lsproduct' }));
                                 motherNameRow.appendChild(motherErrColumn);
-                         tab3DivCol7.appendChild(motherNameRow);
+                        tab3DivCol7.appendChild(motherNameRow);
                         //==================================================  
                        
 
@@ -2398,13 +2398,13 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 						const maternalDiv = cTag('div',{ 'class': 'LiveStocks manage_maternal_block' });
                             const maternalRow = cTag('div',{ 'class': 'flex', 'style': "margin-bottom: 10px;" });
                                 let maternalLabel = cTag('label',{ 'for': 'manage_maternal_block' });
-                                    inputField = cTag('input',{ 'type': 'checkbox','name': 'manage_maternal_block','id': 'manage_maternal_block','value': 0 });
-                                    // if(data.manage_inventory_count){
-                                    //     inputField.setAttribute('checked',true);
-                                    // }
+                                    inputField = cTag('input',{ 'type': 'checkbox','name': 'manage_maternal_block','id': 'manage_maternal_block' });
+                                    if(data.manage_maternal_block){                                        
+                                        inputField.setAttribute('checked',true);
+                                    }
                                     inputField.addEventListener('click',checkMaternalBlock);
                                     maternalLabel.appendChild(inputField);
-                                    maternalLabel.append(' '+Translate('External Parent'));
+                                    maternalLabel.append(' '+Translate('External Parent (Mother)'));
                                 maternalRow.appendChild(maternalLabel);
                             maternalDiv.appendChild(maternalRow);
                             maternalDiv.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_manage_maternal_block' }));
@@ -2446,7 +2446,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                     breedSpanMaternal.append(cTag('i', {'class':'fa fa-plus'}), ' ', Translate('New'));
                                     breedInGroupMaternal.appendChild(breedSpanMaternal);
                                     breedDropDownMaternal.appendChild(breedInGroupMaternal);
-                                    breedDropDownMaternal.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_category_id_maternal' }));
+                                    breedDropDownMaternal.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_breed_id_maternal' }));
                                 breedRowMaternal.appendChild(breedDropDownMaternal);
                         tab3DivCol7.appendChild(breedRowMaternal);
 
@@ -2554,13 +2554,13 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                         const calvingCountDivMother = cTag('div',{ 'class': 'manage_maternal_block_out', 'style': "text-align: left; display:none" });
                             const calvingCountRowMother = cTag('div',{ 'class': 'flex', 'style': "text-align: left;" });
                                 const calvingCountTitleMother = cTag('div',{ 'class': 'columnXS12 columnSM4' });
-                                    const calvingCountLabelMother = cTag('label',{ 'for': 'calving_count','data-toggle': 'tooltip','data-placement': 'bottom' });
+                                    const calvingCountLabelMother = cTag('label',{ 'for': 'calving_count_mother','data-toggle': 'tooltip','data-placement': 'bottom' });
                                     calvingCountLabelMother.innerHTML = Translate('Calving Count');
                                     calvingCountTitleMother.appendChild(calvingCountLabelMother);
                                     calvingCountRowMother.appendChild(calvingCountTitleMother);
                                     calvingCountDivMother.appendChild(calvingCountRowMother);
                                     const calvingCountFieldMother = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
-                                    calvingCountFieldMother.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'calving_count','id': 'calving_count','class': 'form-control','value': data.calving_count }));
+                                    calvingCountFieldMother.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'calving_count_mother','id': 'calving_count_mother','class': 'form-control','value': data.calving_count }));
                                     calvingCountRowMother.appendChild(calvingCountFieldMother);
                                     calvingCountDivMother.appendChild(calvingCountRowMother);
                                     calvingCountDivMother.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_calving_count' }));
@@ -2577,7 +2577,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                     birthWeightRowMother.appendChild(birthWeightTitleMother);
                                     birthWeightDivMother.appendChild(birthWeightRowMother);
                                     const birthWeightFieldMother = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
-                                    birthWeightFieldMother.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'birth_weight_mother','id': 'birth_weight_mother','class': 'form-control','value': data.birth_weight_mother }));
+                                    birthWeightFieldMother.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'birth_weight_mother','id': 'birth_weight_mother','class': 'form-control','value': data.last_weight_mother }));
                                     birthWeightRowMother.appendChild(birthWeightFieldMother);
                                     birthWeightDivMother.appendChild(birthWeightRowMother);
                                     birthWeightDivMother.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_birth_weight_mother' }));
@@ -2594,7 +2594,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                     birthHeightRowMother.appendChild(birthHeightTitleMother);
                                     birthHeightDivMother.appendChild(birthHeightRowMother);
                                     const birthHeightFieldMother = cTag('div',{ 'class': 'columnXS12 columnSM8','align': 'left','id': 'parentstorage' });
-                                    birthHeightFieldMother.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'birth_height_mother','id': 'birth_height_mother','class': 'form-control','value': data.birth_height_mother }));
+                                    birthHeightFieldMother.appendChild(cTag('input',{ 'maxlength': '6','type': 'text','name': 'birth_height_mother','id': 'birth_height_mother','class': 'form-control','value': data.last_height_mother }));
                                     birthHeightRowMother.appendChild(birthHeightFieldMother);
                                     birthHeightDivMother.appendChild(birthHeightRowMother);
                                     birthHeightDivMother.appendChild(cTag('span',{ 'class': 'errormsg','id': 'errmsg_birth_height_mother' }));
@@ -2678,7 +2678,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                                     // }
                                     inputField.addEventListener('click',checkPaternalBlock);
                                     paternalLabel.appendChild(inputField);
-                                    paternalLabel.append(' '+Translate('External Parent'));
+                                    paternalLabel.append(' '+Translate('External Parent (Father)'));
                                 paternalRow.appendChild(paternalLabel);
                             paternalDiv.appendChild(paternalRow);
                             paternalDiv.appendChild(cTag('span',{ 'class': 'error_msg','id': 'errmsg_manage_inventory_count' }));
@@ -3181,26 +3181,13 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 			popup_dialog1000(Translate('Livestock Information'),formDialog,(hidePopup)=>AJsave_Livestocks(hidePopup,addCartCBF));
 
 
-
-            // setTimeout(function() {
-            //     document.getElementById("supplier").focus();
-            //     alert('t1');
-            // }, 500);
-            // AJautoComplete('supplier')
-            // AJ_add_MoreInfo();
-
-            //OK
-            // if(document.querySelector("#supplier")){AJautoComplete('supplier');}
-
             if(document.querySelector("#supplier")){
                 
                 AJautoComplete('supplier');
-
                 // let queryString = location.search;
                 // let params = new URLSearchParams(queryString);
                 // let po_datetime = DBDateRangeToViewDate(params.get("po_datetime"));
-                // let supplier = params.get("supplier");
-                            
+                // let supplier = params.get("supplier");                            
             
                 document.getElementById("supplier").addEventListener('keyup', e => {
                     if(document.getElementById("suppliers_id")){
@@ -3236,6 +3223,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 
             }
 
+
             if(document.querySelector("#plsproduct")){
                 
                 AJautoComplete('plsproduct');
@@ -3248,7 +3236,13 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 
             }
 
-            // AJ_add_MoreInfo()
+
+            // setTimeout(function() {
+            //     document.getElementById("supplier").focus();
+            // }, 500);
+            // AJautoComplete('supplier')
+            // AJ_add_MoreInfo();
+
 
 
 			setTimeout(function() {
@@ -3271,6 +3265,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                 date_picker('#birth_date_father');
                 date_picker('#wean_date');
 
+
 				document.getElementById("tag").value = data.tag;
 				document.getElementById("category_id").value = data.category_id;
 				document.getElementById("location_id").value = data.location_id;
@@ -3278,22 +3273,19 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 				document.getElementById("classification_id").value = data.classification_id;
 				document.getElementById("purpose").value = data.purpose;
 				document.getElementById("arrival_type").value = data.arrival_type;
-				// document.getElementById("birth_type").value = data.birth_type;
+				document.getElementById("breed_id_maternal").value = data.breed_id_maternal;
 				document.getElementById("colour_name").value = data.colour_name;
 				document.getElementById("tag_color").value = data.tag_color;
 				document.getElementById("alt_tag").value = data.alt_tag;
 				document.getElementById("anml_description_ta").innerHTML  = data.anml_description;
+				document.getElementById("current_address_mother_ta").innerHTML  = data.current_address_mother;
 				document.getElementById("anml_description_mother_ta").innerHTML  = data.description_mother;
 				document.getElementById("physical_condition_mother_ta").innerHTML  = data.physical_condition_mother;
 				document.getElementById("arrival_note_ta").innerHTML  = data.arrival_note;
 				document.getElementById("lsproduct_id").innerHTML  = data.lsproduct_id;
 				document.getElementById("lsproduct").innerHTML  = data.lsproduct;
-				// document.getElementById("calving_assist_reason_ta").innerHTML  = data.calving_assist_reason;
-				// document.getElementById("birth_location_ta").innerHTML  = data.birth_location;
 				document.getElementById("supplier").value  = data.supplier;
-                // console.log(data.anml_description);
-				// document.getElementById("manufacturer_id").value = data.manufacturer_id;
-				// document.getElementById("physical_condition_name").value = data.physical_condition_name;
+                				
 
                 if(data.gender_id==1){
                     // genderInGroup.setAttribute('checked',true);
@@ -3306,6 +3298,41 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
 					date_picker('.DateField');                    
 				}
 
+
+                let manage_maternal_blockid_checkbox = document.getElementById("manage_maternal_block");
+				if(data.manage_maternal_block && manage_maternal_blockid_checkbox.checked===true){	
+
+                        document.querySelectorAll(".manage_maternal_block_out").forEach(oneFieldObj=>{
+                            if(oneFieldObj.style.display === 'none'){
+                                oneFieldObj.style.display = '';
+                            }
+                        });
+                        document.querySelectorAll(".manage_maternal_block_in").forEach(oneFieldObj=>{
+                            if(oneFieldObj.style.display === ''){
+                                oneFieldObj.style.display = 'none';
+                            }
+                        });                       
+                    
+                    
+				} else {
+
+                    document.querySelectorAll(".manage_maternal_block_out").forEach(oneFieldObj=>{
+                        if(oneFieldObj.style.display === ''){
+                            oneFieldObj.style.display = 'none';
+                        }
+                    });
+                    document.querySelectorAll(".manage_maternal_block_in").forEach(oneFieldObj=>{
+                        if(oneFieldObj.style.display === 'none'){
+                            oneFieldObj.style.display = data.lsproduct;
+                        }            
+                    });
+
+                    document.getElementById("lsproduct").value = data.mother_tag;
+                    document.getElementById("lsproduct_id").value = data.lsproduct;
+
+                }
+
+
                 if(data.arrival_date != null){
                     document.getElementById("arrival_date").value = DBDateToViewDate(data.arrival_date);                    
                 }
@@ -3317,6 +3344,7 @@ export async function AJget_LivestocksPopup(frompage, product_id, similarproduct
                 // if(data.birth_date != null){
                 //     document.getElementById("birth_date").value = DBDateToViewDate(data.birth_date);                    
                 // }
+
                 if(data.birth_date_mother != null){
                     document.getElementById("birth_date_mother").value = DBDateToViewDate(data.birth_date_mother);                    
                 }
@@ -3636,7 +3664,7 @@ function checkMaternalBlock(){
 
     let matBlock = document.getElementById("manage_maternal_block");
     let isChecked = matBlock.checked;
-    console.log(isChecked);
+    // console.log(isChecked);
 
 	let manage_maternal_blockid = document.getElementById("manage_maternal_block");
 	if(manage_maternal_blockid.checked===true){	
