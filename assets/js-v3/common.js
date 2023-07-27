@@ -5381,6 +5381,10 @@ export function AJautoComplete(fieldIdName,selectCBF){
                         // document.querySelector( "#toPedigreeInfo" ).innerHTML = '';
                         // document.querySelector( "#toPedigreeInfo" ).append(htmlStr);
                         // document.querySelector("#tocustomers_id").value = info.id;
+                    } else if(fieldIdName==='plsproduct'){
+                        // document.querySelector( "#toPedigreeInfoP" ).innerHTML = '';
+                        // document.querySelector( "#toPedigreeInfoP" ).append(htmlStr);
+                        // document.querySelector("#tocustomers_id").value = info.id;
                     }
                     else{
                         document.querySelector( "#toSupplierInfo" ).innerHTML = '';
