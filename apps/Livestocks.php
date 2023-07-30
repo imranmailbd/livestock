@@ -1140,14 +1140,17 @@ class Livestocks{
 	
 	
 	public function AJsave_Livestocks(){
+
+		/**
+		 * Initialize post data for save
+		 */
 		$POST = $_POST;
 		$id = 0;
 		$sku = $savemsg = $returnStr = '';
 		$accounts_id = $_SESSION["accounts_id"]??0;
 		$prod_cat_man = $_SESSION["prod_cat_man"]??0;
 		$user_id = $_SESSION["user_id"]??0;
-		$Common = new Common($this->db);
-				
+		$Common = new Common($this->db);				
 		$product_id = intval($POST['product_id']??0);
 		$category_id = intval($POST['category_id']??0);
 		$gender_id = intval($POST['gender_id']??0);
@@ -1226,61 +1229,7 @@ class Livestocks{
 		
 		$pedigree_rfid_tag = $POST['pedigree_rfid_tag'];
 		$physical_condition_parent = $POST['physical_condition_parent'];
-		
-		$manage_maternal_block = $POST['manage_maternal_block'];
-		// var_dump($manage_maternal_block);exit;
-		
-		//If Internal Maternal Pedigree
-		$lsproduct_id = $POST['lsproduct_id'];
-		// var_dump($lsproduct_id);exit;
 
-		//If External Maternal Pedigree
-		$pedigree_rfid_tag_maternal = $pedigree_rfid_tag[0];
-		$category_id_maternal = $POST['category_id_maternal'];
-		$pedigree_breed_id_maternal = $POST['breed_id_maternal'];
-		$pedigree_mother_name = $POST['mother_name'];
-		$colour_name_mother = $POST['colour_name_mother'];	
-		$birth_date_mother = $POST['birth_date_mother']??'';	
-		// echo $birth_date_mother;exit;
-		if($birth_date_mother !=''){$birth_date_mother = date('Y-m-d', strtotime(trim((string) $birth_date_mother)));}
-		else{$birth_date_mother = '1000-01-01';}
-		$no_teeth_mother = $POST['no_teeth_mother'];
-		$physical_condition_parent_maternal = $physical_condition_parent[0];	
-		$calving_count = $POST['calving_count'];
-		$birth_weight_mother = $POST['birth_weight_mother'];
-		$birth_height_mother = $POST['birth_height_mother'];
-		$current_address_mother = $POST['current_address_mother'];
-		$anml_description_mother = $POST['anml_description_mother'];
-
-
-		$manage_paternal_block = $POST['manage_paternal_block'];
-		// var_dump($colour_name_mother);exit;
-
-		//If Internal Paternal Pedigree
-		$plsproduct_id = $POST['plsproduct_id'];
-		// var_dump($plsproduct_id);exit;
-
-		//If External Paternal Pedigree
-		$pedigree_rfid_tag_paternal = $pedigree_rfid_tag[1];
-		$category_id_paternal = $POST['category_id_paternal'];
-		$pedigree_breed_id_paternal = $POST['breed_id_paternal'];
-		$pedigree_father_name = $POST['father_name'];
-		$colour_name_father = $POST['colour_name_father'];	
-		$birth_date_father = $POST['birth_date_father']??'';
-		if($birth_date_father !=''){$birth_date_father = date('Y-m-d', strtotime(trim((string) $birth_date_father)));}
-		else{$birth_date_father = '1000-01-01';}	
-		$no_teeth_father = $POST['no_teeth_father'];
-		$physical_condition_parent_paternal = $physical_condition_parent[1];
-		$birth_weight_father = $POST['birth_weight_father'];
-		$birth_height_father = $POST['birth_height_father'];
-		$current_address_father = $POST['current_address_father'];
-		$anml_description_father = $POST['anml_description_father'];
-
-		
-		
-		
-		
-		
 		if($product_type =='Live Stocks'){
 			$manage_inventory_count = 1;
 			$require_serial_no = 0;
@@ -1312,8 +1261,58 @@ class Livestocks{
 		
 		$last_updated = $created_on = date('Y-m-d H:i:s');
 
+		
+		/**
+		 * Maternal post data
+		 */
+		$manage_maternal_block = $POST['manage_maternal_block'];	
+		
+		//If Internal Maternal Pedigree
+		$lsproduct_id = $POST['lsproduct_id'];		
 
-							
+		//If External Maternal Pedigree
+		$pedigree_rfid_tag_maternal = $pedigree_rfid_tag[0];
+		$category_id_maternal = $POST['category_id_maternal'];
+		$pedigree_breed_id_maternal = $POST['breed_id_maternal'];
+		$pedigree_mother_name = $POST['mother_name'];
+		$colour_name_mother = $POST['colour_name_mother'];	
+		$birth_date_mother = $POST['birth_date_mother']??'';			
+		if($birth_date_mother !=''){$birth_date_mother = date('Y-m-d', strtotime(trim((string) $birth_date_mother)));}
+		else{$birth_date_mother = '1000-01-01';}
+		$no_teeth_mother = $POST['no_teeth_mother'];
+		$physical_condition_parent_maternal = $physical_condition_parent[0];	
+		$calving_count = $POST['calving_count'];
+		$birth_weight_mother = $POST['birth_weight_mother'];
+		$birth_height_mother = $POST['birth_height_mother'];
+		$current_address_mother = $POST['current_address_mother'];
+		$anml_description_mother = $POST['anml_description_mother'];
+
+
+		/**
+		 * Paternal post data
+		 */
+		$manage_paternal_block = $POST['manage_paternal_block'];		
+
+		//If Internal Paternal Pedigree
+		$plsproduct_id = $POST['plsproduct_id'];
+		
+		//If External Paternal Pedigree
+		$pedigree_rfid_tag_paternal = $pedigree_rfid_tag[1];
+		$category_id_paternal = $POST['category_id_paternal'];
+		$pedigree_breed_id_paternal = $POST['breed_id_paternal'];
+		$pedigree_father_name = $POST['father_name'];
+		$colour_name_father = $POST['colour_name_father'];	
+		$birth_date_father = $POST['birth_date_father']??'';
+		if($birth_date_father !=''){$birth_date_father = date('Y-m-d', strtotime(trim((string) $birth_date_father)));}
+		else{$birth_date_father = '1000-01-01';}	
+		$no_teeth_father = $POST['no_teeth_father'];
+		$physical_condition_parent_paternal = $physical_condition_parent[1];
+		$birth_weight_father = $POST['birth_weight_father'];
+		$birth_height_father = $POST['birth_height_father'];
+		$current_address_father = $POST['current_address_father'];
+		$anml_description_father = $POST['anml_description_father'];			
+						
+		
 		if(!empty($category_name)){
 			$queryCatObj = $this->db->query("SELECT category_id FROM category WHERE accounts_id = $prod_cat_man AND UPPER(category_name) = :category_name", array('category_name'=>strtoupper($category_name)));
 			if($queryCatObj){
@@ -1330,6 +1329,7 @@ class Livestocks{
 				$category_id = $this->db->insert('category', $categoryData);
 			}
 		}
+
 		if(!empty($manufacture)){
 			$queryManuObj = $this->db->query("SELECT manufacturer_id FROM manufacturer WHERE accounts_id = $prod_cat_man AND UPPER(name) = :name", array('name'=>strtoupper($manufacture)));
 			if($queryManuObj){
@@ -1352,11 +1352,11 @@ class Livestocks{
 		$sku = str_replace(' ', '-', strtoupper($sku));
 		if($sku =='' && $product_id>0){$sku = $product_id;}
 		if($storage==0){$storage = '';}
-
-
 		
 
-		
+		/**
+		 * Livestock specific data 
+		 */
 		$productdata = array();
 		$productdata['category_id'] = $category_id;
 		$productdata['product_type'] = $product_type;
@@ -1380,6 +1380,9 @@ class Livestocks{
 		$productdata['custom_data'] = '';
 		
 		
+		/**
+		 * Livestock historical data
+		 */
 		$itemdata = array();
 		$itemdata['last_updated'] = $last_updated; //date('Y-m-d H:i:s');
 		$itemdata['accounts_id'] = $accounts_id;
@@ -1420,11 +1423,23 @@ class Livestocks{
 		$itemdata['suppliers_id'] = $suppliers_id;
 		
 		
-
+		/**
+		 * Livestock inventory data
+		 */
 		$inventorydata = array();
 		$inventorydata['accounts_id'] = $accounts_id;
+		if($ave_cost<0){$ave_cost = 0.00;}
+		$inventorydata['ave_cost'] = round($ave_cost,2);
+		$inventorydata['ave_cost_is_percent'] = $ave_cost_is_percent;
+		$inventorydata['regular_price'] = round($regular_price,2);
+		$inventorydata['minimum_price'] = round($minimum_price,2);
+		$inventorydata['low_inventory_alert'] = $low_inventory_alert;
+		$inventorydata['prices_enabled'] = 0;
 		
 
+		/**
+		 * Livestock maternal pedigree data 
+		 */
 		$pedigreedata_maternal = array();
 		$pedigreedata_maternal['pedigree_name'] = $pedigree_mother_name;
 		$pedigreedata_maternal['rfid_tag'] = $pedigree_rfid_tag_maternal;
@@ -1439,9 +1454,11 @@ class Livestocks{
 		$pedigreedata_maternal['description'] = $anml_description_mother;
 		$pedigreedata_maternal['current_address'] = $current_address_mother;
 		$pedigreedata_maternal['calving_count'] = $calving_count;
-		// var_dump($pedigreedata_maternal);exit;
 		
-
+		
+		/**
+		 * Livestock paternal pedigree data 
+		 */
 		$pedigreedata_paternal = array();
 		$pedigreedata_paternal['pedigree_name'] = $pedigree_father_name;
 		$pedigreedata_paternal['rfid_tag'] = $pedigree_rfid_tag_paternal;
@@ -1455,17 +1472,8 @@ class Livestocks{
 		$pedigreedata_paternal['physical_condition'] = $physical_condition_parent_paternal;
 		$pedigreedata_paternal['description'] = $anml_description_father;
 		$pedigreedata_paternal['current_address'] = $current_address_father;
-		
 
 		
-		
-		if($ave_cost<0){$ave_cost = 0.00;}
-		$inventorydata['ave_cost'] = round($ave_cost,2);
-		$inventorydata['ave_cost_is_percent'] = $ave_cost_is_percent;
-		$inventorydata['regular_price'] = round($regular_price,2);
-		$inventorydata['minimum_price'] = round($minimum_price,2);
-		$inventorydata['low_inventory_alert'] = $low_inventory_alert;
-		$inventorydata['prices_enabled'] = 0;
 		
 		if($product_id>0){
 			$todaydate = date('Y-m-d');
@@ -1488,7 +1496,12 @@ class Livestocks{
 			$productdata['allow_backorder'] = 0;
 		}
 		
+
+		/**
+		 * If New livestock where Livestock ID not exist
+		 */
 		if(empty($returnStr) && $product_id==0){
+
 			if($manage_inventory_count>0){
 				$inventorydata['ave_cost'] = 0.00;
 			}
@@ -1497,6 +1510,9 @@ class Livestocks{
 			$productdata['created_on'] = date('Y-m-d H:i:s');
 			$productdata['description'] = '';
 			
+			/**
+			 * Validation
+			 */
 			$totalrows1 = $product_publish1 = 0;
 			$queryProdObj = $this->db->query("SELECT product_id, product_publish FROM product WHERE accounts_id = $prod_cat_man AND manufacturer_id = :manufacturer_id AND product_name = :product_name AND colour_name = :colour_name AND storage = :storage AND physical_condition_name = :physical_condition_name ", array('manufacturer_id'=>$manufacturer_id, 'product_name'=>$product_name, 'colour_name'=>$colour_name, 'storage'=>$storage, 'physical_condition_name'=>$physical_condition_name));
 			if($queryProdObj){
@@ -1517,7 +1533,9 @@ class Livestocks{
 				}
 			}
 
-
+			/**
+			 * Validation message
+			 */
 			if($totalrows1>0){
 				if($product_publish1>0){
 					$savemsg = 'Name_Already_Exist';
@@ -1534,10 +1552,16 @@ class Livestocks{
 					$savemsg = 'SKU_ExistInArchive';
 				}
 			}
+			/**
+			 * Insert new livestock where Livestock ID not exist after validation
+			 */
 			else{
+
+				//################ Livestock data save ######################
 				$product_id = $lastInsertId = $this->db->insert('product', $productdata);
 				
 				if($product_id){
+
 					$custom_data = $Common->postCustomFormFields('product');
 					
 					$this->db->update('product', array('custom_data'=>$custom_data), $product_id);
@@ -1554,115 +1578,170 @@ class Livestocks{
 						}
 					}
 
-					//#############ITEM Data Save######################
-					
+					//############# Livestock ITEM Data Save ######################					
 					$itemdata['created_on'] = date('Y-m-d H:i:s');
-					$itemdata['product_id'] = $product_id;
-					
+					$itemdata['product_id'] = $product_id;					
 					$item_id = $this->db->insert('item', $itemdata);
 
 
-					// var_dump($pedigreedata_maternal);exit;
-					if($manage_maternal_block == "on"){
-						$queryPedigreeRelObj = $this->db->querypagination("SELECT * FROM pedigree_relations WHERE accounts_id = $accounts_id AND product_id = $product_id AND relation_type_id=2", array());
+
+					if($manage_maternal_block == "on" && $pedigree_mother_name && $pedigree_rfid_tag_maternal){					
+				
+						//################ External Maternal Pedigree Insert/Update  ######################	
+						$queryPedigreeRelObj = $this->db->querypagination("SELECT * FROM pedigree_relations WHERE accounts_id = $accounts_id AND product_id = $product_id AND relation_type_id=2 AND entity_location=2", array());
+						
 						if($queryPedigreeRelObj){
-							// var_dump($queryPedigreeRelObj);exit;
-							$pedigree_relations_id = $queryPedigreeRelObj[0]['pedigree_relations_id'];		
-							$pedigreedata_relation_maternal['last_updated'] = date('Y-m-d H:i:s');			
-							$update = $this->db->update('pedigree', $pedigreedata_relation_maternal, $pedigree_relations_id);
-						}
-						else{					
-							$pedigreedata_relation_maternal['relation_publish'] = 1;
-							$pedigreedata_relation_maternal['created_on'] = date('Y-m-d H:i:s');
-							$pedigreedata_relation_maternal['last_updated'] = date('Y-m-d H:i:s');
-							$pedigreedata_relation_maternal['accounts_id'] = 1;
-							$pedigreedata_relation_maternal['user_id'] = 1;
-							$pedigreedata_relation_maternal['product_id'] = $product_id;	
-							if($manage_maternal_block == "on" && $pedigree_mother_name && $pedigree_rfid_tag_maternal){
-								$pedigreedata_relation_maternal['relation_product_id'] = $lastInsertId;					
-								$pedigreedata_relation_maternal['entity_location'] = 2;	
-								$pedigreedata_relation_maternal['relation_type_id'] = 2;	
-							} else {
-								$pedigreedata_relation_maternal['relation_product_id'] = $lsproduct_id;					
-								$pedigreedata_relation_maternal['entity_location'] = 1;
-								$pedigreedata_relation_maternal['relation_type_id'] = 2;
-							}				
-							$pedigree_id = $this->db->insert('pedigree_relations', $pedigreedata_relation_maternal);
-						}
-					}
-
-
-					if($manage_maternal_block == "on"){
-					
-						$queryPedigreeObj = $this->db->querypagination("SELECT pedigree_id FROM pedigree WHERE accounts_id = $accounts_id AND product_id = $product_id AND gender_id=1", array());
-						if($queryPedigreeObj){
-							// var_dump($queryPedigreeObj);exit;
-							$pedigree_id = $queryPedigreeObj[0]['pedigree_id'];		
+	
+							$pedigree_id = $queryPedigreeRelObj[0]['relation_product_id'];		
 							$pedigreedata_maternal['last_updated'] = date('Y-m-d H:i:s');			
 							$update = $this->db->update('pedigree', $pedigreedata_maternal, $pedigree_id);
+	
 						}
-						else{					
+						else{
+	
+							$queryPedigreeRelObjDel = $this->db->querypagination("SELECT * FROM pedigree_relations WHERE accounts_id = $accounts_id AND product_id = $product_id AND relation_type_id=2 AND entity_location=1", array());
+							if($queryPedigreeRelObjDel){
+								$pedigree_rel_id = $queryPedigreeRelObjDel[0]['pedigree_relations_id'];
+								$this->db->delete('pedigree_relations', 'pedigree_relations_id', $pedigree_rel_id);
+							}
+	
 							$pedigreedata_maternal['pedigree_publish'] = 1;
 							$pedigreedata_maternal['created_on'] = date('Y-m-d H:i:s');
 							$pedigreedata_maternal['last_updated'] = date('Y-m-d H:i:s');
 							$pedigreedata_maternal['accounts_id'] = 1;
 							$pedigreedata_maternal['user_id'] = 1;
 							$pedigreedata_maternal['product_id'] = $product_id;	
-							$pedigree_id = $this->db->insert('pedigree', $pedigreedata_maternal);
+							$pedigree_id = $lastInsert = $this->db->insert('pedigree', $pedigreedata_maternal);
+	
+							//################ External Pedigree Relation Insert ###########################
+							$pedigreedata_relation_maternal['relation_publish'] = 1;
+							$pedigreedata_relation_maternal['created_on'] = date('Y-m-d H:i:s');
+							$pedigreedata_relation_maternal['last_updated'] = date('Y-m-d H:i:s');
+							$pedigreedata_relation_maternal['accounts_id'] = 1;
+							$pedigreedata_relation_maternal['user_id'] = 1;
+							$pedigreedata_relation_maternal['product_id'] = $product_id;						
+							$pedigreedata_relation_maternal['relation_product_id'] = $lastInsert;					
+							$pedigreedata_relation_maternal['entity_location'] = 2;	
+							$pedigreedata_relation_maternal['relation_type_id'] = 2;
+										
+							$pedigree_id = $this->db->insert('pedigree_relations', $pedigreedata_relation_maternal);
+	
 						}
-
+		
+					} else {
+						
+						//################ Internal Maternal Pedigree Insert/Update  ######################
+						$queryPedigreeRelObj = $this->db->querypagination("SELECT * FROM pedigree_relations WHERE accounts_id = $accounts_id AND product_id = $product_id AND relation_type_id=2 AND entity_location=1", array());
+						
+						if($queryPedigreeRelObj){	
+													
+							$pedigreedata_relation_maternal['last_updated'] = date('Y-m-d H:i:s');												
+							$pedigreedata_relation_maternal['relation_product_id'] = $lsproduct_id;					
+							$pedigreedata_relation_maternal['entity_location'] = 1;
+							$pedigreedata_relation_maternal['relation_type_id'] = 2;
+							$pedigree_relations_id = $queryPedigreeRelObj[0]['pedigree_relations_id'];	
+	
+							$update = $this->db->update('pedigree_relations', $pedigreedata_relation_maternal, $pedigree_relations_id);
+	
+						}
+						else{	
+							
+							//################ Internal Pedigree Relation Insert ###########################
+							$pedigreedata_relation_maternal['relation_publish'] = 1;
+							$pedigreedata_relation_maternal['created_on'] = date('Y-m-d H:i:s');
+							$pedigreedata_relation_maternal['last_updated'] = date('Y-m-d H:i:s');
+							$pedigreedata_relation_maternal['accounts_id'] = 1;
+							$pedigreedata_relation_maternal['user_id'] = 1;
+							$pedigreedata_relation_maternal['product_id'] = $product_id;												
+							$pedigreedata_relation_maternal['relation_product_id'] = $lsproduct_id;					
+							$pedigreedata_relation_maternal['entity_location'] = 1;
+							$pedigreedata_relation_maternal['relation_type_id'] = 2;						
+	
+							$pedigree_id = $this->db->insert('pedigree_relations', $pedigreedata_relation_maternal);						
+	
+						}
 					}
-
-
-					$queryPedigreeRelObjP = $this->db->querypagination("SELECT * FROM pedigree_relations WHERE accounts_id = $accounts_id AND product_id = $product_id AND relation_type_id=1", array());
-					if($queryPedigreeRelObjP){
-						// var_dump($queryPedigreeRelObjP);exit;
-						$relation_id = $queryPedigreeRelObjP[0]['pedigree_relations_id'];		
-						$pedigreedata_relation_paternal['last_updated'] = date('Y-m-d H:i:s');			
-						$update = $this->db->update('pedigree_relations', $pedigreedata_relation_paternal, $relation_id);
-					}
-					else{					
-						$pedigreedata_relation_paternal['relation_publish'] = 1;
-						$pedigreedata_relation_paternal['created_on'] = date('Y-m-d H:i:s');
-						$pedigreedata_relation_paternal['last_updated'] = date('Y-m-d H:i:s');
-						$pedigreedata_relation_paternal['accounts_id'] = 1;
-						$pedigreedata_relation_paternal['user_id'] = 1;
-						$pedigreedata_relation_paternal['product_id'] = $product_id;	
-						if($manage_maternal_block == "on" && $pedigree_mother_name && $pedigree_rfid_tag_maternal){
-							$pedigreedata_relation_paternal['relation_product_id'] = $lastInsertId;					
-							$pedigreedata_relation_paternal['entity_location'] = 2;	
-							$pedigreedata_relation_maternal['relation_type_id'] = 1;
-						} else {
-							$pedigreedata_relation_paternal['relation_product_id'] = $plsproduct_id;					
-							$pedigreedata_relation_paternal['entity_location'] = 1;
-							$pedigreedata_relation_maternal['relation_type_id'] = 1;
-						}				
-						$pedigree_id = $this->db->insert('pedigree_relations', $pedigreedata_relation_paternal);
-					}
-
-
-					if($manage_paternal_block == "on"){
+	
+	
+	
+					if($manage_paternal_block == "on" && $pedigree_father_name && $pedigree_rfid_tag_paternal){					
 					
-						$queryPedigreeObjP = $this->db->querypagination("SELECT pedigree_id FROM pedigree WHERE accounts_id = $accounts_id AND product_id = $product_id AND gender_id=2", array());
-						if($queryPedigreeObjP){
-							// var_dump($queryPedigreeObjP);exit;
-							$pedigree_id = $queryPedigreeObjP[0]['pedigree_id'];		
+						//################ External Maternal Pedigree Insert/Update  ######################				
+						$queryPedigreeRelObjP = $this->db->querypagination("SELECT * FROM pedigree_relations WHERE accounts_id = $accounts_id AND product_id = $product_id AND relation_type_id=1 AND entity_location=2", array());
+						
+						if($queryPedigreeRelObjP){
+	
+							$pedigree_id = $queryPedigreeRelObjP[0]['relation_product_id'];		
 							$pedigreedata_paternal['last_updated'] = date('Y-m-d H:i:s');			
 							$update = $this->db->update('pedigree', $pedigreedata_paternal, $pedigree_id);
+	
 						}
-						else{					
+						else{
+	
+							$queryPedigreeRelObjPDel = $this->db->querypagination("SELECT * FROM pedigree_relations WHERE accounts_id = $accounts_id AND product_id = $product_id AND relation_type_id=1 AND entity_location=1", array());
+							if($queryPedigreeRelObjPDel){
+								$pedigree_rel_id = $queryPedigreeRelObjPDel[0]['pedigree_relations_id'];
+								$this->db->delete('pedigree_relations', 'pedigree_relations_id', $pedigree_rel_id);
+							}
+	
 							$pedigreedata_paternal['pedigree_publish'] = 1;
 							$pedigreedata_paternal['created_on'] = date('Y-m-d H:i:s');
 							$pedigreedata_paternal['last_updated'] = date('Y-m-d H:i:s');
 							$pedigreedata_paternal['accounts_id'] = 1;
 							$pedigreedata_paternal['user_id'] = 1;
 							$pedigreedata_paternal['product_id'] = $product_id;	
-							$pedigree_id = $this->db->insert('pedigree', $pedigreedata_paternal);
+							$pedigree_id = $lastInsert = $this->db->insert('pedigree', $pedigreedata_paternal);
+	
+							//################ External Pedigree Relation Insert ###########################
+							$pedigreedata_relation_paternal['relation_publish'] = 1;
+							$pedigreedata_relation_paternal['created_on'] = date('Y-m-d H:i:s');
+							$pedigreedata_relation_paternal['last_updated'] = date('Y-m-d H:i:s');
+							$pedigreedata_relation_paternal['accounts_id'] = 1;
+							$pedigreedata_relation_paternal['user_id'] = 1;
+							$pedigreedata_relation_paternal['product_id'] = $product_id;						
+							$pedigreedata_relation_paternal['relation_product_id'] = $lastInsert;					
+							$pedigreedata_relation_paternal['entity_location'] = 2;	
+							$pedigreedata_relation_paternal['relation_type_id'] = 1;
+										
+							$pedigree_id = $this->db->insert('pedigree_relations', $pedigreedata_relation_paternal);
+	
 						}
-
+		
+					} else {
+						
+						//################ Internal Paternal Pedigree Insert/Update  ######################
+						$queryPedigreeRelObjP = $this->db->querypagination("SELECT * FROM pedigree_relations WHERE accounts_id = $accounts_id AND product_id = $product_id AND relation_type_id=1 AND entity_location=1", array());
+						
+						if($queryPedigreeRelObjP){	
+													
+							$pedigreedata_relation_paternal['last_updated'] = date('Y-m-d H:i:s');												
+							$pedigreedata_relation_paternal['relation_product_id'] = $plsproduct_id;					
+							$pedigreedata_relation_paternal['entity_location'] = 1;
+							$pedigreedata_relation_paternal['relation_type_id'] = 1;
+							$pedigree_relations_id = $queryPedigreeRelObjP[0]['pedigree_relations_id'];	
+	
+							$update = $this->db->update('pedigree_relations', $pedigreedata_relation_paternal, $pedigree_relations_id);
+	
+						}
+						else{	
+							
+							//################ Internal Pedigree Relation Insert ###########################
+							$pedigreedata_relation_paternal['relation_publish'] = 1;
+							$pedigreedata_relation_paternal['created_on'] = date('Y-m-d H:i:s');
+							$pedigreedata_relation_paternal['last_updated'] = date('Y-m-d H:i:s');
+							$pedigreedata_relation_paternal['accounts_id'] = 1;
+							$pedigreedata_relation_paternal['user_id'] = 1;
+							$pedigreedata_relation_paternal['product_id'] = $product_id;												
+							$pedigreedata_relation_paternal['relation_product_id'] = $plsproduct_id;					
+							$pedigreedata_relation_paternal['entity_location'] = 1;
+							$pedigreedata_relation_paternal['relation_type_id'] = 1;						
+	
+							$pedigree_id = $this->db->insert('pedigree_relations', $pedigreedata_relation_paternal);						
+	
+						}
 					}
-				
-					
+
+										
 
 					if($sku ==''){
 						$sku = $product_id;
@@ -1671,13 +1750,19 @@ class Livestocks{
 
 					$savemsg = 'add-success';
 					$id = $product_id;
+
+
 				}
 				else{
 					$savemsg = 'error-adding-product';
 				}
 			}
 		}
+		/**
+		 * If exist livestock where Livestock ID exist
+		 */
 		elseif(empty($returnStr)){
+
 			$totalrows1 = 0;
 			$queryProdObj = $this->db->query("SELECT COUNT(product_id) AS totalrows FROM product WHERE accounts_id = $prod_cat_man AND manufacturer_id = :manufacturer_id AND product_name = :product_name AND colour_name = :colour_name AND storage = :storage AND physical_condition_name = :physical_condition_name AND product_publish = 1 AND product_id != :product_id", array('manufacturer_id'=>$manufacturer_id, 'product_name'=>$product_name, 'colour_name'=>$colour_name, 'storage'=>$storage, 'physical_condition_name'=>$physical_condition_name, 'product_id'=>$product_id));
 			if($queryProdObj){
@@ -1690,6 +1775,9 @@ class Livestocks{
 				$totalrows2 = $queryProd2Obj->fetch(PDO::FETCH_OBJ)->totalrows;
 			}
 
+			/**
+			 * validation message
+			 */
 			if($totalrows1>0){
 				$savemsg = 'name-already-exist';
 			}
@@ -1697,25 +1785,36 @@ class Livestocks{
 				$savemsg = 'sku-already-exist';
 			}
 			else{
+
+				//################ Update Product Custom data ###################
 				$productdata['custom_data'] = $Common->postCustomFormFields('product');
 
 				$prodObj = $this->db->querypagination("SELECT * FROM product WHERE accounts_id = $prod_cat_man AND product_id = $product_id", array());
 				$changed = array();
+
+				//#################### Updat product ##########################
 				$update = $this->db->update('product', $productdata, $product_id);
+
 				if($update){
 					if($prodObj){
+
 						unset($productdata['last_updated']);
+						
 						foreach($productdata as $fieldName=>$fieldValue){
+							
 							$prevFieldVal = $prodObj[0][$fieldName];
 							if($fieldName=='custom_data'){
+
 								if(strlen($prevFieldVal)<10 && strlen($fieldValue)<10){}
 								elseif($prevFieldVal != $fieldValue){
 									if($prevFieldVal=='1000-01-01'){$prevFieldVal = '';}
 									if($fieldValue=='1000-01-01'){$fieldValue = '';}
 									$changed[$fieldName] = array($prevFieldVal, $fieldValue);
 								}
+
 							}
 							elseif($prevFieldVal != $fieldValue){
+
 								if($prevFieldVal=='1000-01-01'){$prevFieldVal = '';}
 								if($fieldValue=='1000-01-01'){$fieldValue = '';}
 								if($fieldName=='category_id'){
@@ -1761,6 +1860,7 @@ class Livestocks{
 				$oldregular_price = $oldave_cost = 0.00;
 				$oldave_cost_is_percent = 0;
 				$queryInvObj = $this->db->querypagination("SELECT * FROM inventory WHERE accounts_id = $accounts_id AND product_id = $product_id", array());
+				
 				if($queryInvObj){
 					$inventory_id = $queryInvObj[0]['inventory_id'];
 					$oldregular_price = $queryInvObj[0]['regular_price'];
@@ -1800,192 +1900,165 @@ class Livestocks{
 					$item_id = $this->db->insert('item', $itemdata);
 				}
 
-
-
-				// var_dump($pedigreedata_maternal);exit;
-				// $queryPedigreeRelObj = $this->db->querypagination("SELECT * FROM pedigree_relations WHERE accounts_id = $accounts_id AND product_id = $product_id AND relation_type_id=2", array());
-				// if($queryPedigreeRelObj){
-					
-				// 	$relation_id = $queryPedigreeRelObj[0]['pedigree_relations_id'];
-				// 	$pedigreedata_relation_maternal['last_updated'] = date('Y-m-d H:i:s');			
-				// 	$update = $this->db->update('pedigree_relations', $pedigreedata_relation_maternal, $relation_id);
-				// 	// var_dump($update);exit; //pedigree_relations_id
-				// }
-
-
-				// if($manage_maternal_block == "on"){
 				
-				// 	$queryPedigreeObj = $this->db->querypagination("SELECT pedigree_id FROM pedigree WHERE accounts_id = $accounts_id AND product_id = $product_id AND gender_id=1", array());
-				// 	if($queryPedigreeObj){
-				// 		// var_dump($queryPedigreeObj);exit;
-				// 		$pedigree_id = $queryPedigreeObj[0]['pedigree_id'];		
-				// 		$pedigreedata_maternal['last_updated'] = date('Y-m-d H:i:s');			
-				// 		$update = $this->db->update('pedigree', $pedigreedata_maternal, $pedigree_id);
-				// 	}
-
-				// }
-
-				// var_dump($manage_maternal_block);exit;
-				// var_dump($manage_paternal_block);exit;
+				if($manage_maternal_block == "on" && $pedigree_mother_name && $pedigree_rfid_tag_maternal){					
 				
-				if($manage_maternal_block == "on"){					
-				
-						$queryPedigreeObj = $this->db->querypagination("SELECT pedigree_id FROM pedigree WHERE accounts_id = $accounts_id AND product_id = $product_id AND gender_id=1", array());
-						if($queryPedigreeObj){
-							// var_dump($queryPedigreeObj);exit;
-							// $pedigree_id = $queryPedigreeObj[0]['pedigree_id'];		
-							// $pedigreedata_maternal['last_updated'] = date('Y-m-d H:i:s');			
-							// $update = $this->db->update('pedigree', $pedigreedata_maternal, $pedigree_id);
-						}
-						else{					
-							$pedigreedata_maternal['pedigree_publish'] = 1;
-							$pedigreedata_maternal['created_on'] = date('Y-m-d H:i:s');
-							$pedigreedata_maternal['last_updated'] = date('Y-m-d H:i:s');
-							$pedigreedata_maternal['accounts_id'] = 1;
-							$pedigreedata_maternal['user_id'] = 1;
-							$pedigreedata_maternal['product_id'] = $product_id;	
-							$pedigree_id = $lastInsert = $this->db->insert('pedigree', $pedigreedata_maternal);
-						}
-	
-					
-					// var_dump($pedigreedata_maternal);exit;
+					//################ External Maternal Pedigree Insert/Update  ######################	
 					$queryPedigreeRelObj = $this->db->querypagination("SELECT * FROM pedigree_relations WHERE accounts_id = $accounts_id AND product_id = $product_id AND relation_type_id=2 AND entity_location=2", array());
+					
 					if($queryPedigreeRelObj){
-						// var_dump($queryPedigreeRelObj);exit;
-						$pedigree_relations_id = $queryPedigreeRelObj[0]['pedigree_relations_id'];		
-						$pedigreedata_relation_maternal['last_updated'] = date('Y-m-d H:i:s');			
-						$update = $this->db->update('pedigree', $pedigreedata_relation_maternal, $pedigree_relations_id);
+
+						$pedigree_id = $queryPedigreeRelObj[0]['relation_product_id'];		
+						$pedigreedata_maternal['last_updated'] = date('Y-m-d H:i:s');			
+						$update = $this->db->update('pedigree', $pedigreedata_maternal, $pedigree_id);
+
 					}
-					else{					
+					else{
+
+						$queryPedigreeRelObjDel = $this->db->querypagination("SELECT * FROM pedigree_relations WHERE accounts_id = $accounts_id AND product_id = $product_id AND relation_type_id=2 AND entity_location=1", array());
+						if($queryPedigreeRelObjDel){
+							$pedigree_rel_id = $queryPedigreeRelObjDel[0]['pedigree_relations_id'];
+							$this->db->delete('pedigree_relations', 'pedigree_relations_id', $pedigree_rel_id);
+						}
+
+						$pedigreedata_maternal['pedigree_publish'] = 1;
+						$pedigreedata_maternal['created_on'] = date('Y-m-d H:i:s');
+						$pedigreedata_maternal['last_updated'] = date('Y-m-d H:i:s');
+						$pedigreedata_maternal['accounts_id'] = 1;
+						$pedigreedata_maternal['user_id'] = 1;
+						$pedigreedata_maternal['product_id'] = $product_id;	
+						$pedigree_id = $lastInsert = $this->db->insert('pedigree', $pedigreedata_maternal);
+
+						//################ External Pedigree Relation Insert ###########################
 						$pedigreedata_relation_maternal['relation_publish'] = 1;
 						$pedigreedata_relation_maternal['created_on'] = date('Y-m-d H:i:s');
 						$pedigreedata_relation_maternal['last_updated'] = date('Y-m-d H:i:s');
 						$pedigreedata_relation_maternal['accounts_id'] = 1;
 						$pedigreedata_relation_maternal['user_id'] = 1;
-						$pedigreedata_relation_maternal['product_id'] = $product_id;	
-						if($manage_maternal_block == "on" && $pedigree_mother_name && $pedigree_rfid_tag_maternal){
-							$pedigreedata_relation_maternal['relation_product_id'] = $lastInsert;					
-							$pedigreedata_relation_maternal['entity_location'] = 2;	
-							$pedigreedata_relation_maternal['relation_type_id'] = 2;
-						} else {
-							// $pedigreedata_relation_maternal['relation_product_id'] = $lsproduct_id;					
-							// $pedigreedata_relation_maternal['entity_location'] = 1;
-							// $pedigreedata_relation_maternal['relation_type_id'] = 2;
-						}				
+						$pedigreedata_relation_maternal['product_id'] = $product_id;						
+						$pedigreedata_relation_maternal['relation_product_id'] = $lastInsert;					
+						$pedigreedata_relation_maternal['entity_location'] = 2;	
+						$pedigreedata_relation_maternal['relation_type_id'] = 2;
+									
 						$pedigree_id = $this->db->insert('pedigree_relations', $pedigreedata_relation_maternal);
+
 					}
+	
 				} else {
 					
+					//################ Internal Maternal Pedigree Insert/Update  ######################
 					$queryPedigreeRelObj = $this->db->querypagination("SELECT * FROM pedigree_relations WHERE accounts_id = $accounts_id AND product_id = $product_id AND relation_type_id=2 AND entity_location=1", array());
-					if($queryPedigreeRelObj){
-						// var_dump($queryPedigreeRelObj);exit;
-						$pedigree_relations_id = $queryPedigreeRelObj[0]['pedigree_relations_id'];		
-						$pedigreedata_relation_maternal['last_updated'] = date('Y-m-d H:i:s');			
-						$update = $this->db->update('pedigree', $pedigreedata_relation_maternal, $pedigree_relations_id);
+					
+					if($queryPedigreeRelObj){	
+												
+						$pedigreedata_relation_maternal['last_updated'] = date('Y-m-d H:i:s');												
+						$pedigreedata_relation_maternal['relation_product_id'] = $lsproduct_id;					
+						$pedigreedata_relation_maternal['entity_location'] = 1;
+						$pedigreedata_relation_maternal['relation_type_id'] = 2;
+						$pedigree_relations_id = $queryPedigreeRelObj[0]['pedigree_relations_id'];	
+
+						$update = $this->db->update('pedigree_relations', $pedigreedata_relation_maternal, $pedigree_relations_id);
+
 					}
-					else{					
+					else{	
+						
+						//################ Internal Pedigree Relation Insert ###########################
 						$pedigreedata_relation_maternal['relation_publish'] = 1;
 						$pedigreedata_relation_maternal['created_on'] = date('Y-m-d H:i:s');
 						$pedigreedata_relation_maternal['last_updated'] = date('Y-m-d H:i:s');
 						$pedigreedata_relation_maternal['accounts_id'] = 1;
 						$pedigreedata_relation_maternal['user_id'] = 1;
-						$pedigreedata_relation_maternal['product_id'] = $product_id;	
-						if($manage_maternal_block == "on" && $pedigree_mother_name && $pedigree_rfid_tag_maternal){
-							$pedigreedata_relation_maternal['relation_product_id'] = $product_id;					
-							$pedigreedata_relation_maternal['entity_location'] = 2;	
-							$pedigreedata_relation_maternal['relation_type_id'] = 2;
-						} else {							
-							$pedigreedata_relation_maternal['relation_product_id'] = $lsproduct_id;					
-							$pedigreedata_relation_maternal['entity_location'] = 1;
-							$pedigreedata_relation_maternal['relation_type_id'] = 2;
-						}				
-						$pedigree_id = $this->db->insert('pedigree_relations', $pedigreedata_relation_maternal);
+						$pedigreedata_relation_maternal['product_id'] = $product_id;												
+						$pedigreedata_relation_maternal['relation_product_id'] = $lsproduct_id;					
+						$pedigreedata_relation_maternal['entity_location'] = 1;
+						$pedigreedata_relation_maternal['relation_type_id'] = 2;						
+
+						$pedigree_id = $this->db->insert('pedigree_relations', $pedigreedata_relation_maternal);						
+
 					}
 				}
 
 
+
+				if($manage_paternal_block == "on" && $pedigree_father_name && $pedigree_rfid_tag_paternal){					
 				
-				if($manage_paternal_block == "on"){
-				
-					$queryPedigreeObjP = $this->db->querypagination("SELECT pedigree_id FROM pedigree WHERE accounts_id = $accounts_id AND product_id = $product_id AND gender_id=2", array());
-					if($queryPedigreeObjP){
-						// var_dump($queryPedigreeObjP);exit;
-						// $pedigree_id = $queryPedigreeObjP[0]['pedigree_id'];		
-						// $pedigreedata_paternal['last_updated'] = date('Y-m-d H:i:s');			
-						// $update = $this->db->update('pedigree', $pedigreedata_paternal, $pedigree_id);
+					//################ External Maternal Pedigree Insert/Update  ######################				
+					$queryPedigreeRelObjP = $this->db->querypagination("SELECT * FROM pedigree_relations WHERE accounts_id = $accounts_id AND product_id = $product_id AND relation_type_id=1 AND entity_location=2", array());
+					
+					if($queryPedigreeRelObjP){
+
+						$pedigree_id = $queryPedigreeRelObjP[0]['relation_product_id'];		
+						$pedigreedata_paternal['last_updated'] = date('Y-m-d H:i:s');			
+						$update = $this->db->update('pedigree', $pedigreedata_paternal, $pedigree_id);
+
 					}
-					else{					
+					else{
+
+						$queryPedigreeRelObjPDel = $this->db->querypagination("SELECT * FROM pedigree_relations WHERE accounts_id = $accounts_id AND product_id = $product_id AND relation_type_id=1 AND entity_location=1", array());
+						if($queryPedigreeRelObjPDel){
+							$pedigree_rel_id = $queryPedigreeRelObjPDel[0]['pedigree_relations_id'];
+							$this->db->delete('pedigree_relations', 'pedigree_relations_id', $pedigree_rel_id);
+						}
+
 						$pedigreedata_paternal['pedigree_publish'] = 1;
 						$pedigreedata_paternal['created_on'] = date('Y-m-d H:i:s');
 						$pedigreedata_paternal['last_updated'] = date('Y-m-d H:i:s');
 						$pedigreedata_paternal['accounts_id'] = 1;
 						$pedigreedata_paternal['user_id'] = 1;
 						$pedigreedata_paternal['product_id'] = $product_id;	
-						$pedigree_id = $lastInsertP = $this->db->insert('pedigree', $pedigreedata_paternal);
+						$pedigree_id = $lastInsert = $this->db->insert('pedigree', $pedigreedata_paternal);
+
+						//################ External Pedigree Relation Insert ###########################
+						$pedigreedata_relation_paternal['relation_publish'] = 1;
+						$pedigreedata_relation_paternal['created_on'] = date('Y-m-d H:i:s');
+						$pedigreedata_relation_paternal['last_updated'] = date('Y-m-d H:i:s');
+						$pedigreedata_relation_paternal['accounts_id'] = 1;
+						$pedigreedata_relation_paternal['user_id'] = 1;
+						$pedigreedata_relation_paternal['product_id'] = $product_id;						
+						$pedigreedata_relation_paternal['relation_product_id'] = $lastInsert;					
+						$pedigreedata_relation_paternal['entity_location'] = 2;	
+						$pedigreedata_relation_paternal['relation_type_id'] = 1;
+									
+						$pedigree_id = $this->db->insert('pedigree_relations', $pedigreedata_relation_paternal);
+
 					}
 	
-					
-					$queryPedigreeRelObjP = $this->db->querypagination("SELECT * FROM pedigree_relations WHERE accounts_id = $accounts_id AND product_id = $product_id AND relation_type_id=1 AND entity_location=2", array());
-					if($queryPedigreeRelObjP){
-						// var_dump($queryPedigreeRelObjP);exit;
-						$pedigree_relations_id = $queryPedigreeRelObjP[0]['pedigree_relations_id'];		
-						$pedigreedata_relation_paternal['last_updated'] = date('Y-m-d H:i:s');			
-						$update = $this->db->update('pedigree_relations', $pedigreedata_relation_paternal, $pedigree_relations_id);
-					}
-					else{					
-						$pedigreedata_relation_paternal['relation_publish'] = 1;
-						$pedigreedata_relation_paternal['created_on'] = date('Y-m-d H:i:s');
-						$pedigreedata_relation_paternal['last_updated'] = date('Y-m-d H:i:s');
-						$pedigreedata_relation_paternal['accounts_id'] = 1;
-						$pedigreedata_relation_paternal['user_id'] = 1;
-						$pedigreedata_relation_paternal['product_id'] = $product_id;	
-						if($manage_paternal_block == "on" && $pedigree_father_name && $pedigree_rfid_tag_paternal){
-							$pedigreedata_relation_paternal['relation_product_id'] = $lastInsertP;					
-							$pedigreedata_relation_paternal['entity_location'] = 2;	
-							$pedigreedata_relation_paternal['relation_type_id'] = 1;
-						} else {
-							$pedigreedata_relation_paternal['relation_product_id'] = $plsproduct_id;					
-							$pedigreedata_relation_paternal['entity_location'] = 1;
-							$pedigreedata_relation_paternal['relation_type_id'] = 1;
-						}				
-						$pedigree_id = $this->db->insert('pedigree_relations', $pedigreedata_relation_paternal);
-					}
-
 				} else {
+					
+					//################ Internal Paternal Pedigree Insert/Update  ######################
 					$queryPedigreeRelObjP = $this->db->querypagination("SELECT * FROM pedigree_relations WHERE accounts_id = $accounts_id AND product_id = $product_id AND relation_type_id=1 AND entity_location=1", array());
-					if($queryPedigreeRelObjP){
-						// var_dump($queryPedigreeRelObjP);exit;
-						$pedigree_relations_id = $queryPedigreeRelObjP[0]['pedigree_relations_id'];		
-						$pedigreedata_relation_paternal['last_updated'] = date('Y-m-d H:i:s');			
+					
+					if($queryPedigreeRelObjP){	
+												
+						$pedigreedata_relation_paternal['last_updated'] = date('Y-m-d H:i:s');												
+						$pedigreedata_relation_paternal['relation_product_id'] = $plsproduct_id;					
+						$pedigreedata_relation_paternal['entity_location'] = 1;
+						$pedigreedata_relation_paternal['relation_type_id'] = 1;
+						$pedigree_relations_id = $queryPedigreeRelObjP[0]['pedigree_relations_id'];	
+
 						$update = $this->db->update('pedigree_relations', $pedigreedata_relation_paternal, $pedigree_relations_id);
+
 					}
-					else{					
+					else{	
+						
+						//################ Internal Pedigree Relation Insert ###########################
 						$pedigreedata_relation_paternal['relation_publish'] = 1;
 						$pedigreedata_relation_paternal['created_on'] = date('Y-m-d H:i:s');
 						$pedigreedata_relation_paternal['last_updated'] = date('Y-m-d H:i:s');
 						$pedigreedata_relation_paternal['accounts_id'] = 1;
 						$pedigreedata_relation_paternal['user_id'] = 1;
-						$pedigreedata_relation_paternal['product_id'] = $product_id;	
-						if($manage_paternal_block == "on" && $pedigree_father_name && $pedigree_rfid_tag_paternal){
-							$pedigreedata_relation_paternal['relation_product_id'] = $product_id;					
-							$pedigreedata_relation_paternal['entity_location'] = 2;	
-							$pedigreedata_relation_paternal['relation_type_id'] = 1;
-						} else {
-							// var_dump($plsproduct_id);exit;
-							$pedigreedata_relation_paternal['relation_product_id'] = $plsproduct_id;					
-							$pedigreedata_relation_paternal['entity_location'] = 1;
-							$pedigreedata_relation_paternal['relation_type_id'] = 1;
-						}				
-						$pedigree_id = $this->db->insert('pedigree_relations', $pedigreedata_relation_paternal);
+						$pedigreedata_relation_paternal['product_id'] = $product_id;												
+						$pedigreedata_relation_paternal['relation_product_id'] = $plsproduct_id;					
+						$pedigreedata_relation_paternal['entity_location'] = 1;
+						$pedigreedata_relation_paternal['relation_type_id'] = 1;						
+
+						$pedigree_id = $this->db->insert('pedigree_relations', $pedigreedata_relation_paternal);						
+
 					}
 				}
 
 
-				
-
-
-
-				//###############################
+			
 
 				if(!empty($changed)){
 					$moreInfo = array();
