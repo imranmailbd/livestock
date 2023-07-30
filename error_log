@@ -4494,3 +4494,46 @@ previous: http://livestock.skitsbdl.com/Livestocks/lists/1
 2023-07-30 03:50:31 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 836: Undefined property: stdClass::$category_id_maternal, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
 2023-07-30 03:55:18 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 779: Undefined property: stdClass::$category_id_maternal, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
 2023-07-30 03:55:18 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 836: Undefined property: stdClass::$category_id_maternal, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-07-30 04:15:22 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 779: Undefined property: stdClass::$category_id_maternal, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-07-30 04:15:22 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 836: Undefined property: stdClass::$category_id_maternal, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-07-30 04:15:58 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 779: Undefined property: stdClass::$category_id_maternal, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-07-30 04:15:58 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 836: Undefined property: stdClass::$category_id_maternal, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-07-30 06:02:22 Script Error, Message: 2: ReferenceError: productsGrowthInfoColumn is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:1357:21)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-30 06:02:22 Script Error, Message: 2: ReferenceError: productsGrowthInfoColumn is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:1357:21)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-30 06:05:00 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:1398:57 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-30 06:11:36 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:1439:57 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-30 06:18:23 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 779: Undefined property: stdClass::$category_id_maternal, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-07-30 06:18:23 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 836: Undefined property: stdClass::$category_id_maternal, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-07-30 06:18:27 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:1419:57 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-30 06:18:30 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at HTMLInputElement.validator [as valid] (http://livestock.skitsbdl.com/assets/js-v3/common.js:3387:59) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-30 06:18:58 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'value')
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:1419:57 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-30 06:19:02 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at HTMLInputElement.validator [as valid] (http://livestock.skitsbdl.com/assets/js-v3/common.js:3387:59) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-30 06:21:03 Script Error, Message: 1: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at HTMLInputElement.validator [as valid] (http://livestock.skitsbdl.com/assets/js-v3/common.js:3387:59) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-07-30 07:06:48 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'value')
+    at Object.AJsave_LivestocksGrowth [as click] (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:1421:19)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/view/3
+2023-07-30 07:06:57 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'value')
+    at Object.AJsave_LivestocksGrowth [as click] (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:1421:19)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/view/3

@@ -2849,6 +2849,134 @@ class Livestocks{
 		}
 	}
 
+
+	public function AJget_LivestocksGrowthInfoPopup(){
+		$POST = json_decode(file_get_contents('php://input'), true);
+		$growthData = array();
+		$growthData['login'] = '';
+		$accounts_id = $_SESSION["accounts_id"]??0;
+		$product_growthinfo_id = intval($POST['product_growthinfo_id']??0);
+		
+		$price_type = $type_match = '';
+
+		if(!isset($_SESSION["accounts_id"])){
+			$growthData['login'] = 'session_ended';
+		}
+
+		$growthData['growth'] = 0.00;
+		$growthData['weight'] = 0.00;
+		$growthData['review_date'] = '';
+		
+		if($product_growthinfo_id>0){
+			$ppObj = $this->db->query("SELECT * FROM product_growthinfo WHERE accounts_id = $accounts_id AND product_growthinfo_id = :product_growthinfo_id", array('product_growthinfo_id'=>$product_growthinfo_id),1);
+			if($ppObj){
+				$oneRow = $ppObj->fetch(PDO::FETCH_OBJ);
+				$growthData['growth'] = round($oneRow->growth,2);
+				$growthData['weight'] = round($oneRow->weight,2);
+				$growthData['review_date'] = $oneRow->review_date;
+			}
+		}
+		
+		return json_encode($growthData);
+	}
+
+
+
+	public function AJsave_LivestocksGrowth(){
+		$POST = json_decode(file_get_contents('php://input'), true);
+		$savemsg = '';
+		$accounts_id = $_SESSION["accounts_id"]??0;
+		$prod_cat_man = $_SESSION["prod_cat_man"]??0;
+		$user_id = $_SESSION["user_id"]??0;
+		$currency = $_SESSION["currency"]??'৳';
+		
+		$product_growthinfo_id = intval($POST['product_growthinfo_id']??0);
+		$product_id = intval($POST['product_id']??0);		
+		$growth = floatval($POST['growth']??0);
+		$weight = floatval($POST['weight']??0);
+		$review_date = date('Y-m-d H:i:s');
+		// $start_date = trim((string) $POST['start_date']??'1000-01-01');
+		// if(!in_array($start_date, array('', '1000-01-01'))){$start_date = date('Y-m-d', strtotime($start_date));}
+		// else{$start_date = '1000-01-01';}		
+		
+		$growth = $this->db->checkCharLen('product_growthinfo.growth', $growth);
+
+		$conditionarray = array();
+		$conditionarray['accounts_id'] = $accounts_id;
+		$conditionarray['user_id'] = $user_id;
+		$conditionarray['product_id'] = $product_id;
+		$conditionarray['growth'] = $growth;			
+		$conditionarray['weight'] = $weight;			
+		$conditionarray['review_date'] = date('Y-m-d H:i:s');
+
+		$bindData = array('product_id'=>$product_id, 'growth'=>$growth, 'review_date'=>$review_date);
+		$duplCheckSql = "SELECT COUNT(product_growthinfo_id) AS totalrows FROM product_growthinfo WHERE accounts_id = $accounts_id AND product_id = :product_id AND growth = :growth AND review_date = :review_date";
+		if($product_growthinfo_id>0){
+			$duplCheckSql .= " AND product_growthinfo_id != :product_growthinfo_id";
+			$bindData['product_growthinfo_id'] = $product_growthinfo_id;
+		}
+		$totalrows = 0;
+		$queryObj = $this->db->query($duplCheckSql, $bindData);
+		if($queryObj){
+			$totalrows = $queryObj->fetch(PDO::FETCH_OBJ)->totalrows;
+		}
+		if($totalrows>0){
+			$savemsg = 'growthInfoExist';
+		}
+		else{
+			
+			if($product_growthinfo_id==0){			
+			
+				$conditionarray['created_on'] = date('Y-m-d H:i:s');
+
+				$product_growthinfo_id = $this->db->insert('product_growthinfo', $conditionarray);
+
+				if($product_growthinfo_id){
+					
+					$activity_feed_name = stripslashes(trim((string) "$growth, $weight"));
+					
+					$activity_feed_title = $this->db->translate('Livestock weight info has been added');
+					$activity_feed_title = $this->db->checkCharLen('activity_feed.activity_feed_title', $activity_feed_title);
+					$activity_feed_link = "/Livestocks/view/$product_id";
+					$activity_feed_link = $this->db->checkCharLen('activity_feed.activity_feed_link', $activity_feed_link);
+					
+					$afData = array('created_on' => date('Y-m-d H:i:s'),
+									'last_updated' => date('Y-m-d H:i:s'),
+									'accounts_id' => $accounts_id,
+									'user_id' => $user_id,
+									'activity_feed_title' => $activity_feed_title,
+									'activity_feed_name' => $activity_feed_name,
+									'activity_feed_link' => $activity_feed_link,
+									'uri_table_name' => "product",
+									'uri_table_field_name' =>"product_publish",
+									'field_value' => 1);
+					$this->db->insert('activity_feed', $afData);
+				}
+				else{
+					$savemsg = 'errorAddingWeightInfo';
+				}
+			}
+			else{
+
+				// $oldPPObj = $this->db->query("SELECT * FROM product_growthinfo WHERE accounts_id = $accounts_id AND product_growthinfo_id = :product_growthinfo_id", array('product_growthinfo_id'=>$product_growthinfo_id),1);
+				// if($oldPPObj){
+				// 	$oldPPRow = $oldPPObj->fetch(PDO::FETCH_OBJ);
+				// }
+
+				$update = $this->db->update('product_growthinfo', $conditionarray, $product_growthinfo_id);
+
+				
+			}
+
+
+		}
+
+		$array = array( 'login'=>'', 'product_growthinfo_id'=>$product_growthinfo_id,
+			'savemsg'=>$savemsg);
+		return json_encode($array);
+	}
+
+	
 	//========================ASync========================//	
 	public function AJgetPage(){
 		$POST = json_decode(file_get_contents('php://input'), true);
@@ -3150,6 +3278,27 @@ class Livestocks{
 				}
 			}
 			$jsonResponse['productPrices'] = $productPrices;
+
+
+			$productWeight = array();
+			$strextra = "SELECT * FROM product_growthinfo WHERE accounts_id = $accounts_id AND product_id = $product_id AND product_growthinfo_publish = 1";
+			$query = $this->db->query($strextra, array());						
+			if($query){
+				while($oneRow = $query->fetch(PDO::FETCH_OBJ)){
+					$product_growthinfo_id = $oneRow->product_growthinfo_id;
+					
+					$growth = round($oneRow->growth,2);
+					$weight = round($oneRow->weight,2);
+					$datestr = '';
+					if(!in_array($oneRow->review_date, array('0000-00-00', '1000-01-01'))){
+						$datestr .= $oneRow->review_date;
+					}
+					
+					
+					$productWeight[] = array($product_growthinfo_id, $growth, $weight, $datestr);
+				}
+			}
+			$jsonResponse['productWeight'] = $productWeight;
 
 			$actFeeTitOpt = array();
 			$Sql = "SELECT activity_feed_title AS afTitle FROM activity_feed 

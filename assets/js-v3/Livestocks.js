@@ -40,6 +40,12 @@ const priceFieldAttributes = [
                         {'datatitle':Translate('Date Range'), 'align':'center'},
                         {'datatitle':Translate('Action'), 'align':'center'}
 ];
+
+const weightFieldAttributes = [
+    {'datatitle':Translate('Growth'), 'align':'center'},
+    {'datatitle':Translate('Weight'), 'align':'center'},
+    {'datatitle':Translate('Action'), 'align':'center'}
+];
     
 function setLivestockTableRows(tableData, attributes, uriStr){
     let tbody = document.getElementById("tableRows");
@@ -587,6 +593,11 @@ async function  AJ_view_MoreInfo(){
                 conditionalButton.addEventListener('click', function (){AJget_LivestocksPricePopup(0, product_id);});
             buttonRowDiv.appendChild(conditionalButton);
 
+            let growthInfoButton = cTag('button', {class: "btn editButton", 'style': "margin-right: 15px; margin-bottom: 10px;", title: Translate('Growth Information')});
+            growthInfoButton.innerHTML = Translate('Growth Information');
+            growthInfoButton.addEventListener('click', function (){AJget_LivestocksGrowthInfoPopup(0, product_id);});
+            buttonRowDiv.appendChild(growthInfoButton);
+
                 let similarButton = cTag('button', {class: "btn createButton", 'style': "margin-right: 15px; margin-bottom: 10px;", title: Translate('Create Similar Livestock')});
                 similarButton.innerHTML = Translate('Create Similar Livestock');
                 if(data.prodPer2===0) {
@@ -751,6 +762,58 @@ async function  AJ_view_MoreInfo(){
                 document.querySelector("#productPricesInfo").style.display = 'none';
             }
         }
+
+
+        if(data.productWeight.length>0){
+            if(document.querySelector("#productWeightInfo").style.display === 'none'){
+                document.querySelector("#productWeightInfo").style.display = '';
+            }
+            
+            let productWeightBody = document.getElementById("productWeight");
+            productWeightBody.innerHTML = '';
+
+            let tableData = data.productWeight;
+            if(tableData.length){                    
+                tableData.forEach(oneRow => { 
+                    let i=0;
+                    let tr = cTag('tr');
+                    let addBr = '';
+                    if(OS!=='unknown') addBr = '</br>&nbsp;'
+                    oneRow.forEach(tdvalue => {
+                        if(i>0){                                
+                            let td = cTag('td');
+                            let oneTDObj = weightFieldAttributes[i-1];
+                            for(const [key, value] of Object.entries(oneTDObj)) {
+                                let attName = key;
+                                if(attName !=='' && attName==='datatitle')
+                                    attName = attName.replace('datatitle', 'data-title');
+                                td.setAttribute(attName, value);
+                            }
+
+                            
+                            if(i===3){
+                                    const editIcon = cTag('i',{ 'class':`fa fa-edit`,'style':`cursor: pointer`,'data-toggle':`tooltip`,'data-original-title':Translate('Edit Growth') });
+                                    editIcon.addEventListener('click',()=>AJget_LivestocksGrowthInfoPopup(oneRow[0], product_id))
+                                td.appendChild(editIcon);
+                                td.append('  ');
+                                    const trashIcon = cTag('i',{ 'class':`fa fa-trash-o`,'style':`cursor: pointer`,'data-toggle':`tooltip`,'data-original-title':Translate('Remove Weight') });
+                                    trashIcon.addEventListener('click',()=>AJremove_tableRow('product_prices', oneRow[0], 'Livestock Prices', `/Livestocks/view/${product_id}`))
+                                td.appendChild(trashIcon);
+                            }
+                            else td.innerHTML = tdvalue;
+                            tr.appendChild(td);
+                        }
+                        i++;
+                    });
+                    productWeightBody.appendChild(tr);
+                });
+            }
+        }
+        else{
+            if(document.querySelector("#productWeightInfo").style.display !== 'none'){
+                document.querySelector("#productWeightInfo").style.display = 'none';
+            }
+        }
         
         const shistory_type = document.getElementById("shistory_type");
         const shistory_typeVal = shistory_type.value;
@@ -882,7 +945,7 @@ function view(){
         productContentColumn.appendChild(averageCostWidget);
         
         //===========Livestock price information============//
-            const productPriceWidget = cTag('div', {class: "cardContainer", 'style': "display:none;margin-bottom: 10px;", id: "productPricesInfo"});
+        const productPriceWidget = cTag('div', {class: "cardContainer", 'style': "display:none;margin-bottom: 10px;", id: "productPricesInfo"});
                 const productPriceWidgetHeader = cTag('div', {class: "cardHeader"});
                     const productPriceTitle = cTag('h3', {'style': "padding-left: 6px;"});
                     productPriceTitle.innerHTML = Translate('Livestock price information');
@@ -920,7 +983,51 @@ function view(){
                 productPrice.appendChild(productPriceColumn);
             productPriceWidget.appendChild(productPrice);
         productContentColumn.appendChild(productPriceWidget);
-    showTableData.appendChild(productContentColumn);   
+    
+    
+    
+    //===========Livestock weight information============//
+    const productWeightWidget = cTag('div', {class: "cardContainer", 'style': "display:none;margin-bottom: 10px;", id: "productWeightInfo"});
+        const productWeightWidgetHeader = cTag('div', {class: "cardHeader"});
+            const productWeightTitle = cTag('h3', {'style': "padding-left: 6px;"});
+            productWeightTitle.innerHTML = Translate('Livestock growth information');
+            productWeightWidgetHeader.appendChild(productWeightTitle);
+        productWeightWidget.appendChild(productWeightWidgetHeader);
+
+        const productWeight = cTag('div', {class: "cardContent", 'style': "padding: 0;"});
+            const productWeightColumn = cTag('div', {class: "columnXS12", 'style': "margin: 0; padding: 0;"});
+                const noMoreTableDivW = cTag('div', {id: "no-more-tables"});
+                    const productWeightTable = cTag('table', {class: "table-bordered table-striped table-condensed cf listing", 'style': "margin: 0;"});
+                        const productWeightHead  = cTag('thead', {class: "cf"});
+                            const column4Names = weightFieldAttributes.map(colObj=>(colObj.datatitle));
+                            const productWeightRow = cTag('tr');
+                                const th4Col0 = cTag('th', {'width': "35%"});
+                                th4Col0.innerHTML = column4Names[0];
+
+                                const th4Col1 = cTag('th', {'width': "35%"});
+                                th4Col1.innerHTML = column4Names[1];
+
+                                const th4Col2 = cTag('th', {'width': "30%"});
+                                th4Col2.innerHTML = column4Names[2];
+
+                                // const th4Col3 = cTag('th', {'width': "25%"});
+                                // th3Col3.innerHTML = column4Names[3];
+
+                                // const th4Col4 = cTag('th', {'width': "6%"});
+                                // th3Col4.innerHTML = column4Names[4];
+                                // productWeightRow.append(th4Col0, th4Col1, th4Col2, th4Col3, th4Col4);
+                                productWeightRow.append(th4Col0, th4Col1, th4Col2);
+                            productWeightHead.appendChild(productWeightRow);
+                        productWeightTable.appendChild(productWeightHead);
+                        const productWeightBody = cTag('tbody', {id: "productWeight"});
+                        productWeightTable.appendChild(productWeightBody);
+                    noMoreTableDivW.appendChild(productWeightTable);
+                productWeightColumn.appendChild(noMoreTableDivW);            
+            productWeight.appendChild(productWeightColumn);
+        productWeightWidget.appendChild(productWeight);
+    productContentColumn.appendChild(productWeightWidget);
+
+    showTableData.appendChild(productContentColumn); 
    
 
     //=======sessionStorage =========//
@@ -1317,6 +1424,136 @@ async function AJsave_LivestocksPrice(hidePopup){
     }
 	return false;
 }
+
+
+async function AJget_LivestocksGrowthInfoPopup(product_growthinfo_id, product_id){
+	const jsonData = {};
+	jsonData['product_growthinfo_id'] = product_growthinfo_id;
+	jsonData['product_id'] = product_id;
+
+    const url = '/'+segment1+'/AJget_LivestocksGrowthInfoPopup';
+    fetchData(afterFetch,url,jsonData);
+    
+    function afterFetch(data){
+        let requiredField, inputField;
+        let currencyoption = currency;
+
+        let formDialog = cTag('div');
+            
+            const productsGrowthInfoForm = cTag('form', {'action': "#", name: "frmproduct_growthinfo", id: "frmproduct_growthinfo", 'enctype': "multipart/form-data", 'method': "post", 'accept-charset': "utf-8"});
+                const productsGrowthInfoColumn = cTag('div', {class: "columnSM12", 'align': "left"});       
+
+                    const growthInfoRow = cTag('div', {class: "flex"});
+                        const growthInfoColumn = cTag('div', {class: "columnSM4"});
+                            let growthInfoLabel = cTag('label', {'for': "growth"});
+                            growthInfoLabel.innerHTML = Translate('Growth');
+                                requiredField = cTag('span', {class: "required"});
+                                requiredField.innerHTML = '*';
+                                growthInfoLabel.appendChild(requiredField);
+                            growthInfoColumn.appendChild(growthInfoLabel);
+                        growthInfoRow.appendChild(growthInfoColumn);
+                        const growthInfoField = cTag('div', {class: "columnSM8"});
+                            inputField = cTag('input', {'required': "required", id: "growth", name: "growth", 'type': "text",'data-min':'0', 'data-format':'d.dd', 'value': round(data.growth,2), class: "form-control"});
+                            controllNumericField(inputField, '#error_growth');
+                            growthInfoField.appendChild(inputField);
+                            growthInfoField.appendChild(cTag('span', {id: "error_growth", class: "errormsg"}));
+                        growthInfoRow.appendChild(growthInfoField);
+                    productsGrowthInfoColumn.appendChild(growthInfoRow);
+
+
+
+                    const weightInfoRow = cTag('div', {class: "flex"});
+                        const weightInfoColumn = cTag('div', {class: "columnSM4"});
+                            let weightInfoLabel = cTag('label', {'for': "weight"});
+                            weightInfoLabel.innerHTML = Translate('Weight');
+                                requiredField = cTag('span', {class: "required"});
+                                requiredField.innerHTML = '*';
+                                weightInfoLabel.appendChild(requiredField);
+                                weightInfoColumn.appendChild(weightInfoLabel);
+                            weightInfoRow.appendChild(weightInfoColumn);
+                        const weightInfoField = cTag('div', {class: "columnSM8"});
+                            inputField = cTag('input', {'required': "required", id: "weight", name: "weight", 'type': "text",'data-min':'0', 'data-format':'d.dd', 'value': round(data.weight,2), class: "form-control"});
+                            controllNumericField(inputField, '#error_weight');
+                            weightInfoField.appendChild(inputField);
+                            weightInfoField.appendChild(cTag('span', {id: "error_weight", class: "errormsg"}));
+                            weightInfoRow.appendChild(weightInfoField);
+                    productsGrowthInfoColumn.appendChild(weightInfoRow);
+
+
+                    // const startDateRow = cTag('div', {class: "flex"});
+                    //     const startDateColumn = cTag('div', {class: "columnSM4"});
+                    //         const startDateLabel = cTag('label', {'for': "start_date"});
+                    //         startDateLabel.innerHTML = Translate('Start Date');
+                    //     startDateColumn.appendChild(startDateLabel);
+                    // startDateRow.appendChild(startDateColumn);
+                    //     const startDateField = cTag('div', {class: "columnSM8"});
+                    //         inputField = cTag('input', {'required': "required", 'type': "text", class: "form-control", name: "start_date", id: "start_date", 'value': DBDateToViewDate(data.start_date),'maxlength': 10});
+                    //         checkDateOnBlur(inputField,'#error_product_prices','Invalid Start Date');
+                    //     startDateField.appendChild(inputField);
+                    // startDateRow.appendChild(startDateField);
+                    // productsGrowthInfoColumn.appendChild(startDateRow);
+
+
+                productsGrowthInfoForm.appendChild(productsGrowthInfoColumn);
+
+                inputField = cTag('input', {'type': "hidden", name: "product_growthinfo_id", 'value': product_growthinfo_id});
+                productsGrowthInfoForm.appendChild(inputField);
+                inputField = cTag('input', {'type': "hidden", name: "product_id", 'value': product_id});
+                productsGrowthInfoForm.appendChild(inputField);
+        formDialog.appendChild(productsGrowthInfoForm);
+        
+        popup_dialog1000(Translate('Livestock growth information'),formDialog,AJsave_LivestocksGrowth);			
+
+        setTimeout(function() {
+            // document.getElementById("price_type").value = data.price_type;
+            // date_picker('#start_date');
+        }, 500);
+    }
+	return true;
+}
+
+
+async function AJsave_LivestocksGrowth(hidePopup){
+	let errormsg = document.getElementById('error_growth');
+	let error_weight = document.getElementById('error_weight');
+	errormsg.innerHTML = '';
+	error_weight.innerHTML = '';
+
+    // const price_type = document.getElementById("price_type");
+    // if(price_type.value===''){
+    //     errormsg.innerHTML = Translate('Missing Price Type');
+    //     price_type.focus();
+    //     price_type.classList.add('errorFieldBorder');
+    //     return false;
+    // }else {
+    //     price_type.classList.remove('errorFieldBorder');
+    // }
+
+    let growthField = document.getElementById("growth");
+    if(!validateRequiredField(growthField,'#error_growth') || !growthField.valid()) return;
+
+	let product_id = document.frmproduct_growthinfo.product_id.value;
+	actionBtnClick('.btnmodel', Translate('Saving'), 1);
+			
+    const jsonData = serialize('#frmproduct_growthinfo');
+    
+    const url = '/'+segment1+'/AJsave_LivestocksGrowth';
+    fetchData(afterFetch,url,jsonData);
+    
+    function afterFetch(data){
+        if(data.savemsg ===''){
+            hidePopup();
+			window.location = '/Livestocks/view/'+product_id;						
+		}
+		else{						
+			if(data.savemsg==='growthInfoExist') document.getElementById('error_growth').innerHTML = Translate('This info already exists. Try again with different field values.');
+			// if(data.savemsg==='errorAddingPrice') document.getElementById('error_growth').innerHTML = Translate('Error occured while adding new product prices! Please try again.');
+		}
+        actionBtnClick('.btnmodel', Translate('Save'), 0);
+    }
+	return false;
+}
+
 
 function showTypeMatch(){
 	let price_type = document.getElementById("price_type").value;
