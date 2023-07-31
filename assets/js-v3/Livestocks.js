@@ -64,6 +64,7 @@ function setLivestockTableRows(tableData, attributes, uriStr){
                         td.setAttribute('class', alertVal);
                     }
                     const oneTDObj = attributes[i-2];
+                    console.log(oneTDObj);
                     for(const [key, value] of Object.entries(oneTDObj)) {
                         let attName = key;
                         if(attName !=='' && attName==='datatitle')
@@ -240,6 +241,7 @@ function  lists(){
                 const listTable = cTag('table', {class: "table-bordered table-striped table-condensed cf listing"});
                     const listHead = cTag('thead', {class: "cf"});
                         const columnNames = listsFieldAttributes.map(colObj=>(colObj.datatitle));
+                        // console.log(columnNames);
                         const listHeadRow = cTag('tr',{class:'outerListsTable'});
                             const thCol0 = cTag('th', {'width': "15%"});
                             thCol0.innerHTML = columnNames[0];
@@ -266,6 +268,7 @@ function  lists(){
                 listTable.appendChild(listBody);
             divNoMore.appendChild(listTable);
         divTable.appendChild(divNoMore);
+        
     showTableData.appendChild(divTable);
     addPaginationRowFlex(showTableData);
     

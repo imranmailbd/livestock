@@ -4537,3 +4537,225 @@ previous: http://livestock.skitsbdl.com/Livestocks/view/3
     at Object.AJsave_LivestocksGrowth [as click] (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:1421:19)
     at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
 previous: http://livestock.skitsbdl.com/Livestocks/view/3
+2023-07-31 00:50:35 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_groups/filter, Page Url: http://livestock.skitsbdl.com/Accounts/groups
+2023-07-31 00:50:37 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_groups/filter, Page Url: http://livestock.skitsbdl.com/Accounts/groups
+2023-07-31 00:50:39 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_groups/filter, Page Url: http://livestock.skitsbdl.com/Accounts/groups
+2023-07-31 00:50:41 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_groups/filter, Page Url: http://livestock.skitsbdl.com/Accounts/groups
+2023-07-31 00:50:42 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_groups/filter, Page Url: http://livestock.skitsbdl.com/Accounts/groups
+2023-07-31 00:50:44 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_groups/filter, Page Url: http://livestock.skitsbdl.com/Accounts/groups
+2023-07-31 00:50:46 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_groups/filter, Page Url: http://livestock.skitsbdl.com/Accounts/groups
+2023-07-31 00:50:48 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_groups/filter, Page Url: http://livestock.skitsbdl.com/Accounts/groups
+2023-07-31 00:50:50 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_groups/filter, Page Url: http://livestock.skitsbdl.com/Accounts/groups
+2023-07-31 00:50:55 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_ledger, Page Url: http://livestock.skitsbdl.com/Accounts/ledger
+2023-07-31 00:50:57 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_ledger, Page Url: http://livestock.skitsbdl.com/Accounts/ledger
+2023-07-31 00:50:59 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_ledger, Page Url: http://livestock.skitsbdl.com/Accounts/ledger
+2023-07-31 00:51:01 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_ledger, Page Url: http://livestock.skitsbdl.com/Accounts/ledger
+2023-07-31 00:51:03 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_ledger, Page Url: http://livestock.skitsbdl.com/Accounts/ledger
+2023-07-31 00:53:39 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_groups/filter, Page Url: http://livestock.skitsbdl.com/Accounts/groups
+2023-07-31 00:53:41 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_groups/filter, Page Url: http://livestock.skitsbdl.com/Accounts/groups
+2023-07-31 00:53:43 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_groups/filter, Page Url: http://livestock.skitsbdl.com/Accounts/groups
+2023-07-31 00:53:45 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_groups/filter, Page Url: http://livestock.skitsbdl.com/Accounts/groups
+2023-07-31 00:53:47 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Accounts/AJgetPage_groups/filter, Page Url: http://livestock.skitsbdl.com/Accounts/groups
+2023-07-31 01:23:44 Encountered error 2 in D:\wamp64\www\livestock\apps\Products.php, line 693: Undefined array key "colour_name", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-07-31 01:23:44 Encountered error 2 in D:\wamp64\www\livestock\apps\Products.php, line 695: Undefined array key "colour_name2", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-07-31 01:23:44 Encountered error 2 in D:\wamp64\www\livestock\apps\Products.php, line 702: Undefined array key "storage", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-07-31 01:45:15 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at setLivestockTableRows (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:52:21)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:116:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-31 02:38:20 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'value')
+    at filter_Livestocks_lists (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:95:40)
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:297:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:4122:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-31 02:38:21 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'value')
+    at filter_Livestocks_lists (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:95:40)
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:297:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:4122:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-31 02:38:21 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'value')
+    at filter_Livestocks_lists (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:95:40)
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:297:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:4122:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-31 02:38:22 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'value')
+    at filter_Livestocks_lists (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:95:40)
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:297:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:4122:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-31 02:38:22 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'value')
+    at filter_Livestocks_lists (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:95:40)
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:297:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:4122:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-31 06:25:40 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at calculateCartTotal (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1406:53)
+    at cartsAutoFuncCall (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1034:2)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/POS.js:629:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/POS/index/1/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-31 06:25:41 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at calculateCartTotal (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1406:53)
+    at cartsAutoFuncCall (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1034:2)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/POS.js:629:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/POS/index/1/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-31 06:25:42 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at calculateCartTotal (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1406:53)
+    at cartsAutoFuncCall (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1034:2)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/POS.js:629:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/POS/index/1/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-31 06:25:42 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at calculateCartTotal (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1406:53)
+    at cartsAutoFuncCall (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1034:2)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/POS.js:629:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/POS/index/1/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-31 06:25:42 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at calculateCartTotal (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1406:53)
+    at cartsAutoFuncCall (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1034:2)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/POS.js:629:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/POS/index/1/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-31 06:25:43 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at calculateCartTotal (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1406:53)
+    at cartsAutoFuncCall (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1034:2)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/POS.js:629:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/POS/index/1/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-31 06:25:43 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at calculateCartTotal (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1406:53)
+    at cartsAutoFuncCall (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1034:2)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/POS.js:629:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/POS/index/1/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-31 06:25:43 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at calculateCartTotal (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1406:53)
+    at cartsAutoFuncCall (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1034:2)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/POS.js:629:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/POS/index/1/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-31 06:25:43 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at calculateCartTotal (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1406:53)
+    at cartsAutoFuncCall (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1034:2)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/POS.js:629:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/POS/index/1/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-31 06:25:43 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at calculateCartTotal (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1406:53)
+    at cartsAutoFuncCall (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1034:2)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/POS.js:629:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/POS/index/1/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-31 06:25:43 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at calculateCartTotal (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1406:53)
+    at cartsAutoFuncCall (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1034:2)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/POS.js:629:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/POS/index/1/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-31 06:25:44 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at calculateCartTotal (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1406:53)
+    at cartsAutoFuncCall (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1034:2)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/POS.js:629:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/POS/index/1/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-31 06:25:44 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at calculateCartTotal (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1406:53)
+    at cartsAutoFuncCall (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1034:2)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/POS.js:629:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/POS/index/1/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-31 06:25:44 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at calculateCartTotal (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1406:53)
+    at cartsAutoFuncCall (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1034:2)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/POS.js:629:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/POS/index/1/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-31 06:25:44 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at calculateCartTotal (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1406:53)
+    at cartsAutoFuncCall (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1034:2)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/POS.js:629:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/POS/index/1/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-31 06:25:45 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at calculateCartTotal (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1406:53)
+    at cartsAutoFuncCall (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1034:2)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/POS.js:629:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/POS/index/1/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-31 06:26:02 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at calculateCartTotal (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1406:53)
+    at cartsAutoFuncCall (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1034:2)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/POS.js:629:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/POS/index/0/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-31 06:26:03 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at calculateCartTotal (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1406:53)
+    at cartsAutoFuncCall (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1034:2)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/POS.js:629:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/POS/index/0/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-31 06:26:03 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at calculateCartTotal (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1406:53)
+    at cartsAutoFuncCall (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1034:2)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/POS.js:629:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/POS/index/0/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-31 06:26:05 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at calculateCartTotal (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1406:53)
+    at cartsAutoFuncCall (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1034:2)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/POS.js:629:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/POS/index/0/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-31 06:26:05 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at calculateCartTotal (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1406:53)
+    at cartsAutoFuncCall (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1034:2)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/POS.js:629:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/POS/index/0/1
+previous: http://livestock.skitsbdl.com/Home
+2023-07-31 06:26:08 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at calculateCartTotal (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1406:53)
+    at cartsAutoFuncCall (http://livestock.skitsbdl.com/assets/js-v3/cart.js:1034:2)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/POS.js:629:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/POS/index/0/1
+previous: http://livestock.skitsbdl.com/Home

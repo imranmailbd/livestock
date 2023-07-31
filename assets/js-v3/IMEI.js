@@ -106,9 +106,11 @@ function createListsRow(tableData,listsFieldAttributes, uriStr){
                 if(index===0 || index===10) return;
                 const td = cTag('td');
                 const attributes = listsFieldAttributes[index-1];
+                console.log(attributes);
                 for (const key in attributes) {
                     td.setAttribute(key,attributes[key]);
                 }
+                // console.log(td);
                 if(index===7){
                     if(itemInfo !== ''){
                         const aTag = cTag('a',{'style': "color: #009; text-decoration: underline;", 'href':`/Purchase_orders/edit/${itemInfo}`,'title':Translate('View PO')});
