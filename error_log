@@ -4759,3 +4759,112 @@ previous: http://livestock.skitsbdl.com/Home
     at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/POS.js:629:9)
     at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/POS/index/0/1
 previous: http://livestock.skitsbdl.com/Home
+2023-08-01 02:57:38 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'value')
+    at adjustAmountFieldAttributs (http://livestock.skitsbdl.com/assets/js-v3/Commissions.js:663:68)
+    at http://livestock.skitsbdl.com/assets/js-v3/Commissions.js:634:13 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Commissions/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-08-01 04:14:29 Script Error, Message: 2: ReferenceError: unarchiveManageData is not defined
+    at controller_bar (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:157:209)
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:299:49)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:928:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/lists/1
+previous: http://livestock.skitsbdl.com/Growthinfos/lists/1
+2023-08-01 04:14:31 Script Error, Message: 2: ReferenceError: unarchiveManageData is not defined
+    at controller_bar (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:157:209)
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:299:49)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:928:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/lists/1
+previous: http://livestock.skitsbdl.com/Growthinfos/lists/1
+2023-08-01 05:00:17 Script Error, Message: 2: ReferenceError: thCol8 is not defined
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:291:29)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:928:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/lists/1
+previous: http://livestock.skitsbdl.com/Growthinfos/lists/1
+2023-08-01 05:00:18 Script Error, Message: 2: ReferenceError: thCol8 is not defined
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:291:29)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:928:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/lists/1
+previous: http://livestock.skitsbdl.com/Growthinfos/lists/1
+2023-08-01 05:00:41 Script Error, Message: 2: ReferenceError: thCol8 is not defined
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:291:29)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:929:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/lists/1
+previous: http://livestock.skitsbdl.com/Growthinfos/lists/1
+2023-08-01 05:00:41 Script Error, Message: 2: ReferenceError: thCol8 is not defined
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:291:29)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:929:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/lists/1
+previous: http://livestock.skitsbdl.com/Growthinfos/lists/1
+2023-08-01 05:02:50 Script Error, Message: 2: ReferenceError: thCol5 is not defined
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:294:84)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:930:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/lists/1
+previous: http://livestock.skitsbdl.com/Growthinfos/lists/1
+2023-08-01 05:19:50 Script Error, Message: 2: ReferenceError: aTag is not defined
+    at http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:121:25
+    at Array.forEach (<anonymous>)
+    at http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:107:18
+    at Array.forEach (<anonymous>)
+    at createListsRow (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:105:19)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:66:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/lists/1
+previous: http://livestock.skitsbdl.com/Growthinfos/lists/1
+2023-08-01 06:14:59 Script Error, Message: 2: ReferenceError: aTag is not defined
+    at http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:156:36
+    at Array.forEach (<anonymous>)
+    at http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:106:18
+    at Array.forEach (<anonymous>)
+    at createListsRow (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:104:19)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:65:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/lists/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-01 06:15:00 Script Error, Message: 2: ReferenceError: aTag is not defined
+    at http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:156:36
+    at Array.forEach (<anonymous>)
+    at http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:106:18
+    at Array.forEach (<anonymous>)
+    at createListsRow (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:104:19)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:65:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/lists/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-01 06:15:00 Script Error, Message: 2: ReferenceError: aTag is not defined
+    at http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:156:36
+    at Array.forEach (<anonymous>)
+    at http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:106:18
+    at Array.forEach (<anonymous>)
+    at createListsRow (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:104:19)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:65:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/lists/1
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-01 06:27:09 Script Error, Message: 2: ReferenceError: filterRow2 is not defined
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:253:13)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:951:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-08-01 06:27:10 Script Error, Message: 2: ReferenceError: filterRow2 is not defined
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:253:13)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:951:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-08-01 06:27:10 Script Error, Message: 2: ReferenceError: filterRow2 is not defined
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:253:13)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:951:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-08-01 06:27:11 Script Error, Message: 2: ReferenceError: filterRow2 is not defined
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:253:13)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:951:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-08-01 06:28:58 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'appendChild')
+    at checkAndSetSessionData (http://livestock.skitsbdl.com/assets/js-v3/common.js:1130:16)
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:347:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:952:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-08-01 06:55:50 Script Error, Message: 2: ReferenceError: data is not defined
+    at http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:129:146
+    at Array.forEach (<anonymous>)
+    at http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:106:18
+    at Array.forEach (<anonymous>)
+    at createListsRow (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:104:19)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:65:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/lists/1
+previous: http://livestock.skitsbdl.com/Home
+2023-08-01 06:55:50 Script Error, Message: 2: ReferenceError: data is not defined
+    at http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:129:146
+    at Array.forEach (<anonymous>)
+    at http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:106:18
+    at Array.forEach (<anonymous>)
+    at createListsRow (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:104:19)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:65:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/lists/1
+previous: http://livestock.skitsbdl.com/Home

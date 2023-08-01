@@ -423,6 +423,7 @@ class Template{
 		$returnarray['Purchase Orders'] = ['Purchase_orders', 6]; 
 		$returnarray['Orders'] = ['Orders', 7];
 		$returnarray['Livestocks Inventory'] = ['IMEI', 8];
+		$returnarray['Livestocks Growth Information'] = ['Growthinfos', 8];
 		$returnarray['Stock Take'] = ['Stock_Take', 9]; 
 		$returnarray['Expenses'] = ['Expenses', 10];
 		$returnarray['Suppliers'] = ['Suppliers', 11]; 

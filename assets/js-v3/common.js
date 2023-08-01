@@ -5873,6 +5873,7 @@ function createSideBar(){
 		'6': {label:Translate('Purchase Orders'),fileName:'Purchase_orders',icon:'plus-square'},
 		'7': {label:Translate('Orders'),fileName:'Orders',icon:'pencil-square-o'},
 		'8': {label:Translate('Livestocks Inventory'),fileName:'IMEI',icon:'tablet'},
+		'8': {label:Translate('Livestocks Growth Information'),fileName:'Growthinfos',icon:'tablet'},
 		'9': {label:Translate('Stock Take'),fileName:'Stock_Take',icon:'folder-open'},
 		'10': {label:Translate('Expenses'),fileName:'Expenses',icon:'money'},
 		'11': {label:Translate('Suppliers'),fileName:'Suppliers',icon:'address-book'},

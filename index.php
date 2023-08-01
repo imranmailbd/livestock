@@ -223,7 +223,7 @@ if($segment2name=='Account'){
 }
 
 if(!in_array($segment2name, array('Home', 'POS', 'Repairs', 'Invoices', 'Customers', 'Suppliers', 'Products', 'Livestocks', 
-	'Purchase_orders', 'Orders', 'IMEI', 'Expenses', 'Inventory_Transfer', 'Dashboard', 'End_of_Day', 'Appointment_Calendar', 
+	'Purchase_orders', 'Orders', 'IMEI','Growthinfos', 'Expenses', 'Inventory_Transfer', 'Dashboard', 'End_of_Day', 'Appointment_Calendar', 
 	'Accounts_Receivables', 'Time_Clock', 'Website', 'Commissions', 'Sales_reports', 
 	'Repairs_reports', 'Inventory_reports', 'Activity_Feed', 'Getting_Started', 'Manage_Data', 
 	'Settings', 'Integrations', 'Search', 'Common', 'Admin', 'Carts', 'Payments', 'Stock_Take', 'Accounts'))){
@@ -348,6 +348,7 @@ elseif($segment2name=='Purchase_orders'){$viewFunctions = array('lists'=>$db->tr
 elseif($segment2name=='Stock_Take'){$viewFunctions = array('lists'=>$db->translate('Stock Take Information'), 'add'=>$db->translate('Create Stock Take'), 'edit'=>$db->translate('Stock Take Information'));}
 elseif($segment2name=='Orders'){$viewFunctions = array('lists'=>$db->translate('Customer Orders'), 'add'=>$db->translate('Add Order'), 'edit'=>$db->translate('Edit Order')." o$segment4name");}
 elseif($segment2name=='IMEI'){$viewFunctions = array('lists'=>$db->translate('Livestocks Inventory'), 'view'=>$db->translate('Livestocks Information'), 'tile_view'=>$db->translate('Livestocks Dashboard'));}
+elseif($segment2name=='Growthinfos'){$viewFunctions = array('lists'=>$db->translate('Livestocks Growthinfo'), 'view'=>$db->translate('Livestocks Information'), 'tile_view'=>$db->translate('Livestocks Dashboard'));}
 elseif($segment2name=='Expenses'){$viewFunctions = array('lists'=>$db->translate('Manage Expenses'), 'view'=>$db->translate('Expenses Details'), 'profit_loss'=>$db->translate('P&L Statement'));}
 elseif($segment2name=='Inventory_Transfer'){$viewFunctions = array('lists'=>$db->translate('Inventory Transfer'), 'add'=>$db->translate('Create Inventory Transfer'), 'edit'=>$db->translate('Change Inventory Transfer')." p$segment4name");}
 elseif($segment2name=='Dashboard'){$viewFunctions = array('lists'=>$db->translate('Dashboard'));}
