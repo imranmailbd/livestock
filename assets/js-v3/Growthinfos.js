@@ -71,7 +71,7 @@ async function filter_IMEI_lists(){
         document.getElementById("scolour_name").value = scolour_name;
         document.getElementById("sphysical_condition_name").value = sphysical_condition_name;
         
-        onClickPagination();
+        // onClickPagination();
     }
 }
 
@@ -112,52 +112,29 @@ function createListsRow(tableData,listsFieldAttributes, uriStr){
                     td.setAttribute(key,attributes[key]);
                 }
                 // console.log(td);
-                if(index===4){
-
-                    if(itemInfo !== ''){                                                
-                        let aTag = cTag('input', {'type': "text", 'required': "", class: "form-control", 'style': "margin-top: 10px; margin-bottom: 10px;", name: "livestock_height", id: "livestock_height",  'value': "", 'size': 35, 'maxlength': 35});
-                        td.appendChild(aTag);
-                    }
-                    else{td.append('\u2003');}
-
-                }
-                else if(index === 1){
+                if(index === 1){
                     if(itemInfo===''){itemInfo = '\u2003';}
                     const aTag = cTag('a',{'class':'anchorfulllink', 'style':'text-decoration:underline', 'href':`/${uriStr}/${item[3]}`});
                     
                     aTag.innerHTML = itemInfo;
-                    const inputFieldHidd = cTag('input',{ 'type': 'hidden', 'name': 'product_id','id': 'product_id','value':`${item[0]}` });
+                    const inputFieldHidd = cTag('input',{ 'type': 'hidden', 'name': 'product_id[]','id': 'product_id','value':`${item[0]}` });
                     aTag.appendChild(inputFieldHidd);
                     td.appendChild(aTag);
                 }
-                else if(index===5){
-
+                else if(index===4){
                     if(itemInfo !== ''){                                                
-                        let aTag = cTag('input', {'type': "text", 'required': "", class: "form-control", 'style': "margin-top: 10px; margin-bottom: 10px;", name: "livestock_weight", id: "livestock_weight",  'value': "", 'size': 35, 'maxlength': 35});
+                        let aTag = cTag('input', {'type': "text", 'required': "", class: "form-control", 'style': "margin-top: 10px; margin-bottom: 10px;", name: "livestock_height[]", id: "livestock_height",  'value': "", 'size': 35, 'maxlength': 35});
                         td.appendChild(aTag);
                     }
                     else{td.append('\u2003');}
-                    
-                    // if(itemInfo !== ''){
-                    //     const aTag = cTag('a',{'style': "color: #009; text-decoration: underline;", 'href':`/Purchase_orders/edit/${itemInfo}`,'title':Translate('View PO')});
-                    //     aTag.append(itemInfo,' ',cTag('i',{'class':'fa fa-link'}));
-                    //     td.appendChild(aTag);
-                    // }
-                    // else{td.append('\u2003');}
-                }
-                else if(index===6){
-                    if(item[10]===1){
-                        const inventoryLink = cTag('a',{'class':'anchorfulllink','href':`/${uriStr}/${item[0]}`});
-                        inventoryLink.innerHTML = Translate('In Inventory');
-                        td.appendChild(inventoryLink);
+                }                
+                else if(index===5){
+                    if(itemInfo !== ''){                                                
+                        let aTag = cTag('input', {'type': "text", 'required': "", class: "form-control", 'style': "margin-top: 10px; margin-bottom: 10px;", name: "livestock_weight[]", id: "livestock_weight",  'value': "", 'size': 35, 'maxlength': 35});
+                        td.appendChild(aTag);
                     }
-                    else if(itemInfo>0){
-                        const invoiceLink = cTag('a',{'href':`/Invoices/view/${itemInfo}`,'title':Translate('View Invoice')});
-                        invoiceLink.append('s'+itemInfo,' ',cTag('i',{'class':'fa fa-link'}));
-                        td.appendChild(invoiceLink);
-                    }
-                    else{td.append('\u2003');}
-                }
+                    else{td.append('\u2003');}                 
+                }                
                 else{
                     if(itemInfo===''){itemInfo = '\u2003';}
                     const aTag = cTag('span');
@@ -177,8 +154,7 @@ function createListsRow(tableData,listsFieldAttributes, uriStr){
 
 function controller_bar(id,cancelHandler){
     const controller = cTag('div', {class: "flexStartRow", style:"float:right; margin-top:20px; margin-bottom:20px;"});
-    // controller.appendChild(cTag('input', {'type': "hidden", name: id, id: id, 'value': 0}));
-    controller.appendChild(cTag('input', {'type': "hidden", name: 'nameVal', id: 'nameVal', 'value': ''}));
+    controller.appendChild(cTag('input', {'type': "hidden", name: id, id: id, 'value': 0}));
     controller.appendChild(cTag('input', {'click':cancelHandler,'type': "button", name: "reset", id: "reset", 'value': Translate('Cancel'), class: "btn defaultButton", 'style': "margin-right: 10px;"}));
     controller.appendChild(cTag('input', {'type': "submit", id: "submit", class: "btn saveButton", 'style': "margin-right: 10px; float:right;", 'value': Translate('Save') }));
     return controller;
@@ -279,9 +255,10 @@ function lists(){
     showTableData.appendChild(filterRow);
 
         const divTableColumn = cTag('div', {class: "columnXS12"});
-            const bulkGrowthInfoEntryForm = cTag('form',{ 'method':`post`,'action':`#`,'enctype':`multipart/form-data`,'name':`frm_pos`,'id':`frm_pos` });
-            bulkGrowthInfoEntryForm.addEventListener('submit',event=>event.preventDefault());
-            bulkGrowthInfoEntryForm.appendChild(cTag('input',{type:'submit',style:'visibility:hidden; position:fixed;'}));
+            const bulkGrowthInfoEntryForm = cTag('form',{ 'method':`post`,'action':`#`,'enctype':`multipart/form-data`,'name':`frm_growth_info`,'id':`frm_growth_info` });
+            // bulkGrowthInfoEntryForm.addEventListener('submit',event=>event.preventDefault());
+            // bulkGrowthInfoEntryForm.appendChild(cTag('input',{type:'submit',style:'visibility:hidden; position:fixed;'}));
+            bulkGrowthInfoEntryForm.addEventListener('submit',(event)=>AJsave_ManageData(event,'livestock_height',AJsave_growthinfos));
             const divNoMore = cTag('div', {id: "no-more-tables"});
                 const listTable = cTag('table', {class: "table-bordered table-striped table-condensed cf listing"});
                     const listHead = cTag('thead', {class: "cf"});
@@ -302,20 +279,6 @@ function lists(){
                             const thCol4 = cTag('th', {'width': "8%", class: "hidefor991-768"});
                             thCol4.innerHTML = columnNames[4];
 
-                            // const thCol5 = cTag('th', {'width': "15%", class: "hidefor991-768"});
-                            // thCol5.innerHTML = columnNames[5];
-
-                            // const thCol6 = cTag('th', {'width': "7%"});
-                            // thCol6.innerHTML = columnNames[6];
-
-                            // const thCol7 = cTag('th', {'width': "12%", class: "hidefor991-768"});
-                            // thCol7.innerHTML = columnNames[7];
-
-                            // const thCol8 = cTag('th', {'width': "10%", class: "hidefor991-768"});
-                            
-                            // thCol8.innerHTML = columnNames[8];
-
-                        // listHeadRow.append(thCol0, thCol1, thCol2, thCol3, thCol4, thCol5, thCol6, thCol7, thCol8);
                         listHeadRow.append(thCol0, thCol1, thCol2, thCol3, thCol4);
                     listHead.appendChild(listHeadRow);
                 listTable.appendChild(listHead);
@@ -360,6 +323,114 @@ function lists(){
     addCustomeEventListener('filter',filter_IMEI_lists);
     addCustomeEventListener('loadTable',loadTableRows_IMEI_lists);
     filter_IMEI_lists(true);
+}
+
+
+async function AJsave_ManageData(event=false,fieldID,proceedToSave){
+
+    if(event){event.preventDefault();}
+
+    let submit =  document.querySelector("#submit");
+    // submit.value = Translate('Saving')+'...';
+    // submit.disabled = true;
+
+    /*let jsonData = {keyword_search:document.getElementById(fieldID).value,sdata_type: "Archived",limit: 9};
+    const url = `/Growthinfos/AJgetPage_${segment2}/filter`;
+
+    fetchData(afterFetch,url,jsonData);
+
+    function afterFetch(data){
+        const ArchivedData = data;
+        let inArchive = ArchivedData.tableRows.filter(item=>{
+            if(segment2==='brand_model'){
+                return item[1]===document.getElementById('brand').value && item[2]===document.getElementById('model').value;
+            }
+            else if(segment2==='category'){
+                return item[1]===document.getElementById('category_name').value ;
+            }
+            else{
+                return item[1]===document.getElementById('name').value;
+            }
+        })
+        
+        if(inArchive.length>0){
+            let dialog = cTag('div');
+            dialog.innerHTML = Translate('This name already exists <b>IN ARCHIVED!</b> Please try again with a different name. Do you really want to unarchive it?');
+            popup_dialog(
+                dialog,
+                {
+                    title:Translate('Unarchive'),
+                    width:500,
+                    buttons: {
+                        _Cancel: {
+                            text:Translate('Cancel'),
+                            class: 'btn defaultButton', 'style': "margin-left: 10px;", click: function(hidePopup) {
+                                hidePopup();
+                            },
+                        },
+                        actionbutton:{
+                            text:Translate('Unarchive'),
+                            class: 'btn bgcoolblue btnmodel', 'style': "margin-left: 10px;", click: function(hidePopup) {
+                                document.getElementById(segment2+'_id').value = inArchive[0][0];
+                                unarchiveManageData();
+                                hidePopup();
+                            },
+                        }
+                    }
+                }
+            );
+            submit.value = Translate('Save');
+            submit.disabled = false;
+        }
+        else{
+            proceedToSave();
+        }
+    }*/
+
+    proceedToSave();
+}
+
+
+async function AJsave_growthinfos(event=false){
+    if(event){event.preventDefault();}
+
+	let submit =  document.querySelector("#submit");
+
+    const jsonData = serialize("#frm_growth_info");
+    const url = '/'+segment1+'/AJsave_growthinfos';
+
+    // console.log(jsonData);
+
+    fetchData(afterFetch,url,jsonData);
+
+    function afterFetch(data){
+        if(data.savemsg !=='error' && (data.savemsg==='Add' || data.savemsg==='Update')){
+            resetForm_lsnipplesizescore();
+            if(data.savemsg==='Add'){
+                showTopMessage('success_msg',Translate('Added successfully.'));
+            }
+            else{
+                showTopMessage('success_msg',Translate('Updated successfully.'));
+            }
+            filter_Manage_Data_lsnipplesizescore();	
+        }
+        else if(data.returnStr=='errorOnAdding'){
+			alert_dialog(Translate('Alert message'), Translate('Error occurred while adding new lsnipplesizescore! Please try again.'), Translate('Ok'));
+		}
+		else if(data.returnStr=='Name_Already_Exist'){
+			alert_dialog(Translate('Alert message'), Translate('This name already exists! Please try again with a different name.'), Translate('Ok'));
+		}
+		else if(data.returnStr=='Name_ExistInArchive'){
+			alert_dialog(Translate('Alert message'), Translate('This name already exists <b>IN ARCHIVED</b>! Please try again with a different name.'), Translate('Ok'));
+		}
+		else{
+			alert_dialog(Translate('Alert message'), Translate('No changes / Error occurred while updating data! Please try again.'), Translate('Ok'));
+		}
+        submit.value = Translate('Add')
+        submit.disabled = false;
+    }
+    return false;
+    
 }
 
 async function filter_IMEI_view(){
@@ -580,7 +651,7 @@ async function AJ_view_MoreInfo(){
     }
 }
 
-function view(){
+function viewOLD(){
     let segment4 = 1;
     if(pathArray.length>4){segment4 = pathArray[4];}
     
@@ -637,6 +708,173 @@ function view(){
     addCustomeEventListener('loadTable',loadTableRows_IMEI_view);
     AJ_view_MoreInfo();
 }
+
+
+function view(){
+    let segment4 = 1;
+    if(pathArray.length>4){segment4 = pathArray[4];}
+    
+    let item_number = segment3;
+    let item_id = 0;    
+    
+    const showTableData = document.getElementById("viewPageInfo");
+    showTableData.innerHTML = '';
+        const titleRow = cTag('div', {class: "flexSpaBetRow", 'style': "padding: 5px;"});
+            const headerTitle = cTag('h2');
+            headerTitle.innerHTML = Translate('Livestock Growth Information')+' ';
+                const infoIcon = cTag('i', {class: "fa fa-info-circle", 'style': "font-size: 16px;", 'data-toggle': "tooltip", 'data-placement': "bottom", title: "", 'data-original-title': Translate('This page displays the information of IMEI')});
+            headerTitle.appendChild(infoIcon);
+        titleRow.appendChild(headerTitle);
+            const inventoryListLink = cTag('a', {class: "btn defaultButton", 'href':"/Growthinfos/lists", title:Translate('Livestock Inventory')});
+            inventoryListLink.append(cTag('i', {class: "fa fa-list"}), ' ', Translate('Livestock Inventory'));
+        titleRow.appendChild(inventoryListLink);
+    showTableData.appendChild(titleRow);
+    
+        const viewHeaderColumn = cTag('div', {class: "columnSM12"});
+            let viewHeader = cTag('header', {class: "imageContainer flexSpaBetRow", 'style': "padding: 5px 15px;", id: "viewBasicInfo"});
+        viewHeaderColumn.appendChild(viewHeader);
+    showTableData.appendChild(viewHeaderColumn);
+
+        const viewContentRow = cTag('div', {class: "flex"});
+            const viewContentColumn = cTag('div', {class: "columnXS12"});
+                let hiddenProperties = {
+                    'sproduct_id': 0 ,
+                    'note_forTable': 'item' ,
+                    'table_idValue': item_id ,
+                    'item_numberValue': item_number ,
+                }
+            viewContentColumn.appendChild(growthHistoryTable(Translate('Growth History'),hiddenProperties));
+        viewContentRow.appendChild(viewContentColumn);
+    showTableData.appendChild(viewContentRow);
+
+    const loadData = 'AJ_'+segment2+'_MoreInfo';
+    const fn = window[loadData];
+    if(typeof fn === "function"){fn();}
+    
+    //=====sessionStorage =====//
+    let list_filters;
+    if (sessionStorage.getItem("list_filters") !== null) {
+        list_filters = JSON.parse(sessionStorage.getItem("list_filters"));
+    }
+    else{
+        list_filters = {};
+    }
+
+    const shistory_type = '';
+    checkAndSetSessionData('shistory_type', shistory_type, list_filters);
+
+    addCustomeEventListener('filter',filter_IMEI_view);
+    addCustomeEventListener('loadTable',loadTableRows_IMEI_view);
+    AJ_view_MoreInfo();
+}
+
+
+export function getDeviceOperatingSystem() {
+	let userAgent = navigator.userAgent;
+
+	if(!userAgent) return 'unknown';
+	else if(/linux|android/i.test(userAgent)) return 'Android';
+	else if(/iPad|iPhone|iPod/i.test(userAgent)) return 'iOS';
+	//latest tablet has same info as iMac has, so to differentiate between two checking if screen is touch enabled
+	else if(/macintosh/i.test(userAgent) && navigator.maxTouchPoints>0) return 'iOS'; 
+
+	return 'unknown';
+}
+
+export function growthHistoryTable(title,hiddenProperties,haveSignatureBtn=false){
+	let page = 1;
+	let pathArray = window.location.pathname.split('/');
+	if(pathArray.length>4) page = parseInt(pathArray[4]);
+
+	hiddenProperties = {
+		'pageURI':segment1+'/'+segment2+'/'+segment3,
+		'page':page,
+		'rowHeight':'34',
+		'totalTableRows':0,
+		'publicsShow':0,
+		...hiddenProperties
+	}
+	const widget = cTag('div', {class: "cardContainer", 'style': "margin-bottom: 10px;"});
+	//=====Hidden Fields for Pagination======//
+	for (const key in hiddenProperties){		
+		widget.appendChild(cTag('input', {'type': "hidden",name: key, id: key, 'value': hiddenProperties[key]}));
+	}
+
+		const widgetHeader = cTag('div', {class: "cardHeader"});
+			const widgetHeaderRow = cTag('div', {class: "flexSpaBetRow"});
+				const widgetHeaderName = cTag('div', {class: "columnXS12 columnSM4", 'style': "margin: 0;"});
+					const widgetHeaderTitle = cTag('h3');
+					widgetHeaderTitle.innerHTML = title;
+				widgetHeaderName.appendChild(widgetHeaderTitle);
+			widgetHeaderRow.appendChild(widgetHeaderName);
+
+				const sortDropDown = cTag('div', {class: "columnXS6 columnSM4", 'style': "margin: 0;"});
+					const selectHistory = cTag('select', {class: "form-control", 'style': "margin-top: 2px;", name: "shistory_type", id: "shistory_type"});
+					selectHistory.addEventListener('change', ()=>triggerEvent('filter'));
+						const historyOption = cTag('option', {'value': ""});
+						historyOption.innerHTML = Translate('All Activities');
+					selectHistory.appendChild(historyOption);
+				sortDropDown.appendChild(selectHistory);
+			widgetHeaderRow.appendChild(sortDropDown);
+
+				const buttonTitle = cTag('div', {class: "columnXS6 columnSM4 flexEndRow", 'style': "margin:0; gap:10px; align-items: center;"});
+				if(haveSignatureBtn){
+					let signatureButton = cTag('button',{ 'id':'digital_signature_btn','href':`javascript:void(0);`,'class':`btn defaultButton` });
+						signatureButton.innerHTML = Translate('Add Digital Signature');
+						if(getDeviceOperatingSystem() !='unknown'){
+							signatureButton.innerHTML = '';
+							signatureButton.append(cTag('i',{ 'class':`fa fa-plus` }), ' ', `${Translate('Digital Signature')}`);
+						}
+					buttonTitle.appendChild(signatureButton);
+				}
+					const noteButton = cTag('button', {class: "btn defaultButton"});
+					noteButton.innerHTML = Translate('Add New Note');
+					if(getDeviceOperatingSystem() !=='unknown'){
+						noteButton.innerHTML = '';
+						noteButton.append(cTag('i',{ 'class':`fa fa-plus` }), ' ', `${Translate('Note')}`);
+					}
+					noteButton.addEventListener('click', function(){AJget_notesPopup(0);});
+				buttonTitle.appendChild(noteButton);
+			widgetHeaderRow.appendChild(buttonTitle);
+		widgetHeader.appendChild(widgetHeaderRow);
+	widget.appendChild(widgetHeader);
+
+		const activityDiv = cTag('div', {class: "cardContent", 'style': "padding: 0;"});
+			const divTable = cTag('div', {class: "flexSpaBetRow"});
+				const divTableColumn = cTag('div', {class: "columnXS12", 'style': "margin: 0; padding: 0;"});
+					const noMoreTables = cTag('div', {id: "no-more-tables"});
+						const activityTable = cTag('table', {class: "table-bordered table-striped table-condensed cf listing", 'style': "margin-top: 2px;"});
+							const activityHead = cTag('thead', {class: "cf"});
+								const columnNames = activityFieldAttributes.map(colObj=>(colObj.datatitle));
+								const activityHeadRow = cTag('tr');
+									const thCol0 = cTag('th', {'style': "width: 80px;"});
+									thCol0.innerHTML = columnNames[0];
+
+									const thCol1 = cTag('th', {'style': "width: 80px;"});
+									thCol1.innerHTML = columnNames[1];
+
+									const thCol2 = cTag('th', {'width': "20%"});
+									thCol2.innerHTML = columnNames[2];
+
+									const thCol3 = cTag('th', {'width': "20%"});
+									thCol3.innerHTML = columnNames[3];
+
+									const thCol4 = cTag('th');
+									thCol4.innerHTML = columnNames[4];
+								activityHeadRow.append(thCol0, thCol1, thCol2, thCol3, thCol4);
+							activityHead.appendChild(activityHeadRow);
+						activityTable.appendChild(activityHead);
+							const activityBody = cTag('tbody', {id: "tableRows"});
+						activityTable.appendChild(activityBody);
+					noMoreTables.appendChild(activityTable);
+				divTableColumn.appendChild(noMoreTables);
+			divTable.appendChild(divTableColumn);
+		activityDiv.appendChild(divTable);
+		addPaginationRowFlex(activityDiv,true);
+	widget.appendChild(activityDiv);
+	return widget;
+}
+
 
 async function AJgetPopup_IMEI(){
     let storedData;

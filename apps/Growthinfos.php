@@ -2,7 +2,7 @@
 class Growthinfos{
 	protected $db;
 	private int $page, $totalRows, $in_inventory, $product_id;
-	private string $item_id, $carrier_name, $colour_name, $physical_condition_name, $keyword_search, $history_type, $item_number;
+	private string $item_id, $carrier_name, $data_type, $colour_name, $physical_condition_name, $keyword_search, $history_type, $item_number;
 	private array $proNamOpt, $carNamOpt, $colNamOpt, $phyConNamOpt, $actFeeTitOpt;
 	
 	public function __construct($db){$this->db = $db;}
@@ -128,7 +128,165 @@ class Growthinfos{
 		$this->colNamOpt = $colNamOpt;
 		$this->phyConNamOpt = $phyConNamOpt;
 	}
+
+	public function AJgetPage_lists($segment4name){
+		
+		$POST = json_decode(file_get_contents('php://input'), true);
+		$sdata_type = $POST['sdata_type']??'All';
+		$keyword_search = $POST['keyword_search']??'';
+		$totalRows = intval($POST['totalRows']??0);
+		$page = intval($POST['page']??1);
+		if($page<=0){$page = 1;}
+		$_SESSION["limit"] = intval($POST['limit']??15);
+		
+		$this->data_type = $sdata_type;
+		$this->keyword_search = $keyword_search;
+		
+		$jsonResponse = array();
+		$jsonResponse['login'] = '';
+		//===If filter options changes===//	
+		if($segment4name=='filter'){
+			$this->filterAndOptions_growthinfos();
+			$jsonResponse['totalRows'] = $totalRows = $this->totalRows;
+		}
+		$this->page = $page;
+		$this->totalRows = $totalRows;
+		
+		$jsonResponse['tableRows'] = $this->loadTableRows();
+		
+		return json_encode($jsonResponse);
+	}
+
+
+	private function filterAndOptions_growthinfos(){
+		$prod_cat_man = $_SESSION["prod_cat_man"]??0;
+		$sdata_type = $this->data_type;
+		$keyword_search = $this->keyword_search;
+		
+		$_SESSION["current_module"] = "Manage_Data";
+		$_SESSION["list_filters"] = array('keyword_search'=>$keyword_search);
+
+		$sqlPublish = " AND product_growthinfo_publish = 1";
+		if($sdata_type=='Archived'){
+			$sqlPublish = " AND product_growthinfo_publish = 0";
+		}
+		
+		$filterSql = "FROM product_growthinfo WHERE product_growthinfo_id = $prod_cat_man $sqlPublish";
+		$bindData = array();
+		if($keyword_search !=''){
+			$keyword_search = addslashes(trim((string) $keyword_search));
+			if ( $keyword_search == "" ) { $keyword_search = " "; }
+			$keyword_searches = explode (" ", $keyword_search);
+			if ( strpos($keyword_search, " ") === false ) {$keyword_searches[0] = $keyword_search;}
+			$num = 0;
+			while ( $num < sizeof($keyword_searches) ) {
+				$filterSql .= " AND weight LIKE CONCAT('%', :keyword_search$num, '%')";
+				$bindData['keyword_search'.$num] = trim((string) $keyword_searches[$num]);
+				$num++;
+			}
+		}
+		
+		$totalRows = 0;
+		$strextra ="SELECT COUNT(product_growthinfo_id) AS totalrows $filterSql";
+		$query = $this->db->query($strextra, $bindData);
+		if($query){
+			$totalRows = $query->fetch(PDO::FETCH_OBJ)->totalrows;
+		}
+		$this->totalRows = $totalRows;		
+	}
+
+
+
+	public function AJsave_growthinfos(){
+		
+		$POST = json_decode(file_get_contents('php://input'), true);
+		$prod_cat_man = $_SESSION["prod_cat_man"]??0;
+		$user_id = $_SESSION["user_id"]??0;
+		$returnStr = 'Ok';		
+		$savemsg = '';
+
+		$livestock_product_id  = $POST['product_id[]'];
+		$growth  = $POST['livestock_height[]'];
+		$weight  = $POST['livestock_weight[]'];
+
+
+		$growthinfoarray_all = array();
+		foreach($livestock_product_id as $key => $product_id){
+
+			$growthinfoarray = array();
+			$growthinfoarray['product_id'] = $livestock_product_id[$key];
+			$growthinfoarray['growth'] = $growth[$key];
+			$growthinfoarray['weight'] = $weight[$key];
+			$growthinfoarray['review_date'] = date('Y-m-d H:i:s');
+			$growthinfoarray['last_updated'] = date('Y-m-d H:i:s');
+			$growthinfoarray['accounts_id'] = $prod_cat_man;
+			$growthinfoarray['user_id'] = $user_id;
+
+			/**
+			 * duplicate check
+			 */
+			$duplSql = "SELECT * FROM product_growthinfo WHERE product_id = ".$livestock_product_id[$key]." AND  DATE(review_date) = :growthinfo_review_date";
+			$bindData = array('growthinfo_review_date'=>date('Y-m-d'));
+			$duplRows = 0;
+			$growthinfoObj = $this->db->querypagination($duplSql, $bindData);
+			if($growthinfoObj){
+				foreach($growthinfoObj as $onerow){
+					$duplRows = 1;
+					$product_growthinfo_publish = $onerow['product_growthinfo_publish'];
+					$product_growthinfo_id = $onerow['product_growthinfo_id'];
+
+				}
+			}
+
+			if($duplRows>0){
+
+				$update = $this->db->update('product_growthinfo', $growthinfoarray, $product_growthinfo_id);
+				
+				// if($update){
+				// 	$activity_feed_title = $this->db->translate('lsnipplesizescore was edited');
+				// 	$activity_feed_title = $this->db->checkCharLen('activity_feed.activity_feed_title', $activity_feed_title);
+				// 	$activity_feed_link = "/Manage_Data/lsnipplesizescore/view/$lsnipplesizescore_id";
+				// 	$activity_feed_link = $this->db->checkCharLen('activity_feed.activity_feed_link', $activity_feed_link);
+					
+				// 	$afData = array('created_on' => date('Y-m-d H:i:s'),
+				// 					'last_updated' => date('Y-m-d H:i:s'),
+				// 					'accounts_id' => $_SESSION["accounts_id"],
+				// 					'user_id' => $_SESSION["user_id"],
+				// 					'activity_feed_title' =>  $activity_feed_title,
+				// 					'activity_feed_name' => $lsnipplesizescore_name,
+				// 					'activity_feed_link' => $activity_feed_link,
+				// 					'uri_table_name' => "lsnipplesizescore",
+				// 					'uri_table_field_name' =>"lsnipplesizescore_publish",
+				// 					'field_value' => 1);
+				// 	$this->db->insert('activity_feed', $afData);
+					
+				// 	$savemsg = 'Update';
+				// }
+
+			} else {	
+				
+				$growthinfoarray['created_on'] = date('Y-m-d H:i:s');
+				$product_growthinfo_id  = $this->db->insert('product_growthinfo', $growthinfoarray);
+
+				if($product_growthinfo_id){						
+					$savemsg = 'Add';
+				}
+				else{
+					$returnStr = 'errorOnAdding';
+				}
+
+			}				
+
+			$growthinfoarray_all[] = $growthinfoarray;
+			// var_dump($growthinfoarray_all);exit;	
+
+		}
+		
+		return json_encode(array('login'=>'', 'returnStr'=>$returnStr, 'savemsg'=>$savemsg));
+
+	}
 	
+
     private function loadTableRows(){
 		
 		$accounts_id = $_SESSION["accounts_id"]??0;
