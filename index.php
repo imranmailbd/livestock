@@ -345,7 +345,7 @@ elseif($segment2name=='Suppliers'){$viewFunctions = array('lists'=>$db->translat
 elseif($segment2name=='Livestocks'){$viewFunctions = array('lists'=>$db->translate('Manage Live Stocks'), 'view'=>$db->translate('Live Stocks Information'));}
 elseif($segment2name=='Products'){$viewFunctions = array('lists'=>$db->translate('Manage Products'), 'view'=>$db->translate('Product Information'));}
 elseif($segment2name=='Purchase_orders'){$viewFunctions = array('lists'=>$db->translate('Purchase Order'), 'add'=>$db->translate('Create Purchase Order'), 'returnPO'=>$db->translate('Return Purchase Order'), 'confirmReturn'=>$db->translate('Confirm Purchase Order'), 'edit'=>$db->translate('Purchase Order')." p$segment4name");}
-elseif($segment2name=='Stock_Take'){$viewFunctions = array('lists'=>$db->translate('Stock Take Information'), 'add'=>$db->translate('Create Stock Take'), 'edit'=>$db->translate('Stock Take Information'));}
+//elseif($segment2name=='Stock_Take'){$viewFunctions = array('lists'=>$db->translate('Stock Take Information'), 'add'=>$db->translate('Create Stock Take'), 'edit'=>$db->translate('Stock Take Information'));}
 elseif($segment2name=='Orders'){$viewFunctions = array('lists'=>$db->translate('Customer Orders'), 'add'=>$db->translate('Add Order'), 'edit'=>$db->translate('Edit Order')." o$segment4name");}
 elseif($segment2name=='IMEI'){$viewFunctions = array('lists'=>$db->translate('Livestocks Inventory'), 'view'=>$db->translate('Livestocks Information'), 'tile_view'=>$db->translate('Livestocks Dashboard'));}
 elseif($segment2name=='Growthinfos'){$viewFunctions = array('lists'=>$db->translate('Livestocks Growthinfo'), 'view'=>$db->translate('Livestocks Information'), 'tile_view'=>$db->translate('Livestocks Dashboard'));}

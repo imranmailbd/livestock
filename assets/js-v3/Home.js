@@ -355,6 +355,7 @@ async function index(){
             '27': {label:Translate('Integrations'),fileName:'Integrations',icon:'compress'},
             '28': {label:Translate('Accounts'),fileName:'Accounts',icon:'money'},
             '29': {label:Translate('Livestocks'),fileName:'Livestocks',icon:'barcode'},
+            '30': {label:Translate('Livestocks Growth'),fileName:'Growthinfos',icon:'line-chart'},
         }
 	    if(multipleLocations>0) modulesInfo['12'] = {label:Translate('Inventory Transfer'),fileName:'Inventory_Transfer',icon:'truck'};
 
