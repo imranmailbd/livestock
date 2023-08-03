@@ -1,5 +1,5 @@
 import {
-    cTag, Translate, checkAndSetLimit, tooltip, storeSessionData, addCurrency, DBDateToViewDate, printbyurl, setSelectOpt, setTableHRows, 
+    cTag, Translate, checkAndSetLimit, tooltip, round, controllNumericField, validateRequiredField, storeSessionData, addCurrency, DBDateToViewDate, printbyurl, setSelectOpt, setTableHRows, 
     showTopMessage, setOptions, addPaginationRowFlex, checkAndSetSessionData, popup_dialog600, popup_dialog1000, date_picker, validDate, 
     applySanitizer, generateCustomeFields, fetchData, listenToEnterKey, addCustomeEventListener, actionBtnClick, callPlaceholder, 
     serialize, onClickPagination, historyTable, activityFieldAttributes, noPermissionWarning, validifyCustomField, alert_label_missing
@@ -103,6 +103,7 @@ function createListsRow(tableData,listsFieldAttributes, uriStr){
     if(tableData.length){
         tableData.forEach(item=>{
             const tr = cTag('tr');
+            // console.log(item);
             item.forEach((itemInfo,index)=>{
                 if(index===0 || index===7) return;
                 const td = cTag('td');
@@ -433,7 +434,7 @@ async function AJsave_growthinfos(event=false){
     
 }
 
-async function filter_IMEI_view(){
+async function filter_growth_view(){
     let page = 1;
 	document.getElementById("page").value = page;
     
@@ -441,40 +442,292 @@ async function filter_IMEI_view(){
 	jsonData['sproduct_id'] = document.getElementById("sproduct_id").value;
 	jsonData['sitem_id'] = document.getElementById("table_idValue").value;
 	jsonData['item_number'] = document.getElementById("item_numberValue").value;
-	jsonData['shistory_type'] = document.getElementById("shistory_type").value;
+	// jsonData['shistory_type'] = document.getElementById("shistory_type").value;
 	jsonData['totalRows'] = document.getElementById("totalTableRows").value;
 	jsonData['rowHeight'] = document.getElementById("rowHeight").value;
 	jsonData['limit'] = checkAndSetLimit();
 	jsonData['page'] = page;
 	
-    const url = '/'+segment1+'/AJgetHPage/filter';
+    const url = '/'+segment1+'/AJgetHPage_Growth/filter';
     fetchData(afterFetch,url,jsonData);
     
     function afterFetch(data){
         storeSessionData(jsonData);
-        setTableHRows(data.tableRows, activityFieldAttributes);		
+        setTableHRowsGrowth(data.tableRows, growthFieldAttributes);		
         document.getElementById("totalTableRows").value = data.totalRows;
         
-        const shistory_type = document.getElementById("shistory_type");
-        const shistory_typeVal = shistory_type.value;
-        shistory_type.innerHTML = '';
+        // const shistory_type = document.getElementById("shistory_type");
+        // const shistory_typeVal = shistory_type.value;
+        // shistory_type.innerHTML = '';
+
         const option = document.createElement('option');
         option.setAttribute('value', '');
         option.innerHTML = Translate('All Activities');
-        shistory_type.appendChild(option);
-        setOptions(shistory_type, data.actFeeTitOpt, 0, 1);
-        document.getElementById("shistory_type").value = shistory_typeVal;
+
+
+        // shistory_type.appendChild(option);
+        // setOptions(shistory_type, data.actFeeTitOpt, 0, 1);
+        // document.getElementById("shistory_type").value = shistory_typeVal;
+
 
         onClickPagination();
     }
 }
+
+
+export function setTableHRowsGrowth(tableData, tdAttributes){
+    
+    let tbody = document.getElementById("tableRows");
+	tbody.innerHTML = '';
+
+	//======Create TBody TR Column======//
+	let reviewDate, height, weight, product_id, dateTimeArray, date, time, oneTDObj, tabelHeadRow, tdCol;
+    //console.log(tableData[0][3])
+
+	if(tableData.length){
+
+		tableData.forEach(oneRow => {
+
+			let i=0;
+			tabelHeadRow = cTag('tr');
+			
+			let idVal = oneRow[0];
+			reviewDate = oneRow[1];
+			height = oneRow[2];
+			weight = oneRow[3];
+			product_id = oneRow[4];
+			
+			dateTimeArray = DBDateToViewDate(oneRow[1], 1, 1);
+			date = dateTimeArray[0];
+            console.log(product_id)	
+
+			tdCol = cTag('td');
+
+			oneTDObj = tdAttributes[0];
+			for(const [key, value] of Object.entries(oneTDObj)) {
+				let attName = key;
+				if(attName !=='' && attName==='datatitle')
+					attName = attName.replace('datatitle', 'data-title');
+				tdCol.setAttribute(attName, value);
+			}
+
+			tdCol.innerHTML = date;
+			tabelHeadRow.appendChild(tdCol);
+
+			
+			tdCol = cTag('td');
+			oneTDObj = tdAttributes[1];
+			for(const [key, value] of Object.entries(oneTDObj)) {
+				let attName = key;
+				if(attName !=='' && attName==='datatitle')
+					attName = attName.replace('datatitle', 'data-title');
+				tdCol.setAttribute(attName, value);
+			}
+			tdCol.innerHTML = height;
+			tabelHeadRow.appendChild(tdCol);
+
+
+            tdCol = cTag('td');
+            oneTDObj = tdAttributes[2];
+            for(const [key, value] of Object.entries(oneTDObj)) {
+                let attName = key;
+                if(attName !=='' && attName==='datatitle')
+                    attName = attName.replace('datatitle', 'data-title');
+                tdCol.setAttribute(attName, value);
+            }
+            tdCol.innerHTML = weight;
+			tabelHeadRow.appendChild(tdCol);
+
+				
+            // let pTag = cTag('p');
+            // pTag.innerHTML=idVal;
+            // tdCol.appendChild(pTag);
+            // let cursorIcon = cTag('i',{ 'class': 'fa fa-edit cursor',  'data-toggle':"tooltip", 'click':()=>AJget_notesPopup(0,idVal), 'data-original-title':"Edit Note"});
+            // tdCol.append(' ', cursorIcon);
+
+                                    
+            // let aTag = cTag('a',{ 'style': "color: #009; text-decoration: underline;", title:Translate('View Details'), 'href': height });							
+            // aTag.innerHTML=tdvalue;
+            // let linkIcon = cTag('i',{ 'class': 'fa fa-link'});
+            // aTag.append(' ',linkIcon,' ');
+            // tdCol.appendChild(aTag);
+        
+            
+            // tdCol.innerHTML = tdvalue;
+            // if(i===4 && ['notes', 'digital_signature'].includes(tableName) && height===1){
+            //     let publicSpan = cTag('span',{ 'class': 'bgblack', 'style': "color: white; margin-left: 15px; padding: 5px;"});
+            //     publicSpan.innerHTML= Translate('Public');
+            //     tdCol.append(' ', publicSpan);
+
+			// tabelHeadRow.appendChild(tdCol);
+            
+            tdCol = cTag('td');
+            oneTDObj = tdAttributes[0];
+            for(const [key, value] of Object.entries(oneTDObj)) {
+                let attName = key;
+                if(attName !=='' && attName==='datatitle')
+                    attName = attName.replace('datatitle', 'data-title');
+                tdCol.setAttribute(attName, value);
+            }
+            // tdCol.innerHTML = weight;
+
+            const editIcon = cTag('i',{ 'class':`fa fa-edit`,'style':`cursor: pointer`,'data-toggle':`tooltip`,'data-original-title':Translate('Edit Growth') });
+            editIcon.addEventListener('click',()=>AJget_LivestocksGrowthInfoPopup(idVal, product_id))
+            tdCol.appendChild(editIcon);
+            tdCol.append('  ');
+            const trashIcon = cTag('i',{ 'class':`fa fa-trash-o`,'style':`cursor: pointer`,'data-toggle':`tooltip`,'data-original-title':Translate('Remove Weight') });
+            trashIcon.addEventListener('click',()=>AJremove_tableRow('product_prices', idVal, 'Livestock Prices', `/Livestocks/view/${product_id}`))
+            tdCol.appendChild(trashIcon);
+
+			tabelHeadRow.appendChild(tdCol);
+
+			tbody.appendChild(tabelHeadRow);
+
+		});
+	}
+    
+	tbody.querySelectorAll('[data-toggle="tooltip"]').forEach(item=>tooltip(item))
+
+}
+
+
+async function AJget_LivestocksGrowthInfoPopup(product_growthinfo_id, product_id){
+    
+	const jsonData = {};
+	jsonData['product_growthinfo_id'] = product_growthinfo_id;
+	jsonData['product_id'] = product_id;
+
+    const url = '/Growthinfos/AJget_LivestocksGrowthInfoPopup';
+    fetchData(afterFetch,url,jsonData);
+    
+    function afterFetch(data){
+        let requiredField, inputField;
+        let currencyoption = currency;
+
+        let formDialog = cTag('div');
+            
+            const productsGrowthInfoForm = cTag('form', {'action': "#", name: "frmproduct_growthinfo", id: "frmproduct_growthinfo", 'enctype': "multipart/form-data", 'method': "post", 'accept-charset': "utf-8"});
+                const productsGrowthInfoColumn = cTag('div', {class: "columnSM12", 'align': "left"});       
+
+                    const growthInfoRow = cTag('div', {class: "flex"});
+                        const growthInfoColumn = cTag('div', {class: "columnSM4"});
+                            let growthInfoLabel = cTag('label', {'for': "growth"});
+                            growthInfoLabel.innerHTML = Translate('Growth');
+                                requiredField = cTag('span', {class: "required"});
+                                requiredField.innerHTML = '*';
+                                growthInfoLabel.appendChild(requiredField);
+                            growthInfoColumn.appendChild(growthInfoLabel);
+                        growthInfoRow.appendChild(growthInfoColumn);
+                        const growthInfoField = cTag('div', {class: "columnSM8"});
+                            inputField = cTag('input', {'required': "required", id: "growth", name: "growth", 'type': "text",'data-min':'0', 'data-format':'d.dd', 'value': round(data.growth,2), class: "form-control"});
+                            controllNumericField(inputField, '#error_growth');
+                            growthInfoField.appendChild(inputField);
+                            growthInfoField.appendChild(cTag('span', {id: "error_growth", class: "errormsg"}));
+                        growthInfoRow.appendChild(growthInfoField);
+                    productsGrowthInfoColumn.appendChild(growthInfoRow);
+
+
+
+                    const weightInfoRow = cTag('div', {class: "flex"});
+                        const weightInfoColumn = cTag('div', {class: "columnSM4"});
+                            let weightInfoLabel = cTag('label', {'for': "weight"});
+                            weightInfoLabel.innerHTML = Translate('Weight');
+                                requiredField = cTag('span', {class: "required"});
+                                requiredField.innerHTML = '*';
+                                weightInfoLabel.appendChild(requiredField);
+                                weightInfoColumn.appendChild(weightInfoLabel);
+                            weightInfoRow.appendChild(weightInfoColumn);
+                        const weightInfoField = cTag('div', {class: "columnSM8"});
+                            inputField = cTag('input', {'required': "required", id: "weight", name: "weight", 'type': "text",'data-min':'0', 'data-format':'d.dd', 'value': round(data.weight,2), class: "form-control"});
+                            controllNumericField(inputField, '#error_weight');
+                            weightInfoField.appendChild(inputField);
+                            weightInfoField.appendChild(cTag('span', {id: "error_weight", class: "errormsg"}));
+                            weightInfoRow.appendChild(weightInfoField);
+                    productsGrowthInfoColumn.appendChild(weightInfoRow);
+
+
+                    // const startDateRow = cTag('div', {class: "flex"});
+                    //     const startDateColumn = cTag('div', {class: "columnSM4"});
+                    //         const startDateLabel = cTag('label', {'for': "start_date"});
+                    //         startDateLabel.innerHTML = Translate('Start Date');
+                    //     startDateColumn.appendChild(startDateLabel);
+                    // startDateRow.appendChild(startDateColumn);
+                    //     const startDateField = cTag('div', {class: "columnSM8"});
+                    //         inputField = cTag('input', {'required': "required", 'type': "text", class: "form-control", name: "start_date", id: "start_date", 'value': DBDateToViewDate(data.start_date),'maxlength': 10});
+                    //         checkDateOnBlur(inputField,'#error_product_prices','Invalid Start Date');
+                    //     startDateField.appendChild(inputField);
+                    // startDateRow.appendChild(startDateField);
+                    // productsGrowthInfoColumn.appendChild(startDateRow);
+
+
+                productsGrowthInfoForm.appendChild(productsGrowthInfoColumn);
+
+                inputField = cTag('input', {'type': "hidden", name: "product_growthinfo_id", 'value': product_growthinfo_id});
+                productsGrowthInfoForm.appendChild(inputField);
+                inputField = cTag('input', {'type': "hidden", name: "product_id", 'value': product_id});
+                productsGrowthInfoForm.appendChild(inputField);
+        formDialog.appendChild(productsGrowthInfoForm);
+        
+        popup_dialog1000(Translate('Livestock growth information'),formDialog,AJsave_LivestocksGrowth);			
+
+        setTimeout(function() {
+            // document.getElementById("price_type").value = data.price_type;
+            // date_picker('#start_date');
+        }, 500);
+    }
+	return true;
+}
+
+
+
+async function AJsave_LivestocksGrowth(hidePopup){
+	let errormsg = document.getElementById('error_growth');
+	let error_weight = document.getElementById('error_weight');
+	errormsg.innerHTML = '';
+	error_weight.innerHTML = '';
+
+    // const price_type = document.getElementById("price_type");
+    // if(price_type.value===''){
+    //     errormsg.innerHTML = Translate('Missing Price Type');
+    //     price_type.focus();
+    //     price_type.classList.add('errorFieldBorder');
+    //     return false;
+    // }else {
+    //     price_type.classList.remove('errorFieldBorder');
+    // }
+
+    let growthField = document.getElementById("growth");
+    if(!validateRequiredField(growthField,'#error_growth') || !growthField.valid()) return;
+
+	let product_id = document.frmproduct_growthinfo.product_id.value;
+	actionBtnClick('.btnmodel', Translate('Saving'), 1);
+			
+    const jsonData = serialize('#frmproduct_growthinfo');
+    
+    const url = '/'+segment1+'/AJsave_LivestocksGrowth';
+    fetchData(afterFetch,url,jsonData);
+    
+    function afterFetch(data){
+        if(data.savemsg ===''){
+            hidePopup();
+			window.location = '/Growthinfos/view/'+product_id;						
+		}
+		else{						
+			if(data.savemsg==='growthInfoExist') document.getElementById('error_growth').innerHTML = Translate('This info already exists. Try again with different field values.');
+			// if(data.savemsg==='errorAddingPrice') document.getElementById('error_growth').innerHTML = Translate('Error occured while adding new product prices! Please try again.');
+		}
+        actionBtnClick('.btnmodel', Translate('Save'), 0);
+    }
+	return false;
+}
+
 
 async function loadTableRows_IMEI_view(){
 	const jsonData = {};
 	jsonData['sproduct_id'] = document.getElementById("sproduct_id").value;
 	jsonData['sitem_id'] = document.getElementById("table_idValue").value;
 	jsonData['item_number'] = document.getElementById("item_numberValue").value;
-	jsonData['shistory_type'] = document.getElementById("shistory_type").value;
+	// jsonData['shistory_type'] = document.getElementById("shistory_type").value;
 	jsonData['totalRows'] = document.getElementById("totalTableRows").value;
 	jsonData['rowHeight'] = document.getElementById("rowHeight").value;
 	jsonData['limit'] = checkAndSetLimit();
@@ -647,7 +900,7 @@ async function AJ_view_MoreInfo(){
             viewBasicInfo.appendChild(customColumn);
 
         }
-        filter_IMEI_view();
+        filter_growth_view();
     }
 }
 
@@ -701,10 +954,10 @@ function viewOLD(){
         list_filters = {};
     }
 
-    const shistory_type = '';
-    checkAndSetSessionData('shistory_type', shistory_type, list_filters);
+    // const shistory_type = '';
+    // checkAndSetSessionData('shistory_type', shistory_type, list_filters);
 
-    addCustomeEventListener('filter',filter_IMEI_view);
+    addCustomeEventListener('filter',filter_growth_view);
     addCustomeEventListener('loadTable',loadTableRows_IMEI_view);
     AJ_view_MoreInfo();
 }
@@ -760,10 +1013,10 @@ function view(){
         list_filters = {};
     }
 
-    const shistory_type = '';
-    checkAndSetSessionData('shistory_type', shistory_type, list_filters);
+    // const shistory_type = '';
+    // checkAndSetSessionData('shistory_type', shistory_type, list_filters);
 
-    addCustomeEventListener('filter',filter_IMEI_view);
+    addCustomeEventListener('filter',filter_growth_view);
     addCustomeEventListener('loadTable',loadTableRows_IMEI_view);
     AJ_view_MoreInfo();
 }
@@ -780,6 +1033,15 @@ export function getDeviceOperatingSystem() {
 
 	return 'unknown';
 }
+
+
+export let  growthFieldAttributes = [
+	{ 'valign':'top','datatitle':Translate('Date'), 'align':'center'},
+	{'valign':'top','datatitle':Translate('Height'), 'align':'center'},
+	{'valign':'top','datatitle':Translate('Weight'), 'align':'center'},
+	{'valign':'top','datatitle':Translate('Action'), 'align':'left'}
+];
+
 
 export function growthHistoryTable(title,hiddenProperties,haveSignatureBtn=false){
 	let page = 1;
@@ -808,34 +1070,36 @@ export function growthHistoryTable(title,hiddenProperties,haveSignatureBtn=false
 				widgetHeaderName.appendChild(widgetHeaderTitle);
 			widgetHeaderRow.appendChild(widgetHeaderName);
 
-				const sortDropDown = cTag('div', {class: "columnXS6 columnSM4", 'style': "margin: 0;"});
-					const selectHistory = cTag('select', {class: "form-control", 'style': "margin-top: 2px;", name: "shistory_type", id: "shistory_type"});
-					selectHistory.addEventListener('change', ()=>triggerEvent('filter'));
-						const historyOption = cTag('option', {'value': ""});
-						historyOption.innerHTML = Translate('All Activities');
-					selectHistory.appendChild(historyOption);
-				sortDropDown.appendChild(selectHistory);
-			widgetHeaderRow.appendChild(sortDropDown);
+			// 	const sortDropDown = cTag('div', {class: "columnXS6 columnSM4", 'style': "margin: 0;"});
+			// 		const selectHistory = cTag('select', {class: "form-control", 'style': "margin-top: 2px;", name: "shistory_type", id: "shistory_type"});
+			// 		selectHistory.addEventListener('change', ()=>triggerEvent('filter'));
+			// 			const historyOption = cTag('option', {'value': ""});
+			// 			historyOption.innerHTML = Translate('All Activities');
+			// 		selectHistory.appendChild(historyOption);
+			// 	sortDropDown.appendChild(selectHistory);
+			// widgetHeaderRow.appendChild(sortDropDown);
 
-				const buttonTitle = cTag('div', {class: "columnXS6 columnSM4 flexEndRow", 'style': "margin:0; gap:10px; align-items: center;"});
-				if(haveSignatureBtn){
-					let signatureButton = cTag('button',{ 'id':'digital_signature_btn','href':`javascript:void(0);`,'class':`btn defaultButton` });
-						signatureButton.innerHTML = Translate('Add Digital Signature');
-						if(getDeviceOperatingSystem() !='unknown'){
-							signatureButton.innerHTML = '';
-							signatureButton.append(cTag('i',{ 'class':`fa fa-plus` }), ' ', `${Translate('Digital Signature')}`);
-						}
-					buttonTitle.appendChild(signatureButton);
-				}
-					const noteButton = cTag('button', {class: "btn defaultButton"});
-					noteButton.innerHTML = Translate('Add New Note');
-					if(getDeviceOperatingSystem() !=='unknown'){
-						noteButton.innerHTML = '';
-						noteButton.append(cTag('i',{ 'class':`fa fa-plus` }), ' ', `${Translate('Note')}`);
-					}
-					noteButton.addEventListener('click', function(){AJget_notesPopup(0);});
-				buttonTitle.appendChild(noteButton);
-			widgetHeaderRow.appendChild(buttonTitle);
+				// const buttonTitle = cTag('div', {class: "columnXS6 columnSM4 flexEndRow", 'style': "margin:0; gap:10px; align-items: center;"});
+				// if(haveSignatureBtn){
+				// 	let signatureButton = cTag('button',{ 'id':'digital_signature_btn','href':`javascript:void(0);`,'class':`btn defaultButton` });
+				// 		signatureButton.innerHTML = Translate('Add Digital Signature');
+				// 		if(getDeviceOperatingSystem() !='unknown'){
+				// 			signatureButton.innerHTML = '';
+				// 			signatureButton.append(cTag('i',{ 'class':`fa fa-plus` }), ' ', `${Translate('Digital Signature')}`);
+				// 		}
+				// 	buttonTitle.appendChild(signatureButton);
+				// }
+
+				// 	const noteButton = cTag('button', {class: "btn defaultButton"});
+				// 	noteButton.innerHTML = Translate('Add New Note');
+				// 	if(getDeviceOperatingSystem() !=='unknown'){
+				// 		noteButton.innerHTML = '';
+				// 		noteButton.append(cTag('i',{ 'class':`fa fa-plus` }), ' ', `${Translate('Note')}`);
+				// 	}
+				// 	noteButton.addEventListener('click', function(){AJget_notesPopup(0);});
+				// buttonTitle.appendChild(noteButton);
+			// widgetHeaderRow.appendChild(buttonTitle);
+
 		widgetHeader.appendChild(widgetHeaderRow);
 	widget.appendChild(widgetHeader);
 
@@ -845,23 +1109,21 @@ export function growthHistoryTable(title,hiddenProperties,haveSignatureBtn=false
 					const noMoreTables = cTag('div', {id: "no-more-tables"});
 						const activityTable = cTag('table', {class: "table-bordered table-striped table-condensed cf listing", 'style': "margin-top: 2px;"});
 							const activityHead = cTag('thead', {class: "cf"});
-								const columnNames = activityFieldAttributes.map(colObj=>(colObj.datatitle));
+								const columnNames = growthFieldAttributes.map(colObj=>(colObj.datatitle));
 								const activityHeadRow = cTag('tr');
-									const thCol0 = cTag('th', {'style': "width: 80px;"});
+									const thCol0 = cTag('th', {'style': "width: 20px;"});
 									thCol0.innerHTML = columnNames[0];
 
 									const thCol1 = cTag('th', {'style': "width: 80px;"});
 									thCol1.innerHTML = columnNames[1];
 
-									const thCol2 = cTag('th', {'width': "20%"});
+									const thCol2 = cTag('th', {'style': "width: 80px;"});
 									thCol2.innerHTML = columnNames[2];
 
-									const thCol3 = cTag('th', {'width': "20%"});
+									const thCol3 = cTag('th', {'style': "width: 80px;"});
 									thCol3.innerHTML = columnNames[3];
-
-									const thCol4 = cTag('th');
-									thCol4.innerHTML = columnNames[4];
-								activityHeadRow.append(thCol0, thCol1, thCol2, thCol3, thCol4);
+                                    
+								activityHeadRow.append(thCol0, thCol1, thCol2, thCol3);
 							activityHead.appendChild(activityHeadRow);
 						activityTable.appendChild(activityHead);
 							const activityBody = cTag('tbody', {id: "tableRows"});

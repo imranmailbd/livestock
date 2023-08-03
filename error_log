@@ -5197,3 +5197,319 @@ previous: http://livestock.skitsbdl.com/Growthinfos
     at Object.view (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:747:13)
     at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1194:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
 previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 01:43:38 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'appendChild')
+    at checkAndSetSessionData (http://livestock.skitsbdl.com/assets/js-v3/common.js:1130:16)
+    at Object.view (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:764:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1193:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 01:43:40 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'appendChild')
+    at checkAndSetSessionData (http://livestock.skitsbdl.com/assets/js-v3/common.js:1130:16)
+    at Object.view (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:764:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1193:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 01:44:52 Script Error, Message: 1: ReferenceError: triggerEvent is not defined
+    at HTMLSelectElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:813:51) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 01:44:54 Script Error, Message: 1: ReferenceError: triggerEvent is not defined
+    at HTMLSelectElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:813:51) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 01:46:01 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'appendChild')
+    at checkAndSetSessionData (http://livestock.skitsbdl.com/assets/js-v3/common.js:1130:16)
+    at Object.view (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:764:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1193:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 01:46:02 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'appendChild')
+    at checkAndSetSessionData (http://livestock.skitsbdl.com/assets/js-v3/common.js:1130:16)
+    at Object.view (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:764:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1193:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 01:46:02 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'appendChild')
+    at checkAndSetSessionData (http://livestock.skitsbdl.com/assets/js-v3/common.js:1130:16)
+    at Object.view (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:764:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1193:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 01:46:03 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'appendChild')
+    at checkAndSetSessionData (http://livestock.skitsbdl.com/assets/js-v3/common.js:1130:16)
+    at Object.view (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:764:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1193:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 01:46:03 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'appendChild')
+    at checkAndSetSessionData (http://livestock.skitsbdl.com/assets/js-v3/common.js:1130:16)
+    at Object.view (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:764:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1193:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 02:08:21 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'appendChild')
+    at checkAndSetSessionData (http://livestock.skitsbdl.com/assets/js-v3/common.js:1130:16)
+    at Object.view (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:764:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1193:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 02:08:22 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'appendChild')
+    at checkAndSetSessionData (http://livestock.skitsbdl.com/assets/js-v3/common.js:1130:16)
+    at Object.view (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:764:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1193:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 02:08:23 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'appendChild')
+    at checkAndSetSessionData (http://livestock.skitsbdl.com/assets/js-v3/common.js:1130:16)
+    at Object.view (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:764:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1193:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 02:12:05 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'appendChild')
+    at checkAndSetSessionData (http://livestock.skitsbdl.com/assets/js-v3/common.js:1130:16)
+    at Object.view (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:764:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1193:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 02:12:06 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'appendChild')
+    at checkAndSetSessionData (http://livestock.skitsbdl.com/assets/js-v3/common.js:1130:16)
+    at Object.view (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:764:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1193:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 02:12:07 Script Error, Message: 2: TypeError: Cannot read properties of null (reading 'appendChild')
+    at checkAndSetSessionData (http://livestock.skitsbdl.com/assets/js-v3/common.js:1130:16)
+    at Object.view (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:764:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1193:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 02:12:50 Script Error, Message: 1: ReferenceError: triggerEvent is not defined
+    at HTMLSelectElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:813:51) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 02:12:55 Script Error, Message: 1: ReferenceError: triggerEvent is not defined
+    at HTMLSelectElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:813:51) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 02:14:58 Script Error, Message: 1: ReferenceError: AJget_notesPopup is not defined
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:836:54) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 02:58:34 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at setTableHRows (http://livestock.skitsbdl.com/assets/js-v3/common.js:903:18)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:455:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 02:58:35 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at setTableHRows (http://livestock.skitsbdl.com/assets/js-v3/common.js:903:18)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:455:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 02:58:35 Script Error, Message: 2: TypeError: Cannot set properties of null (setting 'innerHTML')
+    at setTableHRows (http://livestock.skitsbdl.com/assets/js-v3/common.js:903:18)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:455:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 04:02:56 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Growthinfos/AJgetHPage/filter, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-03 04:02:57 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Growthinfos/AJgetHPage/filter, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-03 04:02:59 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Growthinfos/AJgetHPage/filter, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-03 04:04:52 Script Error, Message: 2: TypeError: Cannot read properties of undefined (reading 'length')
+    at setTableHRows (http://livestock.skitsbdl.com/assets/js-v3/common.js:906:15)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:455:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 04:04:52 Script Error, Message: 2: TypeError: Cannot read properties of undefined (reading 'length')
+    at setTableHRows (http://livestock.skitsbdl.com/assets/js-v3/common.js:906:15)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:455:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 04:07:52 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Growthinfos/AJgetHPage_Growth/filter, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-03 04:07:54 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Growthinfos/AJgetHPage_Growth/filter, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-03 04:07:56 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Growthinfos/AJgetHPage_Growth/filter, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-03 04:07:58 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Growthinfos/AJgetHPage_Growth/filter, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-03 04:08:00 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Growthinfos/AJgetHPage_Growth/filter, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-03 04:09:22 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Growthinfos/AJgetHPage_Growth/filter, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-03 04:09:24 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Growthinfos/AJgetHPage_Growth/filter, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-03 04:09:26 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Growthinfos/AJgetHPage_Growth/filter, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-03 04:09:28 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Growthinfos/AJgetHPage_Growth/filter, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-03 04:09:31 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Growthinfos/AJgetHPage_Growth/filter, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-03 04:12:53 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Growthinfos/AJgetHPage_Growth/filter, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-03 04:12:55 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Growthinfos/AJgetHPage_Growth/filter, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-03 04:12:57 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Growthinfos/AJgetHPage_Growth/filter, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-03 04:12:59 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Growthinfos/AJgetHPage_Growth/filter, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-03 04:13:01 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Growthinfos/AJgetHPage_Growth/filter, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-03 05:25:09 Script Error, Message: 2: ReferenceError: weight is not defined
+    at http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:496:11
+    at Array.forEach (<anonymous>)
+    at setTableHRowsGrowth (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:488:13)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:455:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 05:26:11 Script Error, Message: 2: ReferenceError: weight is not defined
+    at http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:496:11
+    at Array.forEach (<anonymous>)
+    at setTableHRowsGrowth (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:488:13)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:455:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 05:27:21 Script Error, Message: 2: ReferenceError: weight is not defined
+    at http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:496:11
+    at Array.forEach (<anonymous>)
+    at setTableHRowsGrowth (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:488:13)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:455:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 05:27:55 Script Error, Message: 2: ReferenceError: weight is not defined
+    at http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:496:11
+    at Array.forEach (<anonymous>)
+    at setTableHRowsGrowth (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:488:13)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:455:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 05:28:29 Script Error, Message: 2: ReferenceError: weight is not defined
+    at http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:496:11
+    at Array.forEach (<anonymous>)
+    at setTableHRowsGrowth (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:488:13)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:455:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 05:34:06 Script Error, Message: 2: ReferenceError: weight is not defined
+    at http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:496:11
+    at Array.forEach (<anonymous>)
+    at setTableHRowsGrowth (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:488:13)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:455:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 05:34:30 Script Error, Message: 2: ReferenceError: weight is not defined
+    at http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:496:11
+    at Array.forEach (<anonymous>)
+    at setTableHRowsGrowth (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:488:13)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:455:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 05:34:38 Script Error, Message: 2: ReferenceError: weight is not defined
+    at http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:496:11
+    at Array.forEach (<anonymous>)
+    at setTableHRowsGrowth (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:488:13)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:455:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 06:45:43 Script Error, Message: 2: ReferenceError: product_id is not defined
+    at http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:497:15
+    at Array.forEach (<anonymous>)
+    at setTableHRowsGrowth (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:488:13)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:455:9)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 06:46:06 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Growthinfos/AJget_LivestocksGrowthInfoPopup, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-03 06:46:08 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Growthinfos/AJget_LivestocksGrowthInfoPopup, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-03 06:46:10 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Growthinfos/AJget_LivestocksGrowthInfoPopup, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-03 06:46:27 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Growthinfos/AJget_LivestocksGrowthInfoPopup, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-03 06:46:29 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Growthinfos/AJget_LivestocksGrowthInfoPopup, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-03 06:46:31 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Growthinfos/AJget_LivestocksGrowthInfoPopup, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-03 06:46:33 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Growthinfos/AJget_LivestocksGrowthInfoPopup, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-03 06:46:35 JSON Issue, Message: Unexpected token '<', "<!DOCTYPE "... is not valid JSON: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON for API: /Growthinfos/AJget_LivestocksGrowthInfoPopup, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-03 06:48:04 Script Error, Message: 2: ReferenceError: round is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:620:173)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 06:48:05 Script Error, Message: 2: ReferenceError: round is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:620:173)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 06:48:05 Script Error, Message: 2: ReferenceError: round is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:620:173)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 06:48:06 Script Error, Message: 2: ReferenceError: round is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:620:173)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 06:48:06 Script Error, Message: 2: ReferenceError: round is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:620:173)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 06:48:08 Script Error, Message: 2: ReferenceError: round is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:620:173)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 06:48:09 Script Error, Message: 2: ReferenceError: round is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:620:173)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 06:48:09 Script Error, Message: 2: ReferenceError: round is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:620:173)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 06:48:10 Script Error, Message: 2: ReferenceError: round is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:620:173)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 06:48:10 Script Error, Message: 2: ReferenceError: round is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:620:173)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 06:48:12 Script Error, Message: 2: ReferenceError: round is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:620:173)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 06:48:13 Script Error, Message: 2: ReferenceError: round is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:620:173)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 06:48:20 Script Error, Message: 2: ReferenceError: round is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:620:173)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 06:52:55 Script Error, Message: 2: ReferenceError: round is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:620:173)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 06:55:45 Script Error, Message: 2: ReferenceError: round is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:621:173)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 06:55:58 Script Error, Message: 2: ReferenceError: round is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:621:173)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 06:58:27 Script Error, Message: 2: ReferenceError: round is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:621:173)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 06:58:28 Script Error, Message: 2: ReferenceError: round is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:621:173)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 06:58:32 Script Error, Message: 2: ReferenceError: round is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:621:173)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 06:58:33 Script Error, Message: 2: ReferenceError: round is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:621:173)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 06:58:37 Script Error, Message: 2: ReferenceError: round is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:621:173)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 07:00:46 Script Error, Message: 2: ReferenceError: controllNumericField is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:622:29)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 07:01:32 Script Error, Message: 2: ReferenceError: AJsave_LivestocksGrowth is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:670:79)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-03 07:03:23 Script Error, Message: 2: ReferenceError: validateRequiredField is not defined
+    at Object.AJsave_LivestocksGrowth [as click] (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:699:5)
+    at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos

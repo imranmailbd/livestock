@@ -1009,6 +1009,178 @@ class Growthinfos{
 
 		return $tabledata;
     }
+
+
+	public function AJget_LivestocksGrowthInfoPopup(){
+		$POST = json_decode(file_get_contents('php://input'), true);
+		$growthData = array();
+		$growthData['login'] = '';
+		$accounts_id = $_SESSION["accounts_id"]??0;
+		$product_growthinfo_id = intval($POST['product_growthinfo_id']??0);
+		
+		$price_type = $type_match = '';
+
+		if(!isset($_SESSION["accounts_id"])){
+			$growthData['login'] = 'session_ended';
+		}
+
+		$growthData['growth'] = 0.00;
+		$growthData['weight'] = 0.00;
+		$growthData['review_date'] = '';
+		
+		if($product_growthinfo_id>0){
+			$ppObj = $this->db->query("SELECT * FROM product_growthinfo WHERE accounts_id = $accounts_id AND product_growthinfo_id = :product_growthinfo_id", array('product_growthinfo_id'=>$product_growthinfo_id),1);
+			if($ppObj){
+				$oneRow = $ppObj->fetch(PDO::FETCH_OBJ);
+				$growthData['growth'] = round($oneRow->growth,2);
+				$growthData['weight'] = round($oneRow->weight,2);
+				$growthData['review_date'] = $oneRow->review_date;
+			}
+		}
+		
+		return json_encode($growthData);
+	}
+
+
+
+
+	private function loadHTableRowsGrowth(){
+		
+		$limit = $_SESSION["limit"];
+		$page = $this->page;
+		$totalRows = $this->totalRows;
+		$sitem_id = $this->item_id;
+		$sproduct_id = $this->product_id;
+		$starting_val = ($page-1)*$limit;
+		if($starting_val>$totalRows){$starting_val = 0;}		
+		$accounts_id = $_SESSION["accounts_id"]??0;
+		$bindData = array();
+
+		$filterSql = "SELECT * FROM product_growthinfo";
+		$filterSql .= " WHERE accounts_id = $accounts_id AND product_id = $sproduct_id";		
+		$filterSql .= " ORDER BY review_date DESC LIMIT $starting_val, $limit";
+		$query = $this->db->querypagination($filterSql, $bindData);
+
+		$tabledata = array();
+		// $tabledata[] = $query;
+		if($query){
+
+			foreach($query as $ponerow){
+
+				$growth_info_id  = $ponerow['product_growthinfo_id'];
+				$review_date = $ponerow['review_date'];
+				$growth = $ponerow['growth'];
+				$weight = $ponerow['weight'];
+				$product_id = $ponerow['product_id'];
+				
+				$getHMoreInfo = array($growth_info_id, $review_date, $growth, $weight, $product_id);
+				if(!empty($getHMoreInfo)){
+					$tabledata[] = $getHMoreInfo;
+				}
+
+			}
+		}
+
+		return $tabledata;
+    }
+	
+
+
+	public function AJsave_LivestocksGrowth(){
+		$POST = json_decode(file_get_contents('php://input'), true);
+		$savemsg = '';
+		$accounts_id = $_SESSION["accounts_id"]??0;
+		$prod_cat_man = $_SESSION["prod_cat_man"]??0;
+		$user_id = $_SESSION["user_id"]??0;
+		$currency = $_SESSION["currency"]??'৳';
+		
+		$product_growthinfo_id = intval($POST['product_growthinfo_id']??0);
+		$product_id = intval($POST['product_id']??0);		
+		$growth = floatval($POST['growth']??0);
+		$weight = floatval($POST['weight']??0);
+		$review_date = date('Y-m-d H:i:s');
+		// $start_date = trim((string) $POST['start_date']??'1000-01-01');
+		// if(!in_array($start_date, array('', '1000-01-01'))){$start_date = date('Y-m-d', strtotime($start_date));}
+		// else{$start_date = '1000-01-01';}		
+		
+		$growth = $this->db->checkCharLen('product_growthinfo.growth', $growth);
+
+		$conditionarray = array();
+		$conditionarray['accounts_id'] = $accounts_id;
+		$conditionarray['user_id'] = $user_id;
+		$conditionarray['product_id'] = $product_id;
+		$conditionarray['growth'] = $growth;			
+		$conditionarray['weight'] = $weight;			
+		$conditionarray['review_date'] = date('Y-m-d H:i:s');
+
+		$bindData = array('product_id'=>$product_id, 'growth'=>$growth, 'review_date'=>$review_date);
+		$duplCheckSql = "SELECT COUNT(product_growthinfo_id) AS totalrows FROM product_growthinfo WHERE accounts_id = $accounts_id AND product_id = :product_id AND growth = :growth AND review_date = :review_date";
+		if($product_growthinfo_id>0){
+			$duplCheckSql .= " AND product_growthinfo_id != :product_growthinfo_id";
+			$bindData['product_growthinfo_id'] = $product_growthinfo_id;
+		}
+		$totalrows = 0;
+		$queryObj = $this->db->query($duplCheckSql, $bindData);
+		if($queryObj){
+			$totalrows = $queryObj->fetch(PDO::FETCH_OBJ)->totalrows;
+		}
+		if($totalrows>0){
+			$savemsg = 'growthInfoExist';
+		}
+		else{
+			
+			if($product_growthinfo_id==0){			
+			
+				$conditionarray['created_on'] = date('Y-m-d H:i:s');
+
+				$product_growthinfo_id = $this->db->insert('product_growthinfo', $conditionarray);
+
+				if($product_growthinfo_id){
+					
+					$activity_feed_name = stripslashes(trim((string) "$growth, $weight"));
+					
+					$activity_feed_title = $this->db->translate('Livestock weight info has been added');
+					$activity_feed_title = $this->db->checkCharLen('activity_feed.activity_feed_title', $activity_feed_title);
+					$activity_feed_link = "/Livestocks/view/$product_id";
+					$activity_feed_link = $this->db->checkCharLen('activity_feed.activity_feed_link', $activity_feed_link);
+					
+					$afData = array('created_on' => date('Y-m-d H:i:s'),
+									'last_updated' => date('Y-m-d H:i:s'),
+									'accounts_id' => $accounts_id,
+									'user_id' => $user_id,
+									'activity_feed_title' => $activity_feed_title,
+									'activity_feed_name' => $activity_feed_name,
+									'activity_feed_link' => $activity_feed_link,
+									'uri_table_name' => "product",
+									'uri_table_field_name' =>"product_publish",
+									'field_value' => 1);
+					$this->db->insert('activity_feed', $afData);
+				}
+				else{
+					$savemsg = 'errorAddingWeightInfo';
+				}
+			}
+			else{
+
+				// $oldPPObj = $this->db->query("SELECT * FROM product_growthinfo WHERE accounts_id = $accounts_id AND product_growthinfo_id = :product_growthinfo_id", array('product_growthinfo_id'=>$product_growthinfo_id),1);
+				// if($oldPPObj){
+				// 	$oldPPRow = $oldPPObj->fetch(PDO::FETCH_OBJ);
+				// }
+
+				$update = $this->db->update('product_growthinfo', $conditionarray, $product_growthinfo_id);
+
+				
+			}
+
+
+		}
+
+		$array = array( 'login'=>'', 'product_growthinfo_id'=>$product_growthinfo_id,
+			'savemsg'=>$savemsg);
+		return json_encode($array);
+	}
+
+	
 	
 	
 	 public function prints($segment4name, $segment5name){
@@ -1129,11 +1301,13 @@ class Growthinfos{
 	}
 	
 	public function AJgetHPage($segment4name){
+
 		$accounts_id = $_SESSION["accounts_id"]??0;
 		$POST = json_decode(file_get_contents('php://input'), true);
 		$sproduct_id = intval($POST['sproduct_id']??0);
 		$sitem_id = $POST['sitem_id']??'';
 		$item_number = $POST['item_number']??'';
+		
 		if(!empty($item_number)){
 			$itemIds = array();
 			$itemObj = $this->db->query("SELECT item_id FROM item WHERE item_number = :item_number AND accounts_id = $accounts_id ORDER BY item_id DESC", array('item_number'=>str_replace('%5C', '/', $item_number)));
@@ -1171,6 +1345,43 @@ class Growthinfos{
 		$this->page = $page;
 		$this->totalRows = $totalRows;
 		$jsonResponse['tableRows'] = $this->loadHTableRows();
+		
+		return json_encode($jsonResponse);
+	}
+
+	public function AJgetHPage_Growth($segment4name){
+
+		$accounts_id = $_SESSION["accounts_id"]??0;
+		$POST = json_decode(file_get_contents('php://input'), true);
+		$sproduct_id = intval($POST['sproduct_id']??0);
+		$sitem_id = $POST['sitem_id']??'';
+		$item_number = $POST['item_number']??'';
+		$shistory_type = $POST['shistory_type']??'';
+		$totalRows = intval($POST['totalRows']??0);
+		$page = intval($POST['page']??1);
+		if($page<=0){$page = 1;}
+		$_SESSION["limit"] = intval($POST['limit']??15);
+
+		// var_dump($POST);exit;
+		
+		if(!is_int($sproduct_id)){$this->db->writeIntoLog("Error on IMEI#1064: A/C Id: $_SESSION[accounts_id], sproduct_id: $sproduct_id, ASCII: ".ord($sproduct_id).", segment2name: $GLOBALS[segment2name], segment3name: $GLOBALS[segment3name]");$sproduct_id = 0;}
+		$this->product_id = $sproduct_id;
+		$this->item_id = (string) $sitem_id;
+		$this->item_number = $item_number;
+		$this->history_type = $shistory_type;
+		
+		$jsonResponse = array();
+		$jsonResponse['login'] = '';
+		//===If filter options changes===//	
+		if($segment4name=='filter'){
+			$this->filterHAndOptions();
+			$jsonResponse['totalRows'] = $totalRows = $this->totalRows;	
+			$jsonResponse['actFeeTitOpt'] = $this->actFeeTitOpt;		
+		}
+
+		$this->page = $page;
+		$this->totalRows = $totalRows;
+		$jsonResponse['tableRows'] = $this->loadHTableRowsGrowth();
 		
 		return json_encode($jsonResponse);
 	}
