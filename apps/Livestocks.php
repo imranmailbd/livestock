@@ -160,36 +160,36 @@ class Livestocks{
 			$sqlPublish = " AND p.product_publish = 0";
 		}
 		
-		$strextra ="SELECT p.product_id, p.product_type, p.sku, p.category_id, i.current_inventory AS current_inventory, manufacturer.name AS manufacture, p.product_name as product_name, p.colour_name AS colour_name, p.storage AS storage, p.physical_condition_name AS physical_condition_name, i.regular_price, p.manage_inventory_count, i.current_inventory, p.allow_backorder, i.low_inventory_alert AS low_inventory_alert 
-					FROM inventory i, product p LEFT JOIN manufacturer ON (p.manufacturer_id = manufacturer.manufacturer_id) 
-					WHERE i.accounts_id = $accounts_id AND p.product_type != 'Live Stocks' $sqlPublish $filterSql";
-		if($sdata_type=='Available'){
-			$strextra .= " AND ((p.manage_inventory_count = 0 OR p.manage_inventory_count is null) OR (p.manage_inventory_count=1 AND i.current_inventory>0) OR p.allow_backorder = 1)";
-		}
-		elseif($sdata_type=='Low Stock'){
-			$strextra .= " AND (p.manage_inventory_count>0 AND i.current_inventory < i.low_inventory_alert)";
-		}
-		$strextra .= " AND i.product_id = p.product_id GROUP BY p.product_id 
-						 UNION 
-						 SELECT p.product_id AS product_id, p.product_type, p.sku, p.category_id, count(item.item_id) as current_inventory,  manufacturer.name AS manufacture, p.product_name as product_name, p.colour_name AS colour_name, p.storage AS storage, p.physical_condition_name AS physical_condition_name, i.regular_price, p.manage_inventory_count, count(item.item_id) as current_inventory, p.allow_backorder, i.low_inventory_alert AS low_inventory_alert";
-		if($sdata_type =='All'){
-			$strextra .= " FROM inventory i, product p LEFT JOIN manufacturer ON (p.manufacturer_id = manufacturer.manufacturer_id) LEFT JOIN item ON (item.accounts_id = $accounts_id AND item.product_id = p.product_id AND item.in_inventory = 1 AND item.item_publish = 1)";
-		}
-		else{
-			$strextra .= " FROM inventory i, item, product p LEFT JOIN manufacturer ON (p.manufacturer_id = manufacturer.manufacturer_id)";
-		}
-		$strextra .= " WHERE i.accounts_id = $accounts_id AND p.product_type = 'Live Stocks' $sqlPublish $filterSql";
+		$strextra ="SELECT p.product_id, p.product_type, p.sku, p.category_id, p.product_name as product_name, item.tag, item.purchase_price, p.colour_name AS colour_name, p.storage AS storage, p.physical_condition_name AS physical_condition_name, p.manage_inventory_count, p.allow_backorder 
+					FROM product p LEFT JOIN manufacturer ON (p.manufacturer_id = manufacturer.manufacturer_id) LEFT JOIN item ON  (p.product_id = item.product_id) 
+					WHERE p.product_type = 'Live Stocks' $sqlPublish $filterSql";
+		// if($sdata_type=='Available'){
+		// 	$strextra .= " AND ((p.manage_inventory_count = 0 OR p.manage_inventory_count is null) OR (p.manage_inventory_count=1 AND i.current_inventory>0) OR p.allow_backorder = 1)";
+		// }
+		// elseif($sdata_type=='Low Stock'){
+		// 	$strextra .= " AND (p.manage_inventory_count>0 AND i.current_inventory < i.low_inventory_alert)";
+		// }
+		// $strextra .= " GROUP BY p.product_id 
+		// 				 UNION 
+		// 				 SELECT p.product_id AS product_id, p.product_type, p.sku, p.category_id, count(item.item_id) as current_inventory,  manufacturer.name AS manufacture, p.product_name as product_name, p.colour_name AS colour_name, p.storage AS storage, p.physical_condition_name AS physical_condition_name, i.regular_price, p.manage_inventory_count, count(item.item_id) as current_inventory, p.allow_backorder, i.low_inventory_alert AS low_inventory_alert";
+		// if($sdata_type =='All'){
+		// 	$strextra .= " FROM inventory i, product p LEFT JOIN manufacturer ON (p.manufacturer_id = manufacturer.manufacturer_id) LEFT JOIN item ON (item.accounts_id = $accounts_id AND item.product_id = p.product_id AND item.in_inventory = 1 AND item.item_publish = 1)";
+		// }
+		// else{
+		// 	$strextra .= " FROM inventory i, item, product p LEFT JOIN manufacturer ON (p.manufacturer_id = manufacturer.manufacturer_id)";
+		// }
+		// $strextra .= " WHERE i.accounts_id = $accounts_id AND p.product_type = 'Live Stocks' $sqlPublish $filterSql";
 
-		if($sdata_type=='Available' || $sdata_type=='Low Stock'){
-			$strextra .=" AND item.accounts_id = $accounts_id AND item.in_inventory = 1 AND item.item_publish = 1";
-		}
+		// if($sdata_type=='Available' || $sdata_type=='Low Stock'){
+		// 	$strextra .=" AND item.accounts_id = $accounts_id ";
+		// }
 
-		$strextra .= " AND i.product_id = p.product_id";
+		// $strextra .= " AND i.product_id = p.product_id";
 		if($sdata_type !='All'){
 			$strextra .= " AND item.product_id = p.product_id";
 		}
 		$strextra .= " GROUP BY p.product_id$havingsql 
-					 ORDER BY manufacture ASC, product_name ASC, colour_name ASC, storage ASC, physical_condition_name ASC";
+					 ORDER BY product_name ASC, colour_name ASC, storage ASC, physical_condition_name ASC";
 		
 		$sqlquery = "$strextra LIMIT $starting_val, $limit";
 		$query = $this->db->querypagination($sqlquery, $bindData);
@@ -214,16 +214,18 @@ class Livestocks{
 			}
 
 			foreach($query as $rowproduct){
-
+				// var_dump($rowproduct);exit;
 				$product_id = intval($rowproduct['product_id']);
 				$product_type = $rowproduct['product_type'];
 				$sku = stripslashes($rowproduct['sku']);
+				$item = stripslashes($rowproduct['item']);
 				
 				$category_name = '';
 				if($rowproduct['category_id']>0 && array_key_exists($rowproduct['category_id'], $categoryList)){$category_name = $categoryList[$rowproduct['category_id']];}
 
-				$manufacturer_name = stripslashes(trim((string) $rowproduct['manufacture']));
+				// $manufacturer_name = stripslashes(trim((string) $rowproduct['manufacture']));
 				$product_name = stripslashes(trim((string) $rowproduct['product_name']));
+				$tag = stripslashes(trim((string) $rowproduct['tag']));
 
 				$colour_name = stripslashes(trim((string) $rowproduct['colour_name']));
 				if($colour_name !=''){$product_name .= ' '.$colour_name;}
@@ -236,33 +238,36 @@ class Livestocks{
 
 				$alertclass = '';
 				$regular_price = round($rowproduct['regular_price'],2);
-				$current_inventory = 0;
-				$manage_inventory_count = intval($rowproduct['manage_inventory_count']);
-				if($manage_inventory_count>0){
-					$current_inventory = $rowproduct['current_inventory'];
-					$allow_backorder = $rowproduct['allow_backorder'];
-					$low_inventory_alert = $rowproduct['low_inventory_alert'];
+				$purchase_price = round($rowproduct['purchase_price'],2);
 
-					if($current_inventory<$low_inventory_alert){
-						$alertclass = ' alert alert-danger';
-					}
-				}
+				// $current_inventory = 0;
+				// $manage_inventory_count = intval($rowproduct['manage_inventory_count']);
+				// if($manage_inventory_count>0){
+				// 	$current_inventory = $rowproduct['current_inventory'];
+				// 	$allow_backorder = $rowproduct['allow_backorder'];
+				// 	$low_inventory_alert = $rowproduct['low_inventory_alert'];
+
+				// 	if($current_inventory<$low_inventory_alert){
+				// 		$alertclass = ' alert alert-danger';
+				// 	}
+				// }
 
 				$NeedHaveOnPOInfo = array();
 				$NeedHaveOnPOInfo['product_type'] = $product_type;
 				$NeedHaveOnPOInfo['manage_inventory_count'] = $manage_inventory_count;
 				$NeedHaveOnPOInfo['need'] = 0;
-				$NeedHaveOnPOInfo['have'] = $current_inventory;
+				// $NeedHaveOnPOInfo['have'] = $current_inventory;
 				$NeedHaveOnPOInfo['onPO'] = 0;
 				
-				$NeedHaveOnPO = $current_inventory;
+				// $NeedHaveOnPO = $current_inventory;
+
 				if(in_array($product_type, array('Standard', 'Live Stocks')) && $manage_inventory_count>0){
 					$NHPInfo = $Carts->NeedHaveOnPO($product_id, $product_type, 1);
 					$NeedHaveOnPOInfo['need'] = $NHPInfo[0];
 					$NeedHaveOnPOInfo['have'] = $NHPInfo[1];
 					$NeedHaveOnPOInfo['onPO'] = $NHPInfo[2];
 				}
-				$tabledata[] = array($product_id, $alertclass, $manufacturer_name, $product_name, $sku, $category_name, $regular_price, $NeedHaveOnPOInfo);
+				$tabledata[] = array($product_id, $alertclass, $sku, $product_name, $colour_name, $tag, $purchase_price, $NeedHaveOnPOInfo);
 			}
 		}
 		return $tabledata;
@@ -2873,7 +2878,7 @@ class Livestocks{
 				$oneRow = $ppObj->fetch(PDO::FETCH_OBJ);
 				$growthData['growth'] = round($oneRow->growth,2);
 				$growthData['weight'] = round($oneRow->weight,2);
-				$growthData['review_date'] = $oneRow->review_date;
+				$growthData['review_date'] = date('Y-m-d', strtotime($oneRow->review_date));
 			}
 		}
 		
@@ -2894,7 +2899,7 @@ class Livestocks{
 		$product_id = intval($POST['product_id']??0);		
 		$growth = floatval($POST['growth']??0);
 		$weight = floatval($POST['weight']??0);
-		$review_date = date('Y-m-d H:i:s');
+		$review_date = date('Y-m-d H:i:s', strtotime($POST['review_date']));
 		// $start_date = trim((string) $POST['start_date']??'1000-01-01');
 		// if(!in_array($start_date, array('', '1000-01-01'))){$start_date = date('Y-m-d', strtotime($start_date));}
 		// else{$start_date = '1000-01-01';}		
@@ -2907,7 +2912,7 @@ class Livestocks{
 		$conditionarray['product_id'] = $product_id;
 		$conditionarray['growth'] = $growth;			
 		$conditionarray['weight'] = $weight;			
-		$conditionarray['review_date'] = date('Y-m-d H:i:s');
+		$conditionarray['review_date'] = $review_date;
 
 		$bindData = array('product_id'=>$product_id, 'growth'=>$growth, 'review_date'=>$review_date);
 		$duplCheckSql = "SELECT COUNT(product_growthinfo_id) AS totalrows FROM product_growthinfo WHERE accounts_id = $accounts_id AND product_id = :product_id AND growth = :growth AND review_date = :review_date";
@@ -3285,17 +3290,18 @@ class Livestocks{
 			$query = $this->db->query($strextra, array());						
 			if($query){
 				while($oneRow = $query->fetch(PDO::FETCH_OBJ)){
-					$product_growthinfo_id = $oneRow->product_growthinfo_id;
-					
+
+					$product_growthinfo_id = $oneRow->product_growthinfo_id;					
 					$growth = round($oneRow->growth,2);
 					$weight = round($oneRow->weight,2);
+					$product_id = round($oneRow->product_id,2);
 					$datestr = '';
 					if(!in_array($oneRow->review_date, array('0000-00-00', '1000-01-01'))){
-						$datestr .= $oneRow->review_date;
+						$datestr .= date('Y-m-d', strtotime($oneRow->review_date));
 					}
 					
 					
-					$productWeight[] = array($product_growthinfo_id, $growth, $weight, $datestr);
+					$productWeight[] = array($product_growthinfo_id, $datestr, $growth, $weight, $product_id);
 				}
 			}
 			$jsonResponse['productWeight'] = $productWeight;

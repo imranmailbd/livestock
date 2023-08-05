@@ -5513,3 +5513,801 @@ previous: http://livestock.skitsbdl.com/Growthinfos
     at Object.AJsave_LivestocksGrowth [as click] (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:699:5)
     at HTMLButtonElement.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/common.js:1886:138) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
 previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-05 02:26:42 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 779: Undefined property: stdClass::$category_id_maternal, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 02:26:42 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 836: Undefined property: stdClass::$category_id_maternal, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 02:33:45 Script Error, Message: 2: ReferenceError: checkDateOnBlur is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:662:29)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-05 02:33:46 Script Error, Message: 2: ReferenceError: checkDateOnBlur is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:662:29)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-05 02:33:47 Script Error, Message: 2: ReferenceError: checkDateOnBlur is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:662:29)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-05 02:39:15 Script Error, Message: 1: TypeError: Cannot read properties of null (reading 'addEventListener')
+    at date_picker_dialog (http://livestock.skitsbdl.com/assets/js-v3/common.js:2118:10)
+    at date_picker (http://livestock.skitsbdl.com/assets/js-v3/common.js:2307:3)
+    at http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:696:13 ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+previous: http://livestock.skitsbdl.com/Growthinfos
+2023-08-05 04:19:25 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Growthinfos/AJsave_LivestocksGrowth, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-05 04:19:27 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Growthinfos/AJsave_LivestocksGrowth, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-05 04:19:29 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Growthinfos/AJsave_LivestocksGrowth, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-05 04:19:31 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Growthinfos/AJsave_LivestocksGrowth, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-05 04:19:33 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Growthinfos/AJsave_LivestocksGrowth, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-05 04:29:40 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Growthinfos/AJget_LivestocksGrowthInfoPopup, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-05 04:29:42 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Growthinfos/AJget_LivestocksGrowthInfoPopup, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-05 04:29:44 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Growthinfos/AJget_LivestocksGrowthInfoPopup, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-05 04:29:46 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Growthinfos/AJget_LivestocksGrowthInfoPopup, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-05 04:29:48 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Growthinfos/AJget_LivestocksGrowthInfoPopup, Page Url: http://livestock.skitsbdl.com/Growthinfos/view/TAGNo-23332323
+2023-08-05 05:01:19 Script Error, Message: 2: ReferenceError: columnNames is not defined
+    at Object.view (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:1020:29)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:4161:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 05:02:17 Script Error, Message: 2: ReferenceError: th4Col0 is not defined
+    at Object.view (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:1038:57)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:4161:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 05:33:14 Script Error, Message: 2: TypeError: Cannot convert undefined or null to object
+    at Function.entries (<anonymous>)
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:792:62
+    at Array.forEach (<anonymous>)
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:788:28
+    at Array.forEach (<anonymous>)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:783:27)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 06:01:03 Script Error, Message: 2: ReferenceError: reviewDate is not defined
+    at http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:789:32
+    at Array.forEach (<anonymous>)
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Livestocks.js:783:27)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Livestocks/view/3
+previous: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 06:36:08 Script Error, Message: 2: ReferenceError: $ is not defined
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:327:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1484:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos
+previous: http://livestock.skitsbdl.com/Home
+2023-08-05 06:36:10 Script Error, Message: 2: ReferenceError: $ is not defined
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:327:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1484:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos
+previous: http://livestock.skitsbdl.com/Home
+2023-08-05 06:36:11 Script Error, Message: 2: ReferenceError: $ is not defined
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:327:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1484:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos
+previous: http://livestock.skitsbdl.com/Home
+2023-08-05 06:36:11 Script Error, Message: 2: ReferenceError: $ is not defined
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:327:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1484:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos
+previous: http://livestock.skitsbdl.com/Home
+2023-08-05 06:38:36 Script Error, Message: 2: ReferenceError: $ is not defined
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:327:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1484:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos
+previous: http://livestock.skitsbdl.com/Home
+2023-08-05 06:38:37 Script Error, Message: 2: ReferenceError: $ is not defined
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:327:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1484:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos
+previous: http://livestock.skitsbdl.com/Home
+2023-08-05 06:38:37 Script Error, Message: 2: ReferenceError: $ is not defined
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:327:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1484:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos
+previous: http://livestock.skitsbdl.com/Home
+2023-08-05 06:38:38 Script Error, Message: 2: ReferenceError: $ is not defined
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:327:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1484:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos
+previous: http://livestock.skitsbdl.com/Home
+2023-08-05 06:38:38 Script Error, Message: 2: ReferenceError: $ is not defined
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:327:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1484:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos
+previous: http://livestock.skitsbdl.com/Home
+2023-08-05 06:44:07 Script Error, Message: 2: TypeError: Cannot read properties of undefined (reading 'value')
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:327:11)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1485:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos
+previous: http://livestock.skitsbdl.com/Home
+2023-08-05 06:44:08 Script Error, Message: 2: TypeError: Cannot read properties of undefined (reading 'value')
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:327:11)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1485:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos
+previous: http://livestock.skitsbdl.com/Home
+2023-08-05 06:44:42 Script Error, Message: 2: TypeError: Cannot read properties of undefined (reading 'value')
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:327:11)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1485:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos
+previous: http://livestock.skitsbdl.com/Home
+2023-08-05 06:44:42 Script Error, Message: 2: TypeError: Cannot read properties of undefined (reading 'value')
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:327:11)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1485:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos
+previous: http://livestock.skitsbdl.com/Home
+2023-08-05 06:44:53 Script Error, Message: 2: TypeError: Cannot read properties of undefined (reading 'val')
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:327:11)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1485:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos
+previous: http://livestock.skitsbdl.com/Home
+2023-08-05 06:45:00 Script Error, Message: 2: TypeError: Cannot set properties of undefined (setting 'val')
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:327:15)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1485:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos
+previous: http://livestock.skitsbdl.com/Home
+2023-08-05 06:46:48 Script Error, Message: 2: ReferenceError: $ is not defined
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:328:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1485:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos
+previous: http://livestock.skitsbdl.com/Home
+2023-08-05 06:46:48 Script Error, Message: 2: ReferenceError: $ is not defined
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:328:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1485:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos
+previous: http://livestock.skitsbdl.com/Home
+2023-08-05 06:49:52 Script Error, Message: 2: ReferenceError: $ is not defined
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:327:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1486:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos
+previous: http://livestock.skitsbdl.com/Home
+2023-08-05 06:49:52 Script Error, Message: 2: ReferenceError: $ is not defined
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:327:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1486:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos
+previous: http://livestock.skitsbdl.com/Home
+2023-08-05 06:49:53 Script Error, Message: 2: ReferenceError: $ is not defined
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:327:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1486:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos
+previous: http://livestock.skitsbdl.com/Home
+2023-08-05 06:49:53 Script Error, Message: 2: ReferenceError: $ is not defined
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:327:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1486:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos
+previous: http://livestock.skitsbdl.com/Home
+2023-08-05 06:52:45 Script Error, Message: 2: TypeError: bdate is not a function
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:327:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1486:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos
+previous: http://livestock.skitsbdl.com/Home
+2023-08-05 06:52:47 Script Error, Message: 2: TypeError: bdate is not a function
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:327:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1486:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos
+previous: http://livestock.skitsbdl.com/Home
+2023-08-05 06:52:47 Script Error, Message: 2: TypeError: bdate is not a function
+    at Object.lists (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:327:5)
+    at HTMLDocument.<anonymous> (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:1486:30) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos
+previous: http://livestock.skitsbdl.com/Home
+2023-08-05 07:02:25 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Growthinfos/AJsave_growthinfos, Page Url: http://livestock.skitsbdl.com/Growthinfos
+2023-08-05 07:02:27 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Growthinfos/AJsave_growthinfos, Page Url: http://livestock.skitsbdl.com/Growthinfos
+2023-08-05 07:02:29 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Growthinfos/AJsave_growthinfos, Page Url: http://livestock.skitsbdl.com/Growthinfos
+2023-08-05 07:02:31 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Growthinfos/AJsave_growthinfos, Page Url: http://livestock.skitsbdl.com/Growthinfos
+2023-08-05 07:02:33 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Growthinfos/AJsave_growthinfos, Page Url: http://livestock.skitsbdl.com/Growthinfos
+2023-08-05 07:04:55 Script Error, Message: 2: ReferenceError: resetForm_lsnipplesizescore is not defined
+    at afterFetch (http://livestock.skitsbdl.com/assets/js-v3/Growthinfos.js:424:13)
+    at fetchData (http://livestock.skitsbdl.com/assets/js-v3/common.js:3856:4) ---UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36, Page Url: current: http://livestock.skitsbdl.com/Growthinfos
+previous: http://livestock.skitsbdl.com/Home
+2023-08-05 07:53:36 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 07:53:38 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 07:53:40 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 07:53:42 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 07:53:44 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 07:54:37 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 07:54:39 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 07:54:41 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 07:54:43 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 07:54:46 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 07:56:01 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 07:56:04 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 07:56:06 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 07:56:08 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 07:56:10 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:06:25 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:06:27 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:06:29 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:06:31 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:06:33 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:06:44 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:06:45 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:06:48 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:06:51 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:06:54 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:06:57 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:07:19 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:07:21 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:07:23 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:07:25 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:07:27 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:09:43 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:09:45 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:09:47 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:09:49 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:09:51 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:20:32 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:20:34 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:20:36 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:20:38 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:20:40 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:22:47 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:22:49 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:22:51 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:22:53 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:22:55 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:25:58 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:26:01 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:26:03 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:26:05 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:26:07 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:26:34 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:26:36 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:26:39 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:26:42 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:26:45 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:26:54 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:26:56 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:26:58 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:27:01 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:27:04 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:27:16 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:27:18 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:27:21 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:27:24 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:27:27 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:29:53 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:29:56 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:29:59 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:30:02 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:30:05 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:31:29 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:31:31 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:31:33 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:31:35 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:31:37 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:32:31 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:32:33 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:32:35 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:32:37 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:32:39 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:33:54 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:33:56 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:33:58 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:34:00 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:34:02 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:36:45 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:36:47 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:36:49 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:36:51 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:36:54 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:37:28 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:37:30 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:37:32 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:37:34 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:37:36 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:39:39 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:39:41 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:39:43 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:39:46 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:39:48 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:40:16 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:40:18 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:40:20 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:40:22 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:40:24 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:41:01 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:41:04 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:41:06 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:41:08 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:41:10 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:42:07 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:42:07 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:42:07 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:42:07 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:42:07 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:42:08 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:42:08 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:42:08 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:42:08 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:42:08 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:42:14 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:42:14 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:42:14 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:42:14 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:42:14 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:45:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:45:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 255: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:45:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 262: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:45:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:45:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 255: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:45:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 262: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:45:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:45:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 255: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:45:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 262: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:45:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:45:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 255: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:45:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 262: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:45:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:45:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 255: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:45:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 262: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:46:09 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:46:09 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 255: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:46:09 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 262: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:46:09 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:46:09 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 255: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:46:09 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 262: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:46:09 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:46:09 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 255: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:46:09 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 262: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:46:09 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:46:09 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 255: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:46:09 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 262: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:46:09 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:46:09 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 255: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:46:09 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 262: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 08:47:11 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:47:13 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:47:15 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:47:17 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:47:19 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:47:45 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:47:47 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:47:49 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:47:51 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:47:53 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:48:40 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:48:42 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:48:44 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:48:46 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:48:49 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:49:13 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:49:15 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:49:17 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:49:19 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:49:21 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:49:50 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:49:52 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:49:54 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:49:57 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:50:00 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:50:15 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:50:17 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:50:19 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:50:21 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:50:23 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:50:55 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:50:57 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:50:59 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:51:01 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:51:03 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:51:14 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:51:16 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:51:18 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:51:20 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:51:22 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:51:36 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:51:38 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:51:40 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:51:42 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:51:44 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:52:31 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:52:33 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:52:35 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:52:37 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:52:39 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:54:45 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:54:47 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:54:49 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:54:51 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:54:54 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:55:23 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:55:25 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:55:27 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:55:29 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:55:32 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:58:47 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:58:50 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:58:52 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:58:54 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 08:58:56 JSON Issue, Message: Unexpected token '<', "<br />
+<fo"... is not valid JSON: SyntaxError: Unexpected token '<', "<br />
+<fo"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 09:00:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:00:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 239: Undefined array key "regular_price", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:00:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 255: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:00:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 262: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:00:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:00:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 239: Undefined array key "regular_price", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:00:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 255: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:00:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 262: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:00:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:00:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 239: Undefined array key "regular_price", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:00:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 255: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:00:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 262: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:00:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:00:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 239: Undefined array key "regular_price", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:00:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 255: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:00:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 262: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:00:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:00:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 239: Undefined array key "regular_price", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:00:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 255: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:00:20 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 262: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:00:33 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 09:00:35 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 09:00:37 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 09:00:39 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 09:00:41 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 09:01:03 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 09:01:05 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 09:01:07 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 09:01:09 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 09:01:11 JSON Issue, Message: Unexpected token '<', "<pre class"... is not valid JSON: SyntaxError: Unexpected token '<', "<pre class"... is not valid JSON for API: /Livestocks/AJgetPage/filter, Page Url: http://livestock.skitsbdl.com/Livestocks/lists/1
+2023-08-05 09:01:50 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:01:50 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 240: Undefined array key "regular_price", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:01:50 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 256: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:01:50 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 263: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:01:50 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:01:50 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 240: Undefined array key "regular_price", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:01:50 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 256: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:01:50 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 263: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:01:50 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:01:50 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 240: Undefined array key "regular_price", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:01:50 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 256: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:01:50 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 263: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:01:50 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:01:50 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 240: Undefined array key "regular_price", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:01:50 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 256: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:01:50 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 263: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:01:50 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:01:50 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 240: Undefined array key "regular_price", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:01:50 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 256: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:01:50 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 263: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:02:58 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:02:58 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 240: Undefined array key "regular_price", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:02:58 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 256: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:02:58 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 263: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:02:58 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:02:58 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 240: Undefined array key "regular_price", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:02:58 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 256: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:02:58 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 263: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:02:58 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:02:58 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 240: Undefined array key "regular_price", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:02:58 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 256: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:02:58 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 263: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:02:58 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:02:58 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 240: Undefined array key "regular_price", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:02:58 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 256: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:02:58 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 263: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:02:58 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:02:58 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 240: Undefined array key "regular_price", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:02:58 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 256: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:02:58 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 263: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:03:19 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:03:19 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 240: Undefined array key "regular_price", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:03:19 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 256: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:03:19 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 263: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:03:19 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:03:19 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 240: Undefined array key "regular_price", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:03:19 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 256: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:03:19 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 263: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:03:19 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:03:19 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 240: Undefined array key "regular_price", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:03:19 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 256: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:03:19 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 263: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:03:19 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:03:19 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 240: Undefined array key "regular_price", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:03:19 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 256: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:03:19 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 263: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:03:19 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:03:19 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 240: Undefined array key "regular_price", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:03:19 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 256: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:03:19 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 263: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:06:42 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:06:42 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 240: Undefined array key "regular_price", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:06:42 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 257: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:06:42 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 264: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:06:42 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:06:42 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 240: Undefined array key "regular_price", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:06:42 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 257: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:06:42 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 264: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:06:42 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:06:42 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 240: Undefined array key "regular_price", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:06:42 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 257: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:06:42 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 264: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:06:42 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:06:42 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 240: Undefined array key "regular_price", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:06:42 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 257: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:06:42 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 264: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:06:42 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 221: Undefined array key "item", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:06:42 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 240: Undefined array key "regular_price", [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:06:42 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 257: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]
+2023-08-05 09:06:42 Encountered error 2 in D:\wamp64\www\livestock\apps\Livestocks.php, line 264: Undefined variable $manage_inventory_count, [AccID: 1, UserID: 1, Browser: Mozilla/5.0]

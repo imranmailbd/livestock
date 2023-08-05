@@ -1,6 +1,6 @@
 import {
     cTag, Translate, checkAndSetLimit, tooltip, round, controllNumericField, validateRequiredField, storeSessionData, addCurrency, DBDateToViewDate, printbyurl, setSelectOpt, setTableHRows, 
-    showTopMessage, setOptions, addPaginationRowFlex, checkAndSetSessionData, popup_dialog600, popup_dialog1000, date_picker, validDate, 
+    showTopMessage, checkDateOnBlur, setOptions, addPaginationRowFlex, checkAndSetSessionData, popup_dialog600, popup_dialog1000, date_picker, validDate, 
     applySanitizer, generateCustomeFields, fetchData, listenToEnterKey, addCustomeEventListener, actionBtnClick, callPlaceholder, 
     serialize, onClickPagination, historyTable, activityFieldAttributes, noPermissionWarning, validifyCustomField, alert_label_missing
 } from './common.js';
@@ -156,6 +156,8 @@ function createListsRow(tableData,listsFieldAttributes, uriStr){
 function controller_bar(id,cancelHandler){
     const controller = cTag('div', {class: "flexStartRow", style:"float:right; margin-top:20px; margin-bottom:20px;"});
     controller.appendChild(cTag('input', {'type': "hidden", name: id, id: id, 'value': 0}));
+    controller.appendChild(cTag('input', {'autocomplete': "off", 'required': "required", 'type': "text", class: "form-control", style:'margin-right:10px; width:50% !important;',  name: "review_date_blk", id: "review_date_blk", 'value': '', 'maxlength': 10}));
+    // inputField = cTag('input', {'autocomplete': "off", 'required': "required", 'type': "text", class: "form-control", name: "arrival_date", id: "arrival_date", 'value': '', 'maxlength': 10});
     controller.appendChild(cTag('input', {'click':cancelHandler,'type': "button", name: "reset", id: "reset", 'value': Translate('Cancel'), class: "btn defaultButton", 'style': "margin-right: 10px;"}));
     controller.appendChild(cTag('input', {'type': "submit", id: "submit", class: "btn saveButton", 'style': "margin-right: 10px; float:right;", 'value': Translate('Save') }));
     return controller;
@@ -320,6 +322,19 @@ function lists(){
         keyword_search = list_filters.keyword_search;
     }
     document.getElementById("keyword_search").value = keyword_search;
+
+    let bdate = date_picker('#review_date_blk');
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+    today = mm + '/' + dd + '/' + yyyy;
+    document.getElementById("review_date_blk").value = today;
+    
+    // $('#review_date_blk').datePicker({
+    //         "setDate": new Date(),
+    //         "autoclose": true
+    // });
 
     addCustomeEventListener('filter',filter_IMEI_lists);
     addCustomeEventListener('loadTable',loadTableRows_IMEI_lists);
@@ -612,7 +627,7 @@ async function AJget_LivestocksGrowthInfoPopup(product_growthinfo_id, product_id
                     const growthInfoRow = cTag('div', {class: "flex"});
                         const growthInfoColumn = cTag('div', {class: "columnSM4"});
                             let growthInfoLabel = cTag('label', {'for': "growth"});
-                            growthInfoLabel.innerHTML = Translate('Growth');
+                            growthInfoLabel.innerHTML = Translate('Height');
                                 requiredField = cTag('span', {class: "required"});
                                 requiredField.innerHTML = '*';
                                 growthInfoLabel.appendChild(requiredField);
@@ -645,6 +660,26 @@ async function AJget_LivestocksGrowthInfoPopup(product_growthinfo_id, product_id
                             weightInfoRow.appendChild(weightInfoField);
                     productsGrowthInfoColumn.appendChild(weightInfoRow);
 
+                    //########## Review Date ############        
+                    const arrivalDateRow = cTag('div', {class: "flex"});
+                        const arrivalDateName = cTag('div', {class: "columnSM4", 'align': "left"});
+                            const arrivalDateLabel = cTag('label', {'for': "review_date"});
+                            arrivalDateLabel.innerHTML = Translate('Review Date');
+
+                            let adrequiredField = cTag('span', {class: "required"});
+                            adrequiredField.innerHTML = '*';
+                                arrivalDateLabel.appendChild(adrequiredField);
+                            arrivalDateName.appendChild(arrivalDateLabel);
+                            
+                        arrivalDateRow.appendChild(arrivalDateName);
+                        const arrivalDateField = cTag('div', {class: "columnSM8", 'align': "left"});
+                            inputField = cTag('input', {'autocomplete': "off", 'required': "required", 'type': "text", class: "form-control", name: "review_date", id: "review_date", 'value': DBDateToViewDate(data.review_date), 'maxlength': 10});
+                            checkDateOnBlur(inputField,'#error_date','Invalid '+Translate('Arrival Date'));
+                            arrivalDateField.appendChild(inputField);
+                            arrivalDateField.appendChild(cTag('span',{id:'error_review_date',class:'errormsg'}));
+                        arrivalDateRow.appendChild(arrivalDateField);
+                    productsGrowthInfoColumn.appendChild(arrivalDateRow);
+
 
                     // const startDateRow = cTag('div', {class: "flex"});
                     //     const startDateColumn = cTag('div', {class: "columnSM4"});
@@ -673,6 +708,7 @@ async function AJget_LivestocksGrowthInfoPopup(product_growthinfo_id, product_id
         setTimeout(function() {
             // document.getElementById("price_type").value = data.price_type;
             // date_picker('#start_date');
+            date_picker('#review_date');
         }, 500);
     }
 	return true;

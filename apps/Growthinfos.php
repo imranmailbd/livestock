@@ -208,6 +208,7 @@ class Growthinfos{
 		$livestock_product_id  = $POST['product_id[]'];
 		$growth  = $POST['livestock_height[]'];
 		$weight  = $POST['livestock_weight[]'];
+		$review_date  = $POST['review_date_blk'];
 
 
 		$growthinfoarray_all = array();
@@ -217,7 +218,7 @@ class Growthinfos{
 			$growthinfoarray['product_id'] = $livestock_product_id[$key];
 			$growthinfoarray['growth'] = $growth[$key];
 			$growthinfoarray['weight'] = $weight[$key];
-			$growthinfoarray['review_date'] = date('Y-m-d H:i:s');
+			$growthinfoarray['review_date'] = date('Y-m-d H:i:s', strtotime($review_date));
 			$growthinfoarray['last_updated'] = date('Y-m-d H:i:s');
 			$growthinfoarray['accounts_id'] = $prod_cat_man;
 			$growthinfoarray['user_id'] = $user_id;
@@ -226,7 +227,7 @@ class Growthinfos{
 			 * duplicate check
 			 */
 			$duplSql = "SELECT * FROM product_growthinfo WHERE product_id = ".$livestock_product_id[$key]." AND  DATE(review_date) = :growthinfo_review_date";
-			$bindData = array('growthinfo_review_date'=>date('Y-m-d'));
+			$bindData = array('growthinfo_review_date'=> date('Y-m-d', strtotime($review_date)));
 			$duplRows = 0;
 			$growthinfoObj = $this->db->querypagination($duplSql, $bindData);
 			if($growthinfoObj){
@@ -1034,7 +1035,7 @@ class Growthinfos{
 				$oneRow = $ppObj->fetch(PDO::FETCH_OBJ);
 				$growthData['growth'] = round($oneRow->growth,2);
 				$growthData['weight'] = round($oneRow->weight,2);
-				$growthData['review_date'] = $oneRow->review_date;
+				$growthData['review_date'] = date('Y-m-d', strtotime($oneRow->review_date));
 			}
 		}
 		
@@ -1098,10 +1099,10 @@ class Growthinfos{
 		$product_id = intval($POST['product_id']??0);		
 		$growth = floatval($POST['growth']??0);
 		$weight = floatval($POST['weight']??0);
-		$review_date = date('Y-m-d H:i:s');
+		$review_date = date('Y-m-d H:i:s', strtotime($POST['review_date']));
 		// $start_date = trim((string) $POST['start_date']??'1000-01-01');
 		// if(!in_array($start_date, array('', '1000-01-01'))){$start_date = date('Y-m-d', strtotime($start_date));}
-		// else{$start_date = '1000-01-01';}		
+		// else{$start_date = '1000-01-01';}	
 		
 		$growth = $this->db->checkCharLen('product_growthinfo.growth', $growth);
 
@@ -1111,7 +1112,7 @@ class Growthinfos{
 		$conditionarray['product_id'] = $product_id;
 		$conditionarray['growth'] = $growth;			
 		$conditionarray['weight'] = $weight;			
-		$conditionarray['review_date'] = date('Y-m-d H:i:s');
+		$conditionarray['review_date'] = $review_date;
 
 		$bindData = array('product_id'=>$product_id, 'growth'=>$growth, 'review_date'=>$review_date);
 		$duplCheckSql = "SELECT COUNT(product_growthinfo_id) AS totalrows FROM product_growthinfo WHERE accounts_id = $accounts_id AND product_id = :product_id AND growth = :growth AND review_date = :review_date";
